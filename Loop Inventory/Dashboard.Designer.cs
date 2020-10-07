@@ -161,6 +161,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.quantityMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
@@ -328,7 +329,8 @@
             this.currenyMasterToolStripMenuItem,
             this.expenseMasterToolStripMenuItem,
             this.taxMasterToolStripMenuItem,
-            this.storeMasterToolStripMenuItem});
+            this.storeMasterToolStripMenuItem,
+            this.quantityMasterToolStripMenuItem});
             this.mastertools.ForeColor = System.Drawing.Color.White;
             this.mastertools.Image = ((System.Drawing.Image)(resources.GetObject("mastertools.Image")));
             this.mastertools.Name = "mastertools";
@@ -561,21 +563,21 @@
             // CashPaymentToolStripMenuItem
             // 
             this.CashPaymentToolStripMenuItem.Name = "CashPaymentToolStripMenuItem";
-            this.CashPaymentToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.CashPaymentToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.CashPaymentToolStripMenuItem.Text = "Cash Payment";
             this.CashPaymentToolStripMenuItem.Click += new System.EventHandler(this.CashPaymentToolStripMenuItem_Click);
             // 
             // transation
             // 
             this.transation.Name = "transation";
-            this.transation.Size = new System.Drawing.Size(188, 22);
+            this.transation.Size = new System.Drawing.Size(189, 22);
             this.transation.Text = "Transaction Records";
             this.transation.Click += new System.EventHandler(this.transation_Click);
             // 
             // moneyTransferToolStripMenuItem
             // 
             this.moneyTransferToolStripMenuItem.Name = "moneyTransferToolStripMenuItem";
-            this.moneyTransferToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.moneyTransferToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.moneyTransferToolStripMenuItem.Text = "Money Transfer";
             this.moneyTransferToolStripMenuItem.Click += new System.EventHandler(this.moneyTransferToolStripMenuItem_Click);
             // 
@@ -713,7 +715,6 @@
             this.partyListToolStripMenuItem.Name = "partyListToolStripMenuItem";
             this.partyListToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.partyListToolStripMenuItem.Text = "Supplier Ledger Report";
-            
             // 
             // customer
             // 
@@ -1434,7 +1435,7 @@
             this.toolStripStatusLabel5.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel5.ForeColor = System.Drawing.Color.White;
             this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            this.toolStripStatusLabel5.Size = new System.Drawing.Size(213, 20);
+            this.toolStripStatusLabel5.Size = new System.Drawing.Size(214, 20);
             this.toolStripStatusLabel5.Text = "Powered By Glcc4it Solutions";
             // 
             // toolStripStatusLabel4
@@ -1442,7 +1443,7 @@
             this.toolStripStatusLabel4.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel4.ForeColor = System.Drawing.Color.White;
             this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(322, 20);
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(323, 20);
             this.toolStripStatusLabel4.Text = "For More Info Contact Us  +92-308-4370075";
             // 
             // ToolStripStatusLabel1
@@ -1450,7 +1451,7 @@
             this.ToolStripStatusLabel1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripStatusLabel1.ForeColor = System.Drawing.Color.Black;
             this.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1";
-            this.ToolStripStatusLabel1.Size = new System.Drawing.Size(108, 20);
+            this.ToolStripStatusLabel1.Size = new System.Drawing.Size(109, 20);
             this.ToolStripStatusLabel1.Text = "Logged in As :";
             // 
             // lblUserType
@@ -1458,7 +1459,7 @@
             this.lblUserType.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserType.Image = ((System.Drawing.Image)(resources.GetObject("lblUserType.Image")));
             this.lblUserType.Name = "lblUserType";
-            this.lblUserType.Size = new System.Drawing.Size(95, 20);
+            this.lblUserType.Size = new System.Drawing.Size(96, 20);
             this.lblUserType.Text = "User Type";
             // 
             // ToolStripStatusLabel2
@@ -1479,7 +1480,7 @@
             // ToolStripStatusLabel3
             // 
             this.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3";
-            this.ToolStripStatusLabel3.Size = new System.Drawing.Size(85, 20);
+            this.ToolStripStatusLabel3.Size = new System.Drawing.Size(81, 20);
             this.ToolStripStatusLabel3.Spring = true;
             // 
             // lblDateTime
@@ -1565,6 +1566,13 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 336;
             this.pictureBox3.TabStop = false;
+            // 
+            // quantityMasterToolStripMenuItem
+            // 
+            this.quantityMasterToolStripMenuItem.Name = "quantityMasterToolStripMenuItem";
+            this.quantityMasterToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.quantityMasterToolStripMenuItem.Text = "Quantity Master";
+            this.quantityMasterToolStripMenuItem.Click += new System.EventHandler(this.quantityMasterToolStripMenuItem_Click);
             // 
             // Dashboard
             // 
@@ -1759,5 +1767,6 @@
         private System.Windows.Forms.ToolStripMenuItem storeMasterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bonusQuantityToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem moneyTransferToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quantityMasterToolStripMenuItem;
     }
 }

@@ -63,6 +63,14 @@
     <Reference Include="DGV Printer">
       <HintPath>..\packages\DGV Printer.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
@@ -94,8 +102,11 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
@@ -150,11 +161,11 @@
     <Compile Include="Companymaster.Designer.cs">
       <DependentUpon>Companymaster.cs</DependentUpon>
     </Compile>
-    <Compile Include="Currency Master.cs">
+    <Compile Include="Currency_Master.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Currency Master.Designer.cs">
-      <DependentUpon>Currency Master.cs</DependentUpon>
+    <Compile Include="Currency_Master.Designer.cs">
+      <DependentUpon>Currency_Master.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer Master.cs">
       <SubType>Form</SubType>
@@ -267,7 +278,6 @@
     </Compile>
     <Compile Include="Inventory_DBDataSet.cs">
       <DependentUpon>Inventory_DBDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Inventory_DBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -288,6 +298,21 @@
     </Compile>
     <Compile Include="ModCommonClasses.cs" />
     <Compile Include="ModCS.cs" />
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
     <Compile Include="ModFunc.cs" />
     <Compile Include="Money Transfer.cs">
       <SubType>Form</SubType>
@@ -441,6 +466,15 @@
     <Compile Include="Tax Master.Designer.cs">
       <DependentUpon>Tax Master.cs</DependentUpon>
     </Compile>
+    <Compile Include="tblBonusQuantity.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Currency.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_Tax.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Transaction Record.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -498,8 +532,8 @@
     <EmbeddedResource Include="Companymaster.resx">
       <DependentUpon>Companymaster.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Currency Master.resx">
-      <DependentUpon>Currency Master.cs</DependentUpon>
+    <EmbeddedResource Include="Currency_Master.resx">
+      <DependentUpon>Currency_Master.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Master.resx">
       <DependentUpon>Customer Master.cs</DependentUpon>
@@ -681,6 +715,13 @@
     <None Include="Inventory_DBDataSet.xss">
       <DependentUpon>Inventory_DBDataSet.xsd</DependentUpon>
     </None>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -697,6 +738,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
@@ -715,6 +757,18 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

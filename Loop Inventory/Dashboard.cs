@@ -598,18 +598,11 @@ namespace Loop_Inventory
             ss.lblUser.Text = lblUser.Text;
         }
 
-        
-
-       
-
-        
-
-        
-
-        
-
-        
-
-        
+        private void quantityMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Quantity_Bonus ss = new Quantity_Bonus();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+        }
     }
 }

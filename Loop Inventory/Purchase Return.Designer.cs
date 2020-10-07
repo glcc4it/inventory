@@ -399,7 +399,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(5, 6);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 16);
+            this.label10.Size = new System.Drawing.Size(80, 16);
             this.label10.TabIndex = 327;
             this.label10.Text = "Return Type:";
             // 
@@ -600,6 +600,7 @@
             this.btnDelete.Text = "&Delete";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // button11
             // 
@@ -758,7 +759,7 @@
             this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(3, 5);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 18);
+            this.label15.Size = new System.Drawing.Size(54, 18);
             this.label15.TabIndex = 327;
             this.label15.Text = "Tax (%)";
             // 
@@ -946,7 +947,7 @@
             this.label25.ForeColor = System.Drawing.Color.Black;
             this.label25.Location = new System.Drawing.Point(3, 5);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(84, 18);
+            this.label25.Size = new System.Drawing.Size(86, 18);
             this.label25.TabIndex = 327;
             this.label25.Text = "Grand Total:";
             // 
@@ -978,7 +979,7 @@
             this.label23.ForeColor = System.Drawing.Color.Black;
             this.label23.Location = new System.Drawing.Point(4, 105);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(131, 24);
+            this.label23.Size = new System.Drawing.Size(132, 24);
             this.label23.TabIndex = 328;
             this.label23.Text = "Net Payment:";
             // 

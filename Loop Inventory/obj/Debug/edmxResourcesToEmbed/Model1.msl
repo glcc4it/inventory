@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Inventory_DBModelStoreContainer" CdmEntityContainer="Inventory_DBEntities">
+    <EntitySetMapping Name="tbl_Tax">
+      <EntityTypeMapping TypeName="Inventory_DBModel.tbl_Tax">
+        <MappingFragment StoreEntitySet="tbl_Tax">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Currency">
+      <EntityTypeMapping TypeName="Inventory_DBModel.tbl_Currency">
+        <MappingFragment StoreEntitySet="tbl_Currency">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBonusQuantities">
+      <EntityTypeMapping TypeName="Inventory_DBModel.tblBonusQuantity">
+        <MappingFragment StoreEntitySet="tblBonusQuantity">
+          <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+          <ScalarProperty Name="OfferQuantity" ColumnName="OfferQuantity" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="TypeOfUnit" ColumnName="TypeOfUnit" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
