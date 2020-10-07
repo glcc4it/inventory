@@ -120,6 +120,30 @@
     <Compile Include="Account Master.Designer.cs">
       <DependentUpon>Account Master.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add Bank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Bank.Designer.cs">
+      <DependentUpon>Add Bank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Expense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Expense.Designer.cs">
+      <DependentUpon>Add Expense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Treasury.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Treasury.Designer.cs">
+      <DependentUpon>Add Treasury.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Wallets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Wallets.Designer.cs">
+      <DependentUpon>Add Wallets.cs</DependentUpon>
+    </Compile>
     <Compile Include="Brand Master.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,12 +204,6 @@
     </Compile>
     <Compile Include="Expense Master.Designer.cs">
       <DependentUpon>Expense Master.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Export Repair Record.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Export Repair Record.Designer.cs">
-      <DependentUpon>Export Repair Record.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCustomerRecord.cs">
       <SubType>Form</SubType>
@@ -477,11 +495,29 @@
     <Compile Include="UserSetting.Designer.cs">
       <DependentUpon>UserSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vender Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vender Payment.Designer.cs">
+      <DependentUpon>Vender Payment.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Aboutus.resx">
       <DependentUpon>Aboutus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Account Master.resx">
       <DependentUpon>Account Master.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Bank.resx">
+      <DependentUpon>Add Bank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Expense.resx">
+      <DependentUpon>Add Expense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Treasury.resx">
+      <DependentUpon>Add Treasury.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Wallets.resx">
+      <DependentUpon>Add Wallets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Brand Master.resx">
       <DependentUpon>Brand Master.cs</DependentUpon>
@@ -512,9 +548,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Expense Master.resx">
       <DependentUpon>Expense Master.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Export Repair Record.resx">
-      <DependentUpon>Export Repair Record.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCustomerRecord.resx">
       <DependentUpon>frmCustomerRecord.cs</DependentUpon>
@@ -669,6 +702,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserSetting.resx">
       <DependentUpon>UserSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vender Payment.resx">
+      <DependentUpon>Vender Payment.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Inventory_DBDataSet.xsc">
       <DependentUpon>Inventory_DBDataSet.xsd</DependentUpon>

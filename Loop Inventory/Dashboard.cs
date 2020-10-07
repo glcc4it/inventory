@@ -456,12 +456,7 @@ namespace Loop_Inventory
             ss.lblUser.Text = lblUser.Text;
         }
 
-        private void exportRepairOrderToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Export_Repair_Record ss = new Export_Repair_Record();
-            ss.Show();
-            ss.lblUser.Text = lblUser.Text;
-        }
+       
 
        
 
@@ -519,7 +514,7 @@ namespace Loop_Inventory
 
         private void LinkBarcodesetting_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmTrialBalance ss = new frmTrialBalance();
+            Receipt_Customer ss = new Receipt_Customer();
             ss.Show();
             
         }

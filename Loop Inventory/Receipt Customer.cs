@@ -16,5 +16,35 @@ namespace Loop_Inventory
         {
             InitializeComponent();
         }
+
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+     
+
+      
+
+       
+
+        
+
+       
+
+       
+
+       
+
+       
+
+       
+
+        
     }
 }

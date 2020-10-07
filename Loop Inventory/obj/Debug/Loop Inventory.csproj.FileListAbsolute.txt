@@ -151,3 +151,82 @@ C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory\Loop
 C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory\Loop Inventory\obj\Debug\Loop_Inventory.Customer_Master.resources
 C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory\Loop Inventory\obj\Debug\Loop_Inventory.Item_Master.resources
 C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory\Loop Inventory\obj\Debug\Loop_Inventory.Receipt_Customer.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\bin\Debug\Loop Inventory.exe.config
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop Inventory.exe
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop Inventory.pdb
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\bin\Debug\Loop Inventory.exe
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\bin\Debug\Loop Inventory.pdb
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\bin\Debug\AdvancedDataGridView.dll
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\bin\Debug\Bunifu_UI_v1.4.dll
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\bin\Debug\DGV Printer.dll
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\bin\Debug\AdvancedDataGridView.xml
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\bin\Debug\fr\AdvancedDataGridView.resources.dll
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\bin\Debug\ru\AdvancedDataGridView.resources.dll
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop Inventory.csprojResolveAssemblyReference.cache
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Aboutus.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Account_Master.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Add_Expense.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Brand_Master.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Cash_Transaction.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Cashbook.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Categorymaster.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Companymaster.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Currency_Master.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Customer_Master.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Dashboard.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Daybook.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Expense_Master.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmCustomerRecord.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmCustomerRecord1.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmCustomerRecord2.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmLogin.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmPurchaseRecord.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmSqlServerSetting.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmSupplierRecord.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmSupplierRecord1.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmSupplierRecord2.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmTrialBalance.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Godownmaster.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Import_Product.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Import_Services_Customer.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Item_Master.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Logs.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Money_Transfer.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Pricing_level.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Product_Creation.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Profit_and_Loss.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Properties.Resources.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Purchase_Report.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Purchase_Return.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Purchaseproduct.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Quantity_Bonus.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Rackmaster.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Receipt_Customer.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Sale_Return.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Sale_view.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Saleproduct.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Salesmanmaster.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Securityrights.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Service_Ledger_Report.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Services_Billing.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Services_Record.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Splash_Screen.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Stock_Product.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Stock_Report.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Stock_Transfer.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Store_Master.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Supplier_Master.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Tax_Master.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Transaction_Record.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Transaction_Reports.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Trial_Balance.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Unitmaster.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.UserrRegisterd.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.UserSetting.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop Inventory.csproj.GenerateResource.Cache
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\RdlCompile.cache
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\RdlCompile.compiled
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Add_Treasury.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Vender_Payment.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Add_Bank.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Add_Wallets.resources
