@@ -379,7 +379,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label18.Location = new System.Drawing.Point(336, 321);
+            this.label18.Location = new System.Drawing.Point(336, 320);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(92, 18);
             this.label18.TabIndex = 1022;

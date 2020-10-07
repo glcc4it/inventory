@@ -619,7 +619,7 @@
             this.exportRepairOrderToolStripMenuItem.Name = "exportRepairOrderToolStripMenuItem";
             this.exportRepairOrderToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.exportRepairOrderToolStripMenuItem.Text = "Export Record";
-            this.exportRepairOrderToolStripMenuItem.Click += new System.EventHandler(this.exportRepairOrderToolStripMenuItem_Click);
+            
             // 
             // importRecordToolStripMenuItem
             // 

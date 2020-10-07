@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Loop_Inventory
 {
-    public partial class Receipt_Customer : Form
+    public partial class Add_Bank : Form
     {
-        public Receipt_Customer()
+        public Add_Bank()
         {
             InitializeComponent();
         }
@@ -27,24 +27,14 @@ namespace Loop_Inventory
             this.Close();
         }
 
-     
+        
+
+       
 
       
 
        
 
-        
-
-       
-
-       
-
-       
-
-       
-
-       
-
-        
+      
     }
 }

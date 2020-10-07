@@ -687,6 +687,8 @@ namespace Loop_Inventory
             txtPaymentModeDetails.Text = "";
             lblBalance.Text = "00";
         }
+
+        
     }
     
 }

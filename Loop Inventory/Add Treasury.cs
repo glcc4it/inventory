@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Loop_Inventory
 {
-    public partial class Receipt_Customer : Form
+    public partial class Add_Treasury : Form
     {
-        public Receipt_Customer()
+        public Add_Treasury()
         {
             InitializeComponent();
-        }
-
-        private void minimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
         }
 
         private void close_Click(object sender, EventArgs e)
@@ -27,23 +22,9 @@ namespace Loop_Inventory
             this.Close();
         }
 
-     
+       
 
       
-
-       
-
-        
-
-       
-
-       
-
-       
-
-       
-
-       
 
         
     }
