@@ -617,14 +617,12 @@
             this.exportRepairOrderToolStripMenuItem.Name = "exportRepairOrderToolStripMenuItem";
             this.exportRepairOrderToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.exportRepairOrderToolStripMenuItem.Text = "Export Record";
-            
             // 
             // importRecordToolStripMenuItem
             // 
             this.importRecordToolStripMenuItem.Name = "importRecordToolStripMenuItem";
             this.importRecordToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.importRecordToolStripMenuItem.Text = "Import Record";
-            this.importRecordToolStripMenuItem.Click += new System.EventHandler(this.importRecordToolStripMenuItem_Click);
             // 
             // accountreports
             // 
@@ -713,7 +711,6 @@
             this.partyListToolStripMenuItem.Name = "partyListToolStripMenuItem";
             this.partyListToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.partyListToolStripMenuItem.Text = "Supplier Ledger Report";
-            
             // 
             // customer
             // 

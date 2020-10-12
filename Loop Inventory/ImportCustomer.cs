@@ -3,54 +3,25 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Loop_Inventory
 {
-    public partial class Import_Services_Customer : Form
+    public partial class ImportCustomer : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=SERVER;Initial Catalog=Inventory_DB;Integrated Security=True;MultipleActiveResultSets=True;");
-        SqlCommand cmd;
         bool drag = false;
         Point start_point = new Point(0, 0);
-        public Import_Services_Customer()
+        public ImportCustomer()
         {
             InitializeComponent();
         }
 
-        private void bunifuImageButton6_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void bunifuImageButton5_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void panel32_MouseDown(object sender, MouseEventArgs e)
-        {
-            drag = true;
-            start_point = new Point(e.X, e.Y);
-        }
-
-        private void panel32_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (drag)
-            {
-
-
-                Point p = PointToScreen(e.Location);
-                this.Location = new Point(p.X - start_point.X, p.Y - start_point.Y);
-
-            }
-        }
 
 
         private void loadExcelToDataGrid(string strFilePath)
@@ -69,23 +40,8 @@ namespace Loop_Inventory
         }
 
 
-        private void panel32_MouseUp(object sender, MouseEventArgs e)
-        {
-            drag = false;
-        }
 
-        private void btnGetData_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            System.Windows.Forms.DialogResult dr = ofd.ShowDialog();
-            if (dr == DialogResult.OK)
-            {
-                txtFilePath.Text = ofd.FileName;
-                loadExcelToDataGrid(ofd.FileName);
-            }
-        }
-
-        private void btnexport_Click(object sender, EventArgs e)
+        private void btngetrecord_Click(object sender, EventArgs e)
         {
             int rowsTotal = 0;
             int colsTotal = 0;
@@ -143,28 +99,50 @@ namespace Loop_Inventory
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnGetData_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dgvExcelData.Rows.Count - 1; i++)
+            OpenFileDialog ofd = new OpenFileDialog();
+            System.Windows.Forms.DialogResult dr = ofd.ShowDialog();
+            if (dr == DialogResult.OK)
             {
-
-                cmd = new SqlCommand(@"Insert into tbl_repair_order VALUES('" + dgvExcelData.Rows[i].Cells[0].Value + "', '" + dgvExcelData.Rows[i].Cells[1].Value + "', '" + dgvExcelData.Rows[i].Cells[2].Value + "', '" + dgvExcelData.Rows[i].Cells[3].Value + "', '" + dgvExcelData.Rows[i].Cells[4].Value + "', '" + dgvExcelData.Rows[i].Cells[5].Value + "', '" + dgvExcelData.Rows[i].Cells[6].Value + "', '" + dgvExcelData.Rows[i].Cells[7].Value + "', '" + dgvExcelData.Rows[i].Cells[8].Value + "', '" + dgvExcelData.Rows[i].Cells[9].Value + "', '" + dgvExcelData.Rows[i].Cells[10].Value + "', '" + dgvExcelData.Rows[i].Cells[11].Value + "', '" + dgvExcelData.Rows[i].Cells[12].Value + "', '" + dgvExcelData.Rows[i].Cells[13].Value + "', '" + dgvExcelData.Rows[i].Cells[14].Value + "', '" + dgvExcelData.Rows[i].Cells[15].Value + "', '" + dgvExcelData.Rows[i].Cells[16].Value + "', '" + dgvExcelData.Rows[i].Cells[17].Value + "', '" + dgvExcelData.Rows[i].Cells[18].Value + "', '" + dgvExcelData.Rows[i].Cells[19].Value + "', '" + dgvExcelData.Rows[i].Cells[20].Value + "')", con);
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-
-
-
-
-
-
-
-
+                txtFilePath.Text = ofd.FileName;
+                loadExcelToDataGrid(ofd.FileName);
             }
         }
 
-        
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void panel32_MouseDown(object sender, MouseEventArgs e)
+        {
+            drag = true;
+            start_point = new Point(e.X, e.Y);
+
+        }
+
+        private void panel32_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (drag)
+            {
+
+
+                Point p = PointToScreen(e.Location);
+                this.Location = new Point(p.X - start_point.X, p.Y - start_point.Y);
+
+            }
+
+        }
+
+        private void panel32_MouseUp(object sender, MouseEventArgs e)
+        {
+            drag = false;
+        }
     }
 }
-
-

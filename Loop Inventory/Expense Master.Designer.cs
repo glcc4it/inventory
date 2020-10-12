@@ -279,6 +279,9 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(333, 27);
             this.panel12.TabIndex = 0;
+            this.panel12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel12_MouseDown);
+            this.panel12.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel12_MouseMove);
+            this.panel12.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel12_MouseUp);
             // 
             // bunifuImageButton1
             // 
@@ -517,9 +520,11 @@
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Expense_Master";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expense_Master";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Expense_Master_KeyDown);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel15.ResumeLayout(false);

@@ -144,6 +144,12 @@
     <Compile Include="Add Wallets.Designer.cs">
       <DependentUpon>Add Wallets.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddRevenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRevenue.Designer.cs">
+      <DependentUpon>AddRevenue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Brand Master.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,12 @@
     </Compile>
     <Compile Include="Daybook.Designer.cs">
       <DependentUpon>Daybook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailSetting.Designer.cs">
+      <DependentUpon>EmailSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="Encryption.cs" />
     <Compile Include="Expense Master.cs">
@@ -265,6 +277,18 @@
     <Compile Include="frmTrialBalance.Designer.cs">
       <DependentUpon>frmTrialBalance.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralPayment.Designer.cs">
+      <DependentUpon>GeneralPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralReceipt .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralReceipt .Designer.cs">
+      <DependentUpon>GeneralReceipt .cs</DependentUpon>
+    </Compile>
     <Compile Include="Godownmaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,11 +301,17 @@
     <Compile Include="Import Product.Designer.cs">
       <DependentUpon>Import Product.cs</DependentUpon>
     </Compile>
-    <Compile Include="Import Services Customer.cs">
+    <Compile Include="ImportCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Import Services Customer.Designer.cs">
-      <DependentUpon>Import Services Customer.cs</DependentUpon>
+    <Compile Include="ImportCustomer.Designer.cs">
+      <DependentUpon>ImportCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportVender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportVender.Designer.cs">
+      <DependentUpon>ImportVender.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory_DBDataSet.cs">
       <DependentUpon>Inventory_DBDataSet.xsd</DependentUpon>
@@ -312,6 +342,12 @@
     </Compile>
     <Compile Include="Money Transfer.Designer.cs">
       <DependentUpon>Money Transfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayTaxes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayTaxes.Designer.cs">
+      <DependentUpon>PayTaxes.cs</DependentUpon>
     </Compile>
     <Compile Include="Pricing level.cs">
       <SubType>Form</SubType>
@@ -368,6 +404,12 @@
     </Compile>
     <Compile Include="Receipt Customer.Designer.cs">
       <DependentUpon>Receipt Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reminder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reminder.Designer.cs">
+      <DependentUpon>Reminder.cs</DependentUpon>
     </Compile>
     <Compile Include="Sale Return.cs">
       <SubType>Form</SubType>
@@ -459,6 +501,12 @@
     <Compile Include="Tax Master.Designer.cs">
       <DependentUpon>Tax Master.cs</DependentUpon>
     </Compile>
+    <Compile Include="TerminalSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TerminalSetting.Designer.cs">
+      <DependentUpon>TerminalSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction Record.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -519,6 +567,9 @@
     <EmbeddedResource Include="Add Wallets.resx">
       <DependentUpon>Add Wallets.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddRevenue.resx">
+      <DependentUpon>AddRevenue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Brand Master.resx">
       <DependentUpon>Brand Master.cs</DependentUpon>
     </EmbeddedResource>
@@ -545,6 +596,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Daybook.resx">
       <DependentUpon>Daybook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailSetting.resx">
+      <DependentUpon>EmailSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Expense Master.resx">
       <DependentUpon>Expense Master.cs</DependentUpon>
@@ -579,14 +633,23 @@
     <EmbeddedResource Include="frmTrialBalance.resx">
       <DependentUpon>frmTrialBalance.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GeneralPayment.resx">
+      <DependentUpon>GeneralPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralReceipt .resx">
+      <DependentUpon>GeneralReceipt .cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Godownmaster.resx">
       <DependentUpon>Godownmaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Import Product.resx">
       <DependentUpon>Import Product.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Import Services Customer.resx">
-      <DependentUpon>Import Services Customer.cs</DependentUpon>
+    <EmbeddedResource Include="ImportCustomer.resx">
+      <DependentUpon>ImportCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportVender.resx">
+      <DependentUpon>ImportVender.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Item Master.resx">
       <DependentUpon>Item Master.cs</DependentUpon>
@@ -596,6 +659,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Money Transfer.resx">
       <DependentUpon>Money Transfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayTaxes.resx">
+      <DependentUpon>PayTaxes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pricing level.resx">
       <DependentUpon>Pricing level.cs</DependentUpon>
@@ -633,6 +699,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Receipt Customer.resx">
       <DependentUpon>Receipt Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reminder.resx">
+      <DependentUpon>Reminder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
@@ -684,6 +753,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tax Master.resx">
       <DependentUpon>Tax Master.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerminalSetting.resx">
+      <DependentUpon>TerminalSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction Record.resx">
       <DependentUpon>Transaction Record.cs</DependentUpon>

@@ -42,6 +42,75 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.u = new System.Windows.Forms.Panel();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.combo_Status = new System.Windows.Forms.ComboBox();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.txt_AddProfit = new System.Windows.Forms.TextBox();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.txt_Location = new System.Windows.Forms.TextBox();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.txt_RetailPrice = new System.Windows.Forms.TextBox();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.txt_CustomerPrice = new System.Windows.Forms.TextBox();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.txt_PurchasePrice = new System.Windows.Forms.TextBox();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.txt_WholeSalePrice = new System.Windows.Forms.TextBox();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.combo_SellingCurrency = new System.Windows.Forms.ComboBox();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.combo_PurchaseCurency = new System.Windows.Forms.ComboBox();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txt_ReorderLevel = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.label35 = new System.Windows.Forms.Label();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.txt_TaxPercentage = new System.Windows.Forms.TextBox();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.txt_NextShoppingDiscount = new System.Windows.Forms.TextBox();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.txt_DirectDiscount = new System.Windows.Forms.TextBox();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.combo_DiscountType = new System.Windows.Forms.ComboBox();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.txt_PreferredVender = new System.Windows.Forms.TextBox();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.txt_CompanyProduct = new System.Windows.Forms.TextBox();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.txt_QtyPerUnit = new System.Windows.Forms.TextBox();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.txt_Description = new System.Windows.Forms.TextBox();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.combo_Unit = new System.Windows.Forms.ComboBox();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.combo_Color = new System.Windows.Forms.ComboBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.combo_Brand = new System.Windows.Forms.ComboBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.combo_Category = new System.Windows.Forms.ComboBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.combo_Store = new System.Windows.Forms.ComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txt_ProductnameEng = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_ProductnameArabic = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txt_Productcode = new System.Windows.Forms.TextBox();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.txt_Barcode2 = new System.Windows.Forms.TextBox();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.txt_Barcode1 = new System.Windows.Forms.TextBox();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.panel41 = new System.Windows.Forms.Panel();
             this.bunifuImageButton21 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton15 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -49,10 +118,6 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.panel39 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel40 = new System.Windows.Forms.Panel();
-            this.panel41 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -92,117 +157,52 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.txt_Barcode1 = new System.Windows.Forms.TextBox();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.txt_Barcode2 = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txt_Productcode = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txt_ProductnameArabic = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txt_ProductnameEng = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.combo_Store = new System.Windows.Forms.ComboBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.combo_Category = new System.Windows.Forms.ComboBox();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.combo_Brand = new System.Windows.Forms.ComboBox();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.combo_Color = new System.Windows.Forms.ComboBox();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.combo_Unit = new System.Windows.Forms.ComboBox();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.txt_Description = new System.Windows.Forms.TextBox();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.txt_QtyPerUnit = new System.Windows.Forms.TextBox();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.txt_CompanyProduct = new System.Windows.Forms.TextBox();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.txt_PreferredVender = new System.Windows.Forms.TextBox();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.combo_DiscountType = new System.Windows.Forms.ComboBox();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.txt_DirectDiscount = new System.Windows.Forms.TextBox();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.txt_NextShoppingDiscount = new System.Windows.Forms.TextBox();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.txt_TaxPercentage = new System.Windows.Forms.TextBox();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txt_ReorderLevel = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.panel42 = new System.Windows.Forms.Panel();
-            this.label35 = new System.Windows.Forms.Label();
-            this.panel43 = new System.Windows.Forms.Panel();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.combo_PurchaseCurency = new System.Windows.Forms.ComboBox();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.txt_WholeSalePrice = new System.Windows.Forms.TextBox();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.combo_SellingCurrency = new System.Windows.Forms.ComboBox();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.txt_CustomerPrice = new System.Windows.Forms.TextBox();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.txt_PurchasePrice = new System.Windows.Forms.TextBox();
-            this.panel35 = new System.Windows.Forms.Panel();
-            this.txt_Location = new System.Windows.Forms.TextBox();
-            this.panel36 = new System.Windows.Forms.Panel();
-            this.txt_RetailPrice = new System.Windows.Forms.TextBox();
-            this.panel37 = new System.Windows.Forms.Panel();
-            this.combo_Status = new System.Windows.Forms.ComboBox();
-            this.panel38 = new System.Windows.Forms.Panel();
-            this.txt_AddProfit = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel46.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
             this.u.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton15)).BeginInit();
+            this.panel37.SuspendLayout();
+            this.panel38.SuspendLayout();
+            this.panel35.SuspendLayout();
+            this.panel36.SuspendLayout();
+            this.panel33.SuspendLayout();
+            this.panel34.SuspendLayout();
+            this.panel31.SuspendLayout();
+            this.panel32.SuspendLayout();
+            this.panel29.SuspendLayout();
+            this.panel30.SuspendLayout();
+            this.panel27.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.panel42.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel18.SuspendLayout();
             this.panel39.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            this.panel18.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.panel20.SuspendLayout();
-            this.panel22.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.panel24.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel26.SuspendLayout();
-            this.panel25.SuspendLayout();
-            this.panel28.SuspendLayout();
-            this.panel42.SuspendLayout();
-            this.panel27.SuspendLayout();
-            this.panel30.SuspendLayout();
-            this.panel29.SuspendLayout();
-            this.panel31.SuspendLayout();
-            this.panel32.SuspendLayout();
-            this.panel33.SuspendLayout();
-            this.panel34.SuspendLayout();
-            this.panel35.SuspendLayout();
-            this.panel36.SuspendLayout();
-            this.panel37.SuspendLayout();
-            this.panel38.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -429,6 +429,775 @@
             this.u.Size = new System.Drawing.Size(740, 691);
             this.u.TabIndex = 471;
             // 
+            // panel37
+            // 
+            this.panel37.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel37.Controls.Add(this.combo_Status);
+            this.panel37.Location = new System.Drawing.Point(517, 558);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(194, 29);
+            this.panel37.TabIndex = 954;
+            // 
+            // combo_Status
+            // 
+            this.combo_Status.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.combo_Status.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_Status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.combo_Status.DropDownHeight = 200;
+            this.combo_Status.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.combo_Status.ForeColor = System.Drawing.Color.Black;
+            this.combo_Status.FormattingEnabled = true;
+            this.combo_Status.IntegralHeight = false;
+            this.combo_Status.ItemHeight = 17;
+            this.combo_Status.Items.AddRange(new object[] {
+            "Active",
+            "Unactive"});
+            this.combo_Status.Location = new System.Drawing.Point(2, 2);
+            this.combo_Status.MaxDropDownItems = 50;
+            this.combo_Status.Name = "combo_Status";
+            this.combo_Status.Size = new System.Drawing.Size(190, 25);
+            this.combo_Status.TabIndex = 575;
+            this.combo_Status.Text = "--- Select Status---";
+            // 
+            // panel38
+            // 
+            this.panel38.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel38.Controls.Add(this.txt_AddProfit);
+            this.panel38.Location = new System.Drawing.Point(140, 558);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(194, 29);
+            this.panel38.TabIndex = 953;
+            // 
+            // txt_AddProfit
+            // 
+            this.txt_AddProfit.BackColor = System.Drawing.Color.White;
+            this.txt_AddProfit.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_AddProfit.ForeColor = System.Drawing.Color.Black;
+            this.txt_AddProfit.Location = new System.Drawing.Point(2, 2);
+            this.txt_AddProfit.Name = "txt_AddProfit";
+            this.txt_AddProfit.ReadOnly = true;
+            this.txt_AddProfit.Size = new System.Drawing.Size(190, 25);
+            this.txt_AddProfit.TabIndex = 3;
+            // 
+            // panel35
+            // 
+            this.panel35.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel35.Controls.Add(this.txt_Location);
+            this.panel35.Location = new System.Drawing.Point(517, 519);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(194, 29);
+            this.panel35.TabIndex = 952;
+            // 
+            // txt_Location
+            // 
+            this.txt_Location.BackColor = System.Drawing.Color.White;
+            this.txt_Location.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_Location.ForeColor = System.Drawing.Color.Black;
+            this.txt_Location.Location = new System.Drawing.Point(2, 2);
+            this.txt_Location.Name = "txt_Location";
+            this.txt_Location.ReadOnly = true;
+            this.txt_Location.Size = new System.Drawing.Size(190, 25);
+            this.txt_Location.TabIndex = 3;
+            // 
+            // panel36
+            // 
+            this.panel36.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel36.Controls.Add(this.txt_RetailPrice);
+            this.panel36.Location = new System.Drawing.Point(140, 519);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(194, 29);
+            this.panel36.TabIndex = 951;
+            // 
+            // txt_RetailPrice
+            // 
+            this.txt_RetailPrice.BackColor = System.Drawing.Color.White;
+            this.txt_RetailPrice.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_RetailPrice.ForeColor = System.Drawing.Color.Black;
+            this.txt_RetailPrice.Location = new System.Drawing.Point(2, 2);
+            this.txt_RetailPrice.Name = "txt_RetailPrice";
+            this.txt_RetailPrice.ReadOnly = true;
+            this.txt_RetailPrice.Size = new System.Drawing.Size(190, 25);
+            this.txt_RetailPrice.TabIndex = 3;
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel33.Controls.Add(this.txt_CustomerPrice);
+            this.panel33.Location = new System.Drawing.Point(517, 481);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(194, 29);
+            this.panel33.TabIndex = 950;
+            // 
+            // txt_CustomerPrice
+            // 
+            this.txt_CustomerPrice.BackColor = System.Drawing.Color.White;
+            this.txt_CustomerPrice.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_CustomerPrice.ForeColor = System.Drawing.Color.Black;
+            this.txt_CustomerPrice.Location = new System.Drawing.Point(2, 2);
+            this.txt_CustomerPrice.Name = "txt_CustomerPrice";
+            this.txt_CustomerPrice.ReadOnly = true;
+            this.txt_CustomerPrice.Size = new System.Drawing.Size(190, 25);
+            this.txt_CustomerPrice.TabIndex = 3;
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel34.Controls.Add(this.txt_PurchasePrice);
+            this.panel34.Location = new System.Drawing.Point(140, 481);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(194, 29);
+            this.panel34.TabIndex = 949;
+            // 
+            // txt_PurchasePrice
+            // 
+            this.txt_PurchasePrice.BackColor = System.Drawing.Color.White;
+            this.txt_PurchasePrice.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_PurchasePrice.ForeColor = System.Drawing.Color.Black;
+            this.txt_PurchasePrice.Location = new System.Drawing.Point(2, 2);
+            this.txt_PurchasePrice.Name = "txt_PurchasePrice";
+            this.txt_PurchasePrice.ReadOnly = true;
+            this.txt_PurchasePrice.Size = new System.Drawing.Size(190, 25);
+            this.txt_PurchasePrice.TabIndex = 3;
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel31.Controls.Add(this.txt_WholeSalePrice);
+            this.panel31.Location = new System.Drawing.Point(517, 443);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(194, 29);
+            this.panel31.TabIndex = 948;
+            // 
+            // txt_WholeSalePrice
+            // 
+            this.txt_WholeSalePrice.BackColor = System.Drawing.Color.White;
+            this.txt_WholeSalePrice.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_WholeSalePrice.ForeColor = System.Drawing.Color.Black;
+            this.txt_WholeSalePrice.Location = new System.Drawing.Point(2, 2);
+            this.txt_WholeSalePrice.Name = "txt_WholeSalePrice";
+            this.txt_WholeSalePrice.ReadOnly = true;
+            this.txt_WholeSalePrice.Size = new System.Drawing.Size(190, 25);
+            this.txt_WholeSalePrice.TabIndex = 3;
+            // 
+            // panel32
+            // 
+            this.panel32.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel32.Controls.Add(this.combo_SellingCurrency);
+            this.panel32.Location = new System.Drawing.Point(140, 443);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(194, 29);
+            this.panel32.TabIndex = 947;
+            // 
+            // combo_SellingCurrency
+            // 
+            this.combo_SellingCurrency.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.combo_SellingCurrency.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_SellingCurrency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.combo_SellingCurrency.DropDownHeight = 200;
+            this.combo_SellingCurrency.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.combo_SellingCurrency.ForeColor = System.Drawing.Color.Black;
+            this.combo_SellingCurrency.FormattingEnabled = true;
+            this.combo_SellingCurrency.IntegralHeight = false;
+            this.combo_SellingCurrency.ItemHeight = 17;
+            this.combo_SellingCurrency.Location = new System.Drawing.Point(2, 2);
+            this.combo_SellingCurrency.MaxDropDownItems = 50;
+            this.combo_SellingCurrency.Name = "combo_SellingCurrency";
+            this.combo_SellingCurrency.Size = new System.Drawing.Size(190, 25);
+            this.combo_SellingCurrency.TabIndex = 574;
+            this.combo_SellingCurrency.Text = "--- Select Currency---";
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel29.Controls.Add(this.combo_PurchaseCurency);
+            this.panel29.Location = new System.Drawing.Point(517, 406);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(194, 29);
+            this.panel29.TabIndex = 946;
+            // 
+            // combo_PurchaseCurency
+            // 
+            this.combo_PurchaseCurency.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.combo_PurchaseCurency.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_PurchaseCurency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.combo_PurchaseCurency.DropDownHeight = 200;
+            this.combo_PurchaseCurency.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.combo_PurchaseCurency.ForeColor = System.Drawing.Color.Black;
+            this.combo_PurchaseCurency.FormattingEnabled = true;
+            this.combo_PurchaseCurency.IntegralHeight = false;
+            this.combo_PurchaseCurency.ItemHeight = 17;
+            this.combo_PurchaseCurency.Location = new System.Drawing.Point(2, 2);
+            this.combo_PurchaseCurency.MaxDropDownItems = 50;
+            this.combo_PurchaseCurency.Name = "combo_PurchaseCurency";
+            this.combo_PurchaseCurency.Size = new System.Drawing.Size(190, 25);
+            this.combo_PurchaseCurency.TabIndex = 573;
+            this.combo_PurchaseCurency.Text = "--- Select Currency---";
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel30.Controls.Add(this.dateTimePicker1);
+            this.panel30.Location = new System.Drawing.Point(140, 406);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(194, 29);
+            this.panel30.TabIndex = 945;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(190, 25);
+            this.dateTimePicker1.TabIndex = 8;
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel27.Controls.Add(this.dateTimePicker2);
+            this.panel27.Location = new System.Drawing.Point(517, 369);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(194, 29);
+            this.panel27.TabIndex = 944;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker2.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(2, 2);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(190, 25);
+            this.dateTimePicker2.TabIndex = 7;
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel28.Controls.Add(this.label26);
+            this.panel28.Controls.Add(this.txt_ReorderLevel);
+            this.panel28.Controls.Add(this.label27);
+            this.panel28.Controls.Add(this.panel42);
+            this.panel28.Location = new System.Drawing.Point(140, 369);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(194, 29);
+            this.panel28.TabIndex = 943;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
+            this.label26.ForeColor = System.Drawing.Color.Black;
+            this.label26.Location = new System.Drawing.Point(-58, 324);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(192, 18);
+            this.label26.TabIndex = 926;
+            this.label26.Text = "Powered By Glcc Of IT Solutions";
+            // 
+            // txt_ReorderLevel
+            // 
+            this.txt_ReorderLevel.BackColor = System.Drawing.Color.White;
+            this.txt_ReorderLevel.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_ReorderLevel.ForeColor = System.Drawing.Color.Black;
+            this.txt_ReorderLevel.Location = new System.Drawing.Point(2, 2);
+            this.txt_ReorderLevel.Name = "txt_ReorderLevel";
+            this.txt_ReorderLevel.ReadOnly = true;
+            this.txt_ReorderLevel.Size = new System.Drawing.Size(190, 25);
+            this.txt_ReorderLevel.TabIndex = 2;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label27.Location = new System.Drawing.Point(-74, 299);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(230, 24);
+            this.label27.TabIndex = 925;
+            this.label27.Text = "LOOP STOCK INVENTORY";
+            // 
+            // panel42
+            // 
+            this.panel42.BackColor = System.Drawing.Color.Transparent;
+            this.panel42.Controls.Add(this.label35);
+            this.panel42.Controls.Add(this.panel43);
+            this.panel42.ForeColor = System.Drawing.Color.Black;
+            this.panel42.Location = new System.Drawing.Point(-120, 301);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(324, 37);
+            this.panel42.TabIndex = 927;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.Gray;
+            this.label35.Location = new System.Drawing.Point(626, 18);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(0, 15);
+            this.label35.TabIndex = 432;
+            // 
+            // panel43
+            // 
+            this.panel43.BackColor = System.Drawing.Color.Gray;
+            this.panel43.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel43.Location = new System.Drawing.Point(0, 35);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(324, 2);
+            this.panel43.TabIndex = 425;
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel25.Controls.Add(this.txt_TaxPercentage);
+            this.panel25.Location = new System.Drawing.Point(517, 332);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(194, 29);
+            this.panel25.TabIndex = 942;
+            // 
+            // txt_TaxPercentage
+            // 
+            this.txt_TaxPercentage.BackColor = System.Drawing.Color.White;
+            this.txt_TaxPercentage.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_TaxPercentage.ForeColor = System.Drawing.Color.Black;
+            this.txt_TaxPercentage.Location = new System.Drawing.Point(2, 2);
+            this.txt_TaxPercentage.Name = "txt_TaxPercentage";
+            this.txt_TaxPercentage.ReadOnly = true;
+            this.txt_TaxPercentage.Size = new System.Drawing.Size(190, 25);
+            this.txt_TaxPercentage.TabIndex = 3;
+            // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel26.Controls.Add(this.txt_NextShoppingDiscount);
+            this.panel26.Location = new System.Drawing.Point(140, 332);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(194, 29);
+            this.panel26.TabIndex = 941;
+            // 
+            // txt_NextShoppingDiscount
+            // 
+            this.txt_NextShoppingDiscount.BackColor = System.Drawing.Color.White;
+            this.txt_NextShoppingDiscount.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_NextShoppingDiscount.ForeColor = System.Drawing.Color.Black;
+            this.txt_NextShoppingDiscount.Location = new System.Drawing.Point(2, 2);
+            this.txt_NextShoppingDiscount.Name = "txt_NextShoppingDiscount";
+            this.txt_NextShoppingDiscount.ReadOnly = true;
+            this.txt_NextShoppingDiscount.Size = new System.Drawing.Size(190, 25);
+            this.txt_NextShoppingDiscount.TabIndex = 2;
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel23.Controls.Add(this.txt_DirectDiscount);
+            this.panel23.Location = new System.Drawing.Point(517, 295);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(194, 29);
+            this.panel23.TabIndex = 940;
+            // 
+            // txt_DirectDiscount
+            // 
+            this.txt_DirectDiscount.BackColor = System.Drawing.Color.White;
+            this.txt_DirectDiscount.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_DirectDiscount.ForeColor = System.Drawing.Color.Black;
+            this.txt_DirectDiscount.Location = new System.Drawing.Point(2, 2);
+            this.txt_DirectDiscount.Name = "txt_DirectDiscount";
+            this.txt_DirectDiscount.ReadOnly = true;
+            this.txt_DirectDiscount.Size = new System.Drawing.Size(190, 25);
+            this.txt_DirectDiscount.TabIndex = 3;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel24.Controls.Add(this.combo_DiscountType);
+            this.panel24.Location = new System.Drawing.Point(140, 295);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(194, 29);
+            this.panel24.TabIndex = 939;
+            // 
+            // combo_DiscountType
+            // 
+            this.combo_DiscountType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.combo_DiscountType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_DiscountType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.combo_DiscountType.DropDownHeight = 200;
+            this.combo_DiscountType.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.combo_DiscountType.ForeColor = System.Drawing.Color.Black;
+            this.combo_DiscountType.FormattingEnabled = true;
+            this.combo_DiscountType.IntegralHeight = false;
+            this.combo_DiscountType.ItemHeight = 17;
+            this.combo_DiscountType.Location = new System.Drawing.Point(2, 2);
+            this.combo_DiscountType.MaxDropDownItems = 50;
+            this.combo_DiscountType.Name = "combo_DiscountType";
+            this.combo_DiscountType.Size = new System.Drawing.Size(190, 25);
+            this.combo_DiscountType.TabIndex = 572;
+            this.combo_DiscountType.Text = "--- Select Discount Type---";
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel21.Controls.Add(this.txt_PreferredVender);
+            this.panel21.Location = new System.Drawing.Point(517, 259);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(194, 29);
+            this.panel21.TabIndex = 938;
+            // 
+            // txt_PreferredVender
+            // 
+            this.txt_PreferredVender.BackColor = System.Drawing.Color.White;
+            this.txt_PreferredVender.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_PreferredVender.ForeColor = System.Drawing.Color.Black;
+            this.txt_PreferredVender.Location = new System.Drawing.Point(2, 2);
+            this.txt_PreferredVender.Name = "txt_PreferredVender";
+            this.txt_PreferredVender.ReadOnly = true;
+            this.txt_PreferredVender.Size = new System.Drawing.Size(190, 25);
+            this.txt_PreferredVender.TabIndex = 3;
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel22.Controls.Add(this.txt_CompanyProduct);
+            this.panel22.Location = new System.Drawing.Point(140, 259);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(194, 29);
+            this.panel22.TabIndex = 937;
+            // 
+            // txt_CompanyProduct
+            // 
+            this.txt_CompanyProduct.BackColor = System.Drawing.Color.White;
+            this.txt_CompanyProduct.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_CompanyProduct.ForeColor = System.Drawing.Color.Black;
+            this.txt_CompanyProduct.Location = new System.Drawing.Point(2, 2);
+            this.txt_CompanyProduct.Name = "txt_CompanyProduct";
+            this.txt_CompanyProduct.ReadOnly = true;
+            this.txt_CompanyProduct.Size = new System.Drawing.Size(190, 25);
+            this.txt_CompanyProduct.TabIndex = 2;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel20.Controls.Add(this.txt_QtyPerUnit);
+            this.panel20.Location = new System.Drawing.Point(140, 223);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(194, 29);
+            this.panel20.TabIndex = 936;
+            // 
+            // txt_QtyPerUnit
+            // 
+            this.txt_QtyPerUnit.BackColor = System.Drawing.Color.White;
+            this.txt_QtyPerUnit.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_QtyPerUnit.ForeColor = System.Drawing.Color.Black;
+            this.txt_QtyPerUnit.Location = new System.Drawing.Point(2, 2);
+            this.txt_QtyPerUnit.Name = "txt_QtyPerUnit";
+            this.txt_QtyPerUnit.ReadOnly = true;
+            this.txt_QtyPerUnit.Size = new System.Drawing.Size(190, 25);
+            this.txt_QtyPerUnit.TabIndex = 2;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel19.Controls.Add(this.txt_Description);
+            this.panel19.Location = new System.Drawing.Point(517, 187);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(194, 65);
+            this.panel19.TabIndex = 935;
+            // 
+            // txt_Description
+            // 
+            this.txt_Description.BackColor = System.Drawing.Color.White;
+            this.txt_Description.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_Description.ForeColor = System.Drawing.Color.Black;
+            this.txt_Description.Location = new System.Drawing.Point(2, 2);
+            this.txt_Description.Multiline = true;
+            this.txt_Description.Name = "txt_Description";
+            this.txt_Description.ReadOnly = true;
+            this.txt_Description.Size = new System.Drawing.Size(190, 61);
+            this.txt_Description.TabIndex = 3;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel15.Controls.Add(this.combo_Unit);
+            this.panel15.Location = new System.Drawing.Point(517, 151);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(194, 29);
+            this.panel15.TabIndex = 934;
+            // 
+            // combo_Unit
+            // 
+            this.combo_Unit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.combo_Unit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_Unit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.combo_Unit.DropDownHeight = 200;
+            this.combo_Unit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.combo_Unit.ForeColor = System.Drawing.Color.Black;
+            this.combo_Unit.FormattingEnabled = true;
+            this.combo_Unit.IntegralHeight = false;
+            this.combo_Unit.ItemHeight = 17;
+            this.combo_Unit.Location = new System.Drawing.Point(2, 2);
+            this.combo_Unit.MaxDropDownItems = 50;
+            this.combo_Unit.Name = "combo_Unit";
+            this.combo_Unit.Size = new System.Drawing.Size(190, 25);
+            this.combo_Unit.TabIndex = 571;
+            this.combo_Unit.Text = "--- Select Unit---";
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel16.Controls.Add(this.combo_Color);
+            this.panel16.Location = new System.Drawing.Point(140, 187);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(194, 29);
+            this.panel16.TabIndex = 933;
+            // 
+            // combo_Color
+            // 
+            this.combo_Color.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.combo_Color.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_Color.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.combo_Color.DropDownHeight = 200;
+            this.combo_Color.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.combo_Color.ForeColor = System.Drawing.Color.Black;
+            this.combo_Color.FormattingEnabled = true;
+            this.combo_Color.IntegralHeight = false;
+            this.combo_Color.ItemHeight = 17;
+            this.combo_Color.Location = new System.Drawing.Point(2, 2);
+            this.combo_Color.MaxDropDownItems = 50;
+            this.combo_Color.Name = "combo_Color";
+            this.combo_Color.Size = new System.Drawing.Size(190, 25);
+            this.combo_Color.TabIndex = 571;
+            this.combo_Color.Text = "--- Select Color---";
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel12.Controls.Add(this.combo_Brand);
+            this.panel12.Location = new System.Drawing.Point(517, 115);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(194, 29);
+            this.panel12.TabIndex = 932;
+            // 
+            // combo_Brand
+            // 
+            this.combo_Brand.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.combo_Brand.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_Brand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.combo_Brand.DropDownHeight = 200;
+            this.combo_Brand.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.combo_Brand.ForeColor = System.Drawing.Color.Black;
+            this.combo_Brand.FormattingEnabled = true;
+            this.combo_Brand.IntegralHeight = false;
+            this.combo_Brand.ItemHeight = 17;
+            this.combo_Brand.Location = new System.Drawing.Point(2, 2);
+            this.combo_Brand.MaxDropDownItems = 50;
+            this.combo_Brand.Name = "combo_Brand";
+            this.combo_Brand.Size = new System.Drawing.Size(190, 25);
+            this.combo_Brand.TabIndex = 571;
+            this.combo_Brand.Text = "--- Select Brand---";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel9.Controls.Add(this.combo_Category);
+            this.panel9.Location = new System.Drawing.Point(140, 151);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(194, 29);
+            this.panel9.TabIndex = 931;
+            // 
+            // combo_Category
+            // 
+            this.combo_Category.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.combo_Category.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_Category.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.combo_Category.DropDownHeight = 200;
+            this.combo_Category.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.combo_Category.ForeColor = System.Drawing.Color.Black;
+            this.combo_Category.FormattingEnabled = true;
+            this.combo_Category.IntegralHeight = false;
+            this.combo_Category.ItemHeight = 17;
+            this.combo_Category.Location = new System.Drawing.Point(2, 2);
+            this.combo_Category.MaxDropDownItems = 50;
+            this.combo_Category.Name = "combo_Category";
+            this.combo_Category.Size = new System.Drawing.Size(190, 25);
+            this.combo_Category.TabIndex = 571;
+            this.combo_Category.Text = "--- Select Category---";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel6.Controls.Add(this.combo_Store);
+            this.panel6.Location = new System.Drawing.Point(517, 80);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(194, 29);
+            this.panel6.TabIndex = 930;
+            // 
+            // combo_Store
+            // 
+            this.combo_Store.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.combo_Store.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_Store.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.combo_Store.DropDownHeight = 200;
+            this.combo_Store.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.combo_Store.ForeColor = System.Drawing.Color.Black;
+            this.combo_Store.FormattingEnabled = true;
+            this.combo_Store.IntegralHeight = false;
+            this.combo_Store.ItemHeight = 17;
+            this.combo_Store.Location = new System.Drawing.Point(2, 2);
+            this.combo_Store.MaxDropDownItems = 50;
+            this.combo_Store.Name = "combo_Store";
+            this.combo_Store.Size = new System.Drawing.Size(190, 25);
+            this.combo_Store.TabIndex = 571;
+            this.combo_Store.Text = "--- Select Store Type---";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel3.Controls.Add(this.txt_ProductnameEng);
+            this.panel3.Location = new System.Drawing.Point(140, 80);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(194, 64);
+            this.panel3.TabIndex = 929;
+            // 
+            // txt_ProductnameEng
+            // 
+            this.txt_ProductnameEng.BackColor = System.Drawing.Color.White;
+            this.txt_ProductnameEng.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_ProductnameEng.ForeColor = System.Drawing.Color.Black;
+            this.txt_ProductnameEng.Location = new System.Drawing.Point(2, 2);
+            this.txt_ProductnameEng.Multiline = true;
+            this.txt_ProductnameEng.Name = "txt_ProductnameEng";
+            this.txt_ProductnameEng.ReadOnly = true;
+            this.txt_ProductnameEng.Size = new System.Drawing.Size(190, 60);
+            this.txt_ProductnameEng.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.txt_ProductnameArabic);
+            this.panel2.Location = new System.Drawing.Point(517, 45);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(194, 29);
+            this.panel2.TabIndex = 928;
+            // 
+            // txt_ProductnameArabic
+            // 
+            this.txt_ProductnameArabic.BackColor = System.Drawing.Color.White;
+            this.txt_ProductnameArabic.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_ProductnameArabic.ForeColor = System.Drawing.Color.Black;
+            this.txt_ProductnameArabic.Location = new System.Drawing.Point(2, 2);
+            this.txt_ProductnameArabic.Name = "txt_ProductnameArabic";
+            this.txt_ProductnameArabic.ReadOnly = true;
+            this.txt_ProductnameArabic.Size = new System.Drawing.Size(190, 25);
+            this.txt_ProductnameArabic.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel5.Controls.Add(this.txt_Productcode);
+            this.panel5.Location = new System.Drawing.Point(140, 45);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(194, 29);
+            this.panel5.TabIndex = 927;
+            // 
+            // txt_Productcode
+            // 
+            this.txt_Productcode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txt_Productcode.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_Productcode.ForeColor = System.Drawing.Color.Black;
+            this.txt_Productcode.Location = new System.Drawing.Point(2, 2);
+            this.txt_Productcode.Name = "txt_Productcode";
+            this.txt_Productcode.ReadOnly = true;
+            this.txt_Productcode.Size = new System.Drawing.Size(190, 25);
+            this.txt_Productcode.TabIndex = 2;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel17.Controls.Add(this.txt_Barcode2);
+            this.panel17.Location = new System.Drawing.Point(517, 10);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(194, 29);
+            this.panel17.TabIndex = 926;
+            // 
+            // txt_Barcode2
+            // 
+            this.txt_Barcode2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txt_Barcode2.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_Barcode2.ForeColor = System.Drawing.Color.Black;
+            this.txt_Barcode2.Location = new System.Drawing.Point(2, 2);
+            this.txt_Barcode2.Name = "txt_Barcode2";
+            this.txt_Barcode2.ReadOnly = true;
+            this.txt_Barcode2.Size = new System.Drawing.Size(190, 25);
+            this.txt_Barcode2.TabIndex = 2;
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel18.Controls.Add(this.txt_Barcode1);
+            this.panel18.Location = new System.Drawing.Point(140, 10);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(194, 29);
+            this.panel18.TabIndex = 925;
+            // 
+            // txt_Barcode1
+            // 
+            this.txt_Barcode1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txt_Barcode1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_Barcode1.ForeColor = System.Drawing.Color.Black;
+            this.txt_Barcode1.Location = new System.Drawing.Point(2, 2);
+            this.txt_Barcode1.Name = "txt_Barcode1";
+            this.txt_Barcode1.ReadOnly = true;
+            this.txt_Barcode1.Size = new System.Drawing.Size(190, 25);
+            this.txt_Barcode1.TabIndex = 2;
+            // 
+            // panel39
+            // 
+            this.panel39.BackColor = System.Drawing.Color.Transparent;
+            this.panel39.Controls.Add(this.pictureBox1);
+            this.panel39.Controls.Add(this.panel40);
+            this.panel39.Controls.Add(this.panel41);
+            this.panel39.Location = new System.Drawing.Point(140, 597);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(194, 87);
+            this.panel39.TabIndex = 917;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(54, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(78, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 915;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel40
+            // 
+            this.panel40.BackColor = System.Drawing.Color.Silver;
+            this.panel40.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel40.Location = new System.Drawing.Point(-9, 46);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(179, 2);
+            this.panel40.TabIndex = 469;
+            // 
+            // panel41
+            // 
+            this.panel41.BackColor = System.Drawing.Color.Silver;
+            this.panel41.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel41.Location = new System.Drawing.Point(16, 39);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(188, 2);
+            this.panel41.TabIndex = 468;
+            // 
             // bunifuImageButton21
             // 
             this.bunifuImageButton21.BackColor = System.Drawing.Color.Transparent;
@@ -528,48 +1297,6 @@
             this.linkLabel2.TabIndex = 918;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Browse";
-            // 
-            // panel39
-            // 
-            this.panel39.BackColor = System.Drawing.Color.Transparent;
-            this.panel39.Controls.Add(this.pictureBox1);
-            this.panel39.Controls.Add(this.panel40);
-            this.panel39.Controls.Add(this.panel41);
-            this.panel39.Location = new System.Drawing.Point(144, 597);
-            this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(194, 87);
-            this.panel39.TabIndex = 917;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(54, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 74);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 915;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel40
-            // 
-            this.panel40.BackColor = System.Drawing.Color.Silver;
-            this.panel40.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel40.Location = new System.Drawing.Point(-9, 46);
-            this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(179, 2);
-            this.panel40.TabIndex = 469;
-            // 
-            // panel41
-            // 
-            this.panel41.BackColor = System.Drawing.Color.Silver;
-            this.panel41.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel41.Location = new System.Drawing.Point(16, 39);
-            this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(188, 2);
-            this.panel41.TabIndex = 468;
             // 
             // label24
             // 
@@ -1037,733 +1764,6 @@
             this.panel10.Size = new System.Drawing.Size(2, 691);
             this.panel10.TabIndex = 334;
             // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel18.Controls.Add(this.txt_Barcode1);
-            this.panel18.Location = new System.Drawing.Point(140, 10);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(194, 29);
-            this.panel18.TabIndex = 925;
-            // 
-            // txt_Barcode1
-            // 
-            this.txt_Barcode1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txt_Barcode1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_Barcode1.ForeColor = System.Drawing.Color.Black;
-            this.txt_Barcode1.Location = new System.Drawing.Point(2, 2);
-            this.txt_Barcode1.Name = "txt_Barcode1";
-            this.txt_Barcode1.ReadOnly = true;
-            this.txt_Barcode1.Size = new System.Drawing.Size(190, 25);
-            this.txt_Barcode1.TabIndex = 2;
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel17.Controls.Add(this.txt_Barcode2);
-            this.panel17.Location = new System.Drawing.Point(517, 10);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(194, 29);
-            this.panel17.TabIndex = 926;
-            // 
-            // txt_Barcode2
-            // 
-            this.txt_Barcode2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txt_Barcode2.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_Barcode2.ForeColor = System.Drawing.Color.Black;
-            this.txt_Barcode2.Location = new System.Drawing.Point(2, 2);
-            this.txt_Barcode2.Name = "txt_Barcode2";
-            this.txt_Barcode2.ReadOnly = true;
-            this.txt_Barcode2.Size = new System.Drawing.Size(190, 25);
-            this.txt_Barcode2.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel5.Controls.Add(this.txt_Productcode);
-            this.panel5.Location = new System.Drawing.Point(140, 45);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(194, 29);
-            this.panel5.TabIndex = 927;
-            // 
-            // txt_Productcode
-            // 
-            this.txt_Productcode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txt_Productcode.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_Productcode.ForeColor = System.Drawing.Color.Black;
-            this.txt_Productcode.Location = new System.Drawing.Point(2, 2);
-            this.txt_Productcode.Name = "txt_Productcode";
-            this.txt_Productcode.ReadOnly = true;
-            this.txt_Productcode.Size = new System.Drawing.Size(190, 25);
-            this.txt_Productcode.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.txt_ProductnameArabic);
-            this.panel2.Location = new System.Drawing.Point(517, 45);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(194, 29);
-            this.panel2.TabIndex = 928;
-            // 
-            // txt_ProductnameArabic
-            // 
-            this.txt_ProductnameArabic.BackColor = System.Drawing.Color.White;
-            this.txt_ProductnameArabic.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_ProductnameArabic.ForeColor = System.Drawing.Color.Black;
-            this.txt_ProductnameArabic.Location = new System.Drawing.Point(2, 2);
-            this.txt_ProductnameArabic.Name = "txt_ProductnameArabic";
-            this.txt_ProductnameArabic.ReadOnly = true;
-            this.txt_ProductnameArabic.Size = new System.Drawing.Size(190, 25);
-            this.txt_ProductnameArabic.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel3.Controls.Add(this.txt_ProductnameEng);
-            this.panel3.Location = new System.Drawing.Point(140, 80);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(194, 64);
-            this.panel3.TabIndex = 929;
-            // 
-            // txt_ProductnameEng
-            // 
-            this.txt_ProductnameEng.BackColor = System.Drawing.Color.White;
-            this.txt_ProductnameEng.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_ProductnameEng.ForeColor = System.Drawing.Color.Black;
-            this.txt_ProductnameEng.Location = new System.Drawing.Point(2, 2);
-            this.txt_ProductnameEng.Multiline = true;
-            this.txt_ProductnameEng.Name = "txt_ProductnameEng";
-            this.txt_ProductnameEng.ReadOnly = true;
-            this.txt_ProductnameEng.Size = new System.Drawing.Size(190, 60);
-            this.txt_ProductnameEng.TabIndex = 2;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel6.Controls.Add(this.combo_Store);
-            this.panel6.Location = new System.Drawing.Point(517, 80);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(194, 29);
-            this.panel6.TabIndex = 930;
-            // 
-            // combo_Store
-            // 
-            this.combo_Store.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.combo_Store.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_Store.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.combo_Store.DropDownHeight = 200;
-            this.combo_Store.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.combo_Store.ForeColor = System.Drawing.Color.Black;
-            this.combo_Store.FormattingEnabled = true;
-            this.combo_Store.IntegralHeight = false;
-            this.combo_Store.ItemHeight = 17;
-            this.combo_Store.Location = new System.Drawing.Point(2, 2);
-            this.combo_Store.MaxDropDownItems = 50;
-            this.combo_Store.Name = "combo_Store";
-            this.combo_Store.Size = new System.Drawing.Size(190, 25);
-            this.combo_Store.TabIndex = 571;
-            this.combo_Store.Text = "--- Select Store Type---";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel9.Controls.Add(this.combo_Category);
-            this.panel9.Location = new System.Drawing.Point(140, 151);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(194, 29);
-            this.panel9.TabIndex = 931;
-            // 
-            // combo_Category
-            // 
-            this.combo_Category.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.combo_Category.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_Category.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.combo_Category.DropDownHeight = 200;
-            this.combo_Category.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.combo_Category.ForeColor = System.Drawing.Color.Black;
-            this.combo_Category.FormattingEnabled = true;
-            this.combo_Category.IntegralHeight = false;
-            this.combo_Category.ItemHeight = 17;
-            this.combo_Category.Location = new System.Drawing.Point(2, 2);
-            this.combo_Category.MaxDropDownItems = 50;
-            this.combo_Category.Name = "combo_Category";
-            this.combo_Category.Size = new System.Drawing.Size(190, 25);
-            this.combo_Category.TabIndex = 571;
-            this.combo_Category.Text = "--- Select Category---";
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel12.Controls.Add(this.combo_Brand);
-            this.panel12.Location = new System.Drawing.Point(517, 115);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(194, 29);
-            this.panel12.TabIndex = 932;
-            // 
-            // combo_Brand
-            // 
-            this.combo_Brand.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.combo_Brand.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_Brand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.combo_Brand.DropDownHeight = 200;
-            this.combo_Brand.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.combo_Brand.ForeColor = System.Drawing.Color.Black;
-            this.combo_Brand.FormattingEnabled = true;
-            this.combo_Brand.IntegralHeight = false;
-            this.combo_Brand.ItemHeight = 17;
-            this.combo_Brand.Location = new System.Drawing.Point(2, 2);
-            this.combo_Brand.MaxDropDownItems = 50;
-            this.combo_Brand.Name = "combo_Brand";
-            this.combo_Brand.Size = new System.Drawing.Size(190, 25);
-            this.combo_Brand.TabIndex = 571;
-            this.combo_Brand.Text = "--- Select Brand---";
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel16.Controls.Add(this.combo_Color);
-            this.panel16.Location = new System.Drawing.Point(140, 187);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(194, 29);
-            this.panel16.TabIndex = 933;
-            // 
-            // combo_Color
-            // 
-            this.combo_Color.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.combo_Color.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_Color.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.combo_Color.DropDownHeight = 200;
-            this.combo_Color.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.combo_Color.ForeColor = System.Drawing.Color.Black;
-            this.combo_Color.FormattingEnabled = true;
-            this.combo_Color.IntegralHeight = false;
-            this.combo_Color.ItemHeight = 17;
-            this.combo_Color.Location = new System.Drawing.Point(2, 2);
-            this.combo_Color.MaxDropDownItems = 50;
-            this.combo_Color.Name = "combo_Color";
-            this.combo_Color.Size = new System.Drawing.Size(190, 25);
-            this.combo_Color.TabIndex = 571;
-            this.combo_Color.Text = "--- Select Color---";
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel15.Controls.Add(this.combo_Unit);
-            this.panel15.Location = new System.Drawing.Point(517, 151);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(194, 29);
-            this.panel15.TabIndex = 934;
-            // 
-            // combo_Unit
-            // 
-            this.combo_Unit.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.combo_Unit.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_Unit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.combo_Unit.DropDownHeight = 200;
-            this.combo_Unit.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.combo_Unit.ForeColor = System.Drawing.Color.Black;
-            this.combo_Unit.FormattingEnabled = true;
-            this.combo_Unit.IntegralHeight = false;
-            this.combo_Unit.ItemHeight = 17;
-            this.combo_Unit.Location = new System.Drawing.Point(2, 2);
-            this.combo_Unit.MaxDropDownItems = 50;
-            this.combo_Unit.Name = "combo_Unit";
-            this.combo_Unit.Size = new System.Drawing.Size(190, 25);
-            this.combo_Unit.TabIndex = 571;
-            this.combo_Unit.Text = "--- Select Unit---";
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel19.Controls.Add(this.txt_Description);
-            this.panel19.Location = new System.Drawing.Point(517, 187);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(194, 65);
-            this.panel19.TabIndex = 935;
-            // 
-            // txt_Description
-            // 
-            this.txt_Description.BackColor = System.Drawing.Color.White;
-            this.txt_Description.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_Description.ForeColor = System.Drawing.Color.Black;
-            this.txt_Description.Location = new System.Drawing.Point(2, 2);
-            this.txt_Description.Multiline = true;
-            this.txt_Description.Name = "txt_Description";
-            this.txt_Description.ReadOnly = true;
-            this.txt_Description.Size = new System.Drawing.Size(190, 61);
-            this.txt_Description.TabIndex = 3;
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel20.Controls.Add(this.txt_QtyPerUnit);
-            this.panel20.Location = new System.Drawing.Point(140, 223);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(194, 29);
-            this.panel20.TabIndex = 936;
-            // 
-            // txt_QtyPerUnit
-            // 
-            this.txt_QtyPerUnit.BackColor = System.Drawing.Color.White;
-            this.txt_QtyPerUnit.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_QtyPerUnit.ForeColor = System.Drawing.Color.Black;
-            this.txt_QtyPerUnit.Location = new System.Drawing.Point(2, 2);
-            this.txt_QtyPerUnit.Name = "txt_QtyPerUnit";
-            this.txt_QtyPerUnit.ReadOnly = true;
-            this.txt_QtyPerUnit.Size = new System.Drawing.Size(190, 25);
-            this.txt_QtyPerUnit.TabIndex = 2;
-            // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel22.Controls.Add(this.txt_CompanyProduct);
-            this.panel22.Location = new System.Drawing.Point(140, 259);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(194, 29);
-            this.panel22.TabIndex = 937;
-            // 
-            // txt_CompanyProduct
-            // 
-            this.txt_CompanyProduct.BackColor = System.Drawing.Color.White;
-            this.txt_CompanyProduct.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_CompanyProduct.ForeColor = System.Drawing.Color.Black;
-            this.txt_CompanyProduct.Location = new System.Drawing.Point(2, 2);
-            this.txt_CompanyProduct.Name = "txt_CompanyProduct";
-            this.txt_CompanyProduct.ReadOnly = true;
-            this.txt_CompanyProduct.Size = new System.Drawing.Size(190, 25);
-            this.txt_CompanyProduct.TabIndex = 2;
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel21.Controls.Add(this.txt_PreferredVender);
-            this.panel21.Location = new System.Drawing.Point(517, 259);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(194, 29);
-            this.panel21.TabIndex = 938;
-            // 
-            // txt_PreferredVender
-            // 
-            this.txt_PreferredVender.BackColor = System.Drawing.Color.White;
-            this.txt_PreferredVender.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_PreferredVender.ForeColor = System.Drawing.Color.Black;
-            this.txt_PreferredVender.Location = new System.Drawing.Point(2, 2);
-            this.txt_PreferredVender.Name = "txt_PreferredVender";
-            this.txt_PreferredVender.ReadOnly = true;
-            this.txt_PreferredVender.Size = new System.Drawing.Size(190, 25);
-            this.txt_PreferredVender.TabIndex = 3;
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel24.Controls.Add(this.combo_DiscountType);
-            this.panel24.Location = new System.Drawing.Point(140, 295);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(194, 29);
-            this.panel24.TabIndex = 939;
-            // 
-            // combo_DiscountType
-            // 
-            this.combo_DiscountType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.combo_DiscountType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_DiscountType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.combo_DiscountType.DropDownHeight = 200;
-            this.combo_DiscountType.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.combo_DiscountType.ForeColor = System.Drawing.Color.Black;
-            this.combo_DiscountType.FormattingEnabled = true;
-            this.combo_DiscountType.IntegralHeight = false;
-            this.combo_DiscountType.ItemHeight = 17;
-            this.combo_DiscountType.Location = new System.Drawing.Point(2, 2);
-            this.combo_DiscountType.MaxDropDownItems = 50;
-            this.combo_DiscountType.Name = "combo_DiscountType";
-            this.combo_DiscountType.Size = new System.Drawing.Size(190, 25);
-            this.combo_DiscountType.TabIndex = 572;
-            this.combo_DiscountType.Text = "--- Select Discount Type---";
-            // 
-            // panel23
-            // 
-            this.panel23.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel23.Controls.Add(this.txt_DirectDiscount);
-            this.panel23.Location = new System.Drawing.Point(517, 295);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(194, 29);
-            this.panel23.TabIndex = 940;
-            // 
-            // txt_DirectDiscount
-            // 
-            this.txt_DirectDiscount.BackColor = System.Drawing.Color.White;
-            this.txt_DirectDiscount.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_DirectDiscount.ForeColor = System.Drawing.Color.Black;
-            this.txt_DirectDiscount.Location = new System.Drawing.Point(2, 2);
-            this.txt_DirectDiscount.Name = "txt_DirectDiscount";
-            this.txt_DirectDiscount.ReadOnly = true;
-            this.txt_DirectDiscount.Size = new System.Drawing.Size(190, 25);
-            this.txt_DirectDiscount.TabIndex = 3;
-            // 
-            // panel26
-            // 
-            this.panel26.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel26.Controls.Add(this.txt_NextShoppingDiscount);
-            this.panel26.Location = new System.Drawing.Point(140, 332);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(194, 29);
-            this.panel26.TabIndex = 941;
-            // 
-            // txt_NextShoppingDiscount
-            // 
-            this.txt_NextShoppingDiscount.BackColor = System.Drawing.Color.White;
-            this.txt_NextShoppingDiscount.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_NextShoppingDiscount.ForeColor = System.Drawing.Color.Black;
-            this.txt_NextShoppingDiscount.Location = new System.Drawing.Point(2, 2);
-            this.txt_NextShoppingDiscount.Name = "txt_NextShoppingDiscount";
-            this.txt_NextShoppingDiscount.ReadOnly = true;
-            this.txt_NextShoppingDiscount.Size = new System.Drawing.Size(190, 25);
-            this.txt_NextShoppingDiscount.TabIndex = 2;
-            // 
-            // panel25
-            // 
-            this.panel25.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel25.Controls.Add(this.txt_TaxPercentage);
-            this.panel25.Location = new System.Drawing.Point(517, 332);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(194, 29);
-            this.panel25.TabIndex = 942;
-            // 
-            // txt_TaxPercentage
-            // 
-            this.txt_TaxPercentage.BackColor = System.Drawing.Color.White;
-            this.txt_TaxPercentage.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_TaxPercentage.ForeColor = System.Drawing.Color.Black;
-            this.txt_TaxPercentage.Location = new System.Drawing.Point(2, 2);
-            this.txt_TaxPercentage.Name = "txt_TaxPercentage";
-            this.txt_TaxPercentage.ReadOnly = true;
-            this.txt_TaxPercentage.Size = new System.Drawing.Size(190, 25);
-            this.txt_TaxPercentage.TabIndex = 3;
-            // 
-            // panel28
-            // 
-            this.panel28.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel28.Controls.Add(this.label26);
-            this.panel28.Controls.Add(this.txt_ReorderLevel);
-            this.panel28.Controls.Add(this.label27);
-            this.panel28.Controls.Add(this.panel42);
-            this.panel28.Location = new System.Drawing.Point(140, 369);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(194, 29);
-            this.panel28.TabIndex = 943;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
-            this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(-58, 324);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(192, 18);
-            this.label26.TabIndex = 926;
-            this.label26.Text = "Powered By Glcc Of IT Solutions";
-            // 
-            // txt_ReorderLevel
-            // 
-            this.txt_ReorderLevel.BackColor = System.Drawing.Color.White;
-            this.txt_ReorderLevel.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_ReorderLevel.ForeColor = System.Drawing.Color.Black;
-            this.txt_ReorderLevel.Location = new System.Drawing.Point(2, 2);
-            this.txt_ReorderLevel.Name = "txt_ReorderLevel";
-            this.txt_ReorderLevel.ReadOnly = true;
-            this.txt_ReorderLevel.Size = new System.Drawing.Size(190, 25);
-            this.txt_ReorderLevel.TabIndex = 2;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label27.Location = new System.Drawing.Point(-74, 299);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(230, 24);
-            this.label27.TabIndex = 925;
-            this.label27.Text = "LOOP STOCK INVENTORY";
-            // 
-            // panel42
-            // 
-            this.panel42.BackColor = System.Drawing.Color.Transparent;
-            this.panel42.Controls.Add(this.label35);
-            this.panel42.Controls.Add(this.panel43);
-            this.panel42.ForeColor = System.Drawing.Color.Black;
-            this.panel42.Location = new System.Drawing.Point(-120, 301);
-            this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(324, 37);
-            this.panel42.TabIndex = 927;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.Gray;
-            this.label35.Location = new System.Drawing.Point(626, 18);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(0, 15);
-            this.label35.TabIndex = 432;
-            // 
-            // panel43
-            // 
-            this.panel43.BackColor = System.Drawing.Color.Gray;
-            this.panel43.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel43.Location = new System.Drawing.Point(0, 35);
-            this.panel43.Name = "panel43";
-            this.panel43.Size = new System.Drawing.Size(324, 2);
-            this.panel43.TabIndex = 425;
-            // 
-            // panel27
-            // 
-            this.panel27.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel27.Controls.Add(this.dateTimePicker2);
-            this.panel27.Location = new System.Drawing.Point(517, 369);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(194, 29);
-            this.panel27.TabIndex = 944;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker2.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(2, 2);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(190, 25);
-            this.dateTimePicker2.TabIndex = 7;
-            // 
-            // panel30
-            // 
-            this.panel30.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel30.Controls.Add(this.dateTimePicker1);
-            this.panel30.Location = new System.Drawing.Point(140, 406);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(194, 29);
-            this.panel30.TabIndex = 945;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(2, 2);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(190, 25);
-            this.dateTimePicker1.TabIndex = 8;
-            // 
-            // panel29
-            // 
-            this.panel29.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel29.Controls.Add(this.combo_PurchaseCurency);
-            this.panel29.Location = new System.Drawing.Point(517, 406);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(194, 29);
-            this.panel29.TabIndex = 946;
-            // 
-            // combo_PurchaseCurency
-            // 
-            this.combo_PurchaseCurency.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.combo_PurchaseCurency.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_PurchaseCurency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.combo_PurchaseCurency.DropDownHeight = 200;
-            this.combo_PurchaseCurency.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.combo_PurchaseCurency.ForeColor = System.Drawing.Color.Black;
-            this.combo_PurchaseCurency.FormattingEnabled = true;
-            this.combo_PurchaseCurency.IntegralHeight = false;
-            this.combo_PurchaseCurency.ItemHeight = 17;
-            this.combo_PurchaseCurency.Location = new System.Drawing.Point(2, 2);
-            this.combo_PurchaseCurency.MaxDropDownItems = 50;
-            this.combo_PurchaseCurency.Name = "combo_PurchaseCurency";
-            this.combo_PurchaseCurency.Size = new System.Drawing.Size(190, 25);
-            this.combo_PurchaseCurency.TabIndex = 573;
-            this.combo_PurchaseCurency.Text = "--- Select Currency---";
-            // 
-            // panel31
-            // 
-            this.panel31.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel31.Controls.Add(this.txt_WholeSalePrice);
-            this.panel31.Location = new System.Drawing.Point(517, 443);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(194, 29);
-            this.panel31.TabIndex = 948;
-            // 
-            // txt_WholeSalePrice
-            // 
-            this.txt_WholeSalePrice.BackColor = System.Drawing.Color.White;
-            this.txt_WholeSalePrice.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_WholeSalePrice.ForeColor = System.Drawing.Color.Black;
-            this.txt_WholeSalePrice.Location = new System.Drawing.Point(2, 2);
-            this.txt_WholeSalePrice.Name = "txt_WholeSalePrice";
-            this.txt_WholeSalePrice.ReadOnly = true;
-            this.txt_WholeSalePrice.Size = new System.Drawing.Size(190, 25);
-            this.txt_WholeSalePrice.TabIndex = 3;
-            // 
-            // panel32
-            // 
-            this.panel32.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel32.Controls.Add(this.combo_SellingCurrency);
-            this.panel32.Location = new System.Drawing.Point(140, 443);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(194, 29);
-            this.panel32.TabIndex = 947;
-            // 
-            // combo_SellingCurrency
-            // 
-            this.combo_SellingCurrency.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.combo_SellingCurrency.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_SellingCurrency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.combo_SellingCurrency.DropDownHeight = 200;
-            this.combo_SellingCurrency.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.combo_SellingCurrency.ForeColor = System.Drawing.Color.Black;
-            this.combo_SellingCurrency.FormattingEnabled = true;
-            this.combo_SellingCurrency.IntegralHeight = false;
-            this.combo_SellingCurrency.ItemHeight = 17;
-            this.combo_SellingCurrency.Location = new System.Drawing.Point(2, 2);
-            this.combo_SellingCurrency.MaxDropDownItems = 50;
-            this.combo_SellingCurrency.Name = "combo_SellingCurrency";
-            this.combo_SellingCurrency.Size = new System.Drawing.Size(190, 25);
-            this.combo_SellingCurrency.TabIndex = 574;
-            this.combo_SellingCurrency.Text = "--- Select Currency---";
-            // 
-            // panel33
-            // 
-            this.panel33.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel33.Controls.Add(this.txt_CustomerPrice);
-            this.panel33.Location = new System.Drawing.Point(517, 481);
-            this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(194, 29);
-            this.panel33.TabIndex = 950;
-            // 
-            // txt_CustomerPrice
-            // 
-            this.txt_CustomerPrice.BackColor = System.Drawing.Color.White;
-            this.txt_CustomerPrice.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_CustomerPrice.ForeColor = System.Drawing.Color.Black;
-            this.txt_CustomerPrice.Location = new System.Drawing.Point(2, 2);
-            this.txt_CustomerPrice.Name = "txt_CustomerPrice";
-            this.txt_CustomerPrice.ReadOnly = true;
-            this.txt_CustomerPrice.Size = new System.Drawing.Size(190, 25);
-            this.txt_CustomerPrice.TabIndex = 3;
-            // 
-            // panel34
-            // 
-            this.panel34.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel34.Controls.Add(this.txt_PurchasePrice);
-            this.panel34.Location = new System.Drawing.Point(140, 481);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(194, 29);
-            this.panel34.TabIndex = 949;
-            // 
-            // txt_PurchasePrice
-            // 
-            this.txt_PurchasePrice.BackColor = System.Drawing.Color.White;
-            this.txt_PurchasePrice.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_PurchasePrice.ForeColor = System.Drawing.Color.Black;
-            this.txt_PurchasePrice.Location = new System.Drawing.Point(2, 2);
-            this.txt_PurchasePrice.Name = "txt_PurchasePrice";
-            this.txt_PurchasePrice.ReadOnly = true;
-            this.txt_PurchasePrice.Size = new System.Drawing.Size(190, 25);
-            this.txt_PurchasePrice.TabIndex = 3;
-            // 
-            // panel35
-            // 
-            this.panel35.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel35.Controls.Add(this.txt_Location);
-            this.panel35.Location = new System.Drawing.Point(517, 519);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(194, 29);
-            this.panel35.TabIndex = 952;
-            // 
-            // txt_Location
-            // 
-            this.txt_Location.BackColor = System.Drawing.Color.White;
-            this.txt_Location.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_Location.ForeColor = System.Drawing.Color.Black;
-            this.txt_Location.Location = new System.Drawing.Point(2, 2);
-            this.txt_Location.Name = "txt_Location";
-            this.txt_Location.ReadOnly = true;
-            this.txt_Location.Size = new System.Drawing.Size(190, 25);
-            this.txt_Location.TabIndex = 3;
-            // 
-            // panel36
-            // 
-            this.panel36.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel36.Controls.Add(this.txt_RetailPrice);
-            this.panel36.Location = new System.Drawing.Point(140, 519);
-            this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(194, 29);
-            this.panel36.TabIndex = 951;
-            // 
-            // txt_RetailPrice
-            // 
-            this.txt_RetailPrice.BackColor = System.Drawing.Color.White;
-            this.txt_RetailPrice.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_RetailPrice.ForeColor = System.Drawing.Color.Black;
-            this.txt_RetailPrice.Location = new System.Drawing.Point(2, 2);
-            this.txt_RetailPrice.Name = "txt_RetailPrice";
-            this.txt_RetailPrice.ReadOnly = true;
-            this.txt_RetailPrice.Size = new System.Drawing.Size(190, 25);
-            this.txt_RetailPrice.TabIndex = 3;
-            // 
-            // panel37
-            // 
-            this.panel37.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel37.Controls.Add(this.combo_Status);
-            this.panel37.Location = new System.Drawing.Point(517, 558);
-            this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(194, 29);
-            this.panel37.TabIndex = 954;
-            // 
-            // combo_Status
-            // 
-            this.combo_Status.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.combo_Status.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_Status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.combo_Status.DropDownHeight = 200;
-            this.combo_Status.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.combo_Status.ForeColor = System.Drawing.Color.Black;
-            this.combo_Status.FormattingEnabled = true;
-            this.combo_Status.IntegralHeight = false;
-            this.combo_Status.ItemHeight = 17;
-            this.combo_Status.Items.AddRange(new object[] {
-            "Active",
-            "Unactive"});
-            this.combo_Status.Location = new System.Drawing.Point(2, 2);
-            this.combo_Status.MaxDropDownItems = 50;
-            this.combo_Status.Name = "combo_Status";
-            this.combo_Status.Size = new System.Drawing.Size(190, 25);
-            this.combo_Status.TabIndex = 575;
-            this.combo_Status.Text = "--- Select Status---";
-            // 
-            // panel38
-            // 
-            this.panel38.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel38.Controls.Add(this.txt_AddProfit);
-            this.panel38.Location = new System.Drawing.Point(140, 558);
-            this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(194, 29);
-            this.panel38.TabIndex = 953;
-            // 
-            // txt_AddProfit
-            // 
-            this.txt_AddProfit.BackColor = System.Drawing.Color.White;
-            this.txt_AddProfit.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_AddProfit.ForeColor = System.Drawing.Color.Black;
-            this.txt_AddProfit.Location = new System.Drawing.Point(2, 2);
-            this.txt_AddProfit.Name = "txt_AddProfit";
-            this.txt_AddProfit.ReadOnly = true;
-            this.txt_AddProfit.Size = new System.Drawing.Size(190, 25);
-            this.txt_AddProfit.TabIndex = 3;
-            // 
             // Product_Creation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1786,66 +1786,66 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).EndInit();
             this.u.ResumeLayout(false);
             this.u.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton15)).EndInit();
+            this.panel37.ResumeLayout(false);
+            this.panel38.ResumeLayout(false);
+            this.panel38.PerformLayout();
+            this.panel35.ResumeLayout(false);
+            this.panel35.PerformLayout();
+            this.panel36.ResumeLayout(false);
+            this.panel36.PerformLayout();
+            this.panel33.ResumeLayout(false);
+            this.panel33.PerformLayout();
+            this.panel34.ResumeLayout(false);
+            this.panel34.PerformLayout();
+            this.panel31.ResumeLayout(false);
+            this.panel31.PerformLayout();
+            this.panel32.ResumeLayout(false);
+            this.panel29.ResumeLayout(false);
+            this.panel30.ResumeLayout(false);
+            this.panel27.ResumeLayout(false);
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
+            this.panel42.ResumeLayout(false);
+            this.panel42.PerformLayout();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            this.panel24.ResumeLayout(false);
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             this.panel39.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.panel15.ResumeLayout(false);
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
-            this.panel22.ResumeLayout(false);
-            this.panel22.PerformLayout();
-            this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
-            this.panel24.ResumeLayout(false);
-            this.panel23.ResumeLayout(false);
-            this.panel23.PerformLayout();
-            this.panel26.ResumeLayout(false);
-            this.panel26.PerformLayout();
-            this.panel25.ResumeLayout(false);
-            this.panel25.PerformLayout();
-            this.panel28.ResumeLayout(false);
-            this.panel28.PerformLayout();
-            this.panel42.ResumeLayout(false);
-            this.panel42.PerformLayout();
-            this.panel27.ResumeLayout(false);
-            this.panel30.ResumeLayout(false);
-            this.panel29.ResumeLayout(false);
-            this.panel31.ResumeLayout(false);
-            this.panel31.PerformLayout();
-            this.panel32.ResumeLayout(false);
-            this.panel33.ResumeLayout(false);
-            this.panel33.PerformLayout();
-            this.panel34.ResumeLayout(false);
-            this.panel34.PerformLayout();
-            this.panel35.ResumeLayout(false);
-            this.panel35.PerformLayout();
-            this.panel36.ResumeLayout(false);
-            this.panel36.PerformLayout();
-            this.panel37.ResumeLayout(false);
-            this.panel38.ResumeLayout(false);
-            this.panel38.PerformLayout();
             this.ResumeLayout(false);
 
         }

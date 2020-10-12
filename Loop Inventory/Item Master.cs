@@ -16,5 +16,10 @@ namespace Loop_Inventory
         {
             InitializeComponent();
         }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

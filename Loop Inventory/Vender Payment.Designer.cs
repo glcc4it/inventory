@@ -258,12 +258,11 @@
             // 
             // txtVenderName
             // 
-            this.txtVenderName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtVenderName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtVenderName.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
             this.txtVenderName.ForeColor = System.Drawing.Color.Black;
             this.txtVenderName.Location = new System.Drawing.Point(2, 2);
             this.txtVenderName.Name = "txtVenderName";
-            this.txtVenderName.ReadOnly = true;
             this.txtVenderName.Size = new System.Drawing.Size(187, 25);
             this.txtVenderName.TabIndex = 3;
             // 
@@ -845,7 +844,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 27);
             this.pictureBox1.TabIndex = 286;
@@ -897,10 +896,13 @@
             this.panel2.Controls.Add(this.close);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 13);
+            this.panel2.Location = new System.Drawing.Point(3, 13);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(945, 27);
+            this.panel2.Size = new System.Drawing.Size(710, 27);
             this.panel2.TabIndex = 0;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
             // 
             // panel1
             // 
@@ -923,9 +925,11 @@
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Vender_Payment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vender_Payment";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Vender_Payment_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel17.ResumeLayout(false);
             this.panel6.ResumeLayout(false);

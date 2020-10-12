@@ -62,15 +62,9 @@ namespace Loop_Inventory
 
         }
 
-        private void bunifuImageButton6_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
 
-        private void bunifuImageButton5_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
+       
 
         private void panel32_MouseDown(object sender, MouseEventArgs e)
         {
@@ -101,6 +95,16 @@ namespace Loop_Inventory
         {
             Filluser();
             
+        }
+
+        private void minimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

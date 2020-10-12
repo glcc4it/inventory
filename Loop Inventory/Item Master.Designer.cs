@@ -43,9 +43,9 @@
             this.lnk_sale_rpt = new System.Windows.Forms.LinkLabel();
             this.bunifuImageButton14 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.minimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton9 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton6 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.close = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton10 = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,61 +54,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.tcMain = new System.Windows.Forms.TabControl();
             this.Registration = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.txt_mobile = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.combo_route = new System.Windows.Forms.ComboBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.combo_ara = new System.Windows.Forms.ComboBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.txt_cst = new System.Windows.Forms.TextBox();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.txt_credit_per = new System.Windows.Forms.TextBox();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.combo_bil_by_bill = new System.Windows.Forms.ComboBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.txt_email = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel40 = new System.Windows.Forms.Panel();
-            this.txt_tin = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.txt_phone = new System.Windows.Forms.TextBox();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.txt_pan = new System.Windows.Forms.TextBox();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.txt_crdit_limit = new System.Windows.Forms.TextBox();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.combo_pricing_lvel = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.panel42 = new System.Windows.Forms.Panel();
-            this.txt_address = new System.Windows.Forms.TextBox();
-            this.panel44 = new System.Windows.Forms.Panel();
-            this.txt_mailing = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.panel37 = new System.Windows.Forms.Panel();
             this.combo_Status = new System.Windows.Forms.ComboBox();
             this.panel38 = new System.Windows.Forms.Panel();
@@ -206,6 +151,61 @@
             this.lblBrand = new System.Windows.Forms.Label();
             this.lblProductCode = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.txt_mobile = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.combo_route = new System.Windows.Forms.ComboBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.combo_ara = new System.Windows.Forms.ComboBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.txt_cst = new System.Windows.Forms.TextBox();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.txt_credit_per = new System.Windows.Forms.TextBox();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.combo_bil_by_bill = new System.Windows.Forms.ComboBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.txt_email = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.txt_tin = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.txt_phone = new System.Windows.Forms.TextBox();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.txt_pan = new System.Windows.Forms.TextBox();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.txt_crdit_limit = new System.Windows.Forms.TextBox();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.combo_pricing_lvel = new System.Windows.Forms.ComboBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.txt_address = new System.Windows.Forms.TextBox();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.txt_mailing = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton8)).BeginInit();
@@ -214,32 +214,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton14)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tcMain.SuspendLayout();
             this.Registration.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel30.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            this.panel27.SuspendLayout();
-            this.panel26.SuspendLayout();
-            this.panel25.SuspendLayout();
-            this.panel24.SuspendLayout();
-            this.panel22.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel40.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.panel29.SuspendLayout();
-            this.panel42.SuspendLayout();
-            this.panel44.SuspendLayout();
             this.panel37.SuspendLayout();
             this.panel38.SuspendLayout();
             this.panel35.SuspendLayout();
@@ -273,6 +254,25 @@
             this.panel56.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton15)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel30.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.panel27.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panel40.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.panel29.SuspendLayout();
+            this.panel42.SuspendLayout();
+            this.panel44.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -462,9 +462,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Navy;
-            this.panel2.Controls.Add(this.bunifuImageButton5);
+            this.panel2.Controls.Add(this.minimize);
             this.panel2.Controls.Add(this.bunifuImageButton9);
-            this.panel2.Controls.Add(this.bunifuImageButton6);
+            this.panel2.Controls.Add(this.close);
             this.panel2.Controls.Add(this.bunifuImageButton10);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
@@ -473,19 +473,19 @@
             this.panel2.Size = new System.Drawing.Size(760, 27);
             this.panel2.TabIndex = 0;
             // 
-            // bunifuImageButton5
+            // minimize
             // 
-            this.bunifuImageButton5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
-            this.bunifuImageButton5.ImageActive = null;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(714, 3);
-            this.bunifuImageButton5.Name = "bunifuImageButton5";
-            this.bunifuImageButton5.Size = new System.Drawing.Size(22, 22);
-            this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton5.TabIndex = 226;
-            this.bunifuImageButton5.TabStop = false;
-            this.bunifuImageButton5.Zoom = 10;
+            this.minimize.BackColor = System.Drawing.Color.Transparent;
+            this.minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.minimize.Image = ((System.Drawing.Image)(resources.GetObject("minimize.Image")));
+            this.minimize.ImageActive = null;
+            this.minimize.Location = new System.Drawing.Point(714, 3);
+            this.minimize.Name = "minimize";
+            this.minimize.Size = new System.Drawing.Size(22, 22);
+            this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.minimize.TabIndex = 226;
+            this.minimize.TabStop = false;
+            this.minimize.Zoom = 10;
             // 
             // bunifuImageButton9
             // 
@@ -501,19 +501,20 @@
             this.bunifuImageButton9.TabStop = false;
             this.bunifuImageButton9.Zoom = 10;
             // 
-            // bunifuImageButton6
+            // close
             // 
-            this.bunifuImageButton6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton6.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton6.Image")));
-            this.bunifuImageButton6.ImageActive = null;
-            this.bunifuImageButton6.Location = new System.Drawing.Point(735, 3);
-            this.bunifuImageButton6.Name = "bunifuImageButton6";
-            this.bunifuImageButton6.Size = new System.Drawing.Size(22, 22);
-            this.bunifuImageButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton6.TabIndex = 225;
-            this.bunifuImageButton6.TabStop = false;
-            this.bunifuImageButton6.Zoom = 10;
+            this.close.BackColor = System.Drawing.Color.Transparent;
+            this.close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
+            this.close.ImageActive = null;
+            this.close.Location = new System.Drawing.Point(735, 3);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(22, 22);
+            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.close.TabIndex = 225;
+            this.close.TabStop = false;
+            this.close.Zoom = 10;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // bunifuImageButton10
             // 
@@ -665,620 +666,10 @@
             this.Registration.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registration.Location = new System.Drawing.Point(4, 30);
             this.Registration.Name = "Registration";
-            this.Registration.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Registration.Padding = new System.Windows.Forms.Padding(3);
             this.Registration.Size = new System.Drawing.Size(742, 629);
             this.Registration.TabIndex = 0;
             this.Registration.Text = "Main Details";
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.panel13);
-            this.tabPage1.Controls.Add(this.panel17);
-            this.tabPage1.Controls.Add(this.panel16);
-            this.tabPage1.Controls.Add(this.panel15);
-            this.tabPage1.Controls.Add(this.panel14);
-            this.tabPage1.Location = new System.Drawing.Point(4, 28);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(742, 521);
-            this.tabPage1.TabIndex = 1;
-            this.tabPage1.Text = "Secondry Details";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.Lavender;
-            this.panel13.Controls.Add(this.panel30);
-            this.panel13.Controls.Add(this.label20);
-            this.panel13.Controls.Add(this.bunifuImageButton4);
-            this.panel13.Controls.Add(this.bunifuImageButton2);
-            this.panel13.Controls.Add(this.bunifuImageButton1);
-            this.panel13.Controls.Add(this.label19);
-            this.panel13.Controls.Add(this.label18);
-            this.panel13.Controls.Add(this.panel27);
-            this.panel13.Controls.Add(this.panel26);
-            this.panel13.Controls.Add(this.label17);
-            this.panel13.Controls.Add(this.panel25);
-            this.panel13.Controls.Add(this.panel24);
-            this.panel13.Controls.Add(this.panel22);
-            this.panel13.Controls.Add(this.label16);
-            this.panel13.Controls.Add(this.panel23);
-            this.panel13.Controls.Add(this.label15);
-            this.panel13.Controls.Add(this.panel40);
-            this.panel13.Controls.Add(this.label21);
-            this.panel13.Controls.Add(this.panel18);
-            this.panel13.Controls.Add(this.panel19);
-            this.panel13.Controls.Add(this.panel21);
-            this.panel13.Controls.Add(this.panel29);
-            this.panel13.Controls.Add(this.panel42);
-            this.panel13.Controls.Add(this.panel44);
-            this.panel13.Controls.Add(this.label14);
-            this.panel13.Controls.Add(this.label13);
-            this.panel13.Controls.Add(this.label9);
-            this.panel13.Controls.Add(this.label10);
-            this.panel13.Controls.Add(this.label11);
-            this.panel13.Controls.Add(this.label29);
-            this.panel13.Controls.Add(this.label30);
-            this.panel13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.panel13.Location = new System.Drawing.Point(6, 7);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(730, 508);
-            this.panel13.TabIndex = 294;
-            // 
-            // panel30
-            // 
-            this.panel30.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel30.Controls.Add(this.txt_mobile);
-            this.panel30.Location = new System.Drawing.Point(143, 91);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(211, 26);
-            this.panel30.TabIndex = 403;
-            // 
-            // txt_mobile
-            // 
-            this.txt_mobile.BackColor = System.Drawing.Color.White;
-            this.txt_mobile.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_mobile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_mobile.Location = new System.Drawing.Point(2, 2);
-            this.txt_mobile.Multiline = true;
-            this.txt_mobile.Name = "txt_mobile";
-            this.txt_mobile.Size = new System.Drawing.Size(207, 22);
-            this.txt_mobile.TabIndex = 0;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label20.Location = new System.Drawing.Point(18, 95);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(106, 18);
-            this.label20.TabIndex = 402;
-            this.label20.Text = "Mobile Number:";
-            // 
-            // bunifuImageButton4
-            // 
-            this.bunifuImageButton4.BackColor = System.Drawing.Color.DimGray;
-            this.bunifuImageButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
-            this.bunifuImageButton4.ImageActive = null;
-            this.bunifuImageButton4.Location = new System.Drawing.Point(703, 96);
-            this.bunifuImageButton4.Name = "bunifuImageButton4";
-            this.bunifuImageButton4.Size = new System.Drawing.Size(18, 18);
-            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton4.TabIndex = 466;
-            this.bunifuImageButton4.TabStop = false;
-            this.bunifuImageButton4.Zoom = 10;
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.DimGray;
-            this.bunifuImageButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(358, 287);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(18, 18);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton2.TabIndex = 465;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.DimGray;
-            this.bunifuImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(358, 247);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(18, 18);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton1.TabIndex = 464;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label19.Location = new System.Drawing.Point(18, 286);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(48, 18);
-            this.label19.TabIndex = 433;
-            this.label19.Text = "Route:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label18.Location = new System.Drawing.Point(18, 248);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 18);
-            this.label18.TabIndex = 431;
-            this.label18.Text = "Area:";
-            // 
-            // panel27
-            // 
-            this.panel27.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel27.Controls.Add(this.combo_route);
-            this.panel27.Controls.Add(this.textBox16);
-            this.panel27.Location = new System.Drawing.Point(143, 282);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(211, 26);
-            this.panel27.TabIndex = 432;
-            // 
-            // combo_route
-            // 
-            this.combo_route.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combo_route.FormattingEnabled = true;
-            this.combo_route.Location = new System.Drawing.Point(2, 2);
-            this.combo_route.Name = "combo_route";
-            this.combo_route.Size = new System.Drawing.Size(207, 22);
-            this.combo_route.TabIndex = 5;
-            // 
-            // textBox16
-            // 
-            this.textBox16.BackColor = System.Drawing.Color.White;
-            this.textBox16.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.textBox16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox16.Location = new System.Drawing.Point(2, 2);
-            this.textBox16.Multiline = true;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(207, 22);
-            this.textBox16.TabIndex = 0;
-            // 
-            // panel26
-            // 
-            this.panel26.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel26.Controls.Add(this.combo_ara);
-            this.panel26.Controls.Add(this.textBox15);
-            this.panel26.Location = new System.Drawing.Point(143, 243);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(211, 26);
-            this.panel26.TabIndex = 430;
-            // 
-            // combo_ara
-            // 
-            this.combo_ara.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combo_ara.FormattingEnabled = true;
-            this.combo_ara.Location = new System.Drawing.Point(2, 2);
-            this.combo_ara.Name = "combo_ara";
-            this.combo_ara.Size = new System.Drawing.Size(207, 22);
-            this.combo_ara.TabIndex = 4;
-            // 
-            // textBox15
-            // 
-            this.textBox15.BackColor = System.Drawing.Color.White;
-            this.textBox15.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.textBox15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox15.Location = new System.Drawing.Point(2, 2);
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(207, 22);
-            this.textBox15.TabIndex = 0;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label17.Location = new System.Drawing.Point(18, 209);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 18);
-            this.label17.TabIndex = 430;
-            this.label17.Text = "CST:";
-            // 
-            // panel25
-            // 
-            this.panel25.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel25.Controls.Add(this.txt_cst);
-            this.panel25.Location = new System.Drawing.Point(143, 205);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(211, 26);
-            this.panel25.TabIndex = 429;
-            // 
-            // txt_cst
-            // 
-            this.txt_cst.BackColor = System.Drawing.Color.White;
-            this.txt_cst.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_cst.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_cst.Location = new System.Drawing.Point(2, 2);
-            this.txt_cst.Multiline = true;
-            this.txt_cst.Name = "txt_cst";
-            this.txt_cst.Size = new System.Drawing.Size(207, 22);
-            this.txt_cst.TabIndex = 0;
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel24.Controls.Add(this.txt_credit_per);
-            this.panel24.Location = new System.Drawing.Point(143, 167);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(211, 26);
-            this.panel24.TabIndex = 427;
-            // 
-            // txt_credit_per
-            // 
-            this.txt_credit_per.BackColor = System.Drawing.Color.White;
-            this.txt_credit_per.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_credit_per.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_credit_per.Location = new System.Drawing.Point(2, 2);
-            this.txt_credit_per.Multiline = true;
-            this.txt_credit_per.Name = "txt_credit_per";
-            this.txt_credit_per.Size = new System.Drawing.Size(207, 22);
-            this.txt_credit_per.TabIndex = 0;
-            // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel22.Controls.Add(this.combo_bil_by_bill);
-            this.panel22.Controls.Add(this.textBox10);
-            this.panel22.Location = new System.Drawing.Point(489, 129);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(211, 26);
-            this.panel22.TabIndex = 426;
-            // 
-            // combo_bil_by_bill
-            // 
-            this.combo_bil_by_bill.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combo_bil_by_bill.FormattingEnabled = true;
-            this.combo_bil_by_bill.Items.AddRange(new object[] {
-            "No",
-            "Yes"});
-            this.combo_bil_by_bill.Location = new System.Drawing.Point(2, 2);
-            this.combo_bil_by_bill.Name = "combo_bil_by_bill";
-            this.combo_bil_by_bill.Size = new System.Drawing.Size(207, 22);
-            this.combo_bil_by_bill.TabIndex = 3;
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.Color.White;
-            this.textBox10.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.textBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox10.Location = new System.Drawing.Point(2, 2);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(207, 22);
-            this.textBox10.TabIndex = 0;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(18, 171);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(94, 18);
-            this.label16.TabIndex = 425;
-            this.label16.Text = "Credit Period:";
-            // 
-            // panel23
-            // 
-            this.panel23.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel23.Controls.Add(this.txt_email);
-            this.panel23.Location = new System.Drawing.Point(143, 129);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(211, 26);
-            this.panel23.TabIndex = 424;
-            // 
-            // txt_email
-            // 
-            this.txt_email.BackColor = System.Drawing.Color.White;
-            this.txt_email.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_email.Location = new System.Drawing.Point(2, 2);
-            this.txt_email.Multiline = true;
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(207, 22);
-            this.txt_email.TabIndex = 0;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(383, 133);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(76, 18);
-            this.label15.TabIndex = 423;
-            this.label15.Text = "Bill By Bill:";
-            // 
-            // panel40
-            // 
-            this.panel40.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel40.Controls.Add(this.txt_tin);
-            this.panel40.Location = new System.Drawing.Point(489, 205);
-            this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(211, 26);
-            this.panel40.TabIndex = 422;
-            // 
-            // txt_tin
-            // 
-            this.txt_tin.BackColor = System.Drawing.Color.White;
-            this.txt_tin.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_tin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_tin.Location = new System.Drawing.Point(2, 2);
-            this.txt_tin.Multiline = true;
-            this.txt_tin.Name = "txt_tin";
-            this.txt_tin.Size = new System.Drawing.Size(207, 22);
-            this.txt_tin.TabIndex = 0;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label21.Location = new System.Drawing.Point(383, 209);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(34, 18);
-            this.label21.TabIndex = 421;
-            this.label21.Text = "TIN:";
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel18.Controls.Add(this.txt_phone);
-            this.panel18.Location = new System.Drawing.Point(143, 53);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(211, 26);
-            this.panel18.TabIndex = 401;
-            // 
-            // txt_phone
-            // 
-            this.txt_phone.BackColor = System.Drawing.Color.White;
-            this.txt_phone.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_phone.Location = new System.Drawing.Point(2, 2);
-            this.txt_phone.Multiline = true;
-            this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Size = new System.Drawing.Size(207, 22);
-            this.txt_phone.TabIndex = 0;
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel19.Controls.Add(this.txt_pan);
-            this.panel19.Location = new System.Drawing.Point(489, 243);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(211, 26);
-            this.panel19.TabIndex = 406;
-            // 
-            // txt_pan
-            // 
-            this.txt_pan.BackColor = System.Drawing.Color.White;
-            this.txt_pan.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_pan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_pan.Location = new System.Drawing.Point(2, 2);
-            this.txt_pan.Multiline = true;
-            this.txt_pan.Name = "txt_pan";
-            this.txt_pan.Size = new System.Drawing.Size(207, 22);
-            this.txt_pan.TabIndex = 0;
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel21.Controls.Add(this.txt_crdit_limit);
-            this.panel21.Location = new System.Drawing.Point(489, 167);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(211, 26);
-            this.panel21.TabIndex = 405;
-            // 
-            // txt_crdit_limit
-            // 
-            this.txt_crdit_limit.BackColor = System.Drawing.Color.White;
-            this.txt_crdit_limit.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_crdit_limit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_crdit_limit.Location = new System.Drawing.Point(2, 2);
-            this.txt_crdit_limit.Multiline = true;
-            this.txt_crdit_limit.Name = "txt_crdit_limit";
-            this.txt_crdit_limit.Size = new System.Drawing.Size(207, 22);
-            this.txt_crdit_limit.TabIndex = 0;
-            // 
-            // panel29
-            // 
-            this.panel29.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel29.Controls.Add(this.combo_pricing_lvel);
-            this.panel29.Controls.Add(this.textBox7);
-            this.panel29.Location = new System.Drawing.Point(489, 91);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(211, 26);
-            this.panel29.TabIndex = 404;
-            // 
-            // combo_pricing_lvel
-            // 
-            this.combo_pricing_lvel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combo_pricing_lvel.FormattingEnabled = true;
-            this.combo_pricing_lvel.Location = new System.Drawing.Point(2, 2);
-            this.combo_pricing_lvel.Name = "combo_pricing_lvel";
-            this.combo_pricing_lvel.Size = new System.Drawing.Size(207, 22);
-            this.combo_pricing_lvel.TabIndex = 2;
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.White;
-            this.textBox7.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox7.Location = new System.Drawing.Point(2, 2);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(207, 22);
-            this.textBox7.TabIndex = 0;
-            // 
-            // panel42
-            // 
-            this.panel42.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel42.Controls.Add(this.txt_address);
-            this.panel42.Location = new System.Drawing.Point(489, 16);
-            this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(211, 63);
-            this.panel42.TabIndex = 400;
-            // 
-            // txt_address
-            // 
-            this.txt_address.BackColor = System.Drawing.Color.White;
-            this.txt_address.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_address.Location = new System.Drawing.Point(2, 2);
-            this.txt_address.Multiline = true;
-            this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(207, 59);
-            this.txt_address.TabIndex = 0;
-            // 
-            // panel44
-            // 
-            this.panel44.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel44.Controls.Add(this.txt_mailing);
-            this.panel44.Location = new System.Drawing.Point(143, 16);
-            this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(211, 26);
-            this.panel44.TabIndex = 399;
-            // 
-            // txt_mailing
-            // 
-            this.txt_mailing.BackColor = System.Drawing.Color.White;
-            this.txt_mailing.Font = new System.Drawing.Font("Calibri", 11.25F);
-            this.txt_mailing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_mailing.Location = new System.Drawing.Point(2, 2);
-            this.txt_mailing.Multiline = true;
-            this.txt_mailing.Name = "txt_mailing";
-            this.txt_mailing.Size = new System.Drawing.Size(207, 22);
-            this.txt_mailing.TabIndex = 0;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(18, 134);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 18);
-            this.label14.TabIndex = 391;
-            this.label14.Text = "E-mail Addres:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(18, 57);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(104, 18);
-            this.label13.TabIndex = 390;
-            this.label13.Text = "Phone Number:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(383, 248);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 18);
-            this.label9.TabIndex = 376;
-            this.label9.Text = "PAN:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(383, 171);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(86, 18);
-            this.label10.TabIndex = 375;
-            this.label10.Text = "Credit Limit:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(383, 95);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(93, 18);
-            this.label11.TabIndex = 374;
-            this.label11.Text = "Pricing Level:";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label29.Location = new System.Drawing.Point(383, 20);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(62, 18);
-            this.label29.TabIndex = 370;
-            this.label29.Text = "Address:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label30.Location = new System.Drawing.Point(18, 20);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(95, 18);
-            this.label30.TabIndex = 369;
-            this.label30.Text = "Mailing Name:";
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.Black;
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel17.Location = new System.Drawing.Point(3, 4);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(1, 513);
-            this.panel17.TabIndex = 3;
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.Black;
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel16.Location = new System.Drawing.Point(738, 4);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(1, 513);
-            this.panel16.TabIndex = 2;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.Black;
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel15.Location = new System.Drawing.Point(3, 517);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(736, 1);
-            this.panel15.TabIndex = 1;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.Black;
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(3, 3);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(736, 1);
-            this.panel14.TabIndex = 0;
             // 
             // panel37
             // 
@@ -2395,6 +1786,616 @@
             this.lblName.TabIndex = 955;
             this.lblName.Text = "Product Code:";
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.panel13);
+            this.tabPage1.Controls.Add(this.panel17);
+            this.tabPage1.Controls.Add(this.panel16);
+            this.tabPage1.Controls.Add(this.panel15);
+            this.tabPage1.Controls.Add(this.panel14);
+            this.tabPage1.Location = new System.Drawing.Point(4, 30);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(742, 629);
+            this.tabPage1.TabIndex = 1;
+            this.tabPage1.Text = "Secondry Details";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Lavender;
+            this.panel13.Controls.Add(this.panel30);
+            this.panel13.Controls.Add(this.label20);
+            this.panel13.Controls.Add(this.bunifuImageButton4);
+            this.panel13.Controls.Add(this.bunifuImageButton2);
+            this.panel13.Controls.Add(this.bunifuImageButton1);
+            this.panel13.Controls.Add(this.label19);
+            this.panel13.Controls.Add(this.label18);
+            this.panel13.Controls.Add(this.panel27);
+            this.panel13.Controls.Add(this.panel26);
+            this.panel13.Controls.Add(this.label17);
+            this.panel13.Controls.Add(this.panel25);
+            this.panel13.Controls.Add(this.panel24);
+            this.panel13.Controls.Add(this.panel22);
+            this.panel13.Controls.Add(this.label16);
+            this.panel13.Controls.Add(this.panel23);
+            this.panel13.Controls.Add(this.label15);
+            this.panel13.Controls.Add(this.panel40);
+            this.panel13.Controls.Add(this.label21);
+            this.panel13.Controls.Add(this.panel18);
+            this.panel13.Controls.Add(this.panel19);
+            this.panel13.Controls.Add(this.panel21);
+            this.panel13.Controls.Add(this.panel29);
+            this.panel13.Controls.Add(this.panel42);
+            this.panel13.Controls.Add(this.panel44);
+            this.panel13.Controls.Add(this.label14);
+            this.panel13.Controls.Add(this.label13);
+            this.panel13.Controls.Add(this.label9);
+            this.panel13.Controls.Add(this.label10);
+            this.panel13.Controls.Add(this.label11);
+            this.panel13.Controls.Add(this.label29);
+            this.panel13.Controls.Add(this.label30);
+            this.panel13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.panel13.Location = new System.Drawing.Point(6, 7);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(730, 508);
+            this.panel13.TabIndex = 294;
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel30.Controls.Add(this.txt_mobile);
+            this.panel30.Location = new System.Drawing.Point(143, 91);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(211, 26);
+            this.panel30.TabIndex = 403;
+            // 
+            // txt_mobile
+            // 
+            this.txt_mobile.BackColor = System.Drawing.Color.White;
+            this.txt_mobile.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.txt_mobile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_mobile.Location = new System.Drawing.Point(2, 2);
+            this.txt_mobile.Multiline = true;
+            this.txt_mobile.Name = "txt_mobile";
+            this.txt_mobile.Size = new System.Drawing.Size(207, 22);
+            this.txt_mobile.TabIndex = 0;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label20.Location = new System.Drawing.Point(18, 95);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(106, 18);
+            this.label20.TabIndex = 402;
+            this.label20.Text = "Mobile Number:";
+            // 
+            // bunifuImageButton4
+            // 
+            this.bunifuImageButton4.BackColor = System.Drawing.Color.DimGray;
+            this.bunifuImageButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton4.Image")));
+            this.bunifuImageButton4.ImageActive = null;
+            this.bunifuImageButton4.Location = new System.Drawing.Point(703, 96);
+            this.bunifuImageButton4.Name = "bunifuImageButton4";
+            this.bunifuImageButton4.Size = new System.Drawing.Size(18, 18);
+            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bunifuImageButton4.TabIndex = 466;
+            this.bunifuImageButton4.TabStop = false;
+            this.bunifuImageButton4.Zoom = 10;
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.DimGray;
+            this.bunifuImageButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(358, 287);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(18, 18);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bunifuImageButton2.TabIndex = 465;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.DimGray;
+            this.bunifuImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(358, 247);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(18, 18);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bunifuImageButton1.TabIndex = 464;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label19.Location = new System.Drawing.Point(18, 286);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(48, 18);
+            this.label19.TabIndex = 433;
+            this.label19.Text = "Route:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label18.Location = new System.Drawing.Point(18, 248);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(41, 18);
+            this.label18.TabIndex = 431;
+            this.label18.Text = "Area:";
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel27.Controls.Add(this.combo_route);
+            this.panel27.Controls.Add(this.textBox16);
+            this.panel27.Location = new System.Drawing.Point(143, 282);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(211, 26);
+            this.panel27.TabIndex = 432;
+            // 
+            // combo_route
+            // 
+            this.combo_route.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_route.FormattingEnabled = true;
+            this.combo_route.Location = new System.Drawing.Point(2, 2);
+            this.combo_route.Name = "combo_route";
+            this.combo_route.Size = new System.Drawing.Size(207, 22);
+            this.combo_route.TabIndex = 5;
+            // 
+            // textBox16
+            // 
+            this.textBox16.BackColor = System.Drawing.Color.White;
+            this.textBox16.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.textBox16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox16.Location = new System.Drawing.Point(2, 2);
+            this.textBox16.Multiline = true;
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(207, 22);
+            this.textBox16.TabIndex = 0;
+            // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel26.Controls.Add(this.combo_ara);
+            this.panel26.Controls.Add(this.textBox15);
+            this.panel26.Location = new System.Drawing.Point(143, 243);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(211, 26);
+            this.panel26.TabIndex = 430;
+            // 
+            // combo_ara
+            // 
+            this.combo_ara.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_ara.FormattingEnabled = true;
+            this.combo_ara.Location = new System.Drawing.Point(2, 2);
+            this.combo_ara.Name = "combo_ara";
+            this.combo_ara.Size = new System.Drawing.Size(207, 22);
+            this.combo_ara.TabIndex = 4;
+            // 
+            // textBox15
+            // 
+            this.textBox15.BackColor = System.Drawing.Color.White;
+            this.textBox15.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.textBox15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox15.Location = new System.Drawing.Point(2, 2);
+            this.textBox15.Multiline = true;
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(207, 22);
+            this.textBox15.TabIndex = 0;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label17.Location = new System.Drawing.Point(18, 209);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(35, 18);
+            this.label17.TabIndex = 430;
+            this.label17.Text = "CST:";
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel25.Controls.Add(this.txt_cst);
+            this.panel25.Location = new System.Drawing.Point(143, 205);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(211, 26);
+            this.panel25.TabIndex = 429;
+            // 
+            // txt_cst
+            // 
+            this.txt_cst.BackColor = System.Drawing.Color.White;
+            this.txt_cst.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.txt_cst.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_cst.Location = new System.Drawing.Point(2, 2);
+            this.txt_cst.Multiline = true;
+            this.txt_cst.Name = "txt_cst";
+            this.txt_cst.Size = new System.Drawing.Size(207, 22);
+            this.txt_cst.TabIndex = 0;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel24.Controls.Add(this.txt_credit_per);
+            this.panel24.Location = new System.Drawing.Point(143, 167);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(211, 26);
+            this.panel24.TabIndex = 427;
+            // 
+            // txt_credit_per
+            // 
+            this.txt_credit_per.BackColor = System.Drawing.Color.White;
+            this.txt_credit_per.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.txt_credit_per.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_credit_per.Location = new System.Drawing.Point(2, 2);
+            this.txt_credit_per.Multiline = true;
+            this.txt_credit_per.Name = "txt_credit_per";
+            this.txt_credit_per.Size = new System.Drawing.Size(207, 22);
+            this.txt_credit_per.TabIndex = 0;
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel22.Controls.Add(this.combo_bil_by_bill);
+            this.panel22.Controls.Add(this.textBox10);
+            this.panel22.Location = new System.Drawing.Point(489, 129);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(211, 26);
+            this.panel22.TabIndex = 426;
+            // 
+            // combo_bil_by_bill
+            // 
+            this.combo_bil_by_bill.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_bil_by_bill.FormattingEnabled = true;
+            this.combo_bil_by_bill.Items.AddRange(new object[] {
+            "No",
+            "Yes"});
+            this.combo_bil_by_bill.Location = new System.Drawing.Point(2, 2);
+            this.combo_bil_by_bill.Name = "combo_bil_by_bill";
+            this.combo_bil_by_bill.Size = new System.Drawing.Size(207, 22);
+            this.combo_bil_by_bill.TabIndex = 3;
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.White;
+            this.textBox10.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.textBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox10.Location = new System.Drawing.Point(2, 2);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(207, 22);
+            this.textBox10.TabIndex = 0;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label16.Location = new System.Drawing.Point(18, 171);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(94, 18);
+            this.label16.TabIndex = 425;
+            this.label16.Text = "Credit Period:";
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel23.Controls.Add(this.txt_email);
+            this.panel23.Location = new System.Drawing.Point(143, 129);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(211, 26);
+            this.panel23.TabIndex = 424;
+            // 
+            // txt_email
+            // 
+            this.txt_email.BackColor = System.Drawing.Color.White;
+            this.txt_email.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.txt_email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_email.Location = new System.Drawing.Point(2, 2);
+            this.txt_email.Multiline = true;
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(207, 22);
+            this.txt_email.TabIndex = 0;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(383, 133);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(76, 18);
+            this.label15.TabIndex = 423;
+            this.label15.Text = "Bill By Bill:";
+            // 
+            // panel40
+            // 
+            this.panel40.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel40.Controls.Add(this.txt_tin);
+            this.panel40.Location = new System.Drawing.Point(489, 205);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(211, 26);
+            this.panel40.TabIndex = 422;
+            // 
+            // txt_tin
+            // 
+            this.txt_tin.BackColor = System.Drawing.Color.White;
+            this.txt_tin.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.txt_tin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_tin.Location = new System.Drawing.Point(2, 2);
+            this.txt_tin.Multiline = true;
+            this.txt_tin.Name = "txt_tin";
+            this.txt_tin.Size = new System.Drawing.Size(207, 22);
+            this.txt_tin.TabIndex = 0;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label21.Location = new System.Drawing.Point(383, 209);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(34, 18);
+            this.label21.TabIndex = 421;
+            this.label21.Text = "TIN:";
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel18.Controls.Add(this.txt_phone);
+            this.panel18.Location = new System.Drawing.Point(143, 53);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(211, 26);
+            this.panel18.TabIndex = 401;
+            // 
+            // txt_phone
+            // 
+            this.txt_phone.BackColor = System.Drawing.Color.White;
+            this.txt_phone.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.txt_phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_phone.Location = new System.Drawing.Point(2, 2);
+            this.txt_phone.Multiline = true;
+            this.txt_phone.Name = "txt_phone";
+            this.txt_phone.Size = new System.Drawing.Size(207, 22);
+            this.txt_phone.TabIndex = 0;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel19.Controls.Add(this.txt_pan);
+            this.panel19.Location = new System.Drawing.Point(489, 243);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(211, 26);
+            this.panel19.TabIndex = 406;
+            // 
+            // txt_pan
+            // 
+            this.txt_pan.BackColor = System.Drawing.Color.White;
+            this.txt_pan.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.txt_pan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_pan.Location = new System.Drawing.Point(2, 2);
+            this.txt_pan.Multiline = true;
+            this.txt_pan.Name = "txt_pan";
+            this.txt_pan.Size = new System.Drawing.Size(207, 22);
+            this.txt_pan.TabIndex = 0;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel21.Controls.Add(this.txt_crdit_limit);
+            this.panel21.Location = new System.Drawing.Point(489, 167);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(211, 26);
+            this.panel21.TabIndex = 405;
+            // 
+            // txt_crdit_limit
+            // 
+            this.txt_crdit_limit.BackColor = System.Drawing.Color.White;
+            this.txt_crdit_limit.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.txt_crdit_limit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_crdit_limit.Location = new System.Drawing.Point(2, 2);
+            this.txt_crdit_limit.Multiline = true;
+            this.txt_crdit_limit.Name = "txt_crdit_limit";
+            this.txt_crdit_limit.Size = new System.Drawing.Size(207, 22);
+            this.txt_crdit_limit.TabIndex = 0;
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel29.Controls.Add(this.combo_pricing_lvel);
+            this.panel29.Controls.Add(this.textBox7);
+            this.panel29.Location = new System.Drawing.Point(489, 91);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(211, 26);
+            this.panel29.TabIndex = 404;
+            // 
+            // combo_pricing_lvel
+            // 
+            this.combo_pricing_lvel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combo_pricing_lvel.FormattingEnabled = true;
+            this.combo_pricing_lvel.Location = new System.Drawing.Point(2, 2);
+            this.combo_pricing_lvel.Name = "combo_pricing_lvel";
+            this.combo_pricing_lvel.Size = new System.Drawing.Size(207, 22);
+            this.combo_pricing_lvel.TabIndex = 2;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.White;
+            this.textBox7.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox7.Location = new System.Drawing.Point(2, 2);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(207, 22);
+            this.textBox7.TabIndex = 0;
+            // 
+            // panel42
+            // 
+            this.panel42.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel42.Controls.Add(this.txt_address);
+            this.panel42.Location = new System.Drawing.Point(489, 16);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(211, 63);
+            this.panel42.TabIndex = 400;
+            // 
+            // txt_address
+            // 
+            this.txt_address.BackColor = System.Drawing.Color.White;
+            this.txt_address.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.txt_address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_address.Location = new System.Drawing.Point(2, 2);
+            this.txt_address.Multiline = true;
+            this.txt_address.Name = "txt_address";
+            this.txt_address.Size = new System.Drawing.Size(207, 59);
+            this.txt_address.TabIndex = 0;
+            // 
+            // panel44
+            // 
+            this.panel44.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel44.Controls.Add(this.txt_mailing);
+            this.panel44.Location = new System.Drawing.Point(143, 16);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(211, 26);
+            this.panel44.TabIndex = 399;
+            // 
+            // txt_mailing
+            // 
+            this.txt_mailing.BackColor = System.Drawing.Color.White;
+            this.txt_mailing.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.txt_mailing.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_mailing.Location = new System.Drawing.Point(2, 2);
+            this.txt_mailing.Multiline = true;
+            this.txt_mailing.Name = "txt_mailing";
+            this.txt_mailing.Size = new System.Drawing.Size(207, 22);
+            this.txt_mailing.TabIndex = 0;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label14.Location = new System.Drawing.Point(18, 134);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(97, 18);
+            this.label14.TabIndex = 391;
+            this.label14.Text = "E-mail Addres:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label13.Location = new System.Drawing.Point(18, 57);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(104, 18);
+            this.label13.TabIndex = 390;
+            this.label13.Text = "Phone Number:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(383, 248);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 18);
+            this.label9.TabIndex = 376;
+            this.label9.Text = "PAN:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(383, 171);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(86, 18);
+            this.label10.TabIndex = 375;
+            this.label10.Text = "Credit Limit:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(383, 95);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 18);
+            this.label11.TabIndex = 374;
+            this.label11.Text = "Pricing Level:";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label29.Location = new System.Drawing.Point(383, 20);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(62, 18);
+            this.label29.TabIndex = 370;
+            this.label29.Text = "Address:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label30.Location = new System.Drawing.Point(18, 20);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(95, 18);
+            this.label30.TabIndex = 369;
+            this.label30.Text = "Mailing Name:";
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.Black;
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel17.Location = new System.Drawing.Point(3, 4);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(1, 621);
+            this.panel17.TabIndex = 3;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.Black;
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel16.Location = new System.Drawing.Point(738, 4);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(1, 621);
+            this.panel16.TabIndex = 2;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Black;
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel15.Location = new System.Drawing.Point(3, 625);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(736, 1);
+            this.panel15.TabIndex = 1;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.Black;
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(3, 3);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(736, 1);
+            this.panel14.TabIndex = 0;
+            // 
             // Item_Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2419,48 +2420,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton14)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tcMain.ResumeLayout(false);
             this.Registration.ResumeLayout(false);
             this.Registration.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel30.ResumeLayout(false);
-            this.panel30.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            this.panel27.ResumeLayout(false);
-            this.panel27.PerformLayout();
-            this.panel26.ResumeLayout(false);
-            this.panel26.PerformLayout();
-            this.panel25.ResumeLayout(false);
-            this.panel25.PerformLayout();
-            this.panel24.ResumeLayout(false);
-            this.panel24.PerformLayout();
-            this.panel22.ResumeLayout(false);
-            this.panel22.PerformLayout();
-            this.panel23.ResumeLayout(false);
-            this.panel23.PerformLayout();
-            this.panel40.ResumeLayout(false);
-            this.panel40.PerformLayout();
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
-            this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
-            this.panel29.ResumeLayout(false);
-            this.panel29.PerformLayout();
-            this.panel42.ResumeLayout(false);
-            this.panel42.PerformLayout();
-            this.panel44.ResumeLayout(false);
-            this.panel44.PerformLayout();
             this.panel37.ResumeLayout(false);
             this.panel38.ResumeLayout(false);
             this.panel38.PerformLayout();
@@ -2514,6 +2481,40 @@
             this.panel56.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton15)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel30.ResumeLayout(false);
+            this.panel30.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.panel27.ResumeLayout(false);
+            this.panel27.PerformLayout();
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
+            this.panel24.ResumeLayout(false);
+            this.panel24.PerformLayout();
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            this.panel40.ResumeLayout(false);
+            this.panel40.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            this.panel29.ResumeLayout(false);
+            this.panel29.PerformLayout();
+            this.panel42.ResumeLayout(false);
+            this.panel42.PerformLayout();
+            this.panel44.ResumeLayout(false);
+            this.panel44.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2534,9 +2535,9 @@
         private System.Windows.Forms.LinkLabel lnk_sale_rpt;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton14;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton5;
+        private Bunifu.Framework.UI.BunifuImageButton minimize;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton9;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton6;
+        private Bunifu.Framework.UI.BunifuImageButton close;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton10;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;

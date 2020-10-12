@@ -188,7 +188,6 @@ C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Gith
 C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmTrialBalance.resources
 C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Godownmaster.resources
 C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Import_Product.resources
-C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Import_Services_Customer.resources
 C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Item_Master.resources
 C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Logs.resources
 C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Money_Transfer.resources
@@ -230,3 +229,12 @@ C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Gith
 C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Vender_Payment.resources
 C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Add_Bank.resources
 C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Add_Wallets.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.AddRevenue.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.PayTaxes.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.GeneralPayment.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.GeneralReceipt.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.ImportCustomer.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.ImportVender.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Reminder.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.TerminalSetting.resources
+C:\Users\glcc4\Documents\Visual Studio 2012\Projects\project\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.EmailSetting.resources
