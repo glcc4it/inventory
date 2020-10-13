@@ -201,7 +201,6 @@ D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loo
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Dashboard.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Daybook.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Expense_Master.resources
-D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Export_Repair_Record.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmCustomerRecord.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmCustomerRecord1.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmCustomerRecord2.resources
@@ -257,3 +256,8 @@ D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\bin\Debug\Ent
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\bin\Debug\EntityFramework.xml
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\bin\Debug\EntityFramework.SqlServer.xml
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop Inventory.csprojResolveAssemblyReference.cache
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Add_Bank.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Add_Expense.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Add_Treasury.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Add_Wallets.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Vender_Payment.resources

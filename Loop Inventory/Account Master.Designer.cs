@@ -52,7 +52,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -85,7 +85,7 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel41 = new System.Windows.Forms.Panel();
@@ -96,6 +96,7 @@
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel46.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton7)).BeginInit();
@@ -260,6 +261,7 @@
             // 
             this.u.BackColor = System.Drawing.Color.WhiteSmoke;
             this.u.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.u.Controls.Add(this.txtID);
             this.u.Controls.Add(this.btn_print);
             this.u.Controls.Add(this.dataGridView1);
             this.u.Controls.Add(this.panel5);
@@ -305,8 +307,9 @@
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(65, 29);
             this.btn_print.TabIndex = 1033;
-            this.btn_print.Text = "Print";
+            this.btn_print.Text = "Search";
             this.btn_print.UseVisualStyleBackColor = false;
+            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
             // 
             // dataGridView1
             // 
@@ -354,6 +357,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(647, 237);
             this.dataGridView1.TabIndex = 1032;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // panel5
             // 
@@ -387,21 +391,21 @@
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel23.Controls.Add(this.textBox10);
+            this.panel23.Controls.Add(this.txtSearch);
             this.panel23.Location = new System.Drawing.Point(399, 331);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(186, 29);
             this.panel23.TabIndex = 1028;
             // 
-            // textBox10
+            // txtSearch
             // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox10.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.textBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox10.Location = new System.Drawing.Point(2, 2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(182, 25);
-            this.textBox10.TabIndex = 0;
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtSearch.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtSearch.Location = new System.Drawing.Point(2, 2);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(182, 25);
+            this.txtSearch.TabIndex = 0;
             // 
             // label10
             // 
@@ -435,8 +439,8 @@
             this.comboBox2.IntegralHeight = false;
             this.comboBox2.ItemHeight = 17;
             this.comboBox2.Items.AddRange(new object[] {
-            "Resolved",
-            "Unresolved"});
+            "AccountNumber",
+            "Type"});
             this.comboBox2.Location = new System.Drawing.Point(2, 2);
             this.comboBox2.MaxDropDownItems = 50;
             this.comboBox2.Name = "comboBox2";
@@ -468,6 +472,7 @@
             this.btnDelete.Text = "&Delete";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -482,6 +487,7 @@
             this.btnUpdate.Text = " &Update";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSave
             // 
@@ -496,6 +502,7 @@
             this.btnSave.Text = "&Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // panel17
             // 
@@ -622,7 +629,7 @@
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(11, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 18);
+            this.label3.Size = new System.Drawing.Size(97, 18);
             this.label3.TabIndex = 998;
             this.label3.Text = "Account Type:";
             // 
@@ -663,7 +670,6 @@
             this.txtAccountNo.ForeColor = System.Drawing.Color.Black;
             this.txtAccountNo.Location = new System.Drawing.Point(2, 2);
             this.txtAccountNo.Name = "txtAccountNo";
-            this.txtAccountNo.ReadOnly = true;
             this.txtAccountNo.Size = new System.Drawing.Size(187, 25);
             this.txtAccountNo.TabIndex = 2;
             // 
@@ -707,7 +713,7 @@
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(11, 198);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 18);
+            this.label7.Size = new System.Drawing.Size(108, 18);
             this.label7.TabIndex = 966;
             this.label7.Text = "Sub Account Of:";
             // 
@@ -773,7 +779,7 @@
             this.panel15.Controls.Add(this.panel18);
             this.panel15.Location = new System.Drawing.Point(327, 27);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(326, 248);
+            this.panel15.Size = new System.Drawing.Size(326, 216);
             this.panel15.TabIndex = 1020;
             // 
             // label2
@@ -790,32 +796,32 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cmbStatus);
             this.panel2.Location = new System.Drawing.Point(123, 167);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(191, 29);
             this.panel2.TabIndex = 1011;
             // 
-            // comboBox1
+            // cmbStatus
             // 
-            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.comboBox1.DropDownHeight = 200;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.ItemHeight = 17;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbStatus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbStatus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cmbStatus.DropDownHeight = 200;
+            this.cmbStatus.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cmbStatus.ForeColor = System.Drawing.Color.Black;
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.IntegralHeight = false;
+            this.cmbStatus.ItemHeight = 17;
+            this.cmbStatus.Items.AddRange(new object[] {
             "Resolved",
             "Unresolved"});
-            this.comboBox1.Location = new System.Drawing.Point(2, 2);
-            this.comboBox1.MaxDropDownItems = 50;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(187, 25);
-            this.comboBox1.TabIndex = 575;
-            this.comboBox1.Text = "--- Select Status---";
+            this.cmbStatus.Location = new System.Drawing.Point(2, 2);
+            this.cmbStatus.MaxDropDownItems = 50;
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(187, 25);
+            this.cmbStatus.TabIndex = 575;
+            this.cmbStatus.Text = "--- Select Status---";
             // 
             // label25
             // 
@@ -903,7 +909,7 @@
             // 
             this.panel28.BackColor = System.Drawing.Color.DimGray;
             this.panel28.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel28.Location = new System.Drawing.Point(2, 246);
+            this.panel28.Location = new System.Drawing.Point(2, 214);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(322, 2);
             this.panel28.TabIndex = 425;
@@ -914,7 +920,7 @@
             this.panel27.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel27.Location = new System.Drawing.Point(324, 0);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(2, 248);
+            this.panel27.Size = new System.Drawing.Size(2, 216);
             this.panel27.TabIndex = 423;
             // 
             // panel18
@@ -923,8 +929,19 @@
             this.panel18.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel18.Location = new System.Drawing.Point(0, 0);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(2, 248);
+            this.panel18.Size = new System.Drawing.Size(2, 216);
             this.panel18.TabIndex = 422;
+            // 
+            // txtID
+            // 
+            this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtID.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtID.ForeColor = System.Drawing.Color.Black;
+            this.txtID.Location = new System.Drawing.Point(449, 1);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(10, 25);
+            this.txtID.TabIndex = 1034;
             // 
             // Account_Master
             // 
@@ -940,6 +957,7 @@
             this.Name = "Account_Master";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Account_Master";
+            this.Load += new System.EventHandler(this.Account_Master_Load);
             this.panel1.ResumeLayout(false);
             this.panel46.ResumeLayout(false);
             this.panel46.PerformLayout();
@@ -1029,13 +1047,14 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel12;
         public System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label8;
-        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox cmbStatus;
         internal System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_print;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

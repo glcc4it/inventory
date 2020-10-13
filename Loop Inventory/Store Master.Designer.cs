@@ -53,7 +53,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.txtmobile = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtUserID = new System.Windows.Forms.TextBox();
             this.panel28 = new System.Windows.Forms.Panel();
@@ -129,6 +129,7 @@
             this.btnDelete.Text = "&Delete";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -144,6 +145,7 @@
             this.btnUpdate.Text = "&Update";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnNew
             // 
@@ -159,6 +161,7 @@
             this.btnNew.Text = "&New";
             this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // panel5
             // 
@@ -202,6 +205,7 @@
             this.btnSave.Text = "&Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // bunifuImageButton38
             // 
@@ -265,7 +269,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(13, 203);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 18);
+            this.label5.Size = new System.Drawing.Size(99, 18);
             this.label5.TabIndex = 832;
             this.label5.Text = "Email Address:";
             // 
@@ -351,16 +355,15 @@
             this.txtmobile.Size = new System.Drawing.Size(194, 25);
             this.txtmobile.TabIndex = 818;
             // 
-            // txtPassword
+            // txtAddress
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPassword.Location = new System.Drawing.Point(192, 124);
-            this.txtPassword.Multiline = true;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(194, 63);
-            this.txtPassword.TabIndex = 815;
+            this.txtAddress.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAddress.Location = new System.Drawing.Point(192, 124);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(194, 63);
+            this.txtAddress.TabIndex = 815;
             // 
             // txtName
             // 
@@ -424,7 +427,7 @@
             this.panel17.Controls.Add(this.label1);
             this.panel17.Controls.Add(this.label2);
             this.panel17.Controls.Add(this.label6);
-            this.panel17.Controls.Add(this.txtPassword);
+            this.panel17.Controls.Add(this.txtAddress);
             this.panel17.Controls.Add(this.txtName);
             this.panel17.Controls.Add(this.txtUserID);
             this.panel17.Controls.Add(this.panel29);
@@ -447,7 +450,7 @@
             this.cmbUserType.FormattingEnabled = true;
             this.cmbUserType.Items.AddRange(new object[] {
             "Active",
-            "Deative"});
+            "Deactive"});
             this.cmbUserType.Location = new System.Drawing.Point(192, 272);
             this.cmbUserType.Name = "cmbUserType";
             this.cmbUserType.Size = new System.Drawing.Size(194, 25);
@@ -526,6 +529,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(349, 321);
             this.dataGridView1.TabIndex = 805;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // label9
             // 
@@ -562,7 +566,7 @@
             this.panel10.Controls.Add(this.panel14);
             this.panel10.Controls.Add(this.lblUser);
             this.panel10.ForeColor = System.Drawing.Color.DarkGray;
-            this.panel10.Location = new System.Drawing.Point(414, 44);
+            this.panel10.Location = new System.Drawing.Point(414, 43);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(365, 377);
             this.panel10.TabIndex = 838;
@@ -577,8 +581,9 @@
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(63, 25);
             this.btn_print.TabIndex = 804;
-            this.btn_print.Text = "Print";
+            this.btn_print.Text = "Search";
             this.btn_print.UseVisualStyleBackColor = false;
+            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
             // 
             // combo_search_type
             // 
@@ -589,7 +594,7 @@
             this.combo_search_type.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.combo_search_type.FormattingEnabled = true;
             this.combo_search_type.Items.AddRange(new object[] {
-            "Username",
+            "StoreName",
             "Mobile"});
             this.combo_search_type.Location = new System.Drawing.Point(8, 15);
             this.combo_search_type.Name = "combo_search_type";
@@ -687,7 +692,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(18, 263);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 18);
+            this.label7.Size = new System.Drawing.Size(93, 18);
             this.label7.TabIndex = 833;
             this.label7.Text = "Email Addres:";
             // 
@@ -710,6 +715,7 @@
             this.Name = "Store_Master";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Store_Master";
+            this.Load += new System.EventHandler(this.Store_Master_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
@@ -749,7 +755,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txtmobile;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtUserID;
         private System.Windows.Forms.Panel panel28;

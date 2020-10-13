@@ -26,5 +26,10 @@ namespace Loop_Inventory
         {
             this.Close();
         }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
