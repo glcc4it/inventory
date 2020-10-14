@@ -37,9 +37,7 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.lblUser = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -49,13 +47,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel32 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvExcelData = new System.Windows.Forms.DataGridView();
             this.btnReset = new System.Windows.Forms.Button();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.panel34 = new System.Windows.Forms.Panel();
             this.txtFilePath = new System.Windows.Forms.TextBox();
             this.btnGetData = new System.Windows.Forms.Button();
-            this.dgvExcelData = new System.Windows.Forms.DataGridView();
-            this.btnexport = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.jobnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.invoicedateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,9 +81,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel32.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExcelData)).BeginInit();
             this.GroupBox2.SuspendLayout();
             this.panel34.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExcelData)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,14 +102,14 @@
             this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(2, 592);
+            this.panel14.Size = new System.Drawing.Size(2, 619);
             this.panel14.TabIndex = 336;
             // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel13.Location = new System.Drawing.Point(0, 592);
+            this.panel13.Location = new System.Drawing.Point(0, 619);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(716, 2);
             this.panel13.TabIndex = 335;
@@ -123,42 +120,24 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel11.Location = new System.Drawing.Point(716, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(2, 594);
+            this.panel11.Size = new System.Drawing.Size(2, 621);
             this.panel11.TabIndex = 334;
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(325, 287);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(68, 20);
-            this.txtID.TabIndex = 814;
-            this.txtID.Visible = false;
             // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(336, 290);
+            this.lblUser.Location = new System.Drawing.Point(393, 253);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(39, 13);
             this.lblUser.TabIndex = 813;
             this.lblUser.Text = "Label8";
             this.lblUser.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(340, 291);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 815;
-            this.label1.Text = "Label8";
-            this.label1.Visible = false;
-            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(2, 641);
+            this.panel10.Location = new System.Drawing.Point(2, 668);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(720, 2);
             this.panel10.TabIndex = 458;
@@ -169,7 +148,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel7.Location = new System.Drawing.Point(722, 54);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(2, 589);
+            this.panel7.Size = new System.Drawing.Size(2, 616);
             this.panel7.TabIndex = 457;
             // 
             // panel8
@@ -178,7 +157,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 54);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(2, 589);
+            this.panel8.Size = new System.Drawing.Size(2, 616);
             this.panel8.TabIndex = 456;
             // 
             // bunifuImageButton5
@@ -206,11 +185,11 @@
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 12.75F);
             this.label6.ForeColor = System.Drawing.Color.Transparent;
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(259, 2);
+            this.label6.Location = new System.Drawing.Point(265, 2);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(218, 23);
+            this.label6.Size = new System.Drawing.Size(187, 23);
             this.label6.TabIndex = 148;
-            this.label6.Text = "Import and Export Products";
+            this.label6.Text = "Import Product Records";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // bunifuImageButton6
@@ -257,91 +236,21 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.dgvExcelData);
             this.panel2.Controls.Add(this.btnReset);
             this.panel2.Controls.Add(this.GroupBox2);
-            this.panel2.Controls.Add(this.dgvExcelData);
-            this.panel2.Controls.Add(this.btnexport);
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel14);
             this.panel2.Controls.Add(this.panel13);
             this.panel2.Controls.Add(this.panel11);
-            this.panel2.Controls.Add(this.txtID);
             this.panel2.Controls.Add(this.lblUser);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(3, 46);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(718, 594);
+            this.panel2.Size = new System.Drawing.Size(718, 621);
             this.panel2.TabIndex = 459;
-            // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.Color.Transparent;
-            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.ForeColor = System.Drawing.Color.Black;
-            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
-            this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReset.Location = new System.Drawing.Point(631, 34);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(80, 35);
-            this.btnReset.TabIndex = 817;
-            this.btnReset.Text = "Reset";
-            this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReset.UseVisualStyleBackColor = false;
-            // 
-            // GroupBox2
-            // 
-            this.GroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.GroupBox2.Controls.Add(this.panel34);
-            this.GroupBox2.Controls.Add(this.btnGetData);
-            this.GroupBox2.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox2.Location = new System.Drawing.Point(7, 14);
-            this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Size = new System.Drawing.Size(365, 66);
-            this.GroupBox2.TabIndex = 816;
-            this.GroupBox2.TabStop = false;
-            this.GroupBox2.Text = "Excel File Path";
-            // 
-            // panel34
-            // 
-            this.panel34.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel34.Controls.Add(this.txtFilePath);
-            this.panel34.Location = new System.Drawing.Point(6, 20);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(235, 35);
-            this.panel34.TabIndex = 542;
-            // 
-            // txtFilePath
-            // 
-            this.txtFilePath.BackColor = System.Drawing.Color.White;
-            this.txtFilePath.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFilePath.Location = new System.Drawing.Point(3, 3);
-            this.txtFilePath.Multiline = true;
-            this.txtFilePath.Name = "txtFilePath";
-            this.txtFilePath.Size = new System.Drawing.Size(229, 29);
-            this.txtFilePath.TabIndex = 1;
-            // 
-            // btnGetData
-            // 
-            this.btnGetData.BackColor = System.Drawing.Color.White;
-            this.btnGetData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGetData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGetData.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGetData.Image = ((System.Drawing.Image)(resources.GetObject("btnGetData.Image")));
-            this.btnGetData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGetData.Location = new System.Drawing.Point(247, 20);
-            this.btnGetData.Name = "btnGetData";
-            this.btnGetData.Size = new System.Drawing.Size(112, 35);
-            this.btnGetData.TabIndex = 1;
-            this.btnGetData.Text = " Load Excel";
-            this.btnGetData.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGetData.UseVisualStyleBackColor = false;
-            this.btnGetData.Click += new System.EventHandler(this.btnGetData_Click);
             // 
             // dgvExcelData
             // 
@@ -382,28 +291,75 @@
             this.dgvExcelData.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvExcelData.RowTemplate.Height = 18;
             this.dgvExcelData.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvExcelData.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dgvExcelData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvExcelData.Size = new System.Drawing.Size(704, 499);
+            this.dgvExcelData.Size = new System.Drawing.Size(704, 526);
             this.dgvExcelData.TabIndex = 812;
             // 
-            // btnexport
+            // btnReset
             // 
-            this.btnexport.BackColor = System.Drawing.Color.Transparent;
-            this.btnexport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnexport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnexport.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnexport.ForeColor = System.Drawing.Color.Black;
-            this.btnexport.Image = ((System.Drawing.Image)(resources.GetObject("btnexport.Image")));
-            this.btnexport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnexport.Location = new System.Drawing.Point(377, 34);
-            this.btnexport.Name = "btnexport";
-            this.btnexport.Size = new System.Drawing.Size(121, 35);
-            this.btnexport.TabIndex = 797;
-            this.btnexport.Text = "&Export Excel";
-            this.btnexport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnexport.UseVisualStyleBackColor = false;
-            this.btnexport.Click += new System.EventHandler(this.btngetrecord_Click);
+            this.btnReset.BackColor = System.Drawing.Color.Transparent;
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.Black;
+            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
+            this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReset.Location = new System.Drawing.Point(621, 34);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(80, 35);
+            this.btnReset.TabIndex = 817;
+            this.btnReset.Text = "Reset";
+            this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReset.UseVisualStyleBackColor = false;
+            // 
+            // GroupBox2
+            // 
+            this.GroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox2.Controls.Add(this.panel34);
+            this.GroupBox2.Controls.Add(this.btnGetData);
+            this.GroupBox2.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox2.Location = new System.Drawing.Point(7, 14);
+            this.GroupBox2.Name = "GroupBox2";
+            this.GroupBox2.Size = new System.Drawing.Size(452, 66);
+            this.GroupBox2.TabIndex = 816;
+            this.GroupBox2.TabStop = false;
+            this.GroupBox2.Text = "Excel File Path";
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel34.Controls.Add(this.txtFilePath);
+            this.panel34.Location = new System.Drawing.Point(6, 20);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(308, 35);
+            this.panel34.TabIndex = 542;
+            // 
+            // txtFilePath
+            // 
+            this.txtFilePath.BackColor = System.Drawing.Color.White;
+            this.txtFilePath.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFilePath.Location = new System.Drawing.Point(3, 3);
+            this.txtFilePath.Multiline = true;
+            this.txtFilePath.Name = "txtFilePath";
+            this.txtFilePath.Size = new System.Drawing.Size(302, 29);
+            this.txtFilePath.TabIndex = 1;
+            // 
+            // btnGetData
+            // 
+            this.btnGetData.BackColor = System.Drawing.Color.White;
+            this.btnGetData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGetData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetData.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetData.Image = ((System.Drawing.Image)(resources.GetObject("btnGetData.Image")));
+            this.btnGetData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGetData.Location = new System.Drawing.Point(325, 20);
+            this.btnGetData.Name = "btnGetData";
+            this.btnGetData.Size = new System.Drawing.Size(112, 35);
+            this.btnGetData.TabIndex = 1;
+            this.btnGetData.Text = " Load Excel";
+            this.btnGetData.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGetData.UseVisualStyleBackColor = false;
+            this.btnGetData.Click += new System.EventHandler(this.btnGetData_Click);
             // 
             // btnSave
             // 
@@ -414,7 +370,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.Black;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(500, 34);
+            this.btnSave.Location = new System.Drawing.Point(486, 34);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(129, 35);
             this.btnSave.TabIndex = 795;
@@ -601,7 +557,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 643);
+            this.ClientSize = new System.Drawing.Size(724, 670);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel8);
@@ -619,10 +575,10 @@
             this.panel32.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExcelData)).EndInit();
             this.GroupBox2.ResumeLayout(false);
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvExcelData)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -634,9 +590,7 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel11;
-        internal System.Windows.Forms.TextBox txtID;
         internal System.Windows.Forms.Label lblUser;
-        internal System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
@@ -672,7 +626,6 @@
         private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.TextBox txtFilePath;
         internal System.Windows.Forms.Button btnGetData;
-        internal System.Windows.Forms.Button btnexport;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         internal System.Windows.Forms.Button btnReset;
         internal System.Windows.Forms.Button btnSave;

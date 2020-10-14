@@ -449,12 +449,7 @@ namespace Loop_Inventory
 
       
 
-        private void importRecordToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Import_Services_Customer ss = new Import_Services_Customer();
-            ss.Show();
-            ss.lblUser.Text = lblUser.Text;
-        }
+        
 
        
 

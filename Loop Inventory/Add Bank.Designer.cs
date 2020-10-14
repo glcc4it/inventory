@@ -211,11 +211,11 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(13, 14);
+            this.label6.Location = new System.Drawing.Point(13, 15);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 18);
+            this.label6.Size = new System.Drawing.Size(92, 18);
             this.label6.TabIndex = 956;
-            this.label6.Text = "ID Number:";
+            this.label6.Text = "BankNumber:";
             // 
             // panel11
             // 
@@ -481,6 +481,9 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(697, 27);
             this.panel2.TabIndex = 0;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
             // 
             // pictureBox1
             // 
@@ -1030,9 +1033,11 @@
             this.Controls.Add(this.u);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Add_Bank";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Bank";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Add_Bank_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton12)).EndInit();

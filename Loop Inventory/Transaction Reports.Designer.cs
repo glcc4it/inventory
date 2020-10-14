@@ -43,6 +43,7 @@
             this.panel34 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnexport = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -52,7 +53,6 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -239,6 +239,13 @@
             this.panel2.Size = new System.Drawing.Size(718, 639);
             this.panel2.TabIndex = 472;
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(9, 93);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(700, 537);
+            this.reportViewer1.TabIndex = 924;
+            // 
             // btnexport
             // 
             this.btnexport.BackColor = System.Drawing.Color.Transparent;
@@ -250,7 +257,7 @@
             this.btnexport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnexport.Location = new System.Drawing.Point(442, 42);
             this.btnexport.Name = "btnexport";
-            this.btnexport.Size = new System.Drawing.Size(129, 33);
+            this.btnexport.Size = new System.Drawing.Size(129, 35);
             this.btnexport.TabIndex = 923;
             this.btnexport.Text = "&Fetch Reord";
             this.btnexport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -267,7 +274,7 @@
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(575, 42);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(129, 33);
+            this.btnSave.Size = new System.Drawing.Size(129, 35);
             this.btnSave.TabIndex = 922;
             this.btnSave.Text = "&Print Reports";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -336,13 +343,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(2, 633);
             this.panel7.TabIndex = 476;
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Location = new System.Drawing.Point(9, 93);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(700, 537);
-            this.reportViewer1.TabIndex = 924;
             // 
             // Transaction_Reports
             // 

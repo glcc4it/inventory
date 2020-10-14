@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Expense));
             this.panel30 = new System.Windows.Forms.Panel();
             this.txtAmount = new System.Windows.Forms.TextBox();
@@ -481,8 +481,8 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(8, 401);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Size = new System.Drawing.Size(647, 240);
             this.dataGridView1.TabIndex = 1035;
             // 
@@ -898,6 +898,9 @@
             this.panel46.Name = "panel46";
             this.panel46.Size = new System.Drawing.Size(676, 27);
             this.panel46.TabIndex = 0;
+            this.panel46.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel46_MouseDown);
+            this.panel46.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel46_MouseMove);
+            this.panel46.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel46_MouseUp);
             // 
             // lblUser
             // 
@@ -993,9 +996,11 @@
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Add_Expense";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Expense";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Add_Expense_KeyDown);
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
             this.panel5.ResumeLayout(false);
