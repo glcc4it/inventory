@@ -35,5 +35,81 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tbl_godown">
+      <EntityTypeMapping TypeName="Inventory_DBModel.tbl_godown">
+        <MappingFragment StoreEntitySet="tbl_godown">
+          <ScalarProperty Name="narration" ColumnName="narration" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="godownname" ColumnName="godownname" />
+          <ScalarProperty Name="Sno" ColumnName="Sno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStores">
+      <EntityTypeMapping TypeName="Inventory_DBModel.tblStore">
+        <MappingFragment StoreEntitySet="tblStore">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblItemMasters">
+      <EntityTypeMapping TypeName="Inventory_DBModel.tblItemMaster">
+        <MappingFragment StoreEntitySet="tblItemMaster">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="AddProfit" ColumnName="AddProfit" />
+          <ScalarProperty Name="CustomerPrice" ColumnName="CustomerPrice" />
+          <ScalarProperty Name="RetailPrice" ColumnName="RetailPrice" />
+          <ScalarProperty Name="CustomPrice" ColumnName="CustomPrice" />
+          <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+          <ScalarProperty Name="WholeSalePrice" ColumnName="WholeSalePrice" />
+          <ScalarProperty Name="SellingCurrency" ColumnName="SellingCurrency" />
+          <ScalarProperty Name="PurchaseCurrency" ColumnName="PurchaseCurrency" />
+          <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+          <ScalarProperty Name="ManufacturingDate" ColumnName="ManufacturingDate" />
+          <ScalarProperty Name="ReorderLevel" ColumnName="ReorderLevel" />
+          <ScalarProperty Name="TaxPercent" ColumnName="TaxPercent" />
+          <ScalarProperty Name="NextShoppingDiscount" ColumnName="NextShoppingDiscount" />
+          <ScalarProperty Name="DirectDiscount" ColumnName="DirectDiscount" />
+          <ScalarProperty Name="DiscountType" ColumnName="DiscountType" />
+          <ScalarProperty Name="Vender" ColumnName="Vender" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="QtyPerUnit" ColumnName="QtyPerUnit" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="StoreType" ColumnName="StoreType" />
+          <ScalarProperty Name="NameEng" ColumnName="NameEng" />
+          <ScalarProperty Name="NameArabic" ColumnName="NameArabic" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Barcode2" ColumnName="Barcode2" />
+          <ScalarProperty Name="Barcode1" ColumnName="Barcode1" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_AccountMaster">
+      <EntityTypeMapping TypeName="Inventory_DBModel.tbl_AccountMaster">
+        <MappingFragment StoreEntitySet="tbl_AccountMaster">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="AccountCurrency" ColumnName="AccountCurrency" />
+          <ScalarProperty Name="AccountRules" ColumnName="AccountRules" />
+          <ScalarProperty Name="SubAccountof" ColumnName="SubAccountof" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="Accounttype" ColumnName="Accounttype" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -1,5 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Inventory_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_AccountMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountNumber" Type="nvarchar" MaxLength="300" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Accounttype" Type="nvarchar" MaxLength="300" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="300" />
+    <Property Name="SubAccountof" Type="nvarchar" MaxLength="300" />
+    <Property Name="AccountRules" Type="nvarchar" MaxLength="300" />
+    <Property Name="AccountCurrency" Type="nvarchar" MaxLength="300" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="300" />
+    <Property Name="Status" Type="nvarchar" MaxLength="300" />
+  </EntityType>
   <EntityType Name="tbl_Currency">
     <Key>
       <PropertyRef Name="ID" />
@@ -8,6 +23,15 @@
     <Property Name="Name" Type="nvarchar" MaxLength="50" />
     <Property Name="value" Type="decimal" Precision="18" Scale="3" />
     <Property Name="Status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_godown">
+    <Key>
+      <PropertyRef Name="Sno" />
+    </Key>
+    <Property Name="Sno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="godownname" Type="varchar" MaxLength="200" />
+    <Property Name="date" Type="varchar" MaxLength="50" />
+    <Property Name="narration" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="tbl_Tax">
     <Key>
@@ -31,9 +55,61 @@
     <Property Name="OfferQuantity" Type="numeric" Precision="18" Scale="0" />
     <Property Name="Bonus" Type="numeric" Precision="18" Scale="0" />
   </EntityType>
+  <EntityType Name="tblItemMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Barcode1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Barcode2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameArabic" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameEng" Type="nvarchar" MaxLength="50" />
+    <Property Name="StoreType" Type="nvarchar" MaxLength="50" />
+    <Property Name="BrandName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Category" Type="nvarchar" MaxLength="50" />
+    <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+    <Property Name="Color" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="QtyPerUnit" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Company" Type="nvarchar" MaxLength="50" />
+    <Property Name="Vender" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiscountType" Type="nvarchar" MaxLength="50" />
+    <Property Name="DirectDiscount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NextShoppingDiscount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TaxPercent" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ReorderLevel" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="ManufacturingDate" Type="date" />
+    <Property Name="ExpireDate" Type="date" />
+    <Property Name="PurchaseCurrency" Type="nvarchar" MaxLength="50" />
+    <Property Name="SellingCurrency" Type="nvarchar" MaxLength="50" />
+    <Property Name="WholeSalePrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PurchasePrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CustomPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RetailPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CustomerPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AddProfit" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblStore">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateCreated" Type="date" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="MobileNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityContainer Name="Inventory_DBModelStoreContainer">
+    <EntitySet Name="tbl_AccountMaster" EntityType="Self.tbl_AccountMaster" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbl_Currency" EntityType="Self.tbl_Currency" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_godown" EntityType="Self.tbl_godown" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbl_Tax" EntityType="Self.tbl_Tax" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblBonusQuantity" EntityType="Self.tblBonusQuantity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblItemMaster" EntityType="Self.tblItemMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStore" EntityType="Self.tblStore" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
