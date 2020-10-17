@@ -17,6 +17,7 @@
     <EntitySet Name="tblStores" EntityType="Inventory_DBModel.tblStore" />
     <EntitySet Name="tblItemMasters" EntityType="Inventory_DBModel.tblItemMaster" />
     <EntitySet Name="tbl_AccountMaster" EntityType="Inventory_DBModel.tbl_AccountMaster" />
+    <EntitySet Name="Suppliers" EntityType="Inventory_DBModel.Supplier" />
   </EntityContainer>
   <EntityType Name="tbl_Currency">
     <Key>
@@ -111,5 +112,27 @@
     <Property Name="AccountCurrency" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
     <Property Name="Notes" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
     <Property Name="Status" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNature" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CurrencyType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="OpeningBalance" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="OpeningBalanceType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EmailID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Mobileno" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CreditLimit" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Branch" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DefultTransaction" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

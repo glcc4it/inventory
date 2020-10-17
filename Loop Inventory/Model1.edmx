@@ -5,6 +5,28 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Inventory_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SupplierID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="AccountNature" Type="nvarchar" MaxLength="200" />
+          <Property Name="CurrencyType" Type="nvarchar" MaxLength="200" />
+          <Property Name="OpeningBalance" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="OpeningBalanceType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="EmailID" Type="nvarchar" MaxLength="200" />
+          <Property Name="Mobileno" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreditLimit" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Branch" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccountNumber" Type="nvarchar" MaxLength="500" />
+          <Property Name="DefultTransaction" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="nvarchar" MaxLength="500" />
+        </EntityType>
         <EntityType Name="tbl_AccountMaster">
           <Key>
             <PropertyRef Name="Id" />
@@ -109,6 +131,7 @@
           <Property Name="Status" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="Inventory_DBModelStoreContainer">
+          <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_AccountMaster" EntityType="Self.tbl_AccountMaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Currency" EntityType="Self.tbl_Currency" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_godown" EntityType="Self.tbl_godown" Schema="dbo" store:Type="Tables" />
@@ -138,6 +161,7 @@
           <EntitySet Name="tblStores" EntityType="Inventory_DBModel.tblStore" />
           <EntitySet Name="tblItemMasters" EntityType="Inventory_DBModel.tblItemMaster" />
           <EntitySet Name="tbl_AccountMaster" EntityType="Inventory_DBModel.tbl_AccountMaster" />
+          <EntitySet Name="Suppliers" EntityType="Inventory_DBModel.Supplier" />
         </EntityContainer>
         <EntityType Name="tbl_Currency">
           <Key>
@@ -232,6 +256,28 @@
           <Property Name="AccountCurrency" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
           <Property Name="Notes" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SupplierID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AccountNature" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencyType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="OpeningBalance" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="OpeningBalanceType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EmailID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Mobileno" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CreditLimit" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Branch" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccountNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DefultTransaction" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -346,6 +392,29 @@
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Suppliers">
+            <EntityTypeMapping TypeName="Inventory_DBModel.Supplier">
+              <MappingFragment StoreEntitySet="Supplier">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DefultTransaction" ColumnName="DefultTransaction" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="Branch" ColumnName="Branch" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="CreditLimit" ColumnName="CreditLimit" />
+                <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="OpeningBalanceType" ColumnName="OpeningBalanceType" />
+                <ScalarProperty Name="OpeningBalance" ColumnName="OpeningBalance" />
+                <ScalarProperty Name="CurrencyType" ColumnName="CurrencyType" />
+                <ScalarProperty Name="AccountNature" ColumnName="AccountNature" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

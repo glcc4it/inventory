@@ -213,7 +213,6 @@ D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loo
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmTrialBalance.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Godownmaster.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Import_Product.resources
-D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Import_Services_Customer.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Item_Master.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Logs.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Money_Transfer.resources
@@ -255,7 +254,6 @@ D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\bin\Debug\Ent
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\bin\Debug\EntityFramework.SqlServer.dll
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\bin\Debug\EntityFramework.xml
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\bin\Debug\EntityFramework.SqlServer.xml
-D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop Inventory.csprojResolveAssemblyReference.cache
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Add_Bank.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Add_Expense.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Add_Treasury.resources

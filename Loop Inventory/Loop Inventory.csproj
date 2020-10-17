@@ -203,6 +203,11 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Daybook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,12 +292,6 @@
     </Compile>
     <Compile Include="Import Product.Designer.cs">
       <DependentUpon>Import Product.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Import Services Customer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Import Services Customer.Designer.cs">
-      <DependentUpon>Import Services Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory_DBDataSet.cs">
       <DependentUpon>Inventory_DBDataSet.xsd</DependentUpon>
@@ -478,6 +477,9 @@
     <Compile Include="Supplier Master.Designer.cs">
       <DependentUpon>Supplier Master.cs</DependentUpon>
     </Compile>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Tax Master.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -631,9 +633,6 @@
     <EmbeddedResource Include="Import Product.resx">
       <DependentUpon>Import Product.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Import Services Customer.resx">
-      <DependentUpon>Import Services Customer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Item Master.resx">
       <DependentUpon>Item Master.cs</DependentUpon>
     </EmbeddedResource>
@@ -752,6 +751,17 @@
     <EmbeddedResource Include="Vender Payment.resx">
       <DependentUpon>Vender Payment.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Inventory_DBDataSet.xsc">
       <DependentUpon>Inventory_DBDataSet.xsd</DependentUpon>
     </None>
