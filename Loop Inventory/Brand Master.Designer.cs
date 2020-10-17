@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Brand_Master));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,7 +44,10 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -59,13 +63,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgw = new System.Windows.Forms.DataGridView();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.brandNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manufacturerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblBrandMasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inventory_DBDataSet = new Loop_Inventory.Inventory_DBDataSet();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txt_des = new System.Windows.Forms.TextBox();
+            this.combo_status = new System.Windows.Forms.ComboBox();
+            this.tbl_BrandMasterTableAdapter = new Loop_Inventory.Inventory_DBDataSetTableAdapters.tbl_BrandMasterTableAdapter();
             this.panel15.SuspendLayout();
             this.panel6.SuspendLayout();
             this.GroupBox2.SuspendLayout();
@@ -76,6 +84,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblBrandMasterBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventory_DBDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -99,7 +109,7 @@
             this.panel15.Controls.Add(this.label5);
             this.panel15.Location = new System.Drawing.Point(3, 3);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(69, 25);
+            this.panel15.Size = new System.Drawing.Size(89, 25);
             this.panel15.TabIndex = 311;
             // 
             // label5
@@ -108,11 +118,11 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(2, 4);
+            this.label5.Location = new System.Drawing.Point(1, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 15);
+            this.label5.Size = new System.Drawing.Size(86, 15);
             this.label5.TabIndex = 250;
-            this.label5.Text = "Narration:";
+            this.label5.Text = "Select Status:";
             // 
             // panel6
             // 
@@ -180,12 +190,30 @@
             // GroupBox2
             // 
             this.GroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox2.Controls.Add(this.btnDelete);
             this.GroupBox2.Controls.Add(this.btnUpdate);
+            this.GroupBox2.Controls.Add(this.btnSave);
+            this.GroupBox2.Controls.Add(this.btnNew);
             this.GroupBox2.Location = new System.Drawing.Point(6, 297);
             this.GroupBox2.Name = "GroupBox2";
             this.GroupBox2.Size = new System.Drawing.Size(313, 52);
             this.GroupBox2.TabIndex = 344;
             this.GroupBox2.TabStop = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(227, 9);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(82, 40);
+            this.btnDelete.TabIndex = 9;
+            this.btnDelete.Text = "&Delete";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -193,13 +221,43 @@
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(148, 10);
+            this.btnUpdate.Location = new System.Drawing.Point(147, 9);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(80, 40);
-            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "&Update";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(77, 9);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(70, 40);
+            this.btnSave.TabIndex = 7;
+            this.btnSave.Text = "&Save";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
+            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNew.Location = new System.Drawing.Point(4, 9);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(73, 40);
+            this.btnNew.TabIndex = 6;
+            this.btnNew.Text = "&New";
+            this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNew.UseVisualStyleBackColor = true;
             // 
             // panel14
             // 
@@ -312,7 +370,7 @@
             this.minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.minimize.Image = ((System.Drawing.Image)(resources.GetObject("minimize.Image")));
             this.minimize.ImageActive = null;
-            this.minimize.Location = new System.Drawing.Point(288, 3);
+            this.minimize.Location = new System.Drawing.Point(290, 3);
             this.minimize.Name = "minimize";
             this.minimize.Size = new System.Drawing.Size(22, 22);
             this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -327,7 +385,7 @@
             this.close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
             this.close.ImageActive = null;
-            this.close.Location = new System.Drawing.Point(309, 3);
+            this.close.Location = new System.Drawing.Point(310, 3);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(22, 22);
             this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -352,10 +410,7 @@
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.dgw);
-            this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Controls.Add(this.btnNew);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label12);
@@ -375,6 +430,8 @@
             this.dgw.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.OldLace;
             this.dgw.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgw.AutoGenerateColumns = false;
+            this.dgw.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgw.BackgroundColor = System.Drawing.Color.White;
             this.dgw.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -386,7 +443,13 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgw.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgw.ColumnHeadersHeight = 24;
+            this.dgw.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.brandNameDataGridViewTextBoxColumn,
+            this.manufacturerDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn});
             this.dgw.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgw.DataSource = this.tblBrandMasterBindingSource;
             this.dgw.EnableHeadersVisualStyles = false;
             this.dgw.GridColor = System.Drawing.Color.White;
             this.dgw.Location = new System.Drawing.Point(6, 126);
@@ -415,20 +478,46 @@
             this.dgw.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgw.Size = new System.Drawing.Size(315, 172);
             this.dgw.TabIndex = 814;
+            this.dgw.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgw_CellMouseClick);
             // 
-            // btnDelete
+            // idDataGridViewTextBoxColumn
             // 
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(235, 307);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(82, 40);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "&Delete";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // brandNameDataGridViewTextBoxColumn
+            // 
+            this.brandNameDataGridViewTextBoxColumn.DataPropertyName = "BrandName";
+            this.brandNameDataGridViewTextBoxColumn.HeaderText = "BrandName";
+            this.brandNameDataGridViewTextBoxColumn.Name = "brandNameDataGridViewTextBoxColumn";
+            this.brandNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // manufacturerDataGridViewTextBoxColumn
+            // 
+            this.manufacturerDataGridViewTextBoxColumn.DataPropertyName = "Manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn.HeaderText = "Manufacturer";
+            this.manufacturerDataGridViewTextBoxColumn.Name = "manufacturerDataGridViewTextBoxColumn";
+            this.manufacturerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tblBrandMasterBindingSource
+            // 
+            this.tblBrandMasterBindingSource.DataMember = "tbl_BrandMaster";
+            this.tblBrandMasterBindingSource.DataSource = this.inventory_DBDataSet;
+            // 
+            // inventory_DBDataSet
+            // 
+            this.inventory_DBDataSet.DataSetName = "Inventory_DBDataSet";
+            this.inventory_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel3
             // 
@@ -438,34 +527,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(323, 2);
             this.panel3.TabIndex = 351;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(83, 307);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(70, 40);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "&Save";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // btnNew
-            // 
-            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
-            this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.Location = new System.Drawing.Point(9, 307);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(73, 40);
-            this.btnNew.TabIndex = 1;
-            this.btnNew.Text = "&New";
-            this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNew.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -482,7 +543,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.txt_des);
+            this.panel4.Controls.Add(this.combo_status);
             this.panel4.Controls.Add(this.panel15);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(3, 19);
@@ -490,17 +551,30 @@
             this.panel4.Size = new System.Drawing.Size(310, 31);
             this.panel4.TabIndex = 285;
             // 
-            // txt_des
+            // combo_status
             // 
-            this.txt_des.BackColor = System.Drawing.Color.White;
-            this.txt_des.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_des.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_des.Location = new System.Drawing.Point(75, 3);
-            this.txt_des.Multiline = true;
-            this.txt_des.Name = "txt_des";
-            this.txt_des.Size = new System.Drawing.Size(231, 25);
-            this.txt_des.TabIndex = 327;
-            this.txt_des.Text = "NA";
+            this.combo_status.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.combo_status.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.combo_status.DropDownHeight = 200;
+            this.combo_status.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.combo_status.ForeColor = System.Drawing.Color.Black;
+            this.combo_status.FormattingEnabled = true;
+            this.combo_status.IntegralHeight = false;
+            this.combo_status.ItemHeight = 17;
+            this.combo_status.Items.AddRange(new object[] {
+            "Active",
+            "UnActive"});
+            this.combo_status.Location = new System.Drawing.Point(94, 3);
+            this.combo_status.MaxDropDownItems = 50;
+            this.combo_status.Name = "combo_status";
+            this.combo_status.Size = new System.Drawing.Size(213, 25);
+            this.combo_status.TabIndex = 575;
+            this.combo_status.Text = "--- Select Status---";
+            // 
+            // tbl_BrandMasterTableAdapter
+            // 
+            this.tbl_BrandMasterTableAdapter.ClearBeforeFill = true;
             // 
             // Brand_Master
             // 
@@ -516,6 +590,7 @@
             this.Name = "Brand_Master";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Brand_Master";
+            this.Load += new System.EventHandler(this.Brand_Master_Load);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -530,6 +605,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblBrandMasterBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventory_DBDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -549,7 +626,6 @@
         internal System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label12;
         internal System.Windows.Forms.GroupBox GroupBox2;
-        internal System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel5;
@@ -565,12 +641,20 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.DataGridView dgw;
-        internal System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel3;
-        internal System.Windows.Forms.Button btnSave;
-        internal System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txt_des;
+        internal System.Windows.Forms.Button btnNew;
+        internal System.Windows.Forms.Button btnSave;
+        internal System.Windows.Forms.Button btnUpdate;
+        internal System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.ComboBox combo_status;
+        private Inventory_DBDataSet inventory_DBDataSet;
+        private System.Windows.Forms.BindingSource tblBrandMasterBindingSource;
+        private Inventory_DBDataSetTableAdapters.tbl_BrandMasterTableAdapter tbl_BrandMasterTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn brandNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn manufacturerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
     }
 }

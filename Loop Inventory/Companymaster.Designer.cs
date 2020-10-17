@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Companymaster));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.txt_email = new System.Windows.Forms.TextBox();
-            this.txt_phone = new System.Windows.Forms.TextBox();
-            this.txt_mob = new System.Windows.Forms.TextBox();
-            this.txt_website = new System.Windows.Forms.TextBox();
+            this.txt_Address2 = new System.Windows.Forms.TextBox();
+            this.txt_Address3 = new System.Windows.Forms.TextBox();
+            this.txt_Contactno = new System.Windows.Forms.TextBox();
+            this.txt_Email = new System.Windows.Forms.TextBox();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel44 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
@@ -50,10 +51,10 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.txt_bus_name = new System.Windows.Forms.TextBox();
+            this.txt_Company_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.txt_ntn = new System.Windows.Forms.TextBox();
+            this.txt_MailingName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -61,7 +62,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel9 = new System.Windows.Forms.Panel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.txt_city = new System.Windows.Forms.TextBox();
+            this.txt_Address = new System.Windows.Forms.TextBox();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel34 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
@@ -90,23 +91,43 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Txt_notes = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_CurrencyCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkActive = new System.Windows.Forms.CheckBox();
             this.panel45 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Combo_Currency = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
             this.panel41 = new System.Windows.Forms.Panel();
-            this.txt_branchname = new System.Windows.Forms.TextBox();
+            this.txt_VatNumber = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.panel39 = new System.Windows.Forms.Panel();
-            this.txt_accountname = new System.Windows.Forms.TextBox();
+            this.txt_Website = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.inventory_DBDataSet = new Loop_Inventory.Inventory_DBDataSet();
+            this.tblcompanyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbl_companyTableAdapter = new Loop_Inventory.Inventory_DBDataSetTableAdapters.tbl_companyTableAdapter();
+            this.busidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mailingnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startworkDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accountyearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressline1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressline2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressline3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.websiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vatnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capitalaccountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.basecurrenceyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currencycodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.footernotesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel19.SuspendLayout();
             this.panel44.SuspendLayout();
             this.panel30.SuspendLayout();
@@ -133,52 +154,54 @@
             this.panel45.SuspendLayout();
             this.panel41.SuspendLayout();
             this.panel39.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inventory_DBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblcompanyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // txt_email
+            // txt_Address2
             // 
-            this.txt_email.BackColor = System.Drawing.Color.White;
-            this.txt_email.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_email.Location = new System.Drawing.Point(2, 2);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(182, 25);
-            this.txt_email.TabIndex = 0;
+            this.txt_Address2.BackColor = System.Drawing.Color.White;
+            this.txt_Address2.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_Address2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Address2.Location = new System.Drawing.Point(2, 2);
+            this.txt_Address2.Name = "txt_Address2";
+            this.txt_Address2.Size = new System.Drawing.Size(182, 25);
+            this.txt_Address2.TabIndex = 0;
             // 
-            // txt_phone
+            // txt_Address3
             // 
-            this.txt_phone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txt_phone.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_phone.Location = new System.Drawing.Point(2, 2);
-            this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Size = new System.Drawing.Size(182, 25);
-            this.txt_phone.TabIndex = 0;
+            this.txt_Address3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_Address3.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_Address3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Address3.Location = new System.Drawing.Point(2, 2);
+            this.txt_Address3.Name = "txt_Address3";
+            this.txt_Address3.Size = new System.Drawing.Size(182, 25);
+            this.txt_Address3.TabIndex = 0;
             // 
-            // txt_mob
+            // txt_Contactno
             // 
-            this.txt_mob.BackColor = System.Drawing.Color.White;
-            this.txt_mob.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_mob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_mob.Location = new System.Drawing.Point(2, 2);
-            this.txt_mob.Name = "txt_mob";
-            this.txt_mob.Size = new System.Drawing.Size(182, 25);
-            this.txt_mob.TabIndex = 0;
+            this.txt_Contactno.BackColor = System.Drawing.Color.White;
+            this.txt_Contactno.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_Contactno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Contactno.Location = new System.Drawing.Point(2, 2);
+            this.txt_Contactno.Name = "txt_Contactno";
+            this.txt_Contactno.Size = new System.Drawing.Size(182, 25);
+            this.txt_Contactno.TabIndex = 0;
             // 
-            // txt_website
+            // txt_Email
             // 
-            this.txt_website.BackColor = System.Drawing.Color.White;
-            this.txt_website.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_website.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_website.Location = new System.Drawing.Point(2, 2);
-            this.txt_website.Name = "txt_website";
-            this.txt_website.Size = new System.Drawing.Size(182, 25);
-            this.txt_website.TabIndex = 0;
+            this.txt_Email.BackColor = System.Drawing.Color.White;
+            this.txt_Email.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Email.Location = new System.Drawing.Point(2, 2);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(182, 25);
+            this.txt_Email.TabIndex = 0;
             // 
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel19.Controls.Add(this.txt_website);
+            this.panel19.Controls.Add(this.txt_Email);
             this.panel19.Location = new System.Drawing.Point(133, 357);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(186, 29);
@@ -187,7 +210,7 @@
             // panel44
             // 
             this.panel44.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel44.Controls.Add(this.txt_email);
+            this.panel44.Controls.Add(this.txt_Address2);
             this.panel44.Location = new System.Drawing.Point(133, 237);
             this.panel44.Name = "panel44";
             this.panel44.Size = new System.Drawing.Size(186, 29);
@@ -207,7 +230,7 @@
             // panel30
             // 
             this.panel30.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel30.Controls.Add(this.txt_mob);
+            this.panel30.Controls.Add(this.txt_Contactno);
             this.panel30.Location = new System.Drawing.Point(133, 316);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(186, 29);
@@ -227,7 +250,7 @@
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel18.Controls.Add(this.txt_phone);
+            this.panel18.Controls.Add(this.txt_Address3);
             this.panel18.Location = new System.Drawing.Point(133, 276);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(186, 29);
@@ -302,15 +325,15 @@
             this.panel6.Size = new System.Drawing.Size(2, 650);
             this.panel6.TabIndex = 334;
             // 
-            // txt_bus_name
+            // txt_Company_name
             // 
-            this.txt_bus_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txt_bus_name.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_bus_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_bus_name.Location = new System.Drawing.Point(2, 2);
-            this.txt_bus_name.Name = "txt_bus_name";
-            this.txt_bus_name.Size = new System.Drawing.Size(182, 25);
-            this.txt_bus_name.TabIndex = 2;
+            this.txt_Company_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_Company_name.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_Company_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Company_name.Location = new System.Drawing.Point(2, 2);
+            this.txt_Company_name.Name = "txt_Company_name";
+            this.txt_Company_name.Size = new System.Drawing.Size(182, 25);
+            this.txt_Company_name.TabIndex = 2;
             // 
             // label1
             // 
@@ -326,21 +349,21 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel5.Controls.Add(this.txt_bus_name);
+            this.panel5.Controls.Add(this.txt_Company_name);
             this.panel5.Location = new System.Drawing.Point(133, 14);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(186, 29);
             this.panel5.TabIndex = 744;
             // 
-            // txt_ntn
+            // txt_MailingName
             // 
-            this.txt_ntn.BackColor = System.Drawing.Color.White;
-            this.txt_ntn.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_ntn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_ntn.Location = new System.Drawing.Point(2, 2);
-            this.txt_ntn.Name = "txt_ntn";
-            this.txt_ntn.Size = new System.Drawing.Size(182, 25);
-            this.txt_ntn.TabIndex = 0;
+            this.txt_MailingName.BackColor = System.Drawing.Color.White;
+            this.txt_MailingName.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_MailingName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_MailingName.Location = new System.Drawing.Point(2, 2);
+            this.txt_MailingName.Name = "txt_MailingName";
+            this.txt_MailingName.Size = new System.Drawing.Size(182, 25);
+            this.txt_MailingName.TabIndex = 0;
             // 
             // label2
             // 
@@ -417,21 +440,21 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(182, 25);
             this.dateTimePicker2.TabIndex = 7;
             // 
-            // txt_city
+            // txt_Address
             // 
-            this.txt_city.BackColor = System.Drawing.Color.White;
-            this.txt_city.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_city.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_city.Location = new System.Drawing.Point(2, 2);
-            this.txt_city.Multiline = true;
-            this.txt_city.Name = "txt_city";
-            this.txt_city.Size = new System.Drawing.Size(182, 49);
-            this.txt_city.TabIndex = 0;
+            this.txt_Address.BackColor = System.Drawing.Color.White;
+            this.txt_Address.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_Address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Address.Location = new System.Drawing.Point(2, 2);
+            this.txt_Address.Multiline = true;
+            this.txt_Address.Name = "txt_Address";
+            this.txt_Address.Size = new System.Drawing.Size(182, 49);
+            this.txt_Address.TabIndex = 0;
             // 
             // panel24
             // 
             this.panel24.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel24.Controls.Add(this.txt_city);
+            this.panel24.Controls.Add(this.txt_Address);
             this.panel24.Location = new System.Drawing.Point(133, 172);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(186, 53);
@@ -440,7 +463,7 @@
             // panel34
             // 
             this.panel34.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel34.Controls.Add(this.txt_ntn);
+            this.panel34.Controls.Add(this.txt_MailingName);
             this.panel34.Location = new System.Drawing.Point(133, 52);
             this.panel34.Name = "panel34";
             this.panel34.Size = new System.Drawing.Size(186, 29);
@@ -744,6 +767,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.OldLace;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -755,7 +779,26 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeight = 24;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.busidDataGridViewTextBoxColumn,
+            this.companyNameDataGridViewTextBoxColumn,
+            this.mailingnameDataGridViewTextBoxColumn,
+            this.startworkDataGridViewTextBoxColumn,
+            this.accountyearDataGridViewTextBoxColumn,
+            this.addressline1DataGridViewTextBoxColumn,
+            this.addressline2DataGridViewTextBoxColumn,
+            this.addressline3DataGridViewTextBoxColumn,
+            this.contactDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.websiteDataGridViewTextBoxColumn,
+            this.vatnoDataGridViewTextBoxColumn,
+            this.capitalaccountDataGridViewTextBoxColumn,
+            this.basecurrenceyDataGridViewTextBoxColumn,
+            this.currencycodeDataGridViewTextBoxColumn,
+            this.footernotesDataGridViewTextBoxColumn,
+            this.imageDataGridViewImageColumn});
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dataGridView1.DataSource = this.tblcompanyBindingSource;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(6, 409);
@@ -822,7 +865,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.panel12);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.chkActive);
             this.groupBox1.Controls.Add(this.panel45);
             this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.panel41);
@@ -851,22 +894,22 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel13.Controls.Add(this.textBox2);
+            this.panel13.Controls.Add(this.Txt_notes);
             this.panel13.Location = new System.Drawing.Point(126, 212);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(186, 40);
             this.panel13.TabIndex = 411;
             // 
-            // textBox2
+            // Txt_notes
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(2, 2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 36);
-            this.textBox2.TabIndex = 0;
+            this.Txt_notes.BackColor = System.Drawing.Color.White;
+            this.Txt_notes.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Txt_notes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Txt_notes.Location = new System.Drawing.Point(2, 2);
+            this.Txt_notes.Multiline = true;
+            this.Txt_notes.Name = "Txt_notes";
+            this.Txt_notes.Size = new System.Drawing.Size(182, 36);
+            this.Txt_notes.TabIndex = 0;
             // 
             // label8
             // 
@@ -882,21 +925,21 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel12.Controls.Add(this.textBox1);
+            this.panel12.Controls.Add(this.Txt_CurrencyCode);
             this.panel12.Location = new System.Drawing.Point(126, 169);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(186, 29);
             this.panel12.TabIndex = 409;
             // 
-            // textBox1
+            // Txt_CurrencyCode
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 25);
-            this.textBox1.TabIndex = 0;
+            this.Txt_CurrencyCode.BackColor = System.Drawing.Color.White;
+            this.Txt_CurrencyCode.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Txt_CurrencyCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Txt_CurrencyCode.Location = new System.Drawing.Point(2, 2);
+            this.Txt_CurrencyCode.Name = "Txt_CurrencyCode";
+            this.Txt_CurrencyCode.Size = new System.Drawing.Size(182, 25);
+            this.Txt_CurrencyCode.TabIndex = 0;
             // 
             // label3
             // 
@@ -909,41 +952,41 @@
             this.label3.TabIndex = 408;
             this.label3.Text = "Base Currency:";
             // 
-            // checkBox1
+            // chkActive
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(130, 100);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(145, 22);
-            this.checkBox1.TabIndex = 407;
-            this.checkBox1.Text = "Check Or/ Uncheck";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkActive.AutoSize = true;
+            this.chkActive.Location = new System.Drawing.Point(127, 100);
+            this.chkActive.Name = "chkActive";
+            this.chkActive.Size = new System.Drawing.Size(122, 22);
+            this.chkActive.TabIndex = 407;
+            this.chkActive.Text = "Active/Reactive";
+            this.chkActive.UseVisualStyleBackColor = true;
             // 
             // panel45
             // 
             this.panel45.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel45.Controls.Add(this.comboBox1);
+            this.panel45.Controls.Add(this.Combo_Currency);
             this.panel45.Location = new System.Drawing.Point(126, 128);
             this.panel45.Name = "panel45";
             this.panel45.Size = new System.Drawing.Size(186, 29);
             this.panel45.TabIndex = 406;
             // 
-            // comboBox1
+            // Combo_Currency
             // 
-            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.comboBox1.DropDownHeight = 200;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.ItemHeight = 17;
-            this.comboBox1.Location = new System.Drawing.Point(2, 2);
-            this.comboBox1.MaxDropDownItems = 50;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 25);
-            this.comboBox1.TabIndex = 572;
-            this.comboBox1.Text = "--- Select Currency---";
+            this.Combo_Currency.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.Combo_Currency.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.Combo_Currency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Combo_Currency.DropDownHeight = 200;
+            this.Combo_Currency.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Combo_Currency.FormattingEnabled = true;
+            this.Combo_Currency.IntegralHeight = false;
+            this.Combo_Currency.ItemHeight = 17;
+            this.Combo_Currency.Location = new System.Drawing.Point(2, 2);
+            this.Combo_Currency.MaxDropDownItems = 50;
+            this.Combo_Currency.Name = "Combo_Currency";
+            this.Combo_Currency.Size = new System.Drawing.Size(182, 25);
+            this.Combo_Currency.TabIndex = 572;
+            this.Combo_Currency.Text = "--- Select Currency---";
             // 
             // label26
             // 
@@ -959,21 +1002,21 @@
             // panel41
             // 
             this.panel41.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel41.Controls.Add(this.txt_branchname);
+            this.panel41.Controls.Add(this.txt_VatNumber);
             this.panel41.Location = new System.Drawing.Point(126, 63);
             this.panel41.Name = "panel41";
             this.panel41.Size = new System.Drawing.Size(186, 29);
             this.panel41.TabIndex = 404;
             // 
-            // txt_branchname
+            // txt_VatNumber
             // 
-            this.txt_branchname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txt_branchname.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_branchname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_branchname.Location = new System.Drawing.Point(2, 2);
-            this.txt_branchname.Name = "txt_branchname";
-            this.txt_branchname.Size = new System.Drawing.Size(182, 25);
-            this.txt_branchname.TabIndex = 0;
+            this.txt_VatNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txt_VatNumber.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_VatNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_VatNumber.Location = new System.Drawing.Point(2, 2);
+            this.txt_VatNumber.Name = "txt_VatNumber";
+            this.txt_VatNumber.Size = new System.Drawing.Size(182, 25);
+            this.txt_VatNumber.TabIndex = 0;
             // 
             // label25
             // 
@@ -989,21 +1032,21 @@
             // panel39
             // 
             this.panel39.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel39.Controls.Add(this.txt_accountname);
+            this.panel39.Controls.Add(this.txt_Website);
             this.panel39.Location = new System.Drawing.Point(126, 25);
             this.panel39.Name = "panel39";
             this.panel39.Size = new System.Drawing.Size(186, 29);
             this.panel39.TabIndex = 402;
             // 
-            // txt_accountname
+            // txt_Website
             // 
-            this.txt_accountname.BackColor = System.Drawing.Color.White;
-            this.txt_accountname.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_accountname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_accountname.Location = new System.Drawing.Point(2, 2);
-            this.txt_accountname.Name = "txt_accountname";
-            this.txt_accountname.Size = new System.Drawing.Size(182, 25);
-            this.txt_accountname.TabIndex = 1;
+            this.txt_Website.BackColor = System.Drawing.Color.White;
+            this.txt_Website.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_Website.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Website.Location = new System.Drawing.Point(2, 2);
+            this.txt_Website.Name = "txt_Website";
+            this.txt_Website.Size = new System.Drawing.Size(182, 25);
+            this.txt_Website.TabIndex = 1;
             // 
             // label24
             // 
@@ -1028,6 +1071,139 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // inventory_DBDataSet
+            // 
+            this.inventory_DBDataSet.DataSetName = "Inventory_DBDataSet";
+            this.inventory_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblcompanyBindingSource
+            // 
+            this.tblcompanyBindingSource.DataMember = "tbl_company";
+            this.tblcompanyBindingSource.DataSource = this.inventory_DBDataSet;
+            // 
+            // tbl_companyTableAdapter
+            // 
+            this.tbl_companyTableAdapter.ClearBeforeFill = true;
+            // 
+            // busidDataGridViewTextBoxColumn
+            // 
+            this.busidDataGridViewTextBoxColumn.DataPropertyName = "Busid";
+            this.busidDataGridViewTextBoxColumn.HeaderText = "Busid";
+            this.busidDataGridViewTextBoxColumn.Name = "busidDataGridViewTextBoxColumn";
+            this.busidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // companyNameDataGridViewTextBoxColumn
+            // 
+            this.companyNameDataGridViewTextBoxColumn.DataPropertyName = "CompanyName";
+            this.companyNameDataGridViewTextBoxColumn.HeaderText = "CompanyName";
+            this.companyNameDataGridViewTextBoxColumn.Name = "companyNameDataGridViewTextBoxColumn";
+            this.companyNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // mailingnameDataGridViewTextBoxColumn
+            // 
+            this.mailingnameDataGridViewTextBoxColumn.DataPropertyName = "Mailingname";
+            this.mailingnameDataGridViewTextBoxColumn.HeaderText = "Mailingname";
+            this.mailingnameDataGridViewTextBoxColumn.Name = "mailingnameDataGridViewTextBoxColumn";
+            this.mailingnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // startworkDataGridViewTextBoxColumn
+            // 
+            this.startworkDataGridViewTextBoxColumn.DataPropertyName = "Startwork";
+            this.startworkDataGridViewTextBoxColumn.HeaderText = "Startwork";
+            this.startworkDataGridViewTextBoxColumn.Name = "startworkDataGridViewTextBoxColumn";
+            this.startworkDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // accountyearDataGridViewTextBoxColumn
+            // 
+            this.accountyearDataGridViewTextBoxColumn.DataPropertyName = "Accountyear";
+            this.accountyearDataGridViewTextBoxColumn.HeaderText = "Accountyear";
+            this.accountyearDataGridViewTextBoxColumn.Name = "accountyearDataGridViewTextBoxColumn";
+            this.accountyearDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addressline1DataGridViewTextBoxColumn
+            // 
+            this.addressline1DataGridViewTextBoxColumn.DataPropertyName = "Addressline1";
+            this.addressline1DataGridViewTextBoxColumn.HeaderText = "Addressline1";
+            this.addressline1DataGridViewTextBoxColumn.Name = "addressline1DataGridViewTextBoxColumn";
+            this.addressline1DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addressline2DataGridViewTextBoxColumn
+            // 
+            this.addressline2DataGridViewTextBoxColumn.DataPropertyName = "Addressline2";
+            this.addressline2DataGridViewTextBoxColumn.HeaderText = "Addressline2";
+            this.addressline2DataGridViewTextBoxColumn.Name = "addressline2DataGridViewTextBoxColumn";
+            this.addressline2DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addressline3DataGridViewTextBoxColumn
+            // 
+            this.addressline3DataGridViewTextBoxColumn.DataPropertyName = "Addressline3";
+            this.addressline3DataGridViewTextBoxColumn.HeaderText = "Addressline3";
+            this.addressline3DataGridViewTextBoxColumn.Name = "addressline3DataGridViewTextBoxColumn";
+            this.addressline3DataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // contactDataGridViewTextBoxColumn
+            // 
+            this.contactDataGridViewTextBoxColumn.DataPropertyName = "Contact";
+            this.contactDataGridViewTextBoxColumn.HeaderText = "Contact";
+            this.contactDataGridViewTextBoxColumn.Name = "contactDataGridViewTextBoxColumn";
+            this.contactDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // websiteDataGridViewTextBoxColumn
+            // 
+            this.websiteDataGridViewTextBoxColumn.DataPropertyName = "Website";
+            this.websiteDataGridViewTextBoxColumn.HeaderText = "Website";
+            this.websiteDataGridViewTextBoxColumn.Name = "websiteDataGridViewTextBoxColumn";
+            this.websiteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // vatnoDataGridViewTextBoxColumn
+            // 
+            this.vatnoDataGridViewTextBoxColumn.DataPropertyName = "Vatno";
+            this.vatnoDataGridViewTextBoxColumn.HeaderText = "Vatno";
+            this.vatnoDataGridViewTextBoxColumn.Name = "vatnoDataGridViewTextBoxColumn";
+            this.vatnoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // capitalaccountDataGridViewTextBoxColumn
+            // 
+            this.capitalaccountDataGridViewTextBoxColumn.DataPropertyName = "Capitalaccount";
+            this.capitalaccountDataGridViewTextBoxColumn.HeaderText = "Capitalaccount";
+            this.capitalaccountDataGridViewTextBoxColumn.Name = "capitalaccountDataGridViewTextBoxColumn";
+            this.capitalaccountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // basecurrenceyDataGridViewTextBoxColumn
+            // 
+            this.basecurrenceyDataGridViewTextBoxColumn.DataPropertyName = "Basecurrencey";
+            this.basecurrenceyDataGridViewTextBoxColumn.HeaderText = "Basecurrencey";
+            this.basecurrenceyDataGridViewTextBoxColumn.Name = "basecurrenceyDataGridViewTextBoxColumn";
+            this.basecurrenceyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // currencycodeDataGridViewTextBoxColumn
+            // 
+            this.currencycodeDataGridViewTextBoxColumn.DataPropertyName = "Currencycode";
+            this.currencycodeDataGridViewTextBoxColumn.HeaderText = "Currencycode";
+            this.currencycodeDataGridViewTextBoxColumn.Name = "currencycodeDataGridViewTextBoxColumn";
+            this.currencycodeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // footernotesDataGridViewTextBoxColumn
+            // 
+            this.footernotesDataGridViewTextBoxColumn.DataPropertyName = "Footernotes";
+            this.footernotesDataGridViewTextBoxColumn.HeaderText = "Footernotes";
+            this.footernotesDataGridViewTextBoxColumn.Name = "footernotesDataGridViewTextBoxColumn";
+            this.footernotesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // imageDataGridViewImageColumn
+            // 
+            this.imageDataGridViewImageColumn.DataPropertyName = "Image";
+            this.imageDataGridViewImageColumn.HeaderText = "Image";
+            this.imageDataGridViewImageColumn.Name = "imageDataGridViewImageColumn";
+            this.imageDataGridViewImageColumn.ReadOnly = true;
             // 
             // Companymaster
             // 
@@ -1086,16 +1262,18 @@
             this.panel41.PerformLayout();
             this.panel39.ResumeLayout(false);
             this.panel39.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inventory_DBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblcompanyBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txt_email;
-        private System.Windows.Forms.TextBox txt_phone;
-        private System.Windows.Forms.TextBox txt_mob;
-        private System.Windows.Forms.TextBox txt_website;
+        private System.Windows.Forms.TextBox txt_Address2;
+        private System.Windows.Forms.TextBox txt_Address3;
+        private System.Windows.Forms.TextBox txt_Contactno;
+        private System.Windows.Forms.TextBox txt_Email;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel44;
         private System.Windows.Forms.Label label16;
@@ -1109,16 +1287,16 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox txt_bus_name;
+        private System.Windows.Forms.TextBox txt_Company_name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox txt_ntn;
+        private System.Windows.Forms.TextBox txt_MailingName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox txt_city;
+        private System.Windows.Forms.TextBox txt_Address;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.Panel panel27;
@@ -1149,22 +1327,42 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Txt_notes;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_CurrencyCode;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkActive;
         private System.Windows.Forms.Panel panel45;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Combo_Currency;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Panel panel41;
-        private System.Windows.Forms.TextBox txt_branchname;
+        private System.Windows.Forms.TextBox txt_VatNumber;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Panel panel39;
-        private System.Windows.Forms.TextBox txt_accountname;
+        private System.Windows.Forms.TextBox txt_Website;
         private System.Windows.Forms.Label label24;
         internal System.Windows.Forms.DateTimePicker dateTimePicker1;
         internal System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private Inventory_DBDataSet inventory_DBDataSet;
+        private System.Windows.Forms.BindingSource tblcompanyBindingSource;
+        private Inventory_DBDataSetTableAdapters.tbl_companyTableAdapter tbl_companyTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn busidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companyNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mailingnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startworkDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accountyearDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressline1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressline2DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressline3DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contactDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn websiteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vatnoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn capitalaccountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn basecurrenceyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn currencycodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn footernotesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;
     }
 }

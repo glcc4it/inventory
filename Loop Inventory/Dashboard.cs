@@ -25,31 +25,31 @@ namespace Loop_Inventory
 
 
         public void Backup()
-        {
-            try
-            {
-                DateTime dt = DateTime.Today;
-                string destdir = "Inventory_DB " + DateTime.Now.ToString("dd-MM-yyyy_h-mm-ss") + ".bak";
-                SaveFileDialog objdlg = new SaveFileDialog();
-                objdlg.FileName = destdir;
-                objdlg.ShowDialog();
-                Filename = objdlg.FileName;
-                Cursor = Cursors.WaitCursor;
-                timer2.Enabled = true;
-                ModCommonClasses.con = new SqlConnection(ModCS.cs);
-                ModCommonClasses.con.Open();
-                string cb = "backup database Inventory_DB to disk='" + Filename + "'with init,stats=10";
-                ModCommonClasses.cmd = new SqlCommand(cb);
-                ModCommonClasses.cmd.Connection = ModCommonClasses.con;
-                ModCommonClasses.cmd.ExecuteReader();
-                ModCommonClasses.con.Close();
+		{
+			try
+			{
+				DateTime dt = DateTime.Today;
+				string destdir = "Inventory_DB " + DateTime.Now.ToString("dd-MM-yyyy_h-mm-ss") + ".bak";
+				SaveFileDialog objdlg = new SaveFileDialog();
+				objdlg.FileName = destdir;
+				objdlg.ShowDialog();
+				Filename = objdlg.FileName;
+				Cursor = Cursors.WaitCursor;
+				timer2.Enabled = true;
+				ModCommonClasses.con = new SqlConnection(ModCS.cs);
+				ModCommonClasses.con.Open();
+				string cb = "backup database Inventory_DB to disk='" + Filename + "'with init,stats=10";
+				ModCommonClasses.cmd = new SqlCommand(cb);
+				ModCommonClasses.cmd.Connection = ModCommonClasses.con;
+				ModCommonClasses.cmd.ExecuteReader();
+				ModCommonClasses.con.Close();
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
 
 
         public void LogOut()
@@ -262,15 +262,16 @@ namespace Loop_Inventory
 
         private void LinkAddproduct_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Item_Master ss = new Item_Master();
+            ProductMaster ss = new ProductMaster();
             ss.Show();
-            
+            ss.lblUser.Text = lblUser.Text;
+
 
         }
 
         private void ProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Product_Creation ss = new Product_Creation();
+            ProductMaster ss = new ProductMaster();
             ss.Show();
             ss.lblUser.Text = lblUser.Text;
 

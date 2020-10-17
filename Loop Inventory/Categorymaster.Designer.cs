@@ -30,19 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Categorymaster));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton6 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.dgw = new System.Windows.Forms.DataGridView();
-            this.snoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categorynameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.narrationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblcategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.inventory_DBDataSet = new Loop_Inventory.Inventory_DBDataSet();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -56,9 +57,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.txt_color = new System.Windows.Forms.TextBox();
+            this.cmbboxClr = new System.Windows.Forms.ComboBox();
             this.txt_cat_name = new System.Windows.Forms.TextBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -74,6 +74,7 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.tbl_categoryTableAdapter = new Loop_Inventory.Inventory_DBDataSetTableAdapters.tbl_categoryTableAdapter();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
@@ -138,6 +139,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.dgw);
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.panel3);
@@ -145,7 +147,6 @@
             this.panel2.Controls.Add(this.btnNew);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.GroupBox2);
             this.panel2.Controls.Add(this.panel14);
@@ -156,29 +157,42 @@
             this.panel2.Size = new System.Drawing.Size(327, 355);
             this.panel2.TabIndex = 464;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(160, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 18);
+            this.label1.TabIndex = 815;
+            this.label1.Text = "Select Color:";
+            // 
             // dgw
             // 
             this.dgw.AllowUserToAddRows = false;
             this.dgw.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.OldLace;
-            this.dgw.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.OldLace;
+            this.dgw.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgw.AutoGenerateColumns = false;
+            this.dgw.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgw.BackgroundColor = System.Drawing.Color.White;
             this.dgw.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgw.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgw.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgw.ColumnHeadersHeight = 24;
             this.dgw.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.snoDataGridViewTextBoxColumn,
-            this.dateDataGridViewTextBoxColumn,
+            this.idDataGridViewTextBoxColumn,
             this.categorynameDataGridViewTextBoxColumn,
-            this.narrationDataGridViewTextBoxColumn});
+            this.colorDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn});
             this.dgw.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgw.DataSource = this.tblcategoryBindingSource;
             this.dgw.EnableHeadersVisualStyles = false;
@@ -188,21 +202,21 @@
             this.dgw.Name = "dgw";
             this.dgw.ReadOnly = true;
             this.dgw.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgw.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgw.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgw.RowHeadersWidth = 25;
             this.dgw.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dgw.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.dgw.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgw.RowTemplate.Height = 18;
             this.dgw.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgw.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
@@ -211,22 +225,13 @@
             this.dgw.TabIndex = 814;
             this.dgw.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgw_CellMouseClick);
             // 
-            // snoDataGridViewTextBoxColumn
+            // idDataGridViewTextBoxColumn
             // 
-            this.snoDataGridViewTextBoxColumn.DataPropertyName = "Sno";
-            this.snoDataGridViewTextBoxColumn.HeaderText = "Sno";
-            this.snoDataGridViewTextBoxColumn.Name = "snoDataGridViewTextBoxColumn";
-            this.snoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.snoDataGridViewTextBoxColumn.Width = 92;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dateDataGridViewTextBoxColumn.Visible = false;
-            this.dateDataGridViewTextBoxColumn.Width = 92;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // categorynameDataGridViewTextBoxColumn
             // 
@@ -234,15 +239,20 @@
             this.categorynameDataGridViewTextBoxColumn.HeaderText = "Category";
             this.categorynameDataGridViewTextBoxColumn.Name = "categorynameDataGridViewTextBoxColumn";
             this.categorynameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.categorynameDataGridViewTextBoxColumn.Width = 104;
             // 
-            // narrationDataGridViewTextBoxColumn
+            // colorDataGridViewTextBoxColumn
             // 
-            this.narrationDataGridViewTextBoxColumn.DataPropertyName = "narration";
-            this.narrationDataGridViewTextBoxColumn.HeaderText = "Narration";
-            this.narrationDataGridViewTextBoxColumn.Name = "narrationDataGridViewTextBoxColumn";
-            this.narrationDataGridViewTextBoxColumn.ReadOnly = true;
-            this.narrationDataGridViewTextBoxColumn.Width = 92;
+            this.colorDataGridViewTextBoxColumn.DataPropertyName = "Color";
+            this.colorDataGridViewTextBoxColumn.HeaderText = "Color";
+            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
+            this.colorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tblcategoryBindingSource
             // 
@@ -344,10 +354,10 @@
             this.combo_status.Items.AddRange(new object[] {
             "Active",
             "UnActive"});
-            this.combo_status.Location = new System.Drawing.Point(62, 3);
+            this.combo_status.Location = new System.Drawing.Point(94, 3);
             this.combo_status.MaxDropDownItems = 50;
             this.combo_status.Name = "combo_status";
-            this.combo_status.Size = new System.Drawing.Size(245, 25);
+            this.combo_status.Size = new System.Drawing.Size(213, 25);
             this.combo_status.TabIndex = 574;
             this.combo_status.Text = "--- Select Status---";
             // 
@@ -358,7 +368,7 @@
             this.panel15.Controls.Add(this.label5);
             this.panel15.Location = new System.Drawing.Point(3, 3);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(57, 25);
+            this.panel15.Size = new System.Drawing.Size(89, 25);
             this.panel15.TabIndex = 311;
             // 
             // label5
@@ -367,11 +377,11 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(2, 4);
+            this.label5.Location = new System.Drawing.Point(1, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 15);
+            this.label5.Size = new System.Drawing.Size(86, 15);
             this.label5.TabIndex = 250;
-            this.label5.Text = "Status:";
+            this.label5.Text = "Select Status:";
             // 
             // label4
             // 
@@ -396,51 +406,45 @@
             this.label11.TabIndex = 348;
             this.label11.Text = "Category Name:";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(160, 6);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 18);
-            this.label12.TabIndex = 347;
-            this.label12.Text = "Select Color:";
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.Control;
-            this.panel6.Controls.Add(this.txt_color);
+            this.panel6.Controls.Add(this.cmbboxClr);
             this.panel6.Controls.Add(this.txt_cat_name);
             this.panel6.Controls.Add(this.lblUser);
             this.panel6.Controls.Add(this.txtID);
             this.panel6.Location = new System.Drawing.Point(6, 29);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(313, 31);
+            this.panel6.Size = new System.Drawing.Size(313, 30);
             this.panel6.TabIndex = 346;
             // 
-            // txt_color
+            // cmbboxClr
             // 
-            this.txt_color.BackColor = System.Drawing.Color.White;
-            this.txt_color.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_color.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_color.Location = new System.Drawing.Point(157, 3);
-            this.txt_color.Multiline = true;
-            this.txt_color.Name = "txt_color";
-            this.txt_color.Size = new System.Drawing.Size(153, 25);
-            this.txt_color.TabIndex = 326;
+            this.cmbboxClr.BackColor = System.Drawing.Color.White;
+            this.cmbboxClr.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbboxClr.DropDownHeight = 250;
+            this.cmbboxClr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbboxClr.DropDownWidth = 150;
+            this.cmbboxClr.Font = new System.Drawing.Font("Tw Cen MT", 12.75F);
+            this.cmbboxClr.FormattingEnabled = true;
+            this.cmbboxClr.IntegralHeight = false;
+            this.cmbboxClr.ItemHeight = 20;
+            this.cmbboxClr.Location = new System.Drawing.Point(157, 2);
+            this.cmbboxClr.MaxDropDownItems = 50;
+            this.cmbboxClr.Name = "cmbboxClr";
+            this.cmbboxClr.Size = new System.Drawing.Size(153, 26);
+            this.cmbboxClr.TabIndex = 471;
+            this.cmbboxClr.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.cmbboxClr_DrawItem);
             // 
             // txt_cat_name
             // 
-            this.txt_cat_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txt_cat_name.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_cat_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_cat_name.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.txt_cat_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_cat_name.Location = new System.Drawing.Point(3, 3);
             this.txt_cat_name.Name = "txt_cat_name";
             this.txt_cat_name.Size = new System.Drawing.Size(152, 25);
             this.txt_cat_name.TabIndex = 325;
-            this.txt_cat_name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_cat_name_KeyDown);
             // 
             // lblUser
             // 
@@ -594,10 +598,12 @@
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Categorymaster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Categorymaster";
             this.Load += new System.EventHandler(this.Categorymaster_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Categorymaster_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).EndInit();
@@ -637,9 +643,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox txt_color;
         private System.Windows.Forms.TextBox txt_cat_name;
         internal System.Windows.Forms.GroupBox GroupBox2;
         internal System.Windows.Forms.Button btnUpdate;
@@ -652,16 +656,19 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label6;
-        internal System.Windows.Forms.DataGridView dgw;
-        private Inventory_DBDataSet inventory_DBDataSet;
-        private System.Windows.Forms.BindingSource tblcategoryBindingSource;
-        private Inventory_DBDataSetTableAdapters.tbl_categoryTableAdapter tbl_categoryTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn snoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categorynameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn narrationDataGridViewTextBoxColumn;
         internal System.Windows.Forms.TextBox txtID;
         internal System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.ComboBox combo_status;
+        private Inventory_DBDataSet inventory_DBDataSet;
+        private System.Windows.Forms.BindingSource tblcategoryBindingSource;
+        private Inventory_DBDataSetTableAdapters.tbl_categoryTableAdapter tbl_categoryTableAdapter;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.DataGridView dgw;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categorynameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox cmbboxClr;
     }
 }

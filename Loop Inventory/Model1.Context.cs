@@ -25,12 +25,12 @@ namespace Loop_Inventory
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<tbl_Tax> tbl_Tax { get; set; }
-        public virtual DbSet<tbl_Currency> tbl_Currency { get; set; }
-        public virtual DbSet<tblBonusQuantity> tblBonusQuantities { get; set; }
+        public virtual DbSet<tbl_AccountMaster> tbl_AccountMaster { get; set; }
         public virtual DbSet<tbl_godown> tbl_godown { get; set; }
+        public virtual DbSet<tbl_Currency> tbl_Currency { get; set; }
+        public virtual DbSet<tbl_Tax> tbl_Tax { get; set; }
+        public virtual DbSet<tblBonusQuantity> tblBonusQuantities { get; set; }
         public virtual DbSet<tblStore> tblStores { get; set; }
         public virtual DbSet<tblItemMaster> tblItemMasters { get; set; }
-        public virtual DbSet<tbl_AccountMaster> tbl_AccountMaster { get; set; }
     }
 }

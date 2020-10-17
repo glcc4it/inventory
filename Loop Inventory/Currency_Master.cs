@@ -137,5 +137,16 @@ namespace Loop_Inventory
             refreshGrid();
 
         }
+
+        private void Currency_Master_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+
+                SendKeys.Send("{TAB}");
+
+
+            }
+        }
     }
 }

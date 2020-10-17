@@ -78,7 +78,8 @@ namespace Loop_Inventory
             Inventory_DBEntities db = new Inventory_DBEntities();
             tbl_AccountMaster tb = new tbl_AccountMaster();
             tb.AccountNumber = txtAccountNo.Text;
-            tb.Date = dtpTranactionDate.Value;
+            DateTime dttransactiondate = DateTime.Parse(dtpTranactionDate.Value.ToString());
+            tb.Date = dttransactiondate.ToString();
             tb.Accounttype = cmbAccounttype.Text;
             tb.AccountName = txtAccountName.Text;
             tb.SubAccountof = txtSubAccount.Text;
@@ -101,7 +102,8 @@ namespace Loop_Inventory
             decimal idd = decimal.Parse(txtID.Text.ToString());
             var tb = db.tbl_AccountMaster.Where(x => x.Id == idd).FirstOrDefault();
             tb.AccountNumber = txtAccountNo.Text;
-            tb.Date = dtpTranactionDate.Value;
+            DateTime dttransactiondate = DateTime.Parse(dtpTranactionDate.Value.ToString());
+            tb.Date = dttransactiondate.ToString();
             tb.Accounttype = cmbAccounttype.Text;
             tb.AccountName = txtAccountName.Text;
             tb.SubAccountof = txtSubAccount.Text;

@@ -6,9 +6,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 namespace Loop_Inventory
 {
@@ -20,6 +23,7 @@ namespace Loop_Inventory
         public Categorymaster()
         {
             InitializeComponent();
+           
         }
 
         private void bunifuImageButton6_Click(object sender, EventArgs e)
@@ -69,13 +73,13 @@ namespace Loop_Inventory
                 ModCommonClasses.con = new SqlConnection(ModCS.cs);
                 ModCommonClasses.con.Open();
 
-                string cb = "insert into tbl_category(Categoryname,date,narration) VALUES ('" + txt_cat_name.Text + "' ,'" + txt_color.Text + "' , '" + combo_status.Text + "')";
+                string cb = "insert into tbl_category(Categoryname,Color,Status) VALUES ('" + txt_cat_name.Text + "' ,'" + cmbboxClr.Text + "' , '" + combo_status.Text + "')";
 
                 ModCommonClasses.cmd = new SqlCommand(cb);
                 ModCommonClasses.cmd.Connection = ModCommonClasses.con;
                 ModCommonClasses.cmd.ExecuteReader();
                 ModCommonClasses.con.Close();
-                MessageBox.Show("Successfully saved", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Successfully Saved", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 ModFunc.LogFunc(lblUser.Text, "Add the Category '" + txt_cat_name.Text + "' Having Category ID '" + txtID.Text + "'");
                 this.ActiveControl = txt_cat_name;
@@ -112,17 +116,29 @@ namespace Loop_Inventory
         //Clear Data 
         private void ClearData()
         {
-            txt_color.Text = "";
+            
             txt_cat_name.Text = "";
+            cmbboxClr.Text = "";
             combo_status.Text = "--- Select Status---";
         }
 
+
+
+
+
         private void Categorymaster_Load(object sender, EventArgs e)
         {
-            
-           
+            // TODO: This line of code loads data into the 'inventory_DBDataSet.tbl_category' table. You can move, or remove it, as needed.
+            this.tbl_categoryTableAdapter.Fill(this.inventory_DBDataSet.tbl_category);
 
-            
+
+            Type colorType = typeof(System.Drawing.Color);
+            PropertyInfo[] propInfoList = colorType.GetProperties(BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public);
+            foreach (PropertyInfo c in propInfoList)
+            {
+                this.cmbboxClr.Items.Add(c.Name);
+            }
+
 
 
             this.ActiveControl = txt_cat_name;
@@ -142,13 +158,13 @@ namespace Loop_Inventory
             {
                 ModCommonClasses.con = new SqlConnection(ModCS.cs);
                 ModCommonClasses.con.Open();
-                string cb = "Update tbl_category set Categoryname=@d1,date=@d2,narration=@d3 WHERE Sno=@id1";
+                string cb = "Update tbl_category set Categoryname=@d1,Color=@d2,Status=@d3 WHERE id=@id1";
                 ModCommonClasses.cmd = new SqlCommand(cb);
                 ModCommonClasses.cmd.Connection = ModCommonClasses.con;
 
                 ModCommonClasses.cmd.Parameters.AddWithValue("@id1", txtID.Text);
                 ModCommonClasses.cmd.Parameters.AddWithValue("@d1", txt_cat_name.Text);
-                ModCommonClasses.cmd.Parameters.AddWithValue("@d2", txt_color.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d2", cmbboxClr.Text);
                 ModCommonClasses.cmd.Parameters.AddWithValue("@d3", combo_status.Text);
               
 
@@ -174,10 +190,7 @@ namespace Loop_Inventory
 
         
 
-        private void ProductsGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-           
-        }
+        
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -201,7 +214,7 @@ namespace Loop_Inventory
                 int RowsAffected = 0;
                 ModCommonClasses.con = new SqlConnection(ModCS.cs);
                 ModCommonClasses.con.Open();
-                string cq = "delete from tbl_category where Sno=@id1";
+                string cq = "delete from tbl_category where id=@id1";
                 ModCommonClasses.cmd = new SqlCommand(cq);
                 ModCommonClasses.cmd.Connection = ModCommonClasses.con;
                 ModCommonClasses.cmd.Parameters.AddWithValue("@id1", (txtID.Text));
@@ -247,9 +260,11 @@ namespace Loop_Inventory
                      DataGridViewRow dr = dgw.SelectedRows[0];
 
                      txtID.Text = dr.Cells[0].Value.ToString();
-                     txt_cat_name.Text = dr.Cells[2].Value.ToString();
+                   
+                    txt_cat_name.Text = dr.Cells[1].Value.ToString();
+                    cmbboxClr.Text = dr.Cells[2].Value.ToString();
 
-                     combo_status.Text = dr.Cells[3].Value.ToString();
+                    combo_status.Text = dr.Cells[3].Value.ToString();
 
                  }
              }
@@ -260,15 +275,7 @@ namespace Loop_Inventory
 
          }
 
-         private void txt_cat_name_KeyDown(object sender, KeyEventArgs e)
-         {
-             if (e.KeyCode == Keys.Enter)
-             {
-
-                 btnSave.PerformClick();
-
-             }
-         }
+         
 
          private void panel12_MouseDown(object sender, MouseEventArgs e)
          {
@@ -294,8 +301,44 @@ namespace Loop_Inventory
          {
              drag = false;
          }
-    
-}
+
+        
 
 
-}
+            
+
+       
+
+        private void Categorymaster_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+
+                SendKeys.Send("{TAB}");
+
+
+            }
+        }
+
+        private void cmbboxClr_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Rectangle rect = e.Bounds;
+            if (e.Index >= 0)
+            {
+                string n = ((ComboBox)sender).Items[e.Index].ToString();
+                Font f = new Font("SegoeUI", 10, FontStyle.Bold);
+                Color c = Color.FromName(n);
+                Brush b = new SolidBrush(c);
+                g.DrawString(n, f, Brushes.Black, rect.X, rect.Top);
+                g.FillRectangle(b, rect.X + 110, rect.Y + 0, rect.Width - 10, rect.Height - 5);
+            }
+        }
+    }
+
+       
+    }
+
+
+
+

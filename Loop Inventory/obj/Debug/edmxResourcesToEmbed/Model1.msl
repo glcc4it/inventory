@@ -1,19 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="Inventory_DBModelStoreContainer" CdmEntityContainer="Inventory_DBEntities">
-    <EntitySetMapping Name="tbl_Tax">
-      <EntityTypeMapping TypeName="Inventory_DBModel.tbl_Tax">
-        <MappingFragment StoreEntitySet="tbl_Tax">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="value" ColumnName="value" />
+    <EntitySetMapping Name="tbl_AccountMaster">
+      <EntityTypeMapping TypeName="Inventory_DBModel.tbl_AccountMaster">
+        <MappingFragment StoreEntitySet="tbl_AccountMaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Accounttype" ColumnName="Accounttype" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="SubAccountof" ColumnName="SubAccountof" />
+          <ScalarProperty Name="AccountRules" ColumnName="AccountRules" />
+          <ScalarProperty Name="AccountCurrency" ColumnName="AccountCurrency" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
           <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_godown">
+      <EntityTypeMapping TypeName="Inventory_DBModel.tbl_godown">
+        <MappingFragment StoreEntitySet="tbl_godown">
+          <ScalarProperty Name="Sno" ColumnName="Sno" />
+          <ScalarProperty Name="godownname" ColumnName="godownname" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="narration" ColumnName="narration" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="tbl_Currency">
       <EntityTypeMapping TypeName="Inventory_DBModel.tbl_Currency">
         <MappingFragment StoreEntitySet="tbl_Currency">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Tax">
+      <EntityTypeMapping TypeName="Inventory_DBModel.tbl_Tax">
+        <MappingFragment StoreEntitySet="tbl_Tax">
           <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="value" ColumnName="value" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -32,16 +58,6 @@
           <ScalarProperty Name="ItemName" ColumnName="ItemName" />
           <ScalarProperty Name="Barcode" ColumnName="Barcode" />
           <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="tbl_godown">
-      <EntityTypeMapping TypeName="Inventory_DBModel.tbl_godown">
-        <MappingFragment StoreEntitySet="tbl_godown">
-          <ScalarProperty Name="narration" ColumnName="narration" />
-          <ScalarProperty Name="date" ColumnName="date" />
-          <ScalarProperty Name="godownname" ColumnName="godownname" />
-          <ScalarProperty Name="Sno" ColumnName="Sno" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -92,22 +108,6 @@
           <ScalarProperty Name="Barcode2" ColumnName="Barcode2" />
           <ScalarProperty Name="Barcode1" ColumnName="Barcode1" />
           <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="tbl_AccountMaster">
-      <EntityTypeMapping TypeName="Inventory_DBModel.tbl_AccountMaster">
-        <MappingFragment StoreEntitySet="tbl_AccountMaster">
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="Notes" ColumnName="Notes" />
-          <ScalarProperty Name="AccountCurrency" ColumnName="AccountCurrency" />
-          <ScalarProperty Name="AccountRules" ColumnName="AccountRules" />
-          <ScalarProperty Name="SubAccountof" ColumnName="SubAccountof" />
-          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
-          <ScalarProperty Name="Accounttype" ColumnName="Accounttype" />
-          <ScalarProperty Name="Date" ColumnName="Date" />
-          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

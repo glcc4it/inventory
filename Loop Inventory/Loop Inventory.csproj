@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -26,6 +27,8 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -63,6 +66,14 @@
     <Reference Include="DGV Printer">
       <HintPath>..\packages\DGV Printer.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
@@ -94,7 +105,9 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -182,11 +195,11 @@
     <Compile Include="Companymaster.Designer.cs">
       <DependentUpon>Companymaster.cs</DependentUpon>
     </Compile>
-    <Compile Include="Currency Master.cs">
+    <Compile Include="Currency_Master.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Currency Master.Designer.cs">
-      <DependentUpon>Currency Master.cs</DependentUpon>
+    <Compile Include="Currency_Master.Designer.cs">
+      <DependentUpon>Currency_Master.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer Master.cs">
       <SubType>Form</SubType>
@@ -205,6 +218,12 @@
     </Compile>
     <Compile Include="Daybook.Designer.cs">
       <DependentUpon>Daybook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiscountMaster.Designer.cs">
+      <DependentUpon>DiscountMaster.cs</DependentUpon>
     </Compile>
     <Compile Include="EmailSetting.cs">
       <SubType>Form</SubType>
@@ -337,22 +356,17 @@
     </Compile>
     <Compile Include="ModCommonClasses.cs" />
     <Compile Include="ModCS.cs" />
-    <Compile Include="Model1.Context.cs" />
-    <Compile Include="Model1.Context1.cs">
+    <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.cs" />
-    <Compile Include="Model1.Designer.cs">
-      <DependentUpon>Model1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Model11.cs">
+    <Compile Include="Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model11.Designer.cs">
+    <Compile Include="Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -376,11 +390,11 @@
     <Compile Include="Pricing level.Designer.cs">
       <DependentUpon>Pricing level.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product Creation.cs">
+    <Compile Include="ProductMaster.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Product Creation.Designer.cs">
-      <DependentUpon>Product Creation.cs</DependentUpon>
+    <Compile Include="ProductMaster.Designer.cs">
+      <DependentUpon>ProductMaster.cs</DependentUpon>
     </Compile>
     <Compile Include="Profit and Loss.cs">
       <SubType>Form</SubType>
@@ -443,6 +457,12 @@
     </Compile>
     <Compile Include="Sale view.Designer.cs">
       <DependentUpon>Sale view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleForm.Designer.cs">
+      <DependentUpon>SaleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Saleproduct.cs">
       <SubType>Form</SubType>
@@ -525,7 +545,19 @@
     <Compile Include="tblBonusQuantity.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="tblItemMaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblStore.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_AccountMaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_Currency.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_godown.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_Tax.cs">
@@ -615,8 +647,8 @@
     <EmbeddedResource Include="Companymaster.resx">
       <DependentUpon>Companymaster.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Currency Master.resx">
-      <DependentUpon>Currency Master.cs</DependentUpon>
+    <EmbeddedResource Include="Currency_Master.resx">
+      <DependentUpon>Currency_Master.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer Master.resx">
       <DependentUpon>Customer Master.cs</DependentUpon>
@@ -626,6 +658,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Daybook.resx">
       <DependentUpon>Daybook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiscountMaster.resx">
+      <DependentUpon>DiscountMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmailSetting.resx">
       <DependentUpon>EmailSetting.cs</DependentUpon>
@@ -696,8 +731,8 @@
     <EmbeddedResource Include="Pricing level.resx">
       <DependentUpon>Pricing level.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Product Creation.resx">
-      <DependentUpon>Product Creation.cs</DependentUpon>
+    <EmbeddedResource Include="ProductMaster.resx">
+      <DependentUpon>ProductMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profit and Loss.resx">
       <DependentUpon>Profit and Loss.cs</DependentUpon>
@@ -744,6 +779,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sale view.resx">
       <DependentUpon>Sale view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleForm.resx">
+      <DependentUpon>SaleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Saleproduct.resx">
       <DependentUpon>Saleproduct.cs</DependentUpon>
@@ -821,7 +859,7 @@
     </None>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model11.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -865,14 +903,24 @@
   <ItemGroup>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context1.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model11.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

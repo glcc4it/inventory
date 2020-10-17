@@ -19,6 +19,9 @@ namespace Loop_Inventory
         public static SqlCommand cmd3;
         public static SqlCommand cmd4;
         public static SqlCommand cmd5;
+        public static SqlCommand cmd6;
+        public static SqlCommand cmd7;
+        public static SqlCommand cmd8;
 
 
         public static DataSet ds;

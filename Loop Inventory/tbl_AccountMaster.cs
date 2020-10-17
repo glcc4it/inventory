@@ -16,7 +16,7 @@ namespace Loop_Inventory
     {
         public int Id { get; set; }
         public string AccountNumber { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
+        public string Date { get; set; }
         public string Accounttype { get; set; }
         public string AccountName { get; set; }
         public string SubAccountof { get; set; }
