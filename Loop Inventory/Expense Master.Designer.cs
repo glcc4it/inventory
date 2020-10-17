@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Expense_Master));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label12 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.combo_Status = new System.Windows.Forms.ComboBox();
-            this.txt_Expense_Type = new System.Windows.Forms.TextBox();
+            this.combo_godown = new System.Windows.Forms.ComboBox();
+            this.txt_cat_name = new System.Windows.Forms.TextBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -60,12 +59,6 @@
             this.txt_des = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgw = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expenseTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblExpenseMasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.inventory_DBDataSet = new Loop_Inventory.Inventory_DBDataSet();
             this.btnDelete = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
@@ -73,7 +66,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.tbl_ExpenseMasterTableAdapter = new Loop_Inventory.Inventory_DBDataSetTableAdapters.tbl_ExpenseMasterTableAdapter();
             this.panel6.SuspendLayout();
             this.panel15.SuspendLayout();
             this.GroupBox2.SuspendLayout();
@@ -84,8 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblExpenseMasterBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventory_DBDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -105,8 +95,8 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.Control;
-            this.panel6.Controls.Add(this.combo_Status);
-            this.panel6.Controls.Add(this.txt_Expense_Type);
+            this.panel6.Controls.Add(this.combo_godown);
+            this.panel6.Controls.Add(this.txt_cat_name);
             this.panel6.Controls.Add(this.lblUser);
             this.panel6.Controls.Add(this.txtID);
             this.panel6.Location = new System.Drawing.Point(6, 29);
@@ -114,30 +104,30 @@
             this.panel6.Size = new System.Drawing.Size(313, 31);
             this.panel6.TabIndex = 346;
             // 
-            // combo_Status
+            // combo_godown
             // 
-            this.combo_Status.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.combo_Status.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combo_Status.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.combo_Status.FormattingEnabled = true;
-            this.combo_Status.Items.AddRange(new object[] {
+            this.combo_godown.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.combo_godown.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_godown.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.combo_godown.FormattingEnabled = true;
+            this.combo_godown.Items.AddRange(new object[] {
             "Active",
             "UnActive"});
-            this.combo_Status.Location = new System.Drawing.Point(157, 3);
-            this.combo_Status.Name = "combo_Status";
-            this.combo_Status.Size = new System.Drawing.Size(153, 25);
-            this.combo_Status.TabIndex = 471;
-            this.combo_Status.Text = "--- Select Status---";
+            this.combo_godown.Location = new System.Drawing.Point(157, 3);
+            this.combo_godown.Name = "combo_godown";
+            this.combo_godown.Size = new System.Drawing.Size(153, 25);
+            this.combo_godown.TabIndex = 471;
+            this.combo_godown.Text = "--- Select Status---";
             // 
-            // txt_Expense_Type
+            // txt_cat_name
             // 
-            this.txt_Expense_Type.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txt_Expense_Type.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_Expense_Type.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_Expense_Type.Location = new System.Drawing.Point(3, 3);
-            this.txt_Expense_Type.Name = "txt_Expense_Type";
-            this.txt_Expense_Type.Size = new System.Drawing.Size(152, 25);
-            this.txt_Expense_Type.TabIndex = 325;
+            this.txt_cat_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_cat_name.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_cat_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_cat_name.Location = new System.Drawing.Point(3, 3);
+            this.txt_cat_name.Name = "txt_cat_name";
+            this.txt_cat_name.Size = new System.Drawing.Size(152, 25);
+            this.txt_cat_name.TabIndex = 325;
             // 
             // lblUser
             // 
@@ -164,7 +154,7 @@
             this.panel15.Controls.Add(this.label5);
             this.panel15.Location = new System.Drawing.Point(3, 3);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(80, 25);
+            this.panel15.Size = new System.Drawing.Size(53, 25);
             this.panel15.TabIndex = 311;
             // 
             // label5
@@ -175,9 +165,9 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(2, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 15);
+            this.label5.Size = new System.Drawing.Size(43, 15);
             this.label5.TabIndex = 250;
-            this.label5.Text = "Description:";
+            this.label5.Text = "Notes:";
             // 
             // label4
             // 
@@ -213,7 +203,6 @@
             this.btnUpdate.Text = "&Update";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panel14
             // 
@@ -290,6 +279,9 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(333, 27);
             this.panel12.TabIndex = 0;
+            //this.panel12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel12_MouseDown);
+            //this.panel12.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel12_MouseMove);
+            //this.panel12.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel12_MouseUp);
             // 
             // bunifuImageButton1
             // 
@@ -355,9 +347,9 @@
             this.txt_des.BackColor = System.Drawing.Color.White;
             this.txt_des.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
             this.txt_des.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_des.Location = new System.Drawing.Point(85, 3);
+            this.txt_des.Location = new System.Drawing.Point(58, 3);
             this.txt_des.Name = "txt_des";
-            this.txt_des.Size = new System.Drawing.Size(222, 25);
+            this.txt_des.Size = new System.Drawing.Size(249, 25);
             this.txt_des.TabIndex = 0;
             this.txt_des.Text = "NA";
             // 
@@ -388,28 +380,20 @@
             // 
             this.dgw.AllowUserToAddRows = false;
             this.dgw.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.OldLace;
-            this.dgw.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgw.AutoGenerateColumns = false;
-            this.dgw.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.OldLace;
+            this.dgw.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgw.BackgroundColor = System.Drawing.Color.White;
             this.dgw.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgw.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgw.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgw.ColumnHeadersHeight = 24;
-            this.dgw.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.expenseTypeDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn,
-            this.notesDataGridViewTextBoxColumn});
             this.dgw.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgw.DataSource = this.tblExpenseMasterBindingSource;
             this.dgw.EnableHeadersVisualStyles = false;
             this.dgw.GridColor = System.Drawing.Color.White;
             this.dgw.Location = new System.Drawing.Point(6, 126);
@@ -417,67 +401,27 @@
             this.dgw.Name = "dgw";
             this.dgw.ReadOnly = true;
             this.dgw.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgw.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgw.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgw.RowHeadersWidth = 25;
             this.dgw.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.dgw.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgw.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgw.RowTemplate.Height = 18;
             this.dgw.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgw.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dgw.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgw.Size = new System.Drawing.Size(315, 172);
             this.dgw.TabIndex = 814;
-            this.dgw.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgw_CellMouseClick);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // expenseTypeDataGridViewTextBoxColumn
-            // 
-            this.expenseTypeDataGridViewTextBoxColumn.DataPropertyName = "ExpenseType";
-            this.expenseTypeDataGridViewTextBoxColumn.HeaderText = "ExpenseName";
-            this.expenseTypeDataGridViewTextBoxColumn.Name = "expenseTypeDataGridViewTextBoxColumn";
-            this.expenseTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // notesDataGridViewTextBoxColumn
-            // 
-            this.notesDataGridViewTextBoxColumn.DataPropertyName = "Notes";
-            this.notesDataGridViewTextBoxColumn.HeaderText = "Notes";
-            this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
-            this.notesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tblExpenseMasterBindingSource
-            // 
-            this.tblExpenseMasterBindingSource.DataMember = "tbl_ExpenseMaster";
-            this.tblExpenseMasterBindingSource.DataSource = this.inventory_DBDataSet;
-            // 
-            // inventory_DBDataSet
-            // 
-            this.inventory_DBDataSet.DataSetName = "Inventory_DBDataSet";
-            this.inventory_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnDelete
             // 
@@ -492,7 +436,6 @@
             this.btnDelete.Text = "&Delete";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // panel3
             // 
@@ -563,13 +506,9 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label11.Location = new System.Drawing.Point(6, 6);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(107, 18);
+            this.label11.Size = new System.Drawing.Size(103, 18);
             this.label11.TabIndex = 348;
-            this.label11.Text = "Expenses Name:";
-            // 
-            // tbl_ExpenseMasterTableAdapter
-            // 
-            this.tbl_ExpenseMasterTableAdapter.ClearBeforeFill = true;
+            this.label11.Text = "Expenses Type:";
             // 
             // Expense_Master
             // 
@@ -586,7 +525,6 @@
             this.Name = "Expense_Master";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expense_Master";
-            this.Load += new System.EventHandler(this.Expense_Master_Load);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -601,8 +539,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblExpenseMasterBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventory_DBDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -614,7 +550,7 @@
 
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox txt_Expense_Type;
+        private System.Windows.Forms.TextBox txt_cat_name;
         internal System.Windows.Forms.Label lblUser;
         internal System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Panel panel15;
@@ -644,13 +580,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox combo_Status;
-        private Inventory_DBDataSet inventory_DBDataSet;
-        private System.Windows.Forms.BindingSource tblExpenseMasterBindingSource;
-        private Inventory_DBDataSetTableAdapters.tbl_ExpenseMasterTableAdapter tbl_ExpenseMasterTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn expenseTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox combo_godown;
     }
 }

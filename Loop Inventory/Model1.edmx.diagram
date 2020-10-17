@@ -4,14 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="967a212bc5b64de9b72b36e95cbe3321" Name="Diagram1">
-        <EntityTypeShape EntityType="Inventory_DBModel.tbl_AccountMaster" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Inventory_DBModel.tbl_godown" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Inventory_DBModel.tbl_Currency" Width="1.5" PointX="3.75" PointY="3.75" />
-        <EntityTypeShape EntityType="Inventory_DBModel.tbl_Tax" Width="1.5" PointX="0.75" PointY="4.75" />
-        <EntityTypeShape EntityType="Inventory_DBModel.tblBonusQuantity" Width="1.5" PointX="5.75" PointY="0.75" />
-        <EntityTypeShape EntityType="Inventory_DBModel.tblStore" Width="1.5" PointX="5.75" PointY="4.75" />
-        <EntityTypeShape EntityType="Inventory_DBModel.tblItemMaster" Width="1.5" PointX="0.75" PointY="7.75" />
+      <Diagram DiagramId="25d7c838afec4ec598e72a393c74912a" Name="Diagram1">
+        <EntityTypeShape EntityType="Inventory_DBModel.tbl_Tax" Width="2.25" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Inventory_DBModel.tbl_Currency" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Inventory_DBModel.tblBonusQuantity" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Inventory_DBModel.tbl_godown" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="Inventory_DBModel.tblStore" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Inventory_DBModel.tblItemMaster" Width="1.5" PointX="5.375" PointY="4.75" />
+        <EntityTypeShape EntityType="Inventory_DBModel.tbl_AccountMaster" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="Inventory_DBModel.Supplier" Width="1.5" PointX="0.75" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

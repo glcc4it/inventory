@@ -5,20 +5,42 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Inventory_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SupplierID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+          <Property Name="AccountNature" Type="nvarchar" MaxLength="200" />
+          <Property Name="CurrencyType" Type="nvarchar" MaxLength="200" />
+          <Property Name="OpeningBalance" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="OpeningBalanceType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="EmailID" Type="nvarchar" MaxLength="200" />
+          <Property Name="Mobileno" Type="nvarchar" MaxLength="200" />
+          <Property Name="CreditLimit" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Branch" Type="nvarchar" MaxLength="500" />
+          <Property Name="AccountNumber" Type="nvarchar" MaxLength="500" />
+          <Property Name="DefultTransaction" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="nvarchar" MaxLength="500" />
+        </EntityType>
         <EntityType Name="tbl_AccountMaster">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AccountNumber" Type="varchar" MaxLength="300" />
-          <Property Name="Date" Type="varchar" MaxLength="50" />
-          <Property Name="Accounttype" Type="varchar" MaxLength="300" />
-          <Property Name="AccountName" Type="varchar" MaxLength="300" />
-          <Property Name="SubAccountof" Type="varchar" MaxLength="300" />
-          <Property Name="AccountRules" Type="varchar" MaxLength="500" />
-          <Property Name="AccountCurrency" Type="varchar" MaxLength="300" />
-          <Property Name="Notes" Type="varchar" MaxLength="300" />
-          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="AccountNumber" Type="nvarchar" MaxLength="300" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Accounttype" Type="nvarchar" MaxLength="300" />
+          <Property Name="AccountName" Type="nvarchar" MaxLength="300" />
+          <Property Name="SubAccountof" Type="nvarchar" MaxLength="300" />
+          <Property Name="AccountRules" Type="nvarchar" MaxLength="300" />
+          <Property Name="AccountCurrency" Type="nvarchar" MaxLength="300" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="300" />
+          <Property Name="Status" Type="nvarchar" MaxLength="300" />
         </EntityType>
         <EntityType Name="tbl_Currency">
           <Key>
@@ -109,6 +131,7 @@
           <Property Name="Status" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="Inventory_DBModelStoreContainer">
+          <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_AccountMaster" EntityType="Self.tbl_AccountMaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Currency" EntityType="Self.tbl_Currency" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_godown" EntityType="Self.tbl_godown" Schema="dbo" store:Type="Tables" />
@@ -121,49 +144,26 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Inventory_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="tbl_AccountMaster">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AccountNumber" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
-          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Accounttype" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
-          <Property Name="AccountName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
-          <Property Name="SubAccountof" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
-          <Property Name="AccountRules" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="AccountCurrency" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
-          <Property Name="Notes" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
-          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="tbl_godown">
-          <Key>
-            <PropertyRef Name="Sno" />
-          </Key>
-          <Property Name="Sno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="godownname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="narration" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityContainer Name="Inventory_DBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="tbl_AccountMaster" EntityType="Self.tbl_AccountMaster" />
-          <EntitySet Name="tbl_godown" EntityType="Self.tbl_godown" />
-          <EntitySet Name="tbl_Currency" EntityType="Inventory_DBModel.tbl_Currency" />
-          <EntitySet Name="tbl_Tax" EntityType="Inventory_DBModel.tbl_Tax" />
-          <EntitySet Name="tblBonusQuantities" EntityType="Inventory_DBModel.tblBonusQuantity" />
-          <EntitySet Name="tblStores" EntityType="Inventory_DBModel.tblStore" />
-          <EntitySet Name="tblItemMasters" EntityType="Inventory_DBModel.tblItemMaster" />
-        </EntityContainer>
-        <EntityType Name="tbl_Currency">
+        <EntityType Name="tbl_Tax">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="value" Type="Decimal" Precision="18" Scale="3" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="tbl_Tax">
+        <EntityContainer Name="Inventory_DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Tax" EntityType="Self.tbl_Tax" />
+          <EntitySet Name="tbl_Currency" EntityType="Inventory_DBModel.tbl_Currency" />
+          <EntitySet Name="tblBonusQuantities" EntityType="Inventory_DBModel.tblBonusQuantity" />
+          <EntitySet Name="tbl_godown" EntityType="Inventory_DBModel.tbl_godown" />
+          <EntitySet Name="tblStores" EntityType="Inventory_DBModel.tblStore" />
+          <EntitySet Name="tblItemMasters" EntityType="Inventory_DBModel.tblItemMaster" />
+          <EntitySet Name="tbl_AccountMaster" EntityType="Inventory_DBModel.tbl_AccountMaster" />
+          <EntitySet Name="Suppliers" EntityType="Inventory_DBModel.Supplier" />
+        </EntityContainer>
+        <EntityType Name="tbl_Currency">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -184,6 +184,15 @@
           <Property Name="ToDate" Type="DateTime" Precision="0" />
           <Property Name="OfferQuantity" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="Bonus" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="tbl_godown">
+          <Key>
+            <PropertyRef Name="Sno" />
+          </Key>
+          <Property Name="Sno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="godownname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="narration" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblStore">
           <Key>
@@ -233,51 +242,62 @@
           <Property Name="AddProfit" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="tbl_AccountMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AccountNumber" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Accounttype" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="AccountName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="SubAccountof" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="AccountRules" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="AccountCurrency" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SupplierID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AccountNature" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencyType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="OpeningBalance" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="OpeningBalanceType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="EmailID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Mobileno" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CreditLimit" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="AccountName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Branch" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AccountNumber" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DefultTransaction" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="Inventory_DBModelStoreContainer" CdmEntityContainer="Inventory_DBEntities">
-          <EntitySetMapping Name="tbl_AccountMaster">
-            <EntityTypeMapping TypeName="Inventory_DBModel.tbl_AccountMaster">
-              <MappingFragment StoreEntitySet="tbl_AccountMaster">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="Accounttype" ColumnName="Accounttype" />
-                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
-                <ScalarProperty Name="SubAccountof" ColumnName="SubAccountof" />
-                <ScalarProperty Name="AccountRules" ColumnName="AccountRules" />
-                <ScalarProperty Name="AccountCurrency" ColumnName="AccountCurrency" />
-                <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <EntitySetMapping Name="tbl_Tax">
+            <EntityTypeMapping TypeName="Inventory_DBModel.tbl_Tax">
+              <MappingFragment StoreEntitySet="tbl_Tax">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="value" ColumnName="value" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tbl_godown">
-            <EntityTypeMapping TypeName="Inventory_DBModel.tbl_godown">
-              <MappingFragment StoreEntitySet="tbl_godown">
-                <ScalarProperty Name="Sno" ColumnName="Sno" />
-                <ScalarProperty Name="godownname" ColumnName="godownname" />
-                <ScalarProperty Name="date" ColumnName="date" />
-                <ScalarProperty Name="narration" ColumnName="narration" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tbl_Currency">
             <EntityTypeMapping TypeName="Inventory_DBModel.tbl_Currency">
               <MappingFragment StoreEntitySet="tbl_Currency">
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="value" ColumnName="value" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tbl_Tax">
-            <EntityTypeMapping TypeName="Inventory_DBModel.tbl_Tax">
-              <MappingFragment StoreEntitySet="tbl_Tax">
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="value" ColumnName="value" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -296,6 +316,16 @@
                 <ScalarProperty Name="ItemName" ColumnName="ItemName" />
                 <ScalarProperty Name="Barcode" ColumnName="Barcode" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_godown">
+            <EntityTypeMapping TypeName="Inventory_DBModel.tbl_godown">
+              <MappingFragment StoreEntitySet="tbl_godown">
+                <ScalarProperty Name="narration" ColumnName="narration" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="godownname" ColumnName="godownname" />
+                <ScalarProperty Name="Sno" ColumnName="Sno" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -346,6 +376,45 @@
                 <ScalarProperty Name="Barcode2" ColumnName="Barcode2" />
                 <ScalarProperty Name="Barcode1" ColumnName="Barcode1" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_AccountMaster">
+            <EntityTypeMapping TypeName="Inventory_DBModel.tbl_AccountMaster">
+              <MappingFragment StoreEntitySet="tbl_AccountMaster">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="AccountCurrency" ColumnName="AccountCurrency" />
+                <ScalarProperty Name="AccountRules" ColumnName="AccountRules" />
+                <ScalarProperty Name="SubAccountof" ColumnName="SubAccountof" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="Accounttype" ColumnName="Accounttype" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Suppliers">
+            <EntityTypeMapping TypeName="Inventory_DBModel.Supplier">
+              <MappingFragment StoreEntitySet="Supplier">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DefultTransaction" ColumnName="DefultTransaction" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="Branch" ColumnName="Branch" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="CreditLimit" ColumnName="CreditLimit" />
+                <ScalarProperty Name="Mobileno" ColumnName="Mobileno" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="OpeningBalanceType" ColumnName="OpeningBalanceType" />
+                <ScalarProperty Name="OpeningBalance" ColumnName="OpeningBalance" />
+                <ScalarProperty Name="CurrencyType" ColumnName="CurrencyType" />
+                <ScalarProperty Name="AccountNature" ColumnName="AccountNature" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

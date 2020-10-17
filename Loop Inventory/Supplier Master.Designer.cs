@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Supplier_Master));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,13 +39,12 @@
             this.btn_print = new System.Windows.Forms.Button();
             this.panel31 = new System.Windows.Forms.Panel();
             this.txt_search = new System.Windows.Forms.TextBox();
-            this.cmbPricinglevel = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.panel32 = new System.Windows.Forms.Panel();
             this.combo_search_type = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.panel33 = new System.Windows.Forms.Panel();
-            this.txtcDefultdiscount = new System.Windows.Forms.TextBox();
+            this.txtDefulttransaction = new System.Windows.Forms.TextBox();
             this.panel35 = new System.Windows.Forms.Panel();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
@@ -59,7 +59,10 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtSupplierName = new System.Windows.Forms.TextBox();
             this.comboAccounttype = new System.Windows.Forms.ComboBox();
+            this.tblAccountMasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new Loop_Inventory.DataSet1();
             this.comboCurrencyType = new System.Windows.Forms.ComboBox();
+            this.tblCurrencyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtOpeningBalance = new System.Windows.Forms.TextBox();
             this.cmbOpeningBalanceType = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -78,9 +81,6 @@
             this.panel39 = new System.Windows.Forms.Panel();
             this.txtBranch = new System.Windows.Forms.TextBox();
             this.panel41 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -126,16 +126,18 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.tbl_AccountMasterTableAdapter = new Loop_Inventory.DataSet1TableAdapters.tbl_AccountMasterTableAdapter();
+            this.tbl_CurrencyTableAdapter = new Loop_Inventory.DataSet1TableAdapters.tbl_CurrencyTableAdapter();
             this.panel45.SuspendLayout();
             this.panel31.SuspendLayout();
             this.panel32.SuspendLayout();
-            this.panel26.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAccountMasterBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCurrencyBindingSource)).BeginInit();
             this.panel39.SuspendLayout();
             this.panel41.SuspendLayout();
-            this.panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -210,17 +212,6 @@
             this.txt_search.Size = new System.Drawing.Size(164, 25);
             this.txt_search.TabIndex = 1;
             // 
-            // cmbPricinglevel
-            // 
-            this.cmbPricinglevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.cmbPricinglevel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cmbPricinglevel.FormattingEnabled = true;
-            this.cmbPricinglevel.Location = new System.Drawing.Point(2, 2);
-            this.cmbPricinglevel.Name = "cmbPricinglevel";
-            this.cmbPricinglevel.Size = new System.Drawing.Size(182, 25);
-            this.cmbPricinglevel.TabIndex = 3;
-            this.cmbPricinglevel.Text = "--- Select Pricing Level---";
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -275,16 +266,16 @@
             this.panel33.Size = new System.Drawing.Size(179, 2);
             this.panel33.TabIndex = 1032;
             // 
-            // txtcDefultdiscount
+            // txtDefulttransaction
             // 
-            this.txtcDefultdiscount.BackColor = System.Drawing.Color.White;
-            this.txtcDefultdiscount.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtcDefultdiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtcDefultdiscount.Location = new System.Drawing.Point(2, 2);
-            this.txtcDefultdiscount.Multiline = true;
-            this.txtcDefultdiscount.Name = "txtcDefultdiscount";
-            this.txtcDefultdiscount.Size = new System.Drawing.Size(182, 41);
-            this.txtcDefultdiscount.TabIndex = 0;
+            this.txtDefulttransaction.BackColor = System.Drawing.Color.White;
+            this.txtDefulttransaction.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtDefulttransaction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDefulttransaction.Location = new System.Drawing.Point(2, 2);
+            this.txtDefulttransaction.Multiline = true;
+            this.txtDefulttransaction.Name = "txtDefulttransaction";
+            this.txtDefulttransaction.Size = new System.Drawing.Size(182, 41);
+            this.txtDefulttransaction.TabIndex = 0;
             // 
             // panel35
             // 
@@ -309,6 +300,7 @@
             this.btn_delete.Text = "&Delete";
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_update
             // 
@@ -324,6 +316,7 @@
             this.btn_update.Text = "&Update";
             this.btn_update.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_save
             // 
@@ -344,8 +337,7 @@
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel26.Controls.Add(this.cmbStatus);
-            this.panel26.Location = new System.Drawing.Point(451, 315);
+            this.panel26.Location = new System.Drawing.Point(453, 280);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(186, 29);
             this.panel26.TabIndex = 1023;
@@ -358,7 +350,7 @@
             this.cmbStatus.Items.AddRange(new object[] {
             "Active",
             "Deactive"});
-            this.cmbStatus.Location = new System.Drawing.Point(2, 2);
+            this.cmbStatus.Location = new System.Drawing.Point(453, 280);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(182, 25);
             this.cmbStatus.TabIndex = 3;
@@ -380,7 +372,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label18.Location = new System.Drawing.Point(336, 320);
+            this.label18.Location = new System.Drawing.Point(335, 287);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(92, 18);
             this.label18.TabIndex = 1022;
@@ -449,24 +441,43 @@
             // comboAccounttype
             // 
             this.comboAccounttype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.comboAccounttype.DataSource = this.tblAccountMasterBindingSource;
+            this.comboAccounttype.DisplayMember = "AccountName";
             this.comboAccounttype.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.comboAccounttype.FormattingEnabled = true;
             this.comboAccounttype.Location = new System.Drawing.Point(2, 2);
             this.comboAccounttype.Name = "comboAccounttype";
             this.comboAccounttype.Size = new System.Drawing.Size(160, 25);
             this.comboAccounttype.TabIndex = 2;
-            this.comboAccounttype.Text = "-Select Account Type-";
+            this.comboAccounttype.ValueMember = "AccountName";
+            // 
+            // tblAccountMasterBindingSource
+            // 
+            this.tblAccountMasterBindingSource.DataMember = "tbl_AccountMaster";
+            this.tblAccountMasterBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // comboCurrencyType
             // 
             this.comboCurrencyType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.comboCurrencyType.DataSource = this.tblCurrencyBindingSource;
+            this.comboCurrencyType.DisplayMember = "Name";
             this.comboCurrencyType.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.comboCurrencyType.FormattingEnabled = true;
             this.comboCurrencyType.Location = new System.Drawing.Point(2, 2);
             this.comboCurrencyType.Name = "comboCurrencyType";
             this.comboCurrencyType.Size = new System.Drawing.Size(160, 25);
             this.comboCurrencyType.TabIndex = 2;
-            this.comboCurrencyType.Text = "--- Select Currency---";
+            this.comboCurrencyType.ValueMember = "Name";
+            // 
+            // tblCurrencyBindingSource
+            // 
+            this.tblCurrencyBindingSource.DataMember = "tbl_Currency";
+            this.tblCurrencyBindingSource.DataSource = this.dataSet1;
             // 
             // txtOpeningBalance
             // 
@@ -655,44 +666,10 @@
             this.panel41.Size = new System.Drawing.Size(186, 29);
             this.panel41.TabIndex = 961;
             // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel20.Controls.Add(this.cmbPricinglevel);
-            this.panel20.Location = new System.Drawing.Point(451, 276);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(186, 29);
-            this.panel20.TabIndex = 1012;
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.DimGray;
-            this.bunifuImageButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(639, 284);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(18, 18);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton2.TabIndex = 1011;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(335, 282);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 18);
-            this.label13.TabIndex = 1010;
-            this.label13.Text = "Pricing Level:";
-            // 
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel16.Controls.Add(this.txtcDefultdiscount);
+            this.panel16.Controls.Add(this.txtDefulttransaction);
             this.panel16.Location = new System.Drawing.Point(451, 222);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(186, 45);
@@ -893,9 +870,9 @@
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label8.Location = new System.Drawing.Point(8, 119);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 18);
+            this.label8.Size = new System.Drawing.Size(67, 18);
             this.label8.TabIndex = 913;
-            this.label8.Text = "Account Nature:";
+            this.label8.Text = "Account :";
             // 
             // dataGridView1
             // 
@@ -943,6 +920,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(650, 192);
             this.dataGridView1.TabIndex = 912;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // pictureBox2
             // 
@@ -961,9 +939,9 @@
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label10.Location = new System.Drawing.Point(8, 156);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(104, 18);
+            this.label10.Size = new System.Drawing.Size(70, 18);
             this.label10.TabIndex = 915;
-            this.label10.Text = "Currency Type:";
+            this.label10.Text = "Currency:";
             // 
             // label16
             // 
@@ -1038,9 +1016,9 @@
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(8, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 18);
+            this.label1.Size = new System.Drawing.Size(44, 18);
             this.label1.TabIndex = 874;
-            this.label1.Text = "Ledger Date:";
+            this.label1.Text = " Date:";
             // 
             // lblUser
             // 
@@ -1176,6 +1154,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.cmbStatus);
             this.panel2.Controls.Add(this.btn_print);
             this.panel2.Controls.Add(this.panel31);
             this.panel2.Controls.Add(this.label19);
@@ -1191,9 +1170,6 @@
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.bunifuImageButton3);
             this.panel2.Controls.Add(this.bunifuImageButton1);
-            this.panel2.Controls.Add(this.panel20);
-            this.panel2.Controls.Add(this.bunifuImageButton2);
-            this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.panel16);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label3);
@@ -1248,6 +1224,14 @@
             this.panel8.Size = new System.Drawing.Size(2, 643);
             this.panel8.TabIndex = 461;
             // 
+            // tbl_AccountMasterTableAdapter
+            // 
+            this.tbl_AccountMasterTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbl_CurrencyTableAdapter
+            // 
+            this.tbl_CurrencyTableAdapter.ClearBeforeFill = true;
+            // 
             // Supplier_Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1262,20 +1246,21 @@
             this.Name = "Supplier_Master";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Supplier_Master";
+            this.Load += new System.EventHandler(this.Supplier_Master_Load);
             this.panel45.ResumeLayout(false);
             this.panel45.PerformLayout();
             this.panel31.ResumeLayout(false);
             this.panel31.PerformLayout();
             this.panel32.ResumeLayout(false);
-            this.panel26.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAccountMasterBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCurrencyBindingSource)).EndInit();
             this.panel39.ResumeLayout(false);
             this.panel39.PerformLayout();
             this.panel41.ResumeLayout(false);
             this.panel41.PerformLayout();
-            this.panel20.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel15.ResumeLayout(false);
@@ -1320,13 +1305,12 @@
         private System.Windows.Forms.Button btn_print;
         private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.TextBox txt_search;
-        public System.Windows.Forms.ComboBox cmbPricinglevel;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.ComboBox combo_search_type;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel33;
-        public System.Windows.Forms.TextBox txtcDefultdiscount;
+        public System.Windows.Forms.TextBox txtDefulttransaction;
         private System.Windows.Forms.Panel panel35;
         internal System.Windows.Forms.Button btn_delete;
         internal System.Windows.Forms.Button btn_update;
@@ -1360,9 +1344,6 @@
         private System.Windows.Forms.Panel panel39;
         public System.Windows.Forms.TextBox txtBranch;
         public System.Windows.Forms.Panel panel41;
-        private System.Windows.Forms.Panel panel20;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label3;
@@ -1408,6 +1389,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.Panel panel37;
-
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource tblAccountMasterBindingSource;
+        private DataSet1TableAdapters.tbl_AccountMasterTableAdapter tbl_AccountMasterTableAdapter;
+        private System.Windows.Forms.BindingSource tblCurrencyBindingSource;
+        private DataSet1TableAdapters.tbl_CurrencyTableAdapter tbl_CurrencyTableAdapter;
     }
 }
