@@ -46,7 +46,6 @@
             this.txt_des = new System.Windows.Forms.TextBox();
             this.txt_cnic_no = new System.Windows.Forms.TextBox();
             this.txt_mob = new System.Windows.Forms.TextBox();
-            this.txt_email = new System.Windows.Forms.TextBox();
             this.txt_city = new System.Windows.Forms.TextBox();
             this.txt_address = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -86,6 +85,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbUserType = new System.Windows.Forms.ComboBox();
+            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -94,6 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuImageButton32
@@ -237,15 +239,6 @@
             this.txt_mob.Name = "txt_mob";
             this.txt_mob.Size = new System.Drawing.Size(194, 25);
             this.txt_mob.TabIndex = 817;
-            // 
-            // txt_email
-            // 
-            this.txt_email.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_email.Location = new System.Drawing.Point(191, 174);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(194, 25);
-            this.txt_email.TabIndex = 816;
             // 
             // txt_city
             // 
@@ -606,6 +599,8 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Transparent;
+            this.panel17.Controls.Add(this.bunifuImageButton3);
+            this.panel17.Controls.Add(this.cmbUserType);
             this.panel17.Controls.Add(this.label11);
             this.panel17.Controls.Add(this.label10);
             this.panel17.Controls.Add(this.dateTimePicker1);
@@ -613,7 +608,6 @@
             this.panel17.Controls.Add(this.txt_des);
             this.panel17.Controls.Add(this.txt_cnic_no);
             this.panel17.Controls.Add(this.txt_mob);
-            this.panel17.Controls.Add(this.txt_email);
             this.panel17.Controls.Add(this.txt_city);
             this.panel17.Controls.Add(this.txt_address);
             this.panel17.Controls.Add(this.txt_salesman_name);
@@ -751,6 +745,37 @@
             this.label1.TabIndex = 838;
             this.label1.Text = "Salesman Name:";
             // 
+            // cmbUserType
+            // 
+            this.cmbUserType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbUserType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbUserType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cmbUserType.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cmbUserType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmbUserType.FormattingEnabled = true;
+            this.cmbUserType.Items.AddRange(new object[] {
+            "Admin",
+            "Salesman"});
+            this.cmbUserType.Location = new System.Drawing.Point(191, 174);
+            this.cmbUserType.Name = "cmbUserType";
+            this.cmbUserType.Size = new System.Drawing.Size(170, 25);
+            this.cmbUserType.TabIndex = 854;
+            this.cmbUserType.Text = "--- Select Currency---";
+            // 
+            // bunifuImageButton3
+            // 
+            this.bunifuImageButton3.BackColor = System.Drawing.Color.DimGray;
+            this.bunifuImageButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
+            this.bunifuImageButton3.ImageActive = null;
+            this.bunifuImageButton3.Location = new System.Drawing.Point(365, 176);
+            this.bunifuImageButton3.Name = "bunifuImageButton3";
+            this.bunifuImageButton3.Size = new System.Drawing.Size(20, 23);
+            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton3.TabIndex = 1059;
+            this.bunifuImageButton3.TabStop = false;
+            this.bunifuImageButton3.Zoom = 10;
+            // 
             // Money_Transfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -773,9 +798,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Money_Transfer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Money_Transfer";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Money_Transfer_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -787,6 +814,7 @@
             this.panel10.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -807,7 +835,6 @@
         private System.Windows.Forms.TextBox txt_des;
         private System.Windows.Forms.TextBox txt_cnic_no;
         private System.Windows.Forms.TextBox txt_mob;
-        private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.TextBox txt_city;
         private System.Windows.Forms.TextBox txt_address;
         private System.Windows.Forms.Label label4;
@@ -847,5 +874,7 @@
         private System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Button btnDelete;
         internal System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.ComboBox cmbUserType;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
     }
 }

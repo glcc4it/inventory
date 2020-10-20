@@ -171,12 +171,6 @@
     <Compile Include="Brand Master.Designer.cs">
       <DependentUpon>Brand Master.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cash Transaction.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cash Transaction.Designer.cs">
-      <DependentUpon>Cash Transaction.cs</DependentUpon>
-    </Compile>
     <Compile Include="Cashbook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +207,11 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Daybook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,18 +243,6 @@
     <Compile Include="frmCustomerRecord.Designer.cs">
       <DependentUpon>frmCustomerRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCustomerRecord1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCustomerRecord1.Designer.cs">
-      <DependentUpon>frmCustomerRecord1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCustomerRecord2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCustomerRecord2.Designer.cs">
-      <DependentUpon>frmCustomerRecord2.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,18 +266,6 @@
     </Compile>
     <Compile Include="frmSupplierRecord.Designer.cs">
       <DependentUpon>frmSupplierRecord.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmSupplierRecord1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSupplierRecord1.Designer.cs">
-      <DependentUpon>frmSupplierRecord1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmSupplierRecord2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSupplierRecord2.Designer.cs">
-      <DependentUpon>frmSupplierRecord2.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTrialBalance.cs">
       <SubType>Form</SubType>
@@ -316,12 +291,6 @@
     <Compile Include="Godownmaster.Designer.cs">
       <DependentUpon>Godownmaster.cs</DependentUpon>
     </Compile>
-    <Compile Include="Import Product.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Import Product.Designer.cs">
-      <DependentUpon>Import Product.cs</DependentUpon>
-    </Compile>
     <Compile Include="ImportCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,12 +310,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Inventory_DBDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Item Master.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Item Master.Designer.cs">
-      <DependentUpon>Item Master.cs</DependentUpon>
     </Compile>
     <Compile Include="Logs.cs">
       <SubType>Form</SubType>
@@ -410,12 +373,6 @@
     <Compile Include="Purchase Report.Designer.cs">
       <DependentUpon>Purchase Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="Purchase Return.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Purchase Return.Designer.cs">
-      <DependentUpon>Purchase Return.cs</DependentUpon>
-    </Compile>
     <Compile Include="Purchaseproduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -445,12 +402,6 @@
     </Compile>
     <Compile Include="Reminder.Designer.cs">
       <DependentUpon>Reminder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sale Return.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sale Return.Designer.cs">
-      <DependentUpon>Sale Return.cs</DependentUpon>
     </Compile>
     <Compile Include="Sale view.cs">
       <SubType>Form</SubType>
@@ -535,6 +486,9 @@
     </Compile>
     <Compile Include="Supplier Master.Designer.cs">
       <DependentUpon>Supplier Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Tax Master.cs">
       <SubType>Form</SubType>
@@ -635,9 +589,6 @@
     <EmbeddedResource Include="Brand Master.resx">
       <DependentUpon>Brand Master.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cash Transaction.resx">
-      <DependentUpon>Cash Transaction.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Cashbook.resx">
       <DependentUpon>Cashbook.cs</DependentUpon>
     </EmbeddedResource>
@@ -671,12 +622,6 @@
     <EmbeddedResource Include="frmCustomerRecord.resx">
       <DependentUpon>frmCustomerRecord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomerRecord1.resx">
-      <DependentUpon>frmCustomerRecord1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomerRecord2.resx">
-      <DependentUpon>frmCustomerRecord2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -688,12 +633,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSupplierRecord.resx">
       <DependentUpon>frmSupplierRecord.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSupplierRecord1.resx">
-      <DependentUpon>frmSupplierRecord1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSupplierRecord2.resx">
-      <DependentUpon>frmSupplierRecord2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrialBalance.resx">
       <DependentUpon>frmTrialBalance.cs</DependentUpon>
@@ -707,17 +646,11 @@
     <EmbeddedResource Include="Godownmaster.resx">
       <DependentUpon>Godownmaster.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Import Product.resx">
-      <DependentUpon>Import Product.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ImportCustomer.resx">
       <DependentUpon>ImportCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImportVender.resx">
       <DependentUpon>ImportVender.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Item Master.resx">
-      <DependentUpon>Item Master.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Logs.resx">
       <DependentUpon>Logs.cs</DependentUpon>
@@ -750,9 +683,6 @@
     <EmbeddedResource Include="Purchase Report.resx">
       <DependentUpon>Purchase Report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Purchase Return.resx">
-      <DependentUpon>Purchase Return.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Purchaseproduct.resx">
       <DependentUpon>Purchaseproduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -774,9 +704,6 @@
     <EmbeddedResource Include="Report4.rdlc" />
     <EmbeddedResource Include="Report5.rdlc" />
     <EmbeddedResource Include="Report6.rdlc" />
-    <EmbeddedResource Include="Sale Return.resx">
-      <DependentUpon>Sale Return.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Sale view.resx">
       <DependentUpon>Sale view.cs</DependentUpon>
     </EmbeddedResource>
@@ -846,6 +773,17 @@
     <EmbeddedResource Include="Vender Payment.resx">
       <DependentUpon>Vender Payment.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Inventory_DBDataSet.xsc">
       <DependentUpon>Inventory_DBDataSet.xsd</DependentUpon>
     </None>

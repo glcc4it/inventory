@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer_Master));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel46 = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
@@ -76,10 +76,10 @@
             this.panel26 = new System.Windows.Forms.Panel();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.add2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.add1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel25 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.comboDefultTranaction = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
             this.txtcPaymentTermsdays = new System.Windows.Forms.TextBox();
@@ -130,7 +130,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.comboAccounttype = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtSupplierName = new System.Windows.Forms.TextBox();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.panel34 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -145,8 +145,8 @@
             this.panel31.SuspendLayout();
             this.panel32.SuspendLayout();
             this.panel26.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).BeginInit();
             this.panel25.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -428,18 +428,18 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.OldLace;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.OldLace;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.ColumnHeadersHeight = 24;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView1.EnableHeadersVisualStyles = false;
@@ -449,21 +449,21 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.RowHeadersWidth = 25;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.RowTemplate.Height = 18;
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
@@ -510,8 +510,8 @@
             this.panel2.Controls.Add(this.btn_save);
             this.panel2.Controls.Add(this.panel26);
             this.panel2.Controls.Add(this.label18);
-            this.panel2.Controls.Add(this.bunifuImageButton3);
-            this.panel2.Controls.Add(this.bunifuImageButton1);
+            this.panel2.Controls.Add(this.add2);
+            this.panel2.Controls.Add(this.add1);
             this.panel2.Controls.Add(this.panel25);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.panel22);
@@ -744,52 +744,55 @@
             this.label18.TabIndex = 1022;
             this.label18.Text = "Select Status:";
             // 
-            // bunifuImageButton3
+            // add2
             // 
-            this.bunifuImageButton3.BackColor = System.Drawing.Color.DimGray;
-            this.bunifuImageButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
-            this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(300, 156);
-            this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(18, 18);
-            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton3.TabIndex = 1021;
-            this.bunifuImageButton3.TabStop = false;
-            this.bunifuImageButton3.Zoom = 10;
+            this.add2.BackColor = System.Drawing.Color.DimGray;
+            this.add2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add2.Image = ((System.Drawing.Image)(resources.GetObject("add2.Image")));
+            this.add2.ImageActive = null;
+            this.add2.Location = new System.Drawing.Point(300, 156);
+            this.add2.Name = "add2";
+            this.add2.Size = new System.Drawing.Size(18, 18);
+            this.add2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.add2.TabIndex = 1021;
+            this.add2.TabStop = false;
+            this.add2.Zoom = 10;
+            this.add2.Click += new System.EventHandler(this.add2_Click);
             // 
-            // bunifuImageButton1
+            // add1
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.DimGray;
-            this.bunifuImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(300, 120);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(18, 18);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton1.TabIndex = 1020;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
+            this.add1.BackColor = System.Drawing.Color.DimGray;
+            this.add1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add1.Image = ((System.Drawing.Image)(resources.GetObject("add1.Image")));
+            this.add1.ImageActive = null;
+            this.add1.Location = new System.Drawing.Point(300, 120);
+            this.add1.Name = "add1";
+            this.add1.Size = new System.Drawing.Size(18, 18);
+            this.add1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.add1.TabIndex = 1020;
+            this.add1.TabStop = false;
+            this.add1.Zoom = 10;
+            this.add1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // panel25
             // 
             this.panel25.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel25.Controls.Add(this.textBox4);
+            this.panel25.Controls.Add(this.comboDefultTranaction);
             this.panel25.Location = new System.Drawing.Point(133, 389);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(186, 29);
             this.panel25.TabIndex = 942;
             // 
-            // textBox4
+            // comboDefultTranaction
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.textBox4.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox4.Location = new System.Drawing.Point(2, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(182, 25);
-            this.textBox4.TabIndex = 0;
+            this.comboDefultTranaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.comboDefultTranaction.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.comboDefultTranaction.FormattingEnabled = true;
+            this.comboDefultTranaction.Location = new System.Drawing.Point(2, 2);
+            this.comboDefultTranaction.Name = "comboDefultTranaction";
+            this.comboDefultTranaction.Size = new System.Drawing.Size(182, 25);
+            this.comboDefultTranaction.TabIndex = 3;
+            this.comboDefultTranaction.Text = "--- Defult Transaction---";
             // 
             // label17
             // 
@@ -826,7 +829,7 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(335, 315);
+            this.label15.Location = new System.Drawing.Point(336, 315);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(107, 18);
             this.label15.TabIndex = 1015;
@@ -856,7 +859,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(335, 278);
+            this.label14.Location = new System.Drawing.Point(336, 278);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(102, 18);
             this.label14.TabIndex = 1013;
@@ -901,7 +904,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(335, 241);
+            this.label13.Location = new System.Drawing.Point(336, 241);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(93, 18);
             this.label13.TabIndex = 1010;
@@ -931,7 +934,7 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(335, 205);
+            this.label12.Location = new System.Drawing.Point(336, 205);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(107, 18);
             this.label12.TabIndex = 1008;
@@ -961,7 +964,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(335, 169);
+            this.label11.Location = new System.Drawing.Point(336, 169);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(100, 18);
             this.label11.TabIndex = 1006;
@@ -1300,21 +1303,21 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel3.Controls.Add(this.txtSupplierName);
+            this.panel3.Controls.Add(this.txtCustomerName);
             this.panel3.Location = new System.Drawing.Point(133, 79);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(186, 29);
             this.panel3.TabIndex = 923;
             // 
-            // txtSupplierName
+            // txtCustomerName
             // 
-            this.txtSupplierName.BackColor = System.Drawing.Color.White;
-            this.txtSupplierName.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtSupplierName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSupplierName.Location = new System.Drawing.Point(2, 2);
-            this.txtSupplierName.Name = "txtSupplierName";
-            this.txtSupplierName.Size = new System.Drawing.Size(182, 25);
-            this.txtSupplierName.TabIndex = 0;
+            this.txtCustomerName.BackColor = System.Drawing.Color.White;
+            this.txtCustomerName.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCustomerName.Location = new System.Drawing.Point(2, 2);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(182, 25);
+            this.txtCustomerName.TabIndex = 0;
             // 
             // panel34
             // 
@@ -1371,6 +1374,7 @@
             this.Name = "Customer_Master";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer_Master";
+            this.Load += new System.EventHandler(this.Customer_Master_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Customer_Master_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel46.ResumeLayout(false);
@@ -1385,10 +1389,9 @@
             this.panel31.PerformLayout();
             this.panel32.ResumeLayout(false);
             this.panel26.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).EndInit();
             this.panel25.ResumeLayout(false);
-            this.panel25.PerformLayout();
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
             this.panel21.ResumeLayout(false);
@@ -1463,7 +1466,7 @@
         private System.Windows.Forms.Panel panel34;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel3;
-        public System.Windows.Forms.TextBox txtSupplierName;
+        public System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Panel panel6;
         public System.Windows.Forms.ComboBox comboAccounttype;
         private System.Windows.Forms.Panel panel12;
@@ -1514,10 +1517,9 @@
         public System.Windows.Forms.TextBox txtcPaymentTermsdays;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel25;
-        public System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label17;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuImageButton add2;
+        private Bunifu.Framework.UI.BunifuImageButton add1;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Label label18;
         public System.Windows.Forms.ComboBox cmbStatus;
@@ -1534,5 +1536,6 @@
         private System.Windows.Forms.Panel panel33;
         private System.Windows.Forms.Panel panel35;
         private System.Windows.Forms.Label label22;
+        public System.Windows.Forms.ComboBox comboDefultTranaction;
     }
 }

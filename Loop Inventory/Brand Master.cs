@@ -13,6 +13,8 @@ namespace Loop_Inventory
 {
     public partial class Brand_Master : Form
     {
+        bool drag = false;
+        Point start_point = new Point(0, 0);
         public Brand_Master()
         {
             InitializeComponent();
@@ -245,6 +247,29 @@ namespace Loop_Inventory
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void panel12_MouseDown(object sender, MouseEventArgs e)
+        {
+            drag = true;
+            start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel12_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (drag)
+            {
+
+
+                Point p = PointToScreen(e.Location);
+                this.Location = new Point(p.X - start_point.X, p.Y - start_point.Y);
+
+            }
+        }
+
+        private void panel12_MouseUp(object sender, MouseEventArgs e)
+        {
+            drag = false;
         }
     }
 

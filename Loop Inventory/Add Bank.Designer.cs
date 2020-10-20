@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Bank));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -66,6 +66,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel37 = new System.Windows.Forms.Panel();
             this.u = new System.Windows.Forms.Panel();
+            this.add1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.add2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
@@ -113,6 +115,8 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.u.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel20.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -134,7 +138,7 @@
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label25.Location = new System.Drawing.Point(347, 91);
+            this.label25.Location = new System.Drawing.Point(347, 90);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(98, 18);
             this.label25.TabIndex = 986;
@@ -145,7 +149,7 @@
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label24.Location = new System.Drawing.Point(347, 54);
+            this.label24.Location = new System.Drawing.Point(347, 53);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(104, 18);
             this.label24.TabIndex = 984;
@@ -508,6 +512,8 @@
             // 
             this.u.BackColor = System.Drawing.Color.White;
             this.u.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.u.Controls.Add(this.add1);
+            this.u.Controls.Add(this.add2);
             this.u.Controls.Add(this.dataGridView1);
             this.u.Controls.Add(this.btnDelete);
             this.u.Controls.Add(this.panel20);
@@ -541,22 +547,52 @@
             this.u.Size = new System.Drawing.Size(681, 604);
             this.u.TabIndex = 923;
             // 
+            // add1
+            // 
+            this.add1.BackColor = System.Drawing.Color.DimGray;
+            this.add1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add1.Image = ((System.Drawing.Image)(resources.GetObject("add1.Image")));
+            this.add1.ImageActive = null;
+            this.add1.Location = new System.Drawing.Point(309, 91);
+            this.add1.Name = "add1";
+            this.add1.Size = new System.Drawing.Size(20, 23);
+            this.add1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add1.TabIndex = 1052;
+            this.add1.TabStop = false;
+            this.add1.Zoom = 10;
+            this.add1.Click += new System.EventHandler(this.add1_Click);
+            // 
+            // add2
+            // 
+            this.add2.BackColor = System.Drawing.Color.DimGray;
+            this.add2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add2.Image = ((System.Drawing.Image)(resources.GetObject("add2.Image")));
+            this.add2.ImageActive = null;
+            this.add2.Location = new System.Drawing.Point(309, 130);
+            this.add2.Name = "add2";
+            this.add2.Size = new System.Drawing.Size(20, 23);
+            this.add2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add2.TabIndex = 1051;
+            this.add2.TabStop = false;
+            this.add2.Zoom = 10;
+            this.add2.Click += new System.EventHandler(this.add2_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.OldLace;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.OldLace;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeight = 24;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView1.EnableHeadersVisualStyles = false;
@@ -566,21 +602,21 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidth = 25;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 18;
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
@@ -699,7 +735,7 @@
             this.panel9.Controls.Add(this.cmbCurrencyType);
             this.panel9.Location = new System.Drawing.Point(138, 126);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(191, 29);
+            this.panel9.Size = new System.Drawing.Size(167, 29);
             this.panel9.TabIndex = 1017;
             // 
             // cmbCurrencyType
@@ -720,9 +756,9 @@
             this.cmbCurrencyType.Location = new System.Drawing.Point(2, 2);
             this.cmbCurrencyType.MaxDropDownItems = 50;
             this.cmbCurrencyType.Name = "cmbCurrencyType";
-            this.cmbCurrencyType.Size = new System.Drawing.Size(187, 25);
+            this.cmbCurrencyType.Size = new System.Drawing.Size(163, 25);
             this.cmbCurrencyType.TabIndex = 573;
-            this.cmbCurrencyType.Text = "--- Select Currency Type---";
+            this.cmbCurrencyType.Text = "-Select Currency Type-";
             // 
             // panel19
             // 
@@ -730,7 +766,7 @@
             this.panel19.Controls.Add(this.cmbAccountType);
             this.panel19.Location = new System.Drawing.Point(138, 87);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(191, 29);
+            this.panel19.Size = new System.Drawing.Size(167, 29);
             this.panel19.TabIndex = 1016;
             // 
             // cmbAccountType
@@ -751,9 +787,9 @@
             this.cmbAccountType.Location = new System.Drawing.Point(2, 2);
             this.cmbAccountType.MaxDropDownItems = 50;
             this.cmbAccountType.Name = "cmbAccountType";
-            this.cmbAccountType.Size = new System.Drawing.Size(187, 25);
+            this.cmbAccountType.Size = new System.Drawing.Size(163, 25);
             this.cmbAccountType.TabIndex = 572;
-            this.cmbAccountType.Text = "--- Select Account Type---";
+            this.cmbAccountType.Text = "-Select Account Type-";
             // 
             // panel34
             // 
@@ -1037,6 +1073,7 @@
             this.Name = "Add_Bank";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Bank";
+            this.Load += new System.EventHandler(this.Add_Bank_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Add_Bank_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).EndInit();
@@ -1050,6 +1087,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.u.ResumeLayout(false);
             this.u.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
@@ -1148,5 +1187,7 @@
         internal System.Windows.Forms.Button btnUpdate;
         internal System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtPhonenumber;
+        private Bunifu.Framework.UI.BunifuImageButton add1;
+        private Bunifu.Framework.UI.BunifuImageButton add2;
     }
 }

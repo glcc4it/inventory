@@ -62,14 +62,26 @@ namespace Loop_Inventory
             drag = false;
         }
 
-        
+        private void Add_Bank_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = cmbAccountType;
+            cmbAccountType.Focus();
+        }
 
        
 
-      
+        private void add2_Click(object sender, EventArgs e)
+        {
+            Currency_Master ss = new Currency_Master();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+        }
 
-       
-
-      
+        private void add1_Click(object sender, EventArgs e)
+        {
+            Account_Master ss = new Account_Master();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+        }
     }
 }

@@ -12,6 +12,8 @@ namespace Loop_Inventory
 {
     public partial class Store_Master : Form
     {
+        bool drag = false;
+        Point start_point = new Point(0, 0);
         public Store_Master()
         {
             InitializeComponent();
@@ -121,6 +123,9 @@ namespace Loop_Inventory
         private void Store_Master_Load(object sender, EventArgs e)
         {
             refreshGrid();
+
+            this.ActiveControl = txtName;
+            txtName.Focus();
         }
 
         private void btn_print_Click(object sender, EventArgs e)
@@ -177,6 +182,40 @@ namespace Loop_Inventory
         private void btnNew_Click(object sender, EventArgs e)
         {
             ClearField();
+        }
+
+        private void Store_Master_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+
+                SendKeys.Send("{TAB}");
+
+
+            }
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            drag = true;
+            start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (drag)
+            {
+
+
+                Point p = PointToScreen(e.Location);
+                this.Location = new Point(p.X - start_point.X, p.Y - start_point.Y);
+
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            drag = false;
         }
     }
 }

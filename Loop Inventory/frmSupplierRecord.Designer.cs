@@ -28,17 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSupplierRecord));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txt_search = new System.Windows.Forms.TextBox();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.Cmb_field = new System.Windows.Forms.ComboBox();
-            this.txt_pro_name = new System.Windows.Forms.TextBox();
             this.jobnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.invoicedateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,10 +44,6 @@
             this.balanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otherfaultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.workerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
             this.estimateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mobileacccessDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reciveidbyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,30 +53,22 @@
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalpaymentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.advanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dgw = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.openingBalanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.openingBalanceTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phonenoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mobilenoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.creditperiodDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.accountNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.branchDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.accountNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remarksDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pricinglevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.inventory_DBDataSet = new Loop_Inventory.Inventory_DBDataSet();
-            this.btnexportExcel = new System.Windows.Forms.Button();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnaddsupplier = new System.Windows.Forms.Button();
+            this.btn_print = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txt_barcode = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.cmbUserID = new System.Windows.Forms.ComboBox();
+            this.GroupBox2 = new System.Windows.Forms.GroupBox();
+            this.Label2 = new System.Windows.Forms.Label();
+            this.Label3 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dtpDateTo = new System.Windows.Forms.DateTimePicker();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.dtpDateFrom = new System.Windows.Forms.DateTimePicker();
+            this.btnGetData = new System.Windows.Forms.Button();
+            this.dgw = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -102,82 +84,20 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.supplierTableAdapter = new Loop_Inventory.Inventory_DBDataSetTableAdapters.SupplierTableAdapter();
+            this.panel2.SuspendLayout();
+            this.GroupBox1.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.GroupBox2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel34.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.GroupBox2.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventory_DBDataSet)).BeginInit();
-            this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
             this.panel32.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel3.Controls.Add(this.txt_search);
-            this.panel3.Location = new System.Drawing.Point(15, 34);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(177, 31);
-            this.panel3.TabIndex = 542;
-            // 
-            // txt_search
-            // 
-            this.txt_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txt_search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_search.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_search.Location = new System.Drawing.Point(2, 2);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(173, 27);
-            this.txt_search.TabIndex = 0;
-            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
-            // 
-            // panel34
-            // 
-            this.panel34.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel34.Controls.Add(this.Cmb_field);
-            this.panel34.Controls.Add(this.txt_pro_name);
-            this.panel34.Location = new System.Drawing.Point(18, 33);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(177, 32);
-            this.panel34.TabIndex = 541;
-            // 
-            // Cmb_field
-            // 
-            this.Cmb_field.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.Cmb_field.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.Cmb_field.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Cmb_field.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.Cmb_field.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cmb_field.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Cmb_field.FormattingEnabled = true;
-            this.Cmb_field.Items.AddRange(new object[] {
-            "ID",
-            "SupplierName",
-            "Mobile"});
-            this.Cmb_field.Location = new System.Drawing.Point(2, 2);
-            this.Cmb_field.Name = "Cmb_field";
-            this.Cmb_field.Size = new System.Drawing.Size(173, 28);
-            this.Cmb_field.TabIndex = 12;
-            // 
-            // txt_pro_name
-            // 
-            this.txt_pro_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txt_pro_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_pro_name.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_pro_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_pro_name.Location = new System.Drawing.Point(2, 2);
-            this.txt_pro_name.Name = "txt_pro_name";
-            this.txt_pro_name.Size = new System.Drawing.Size(160, 27);
-            this.txt_pro_name.TabIndex = 0;
             // 
             // jobnoDataGridViewTextBoxColumn
             // 
@@ -267,49 +187,6 @@
             this.workerDataGridViewTextBoxColumn.Name = "workerDataGridViewTextBoxColumn";
             this.workerDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(551, 607);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(24, 27);
-            this.label14.TabIndex = 809;
-            this.label14.Text = "0";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label11.Location = new System.Drawing.Point(401, 608);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(150, 24);
-            this.label11.TabIndex = 807;
-            this.label11.Text = "Total Suppliers:";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Transparent;
-            this.panel9.Controls.Add(this.panel15);
-            this.panel9.ForeColor = System.Drawing.Color.Black;
-            this.panel9.Location = new System.Drawing.Point(9, 621);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(700, 12);
-            this.panel9.TabIndex = 808;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.Gray;
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(0, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(700, 2);
-            this.panel15.TabIndex = 426;
-            // 
             // estimateDataGridViewTextBoxColumn
             // 
             this.estimateDataGridViewTextBoxColumn.DataPropertyName = "Estimate";
@@ -382,31 +259,14 @@
             this.advanceDataGridViewTextBoxColumn.Name = "advanceDataGridViewTextBoxColumn";
             this.advanceDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
-            // GroupBox2
-            // 
-            this.GroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.GroupBox2.Controls.Add(this.panel3);
-            this.GroupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox2.Location = new System.Drawing.Point(225, 14);
-            this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Size = new System.Drawing.Size(205, 79);
-            this.GroupBox2.TabIndex = 798;
-            this.GroupBox2.TabStop = false;
-            this.GroupBox2.Text = "Search Here:";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.dgw);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.panel9);
-            this.panel2.Controls.Add(this.GroupBox2);
-            this.panel2.Controls.Add(this.btnexportExcel);
             this.panel2.Controls.Add(this.GroupBox1);
-            this.panel2.Controls.Add(this.btnaddsupplier);
+            this.panel2.Controls.Add(this.GroupBox2);
+            this.panel2.Controls.Add(this.dgw);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel14);
             this.panel2.Controls.Add(this.panel13);
@@ -415,8 +275,168 @@
             this.panel2.Controls.Add(this.lblUser);
             this.panel2.Location = new System.Drawing.Point(3, 46);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(718, 640);
+            this.panel2.Size = new System.Drawing.Size(744, 640);
             this.panel2.TabIndex = 454;
+            // 
+            // GroupBox1
+            // 
+            this.GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox1.Controls.Add(this.btn_print);
+            this.GroupBox1.Controls.Add(this.panel6);
+            this.GroupBox1.Controls.Add(this.panel5);
+            this.GroupBox1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox1.Location = new System.Drawing.Point(380, 10);
+            this.GroupBox1.Name = "GroupBox1";
+            this.GroupBox1.Size = new System.Drawing.Size(355, 66);
+            this.GroupBox1.TabIndex = 815;
+            this.GroupBox1.TabStop = false;
+            this.GroupBox1.Text = "Select Fields";
+            // 
+            // btn_print
+            // 
+            this.btn_print.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_print.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_print.Image = ((System.Drawing.Image)(resources.GetObject("btn_print.Image")));
+            this.btn_print.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_print.Location = new System.Drawing.Point(276, 24);
+            this.btn_print.Name = "btn_print";
+            this.btn_print.Size = new System.Drawing.Size(71, 30);
+            this.btn_print.TabIndex = 546;
+            this.btn_print.Text = "Print";
+            this.btn_print.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_print.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel6.Controls.Add(this.txt_barcode);
+            this.panel6.Location = new System.Drawing.Point(143, 24);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(129, 30);
+            this.panel6.TabIndex = 545;
+            // 
+            // txt_barcode
+            // 
+            this.txt_barcode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txt_barcode.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txt_barcode.ForeColor = System.Drawing.Color.Black;
+            this.txt_barcode.Location = new System.Drawing.Point(2, 2);
+            this.txt_barcode.Multiline = true;
+            this.txt_barcode.Name = "txt_barcode";
+            this.txt_barcode.Size = new System.Drawing.Size(125, 26);
+            this.txt_barcode.TabIndex = 4;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel5.Controls.Add(this.cmbUserID);
+            this.panel5.Location = new System.Drawing.Point(8, 24);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(129, 30);
+            this.panel5.TabIndex = 544;
+            // 
+            // cmbUserID
+            // 
+            this.cmbUserID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUserID.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbUserID.FormattingEnabled = true;
+            this.cmbUserID.Items.AddRange(new object[] {
+            "SupplierName",
+            "Phone"});
+            this.cmbUserID.Location = new System.Drawing.Point(2, 2);
+            this.cmbUserID.Name = "cmbUserID";
+            this.cmbUserID.Size = new System.Drawing.Size(125, 26);
+            this.cmbUserID.TabIndex = 13;
+            // 
+            // GroupBox2
+            // 
+            this.GroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox2.Controls.Add(this.Label2);
+            this.GroupBox2.Controls.Add(this.Label3);
+            this.GroupBox2.Controls.Add(this.panel3);
+            this.GroupBox2.Controls.Add(this.panel34);
+            this.GroupBox2.Controls.Add(this.btnGetData);
+            this.GroupBox2.Location = new System.Drawing.Point(9, 10);
+            this.GroupBox2.Name = "GroupBox2";
+            this.GroupBox2.Size = new System.Drawing.Size(367, 66);
+            this.GroupBox2.TabIndex = 814;
+            this.GroupBox2.TabStop = false;
+            // 
+            // Label2
+            // 
+            this.Label2.AutoSize = true;
+            this.Label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Location = new System.Drawing.Point(141, -4);
+            this.Label2.Name = "Label2";
+            this.Label2.Size = new System.Drawing.Size(30, 18);
+            this.Label2.TabIndex = 545;
+            this.Label2.Text = "To :";
+            // 
+            // Label3
+            // 
+            this.Label3.AutoSize = true;
+            this.Label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label3.Location = new System.Drawing.Point(6, -4);
+            this.Label3.Name = "Label3";
+            this.Label3.Size = new System.Drawing.Size(49, 18);
+            this.Label3.TabIndex = 544;
+            this.Label3.Text = "From :";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel3.Controls.Add(this.dtpDateTo);
+            this.panel3.Location = new System.Drawing.Point(138, 24);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(129, 30);
+            this.panel3.TabIndex = 543;
+            // 
+            // dtpDateTo
+            // 
+            this.dtpDateTo.CalendarFont = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateTo.CustomFormat = " ";
+            this.dtpDateTo.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDateTo.Location = new System.Drawing.Point(2, 2);
+            this.dtpDateTo.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpDateTo.Name = "dtpDateTo";
+            this.dtpDateTo.Size = new System.Drawing.Size(125, 26);
+            this.dtpDateTo.TabIndex = 313;
+            // 
+            // panel34
+            // 
+            this.panel34.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel34.Controls.Add(this.dtpDateFrom);
+            this.panel34.Location = new System.Drawing.Point(6, 24);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(129, 30);
+            this.panel34.TabIndex = 542;
+            // 
+            // dtpDateFrom
+            // 
+            this.dtpDateFrom.CalendarFont = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateFrom.CustomFormat = " ";
+            this.dtpDateFrom.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDateFrom.Location = new System.Drawing.Point(2, 2);
+            this.dtpDateFrom.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpDateFrom.Name = "dtpDateFrom";
+            this.dtpDateFrom.Size = new System.Drawing.Size(125, 26);
+            this.dtpDateFrom.TabIndex = 313;
+            // 
+            // btnGetData
+            // 
+            this.btnGetData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGetData.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetData.Image = ((System.Drawing.Image)(resources.GetObject("btnGetData.Image")));
+            this.btnGetData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGetData.Location = new System.Drawing.Point(269, 24);
+            this.btnGetData.Name = "btnGetData";
+            this.btnGetData.Size = new System.Drawing.Size(90, 30);
+            this.btnGetData.TabIndex = 1;
+            this.btnGetData.Text = "Get Data";
+            this.btnGetData.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGetData.UseVisualStyleBackColor = true;
             // 
             // dgw
             // 
@@ -424,7 +444,6 @@
             this.dgw.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.OldLace;
             this.dgw.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgw.AutoGenerateColumns = false;
             this.dgw.BackgroundColor = System.Drawing.Color.White;
             this.dgw.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -436,28 +455,10 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgw.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgw.ColumnHeadersHeight = 24;
-            this.dgw.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.supplierIDDataGridViewTextBoxColumn,
-            this.dateDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.openingBalanceDataGridViewTextBoxColumn,
-            this.openingBalanceTypeDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
-            this.emailIDDataGridViewTextBoxColumn,
-            this.phonenoDataGridViewTextBoxColumn,
-            this.mobilenoDataGridViewTextBoxColumn,
-            this.creditperiodDataGridViewTextBoxColumn,
-            this.accountNameDataGridViewTextBoxColumn1,
-            this.branchDataGridViewTextBoxColumn,
-            this.accountNumberDataGridViewTextBoxColumn,
-            this.remarksDataGridViewTextBoxColumn,
-            this.pricinglevelDataGridViewTextBoxColumn});
             this.dgw.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgw.DataSource = this.supplierBindingSource;
             this.dgw.EnableHeadersVisualStyles = false;
             this.dgw.GridColor = System.Drawing.Color.White;
-            this.dgw.Location = new System.Drawing.Point(9, 99);
+            this.dgw.Location = new System.Drawing.Point(9, 85);
             this.dgw.MultiSelect = false;
             this.dgw.Name = "dgw";
             this.dgw.ReadOnly = true;
@@ -481,172 +482,9 @@
             this.dgw.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgw.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dgw.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgw.Size = new System.Drawing.Size(700, 505);
+            this.dgw.Size = new System.Drawing.Size(726, 546);
             this.dgw.TabIndex = 812;
             this.dgw.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgw_CellMouseClick);
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // supplierIDDataGridViewTextBoxColumn
-            // 
-            this.supplierIDDataGridViewTextBoxColumn.DataPropertyName = "SupplierID";
-            this.supplierIDDataGridViewTextBoxColumn.HeaderText = "SupplierID";
-            this.supplierIDDataGridViewTextBoxColumn.Name = "supplierIDDataGridViewTextBoxColumn";
-            this.supplierIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // openingBalanceDataGridViewTextBoxColumn
-            // 
-            this.openingBalanceDataGridViewTextBoxColumn.DataPropertyName = "OpeningBalance";
-            this.openingBalanceDataGridViewTextBoxColumn.HeaderText = "OpeningBalance";
-            this.openingBalanceDataGridViewTextBoxColumn.Name = "openingBalanceDataGridViewTextBoxColumn";
-            this.openingBalanceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // openingBalanceTypeDataGridViewTextBoxColumn
-            // 
-            this.openingBalanceTypeDataGridViewTextBoxColumn.DataPropertyName = "OpeningBalanceType";
-            this.openingBalanceTypeDataGridViewTextBoxColumn.HeaderText = "Cr/Dr Type";
-            this.openingBalanceTypeDataGridViewTextBoxColumn.Name = "openingBalanceTypeDataGridViewTextBoxColumn";
-            this.openingBalanceTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailIDDataGridViewTextBoxColumn
-            // 
-            this.emailIDDataGridViewTextBoxColumn.DataPropertyName = "EmailID";
-            this.emailIDDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailIDDataGridViewTextBoxColumn.Name = "emailIDDataGridViewTextBoxColumn";
-            this.emailIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // phonenoDataGridViewTextBoxColumn
-            // 
-            this.phonenoDataGridViewTextBoxColumn.DataPropertyName = "Phoneno";
-            this.phonenoDataGridViewTextBoxColumn.HeaderText = "Phone";
-            this.phonenoDataGridViewTextBoxColumn.Name = "phonenoDataGridViewTextBoxColumn";
-            this.phonenoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // mobilenoDataGridViewTextBoxColumn
-            // 
-            this.mobilenoDataGridViewTextBoxColumn.DataPropertyName = "Mobileno";
-            this.mobilenoDataGridViewTextBoxColumn.HeaderText = "Mobile";
-            this.mobilenoDataGridViewTextBoxColumn.Name = "mobilenoDataGridViewTextBoxColumn";
-            this.mobilenoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // creditperiodDataGridViewTextBoxColumn
-            // 
-            this.creditperiodDataGridViewTextBoxColumn.DataPropertyName = "Creditperiod";
-            this.creditperiodDataGridViewTextBoxColumn.HeaderText = "Creditperiod";
-            this.creditperiodDataGridViewTextBoxColumn.Name = "creditperiodDataGridViewTextBoxColumn";
-            this.creditperiodDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // accountNameDataGridViewTextBoxColumn1
-            // 
-            this.accountNameDataGridViewTextBoxColumn1.DataPropertyName = "AccountName";
-            this.accountNameDataGridViewTextBoxColumn1.HeaderText = "AccountName";
-            this.accountNameDataGridViewTextBoxColumn1.Name = "accountNameDataGridViewTextBoxColumn1";
-            this.accountNameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // branchDataGridViewTextBoxColumn
-            // 
-            this.branchDataGridViewTextBoxColumn.DataPropertyName = "Branch";
-            this.branchDataGridViewTextBoxColumn.HeaderText = "Branch";
-            this.branchDataGridViewTextBoxColumn.Name = "branchDataGridViewTextBoxColumn";
-            this.branchDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // accountNumberDataGridViewTextBoxColumn
-            // 
-            this.accountNumberDataGridViewTextBoxColumn.DataPropertyName = "AccountNumber";
-            this.accountNumberDataGridViewTextBoxColumn.HeaderText = "AccountNumber";
-            this.accountNumberDataGridViewTextBoxColumn.Name = "accountNumberDataGridViewTextBoxColumn";
-            this.accountNumberDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // remarksDataGridViewTextBoxColumn
-            // 
-            this.remarksDataGridViewTextBoxColumn.DataPropertyName = "Remarks";
-            this.remarksDataGridViewTextBoxColumn.HeaderText = "Remarks";
-            this.remarksDataGridViewTextBoxColumn.Name = "remarksDataGridViewTextBoxColumn";
-            this.remarksDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pricinglevelDataGridViewTextBoxColumn
-            // 
-            this.pricinglevelDataGridViewTextBoxColumn.DataPropertyName = "Pricinglevel";
-            this.pricinglevelDataGridViewTextBoxColumn.HeaderText = "Pricinglevel";
-            this.pricinglevelDataGridViewTextBoxColumn.Name = "pricinglevelDataGridViewTextBoxColumn";
-            this.pricinglevelDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // supplierBindingSource
-            // 
-            this.supplierBindingSource.DataMember = "Supplier";
-            this.supplierBindingSource.DataSource = this.inventory_DBDataSet;
-            // 
-            // inventory_DBDataSet
-            // 
-            this.inventory_DBDataSet.DataSetName = "Inventory_DBDataSet";
-            this.inventory_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // btnexportExcel
-            // 
-            this.btnexportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnexportExcel.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnexportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnexportExcel.Image")));
-            this.btnexportExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnexportExcel.Location = new System.Drawing.Point(575, 47);
-            this.btnexportExcel.Name = "btnexportExcel";
-            this.btnexportExcel.Size = new System.Drawing.Size(129, 35);
-            this.btnexportExcel.TabIndex = 797;
-            this.btnexportExcel.Text = "&Export Excel";
-            this.btnexportExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnexportExcel.UseVisualStyleBackColor = true;
-            // 
-            // GroupBox1
-            // 
-            this.GroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.GroupBox1.Controls.Add(this.panel34);
-            this.GroupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.Location = new System.Drawing.Point(9, 14);
-            this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(210, 79);
-            this.GroupBox1.TabIndex = 796;
-            this.GroupBox1.TabStop = false;
-            this.GroupBox1.Text = "Select Field:";
-            // 
-            // btnaddsupplier
-            // 
-            this.btnaddsupplier.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnaddsupplier.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnaddsupplier.Image = ((System.Drawing.Image)(resources.GetObject("btnaddsupplier.Image")));
-            this.btnaddsupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnaddsupplier.Location = new System.Drawing.Point(440, 47);
-            this.btnaddsupplier.Name = "btnaddsupplier";
-            this.btnaddsupplier.Size = new System.Drawing.Size(129, 35);
-            this.btnaddsupplier.TabIndex = 795;
-            this.btnaddsupplier.Text = "&Add Supplier";
-            this.btnaddsupplier.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnaddsupplier.UseVisualStyleBackColor = true;
-            this.btnaddsupplier.Click += new System.EventHandler(this.btnaddsupplier_Click);
             // 
             // panel4
             // 
@@ -654,7 +492,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(2, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(714, 2);
+            this.panel4.Size = new System.Drawing.Size(740, 2);
             this.panel4.TabIndex = 368;
             // 
             // panel14
@@ -672,14 +510,14 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel13.Location = new System.Drawing.Point(0, 638);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(716, 2);
+            this.panel13.Size = new System.Drawing.Size(742, 2);
             this.panel13.TabIndex = 335;
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(716, 0);
+            this.panel11.Location = new System.Drawing.Point(742, 0);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(2, 640);
             this.panel11.TabIndex = 334;
@@ -709,7 +547,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 27);
             this.pictureBox1.TabIndex = 286;
@@ -719,7 +557,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(722, 54);
+            this.panel7.Location = new System.Drawing.Point(748, 54);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(2, 633);
             this.panel7.TabIndex = 452;
@@ -731,7 +569,7 @@
             this.bunifuImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton5.Image")));
             this.bunifuImageButton5.ImageActive = null;
             this.bunifuImageButton5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bunifuImageButton5.Location = new System.Drawing.Point(678, 3);
+            this.bunifuImageButton5.Location = new System.Drawing.Point(705, 4);
             this.bunifuImageButton5.Name = "bunifuImageButton5";
             this.bunifuImageButton5.Size = new System.Drawing.Size(22, 22);
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -763,7 +601,7 @@
             this.bunifuImageButton6.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton6.Image")));
             this.bunifuImageButton6.ImageActive = null;
             this.bunifuImageButton6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.bunifuImageButton6.Location = new System.Drawing.Point(699, 3);
+            this.bunifuImageButton6.Location = new System.Drawing.Point(726, 4);
             this.bunifuImageButton6.Name = "bunifuImageButton6";
             this.bunifuImageButton6.Size = new System.Drawing.Size(22, 22);
             this.bunifuImageButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -781,7 +619,7 @@
             this.panel32.Controls.Add(this.pictureBox1);
             this.panel32.Location = new System.Drawing.Point(0, 10);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(724, 27);
+            this.panel32.Size = new System.Drawing.Size(756, 27);
             this.panel32.TabIndex = 0;
             this.panel32.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseDown);
             this.panel32.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseMove);
@@ -793,7 +631,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel10.Location = new System.Drawing.Point(2, 687);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(722, 2);
+            this.panel10.Size = new System.Drawing.Size(748, 2);
             this.panel10.TabIndex = 453;
             // 
             // panel8
@@ -812,18 +650,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(724, 54);
+            this.panel1.Size = new System.Drawing.Size(750, 54);
             this.panel1.TabIndex = 450;
-            // 
-            // supplierTableAdapter
-            // 
-            this.supplierTableAdapter.ClearBeforeFill = true;
             // 
             // frmSupplierRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 689);
+            this.ClientSize = new System.Drawing.Size(750, 689);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel10);
@@ -834,18 +668,17 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSupplierRecord";
             this.Load += new System.EventHandler(this.frmSupplierRecord_Load);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel34.ResumeLayout(false);
-            this.panel34.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.GroupBox2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgw)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.inventory_DBDataSet)).EndInit();
             this.GroupBox1.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.GroupBox2.ResumeLayout(false);
+            this.GroupBox2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel34.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgw)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).EndInit();
@@ -857,12 +690,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txt_search;
-        private System.Windows.Forms.Panel panel34;
-        private System.Windows.Forms.ComboBox Cmb_field;
-        private System.Windows.Forms.TextBox txt_pro_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn jobnoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn invoicedateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn accountnameDataGridViewTextBoxColumn;
@@ -874,10 +701,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn balanceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn otherfaultDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn workerDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.DataGridViewTextBoxColumn estimateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mobileacccessDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reciveidbyDataGridViewTextBoxColumn;
@@ -887,11 +710,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalpaymentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn advanceDataGridViewTextBoxColumn;
-        internal System.Windows.Forms.GroupBox GroupBox2;
         private System.Windows.Forms.Panel panel2;
-        internal System.Windows.Forms.Button btnexportExcel;
-        internal System.Windows.Forms.GroupBox GroupBox1;
-        internal System.Windows.Forms.Button btnaddsupplier;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel13;
@@ -906,26 +725,21 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.Label lblSet;
-        internal System.Windows.Forms.DataGridView dgw;
         internal System.Windows.Forms.Label lblUser;
-        private Inventory_DBDataSet inventory_DBDataSet;
-        private System.Windows.Forms.BindingSource supplierBindingSource;
-        private Inventory_DBDataSetTableAdapters.SupplierTableAdapter supplierTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn supplierIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn openingBalanceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn openingBalanceTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phonenoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mobilenoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn creditperiodDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn accountNameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn branchDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn accountNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn remarksDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pricinglevelDataGridViewTextBoxColumn;
+        internal System.Windows.Forms.DataGridView dgw;
+        internal System.Windows.Forms.GroupBox GroupBox1;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        internal System.Windows.Forms.ComboBox cmbUserID;
+        internal System.Windows.Forms.GroupBox GroupBox2;
+        internal System.Windows.Forms.Label Label2;
+        internal System.Windows.Forms.Label Label3;
+        private System.Windows.Forms.Panel panel3;
+        internal System.Windows.Forms.DateTimePicker dtpDateTo;
+        private System.Windows.Forms.Panel panel34;
+        internal System.Windows.Forms.DateTimePicker dtpDateFrom;
+        internal System.Windows.Forms.Button btnGetData;
+        internal System.Windows.Forms.Button btn_print;
+        private System.Windows.Forms.TextBox txt_barcode;
     }
 }

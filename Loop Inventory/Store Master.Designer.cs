@@ -269,7 +269,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(13, 203);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 18);
+            this.label5.Size = new System.Drawing.Size(98, 18);
             this.label5.TabIndex = 832;
             this.label5.Text = "Email Address:";
             // 
@@ -330,7 +330,9 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(791, 31);
             this.panel1.TabIndex = 825;
-            
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // label24
             // 
@@ -539,9 +541,9 @@
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(436, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 20);
+            this.label9.Size = new System.Drawing.Size(96, 20);
             this.label9.TabIndex = 839;
-            this.label9.Text = "Search User:";
+            this.label9.Text = "Search Here:";
             // 
             // label13
             // 
@@ -550,9 +552,9 @@
             this.label13.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(26, 33);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(94, 20);
+            this.label13.Size = new System.Drawing.Size(59, 20);
             this.label13.TabIndex = 835;
-            this.label13.Text = "User Details:";
+            this.label13.Text = "Details:";
             // 
             // panel10
             // 
@@ -693,7 +695,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(18, 263);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 18);
+            this.label7.Size = new System.Drawing.Size(92, 18);
             this.label7.TabIndex = 833;
             this.label7.Text = "Email Addres:";
             // 
@@ -713,10 +715,12 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Store_Master";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Store_Master";
             this.Load += new System.EventHandler(this.Store_Master_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Store_Master_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();

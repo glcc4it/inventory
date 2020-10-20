@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PayTaxes));
             this.label24 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -84,6 +84,7 @@
             this.bunifuImageButton38 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.add1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel17.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -92,6 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).BeginInit();
             this.SuspendLayout();
             // 
             // label24
@@ -112,6 +114,7 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Transparent;
+            this.panel17.Controls.Add(this.add1);
             this.panel17.Controls.Add(this.TxtNotes);
             this.panel17.Controls.Add(this.TxtPayFrom);
             this.panel17.Controls.Add(this.dateTimePicker3);
@@ -206,7 +209,7 @@
             "Salesman"});
             this.cmbCurrencyType.Location = new System.Drawing.Point(190, 113);
             this.cmbCurrencyType.Name = "cmbCurrencyType";
-            this.cmbCurrencyType.Size = new System.Drawing.Size(194, 25);
+            this.cmbCurrencyType.Size = new System.Drawing.Size(172, 25);
             this.cmbCurrencyType.TabIndex = 1044;
             this.cmbCurrencyType.Text = "--- Select Currency Type---";
             // 
@@ -485,24 +488,24 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.OldLace;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.OldLace;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(8, 46);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(349, 321);
             this.dataGridView1.TabIndex = 805;
@@ -740,6 +743,20 @@
             this.panel6.Size = new System.Drawing.Size(5, 396);
             this.panel6.TabIndex = 851;
             // 
+            // add1
+            // 
+            this.add1.BackColor = System.Drawing.Color.DimGray;
+            this.add1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add1.Image = ((System.Drawing.Image)(resources.GetObject("add1.Image")));
+            this.add1.ImageActive = null;
+            this.add1.Location = new System.Drawing.Point(364, 113);
+            this.add1.Name = "add1";
+            this.add1.Size = new System.Drawing.Size(20, 25);
+            this.add1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add1.TabIndex = 1050;
+            this.add1.TabStop = false;
+            this.add1.Zoom = 10;
+            // 
             // PayTaxes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -770,6 +787,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -829,5 +847,6 @@
         internal System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.TextBox TxtPayFrom;
         private System.Windows.Forms.TextBox TxtNotes;
+        private Bunifu.Framework.UI.BunifuImageButton add1;
     }
 }

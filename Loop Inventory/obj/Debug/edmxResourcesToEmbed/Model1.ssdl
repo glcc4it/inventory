@@ -27,15 +27,15 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="AccountNumber" Type="varchar" MaxLength="300" />
-    <Property Name="Date" Type="varchar" MaxLength="50" />
-    <Property Name="Accounttype" Type="varchar" MaxLength="300" />
-    <Property Name="AccountName" Type="varchar" MaxLength="300" />
-    <Property Name="SubAccountof" Type="varchar" MaxLength="300" />
-    <Property Name="AccountRules" Type="varchar" MaxLength="500" />
-    <Property Name="AccountCurrency" Type="varchar" MaxLength="300" />
-    <Property Name="Notes" Type="varchar" MaxLength="300" />
-    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccountNumber" Type="nvarchar" MaxLength="300" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Accounttype" Type="nvarchar" MaxLength="300" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="300" />
+    <Property Name="SubAccountof" Type="nvarchar" MaxLength="300" />
+    <Property Name="AccountRules" Type="nvarchar" MaxLength="300" />
+    <Property Name="AccountCurrency" Type="nvarchar" MaxLength="300" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="300" />
+    <Property Name="Status" Type="nvarchar" MaxLength="300" />
   </EntityType>
   <EntityType Name="tbl_Currency">
     <Key>

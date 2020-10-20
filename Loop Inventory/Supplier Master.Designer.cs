@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Supplier_Master));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel45 = new System.Windows.Forms.Panel();
             this.txtAccountNo = new System.Windows.Forms.TextBox();
             this.btn_print = new System.Windows.Forms.Button();
@@ -53,8 +53,8 @@
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.add2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.add1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtSupplierName = new System.Windows.Forms.TextBox();
@@ -131,8 +131,8 @@
             this.panel45.SuspendLayout();
             this.panel31.SuspendLayout();
             this.panel32.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblAccountMasterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCurrencyBindingSource)).BeginInit();
@@ -274,7 +274,7 @@
             this.txtDefulttransaction.Location = new System.Drawing.Point(2, 2);
             this.txtDefulttransaction.Multiline = true;
             this.txtDefulttransaction.Name = "txtDefulttransaction";
-            this.txtDefulttransaction.Size = new System.Drawing.Size(182, 41);
+            this.txtDefulttransaction.Size = new System.Drawing.Size(182, 79);
             this.txtDefulttransaction.TabIndex = 0;
             // 
             // panel35
@@ -337,7 +337,7 @@
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel26.Location = new System.Drawing.Point(453, 280);
+            this.panel26.Location = new System.Drawing.Point(451, 315);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(186, 29);
             this.panel26.TabIndex = 1023;
@@ -350,7 +350,7 @@
             this.cmbStatus.Items.AddRange(new object[] {
             "Active",
             "Deactive"});
-            this.cmbStatus.Location = new System.Drawing.Point(453, 280);
+            this.cmbStatus.Location = new System.Drawing.Point(453, 317);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(182, 25);
             this.cmbStatus.TabIndex = 3;
@@ -372,39 +372,41 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label18.Location = new System.Drawing.Point(335, 287);
+            this.label18.Location = new System.Drawing.Point(335, 320);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(92, 18);
             this.label18.TabIndex = 1022;
             this.label18.Text = "Select Status:";
             // 
-            // bunifuImageButton3
+            // add2
             // 
-            this.bunifuImageButton3.BackColor = System.Drawing.Color.DimGray;
-            this.bunifuImageButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
-            this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(300, 157);
-            this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(18, 18);
-            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton3.TabIndex = 1021;
-            this.bunifuImageButton3.TabStop = false;
-            this.bunifuImageButton3.Zoom = 10;
+            this.add2.BackColor = System.Drawing.Color.DimGray;
+            this.add2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add2.Image = ((System.Drawing.Image)(resources.GetObject("add2.Image")));
+            this.add2.ImageActive = null;
+            this.add2.Location = new System.Drawing.Point(300, 157);
+            this.add2.Name = "add2";
+            this.add2.Size = new System.Drawing.Size(18, 18);
+            this.add2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.add2.TabIndex = 1021;
+            this.add2.TabStop = false;
+            this.add2.Zoom = 10;
+            this.add2.Click += new System.EventHandler(this.add2_Click);
             // 
-            // bunifuImageButton1
+            // add1
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.DimGray;
-            this.bunifuImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(300, 120);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(18, 18);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton1.TabIndex = 1020;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
+            this.add1.BackColor = System.Drawing.Color.DimGray;
+            this.add1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add1.Image = ((System.Drawing.Image)(resources.GetObject("add1.Image")));
+            this.add1.ImageActive = null;
+            this.add1.Location = new System.Drawing.Point(300, 120);
+            this.add1.Name = "add1";
+            this.add1.Size = new System.Drawing.Size(18, 18);
+            this.add1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.add1.TabIndex = 1020;
+            this.add1.TabStop = false;
+            this.add1.Zoom = 10;
+            this.add1.Click += new System.EventHandler(this.add1_Click);
             // 
             // txtCustomerID
             // 
@@ -449,6 +451,7 @@
             this.comboAccounttype.Name = "comboAccounttype";
             this.comboAccounttype.Size = new System.Drawing.Size(160, 25);
             this.comboAccounttype.TabIndex = 2;
+            this.comboAccounttype.Text = "--Select Account Type--";
             this.comboAccounttype.ValueMember = "AccountName";
             // 
             // tblAccountMasterBindingSource
@@ -472,6 +475,7 @@
             this.comboCurrencyType.Name = "comboCurrencyType";
             this.comboCurrencyType.Size = new System.Drawing.Size(160, 25);
             this.comboCurrencyType.TabIndex = 2;
+            this.comboCurrencyType.Text = "--Select Currency--";
             this.comboCurrencyType.ValueMember = "Name";
             // 
             // tblCurrencyBindingSource
@@ -672,7 +676,7 @@
             this.panel16.Controls.Add(this.txtDefulttransaction);
             this.panel16.Location = new System.Drawing.Point(451, 222);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(186, 45);
+            this.panel16.Size = new System.Drawing.Size(186, 83);
             this.panel16.TabIndex = 1007;
             // 
             // label11
@@ -682,7 +686,7 @@
             this.label11.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label11.Location = new System.Drawing.Point(335, 227);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 36);
+            this.label11.Size = new System.Drawing.Size(85, 36);
             this.label11.TabIndex = 1006;
             this.label11.Text = "Defult \r\nTransaction:";
             // 
@@ -878,18 +882,18 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.OldLace;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.OldLace;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.ColumnHeadersHeight = 24;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView1.EnableHeadersVisualStyles = false;
@@ -899,21 +903,21 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.RowHeadersWidth = 25;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.RowTemplate.Height = 18;
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
@@ -972,7 +976,7 @@
             this.label30.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label30.Location = new System.Drawing.Point(8, 282);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(93, 18);
+            this.label30.Size = new System.Drawing.Size(92, 18);
             this.label30.TabIndex = 883;
             this.label30.Text = "Email Addres:";
             // 
@@ -983,7 +987,7 @@
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(8, 229);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 18);
+            this.label7.Size = new System.Drawing.Size(113, 18);
             this.label7.TabIndex = 881;
             this.label7.Text = "Current Address:";
             // 
@@ -1058,6 +1062,9 @@
             this.panel46.Name = "panel46";
             this.panel46.Size = new System.Drawing.Size(676, 27);
             this.panel46.TabIndex = 0;
+            this.panel46.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel46_MouseDown);
+            this.panel46.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel46_MouseMove);
+            this.panel46.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel46_MouseUp);
             // 
             // minimize
             // 
@@ -1168,8 +1175,8 @@
             this.panel2.Controls.Add(this.btn_save);
             this.panel2.Controls.Add(this.panel26);
             this.panel2.Controls.Add(this.label18);
-            this.panel2.Controls.Add(this.bunifuImageButton3);
-            this.panel2.Controls.Add(this.bunifuImageButton1);
+            this.panel2.Controls.Add(this.add2);
+            this.panel2.Controls.Add(this.add1);
             this.panel2.Controls.Add(this.panel16);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label3);
@@ -1243,17 +1250,19 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel13);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Supplier_Master";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Supplier_Master";
             this.Load += new System.EventHandler(this.Supplier_Master_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Supplier_Master_KeyDown);
             this.panel45.ResumeLayout(false);
             this.panel45.PerformLayout();
             this.panel31.ResumeLayout(false);
             this.panel31.PerformLayout();
             this.panel32.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblAccountMasterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCurrencyBindingSource)).EndInit();
@@ -1319,8 +1328,8 @@
         public System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label18;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuImageButton add2;
+        private Bunifu.Framework.UI.BunifuImageButton add1;
         public System.Windows.Forms.TextBox txtCustomerID;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
         public System.Windows.Forms.TextBox txtSupplierName;

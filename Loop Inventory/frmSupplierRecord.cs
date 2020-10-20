@@ -24,15 +24,12 @@ namespace Loop_Inventory
 
         private void frmSupplierRecord_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'inventory_DBDataSet.Supplier' table. You can move, or remove it, as needed.
-            this.supplierTableAdapter.Fill(this.inventory_DBDataSet.Supplier);
+            
            
             
 
 
-            Cmb_field.SelectedIndex = 0;
-            this.ActiveControl = txt_search;
-            txt_search.Focus();
+            
            
 
         }
@@ -91,39 +88,7 @@ namespace Loop_Inventory
         private void txt_search_TextChanged(object sender, EventArgs e)
         {
 
-            if (Cmb_field.Text == "ID")
-            {
-                ModCommonClasses.con = new SqlConnection(ModCS.cs);
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT SupplierID, Date, Name, OpeningBalance, OpeningBalanceType, Address, EmailID,Phoneno,Mobileno,Creditperiod,AccountName,Branch,AccountNumber,Remarks,Pricinglevel FROM Supplier where SupplierID like '" + txt_search.Text + "%'", ModCommonClasses.con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                dgw.DataSource = dt;
-
-
-            }
             
-            
-            if (Cmb_field.Text == "SupplierName")
-            {
-                ModCommonClasses.con = new SqlConnection(ModCS.cs);
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT SupplierID, Date, Name, OpeningBalance, OpeningBalanceType, Address, EmailID,Phoneno,Mobileno,Creditperiod,AccountName,Branch,AccountNumber,Remarks,Pricinglevel FROM Supplier where Name like '" + txt_search.Text + "%'", ModCommonClasses.con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                dgw.DataSource = dt;
-              
-
-            }
-
-            if (Cmb_field.Text == "Mobile")
-            {
-                ModCommonClasses.con = new SqlConnection(ModCS.cs);
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT SupplierID, Date, [Name], OpeningBalance, OpeningBalanceType, Address, EmailID,Phoneno,Mobileno,Creditperiod,AccountName,Branch,AccountNumber,Remarks,Pricinglevel FROM Supplier where Mobileno like '" + txt_search.Text + "%'", ModCommonClasses.con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                dgw.DataSource = dt;
-                
-
-            }
         }
 
         private void panel32_MouseDown(object sender, MouseEventArgs e)

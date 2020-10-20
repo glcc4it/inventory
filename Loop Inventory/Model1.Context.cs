@@ -31,7 +31,7 @@ namespace Loop_Inventory
         public virtual DbSet<tbl_godown> tbl_godown { get; set; }
         public virtual DbSet<tblStore> tblStores { get; set; }
         public virtual DbSet<tblItemMaster> tblItemMasters { get; set; }
-        public virtual DbSet<tbl_AccountMaster> tbl_AccountMaster { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
+        public virtual DbSet<tbl_AccountMaster> tbl_AccountMaster { get; set; }
     }
 }

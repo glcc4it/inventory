@@ -30,7 +30,6 @@ namespace Loop_Inventory
         public string Branch { get; set; }
         public string AccountNumber { get; set; }
         public string DefultTransaction { get; set; }
-        public string Pricinglevel { get; set; }
         public string Status { get; set; }
     }
 }

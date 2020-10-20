@@ -13,6 +13,8 @@ namespace Loop_Inventory
 {
     public partial class Expense_Master : Form
     {
+        bool drag = false;
+        Point start_point = new Point(0, 0);
         public Expense_Master()
         {
             InitializeComponent();
@@ -91,8 +93,7 @@ namespace Loop_Inventory
 
         private void Expense_Master_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'inventory_DBDataSet.tbl_ExpenseMaster' table. You can move, or remove it, as needed.
-            this.tbl_ExpenseMasterTableAdapter.Fill(this.inventory_DBDataSet.tbl_ExpenseMaster);
+            
 
         }
 
@@ -220,6 +221,46 @@ namespace Loop_Inventory
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Expense_Master_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+
+                SendKeys.Send("{TAB}");
+
+
+            }
+        }
+
+        private void Expense_Master_Load_1(object sender, EventArgs e)
+        {
+            this.ActiveControl = txt_Expense_Type;
+            txt_Expense_Type.Focus();
+        }
+
+        private void panel12_MouseDown(object sender, MouseEventArgs e)
+        {
+            drag = true;
+            start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel12_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (drag)
+            {
+
+
+                Point p = PointToScreen(e.Location);
+                this.Location = new Point(p.X - start_point.X, p.Y - start_point.Y);
+
+            }
+        }
+
+        private void panel12_MouseUp(object sender, MouseEventArgs e)
+        {
+            drag = false;
         }
     }
 }

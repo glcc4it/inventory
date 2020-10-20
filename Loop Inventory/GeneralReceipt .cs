@@ -32,5 +32,12 @@ namespace Loop_Inventory
 
             }
         }
+
+        private void add1_Click(object sender, EventArgs e)
+        {
+            Currency_Master ss = new Currency_Master();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+        }
     }
 }

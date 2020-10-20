@@ -19,12 +19,56 @@ namespace Loop_Inventory
     {
         SqlConnection con = new SqlConnection("Data Source=SERVER;Initial Catalog=Inventory_DB;Integrated Security=True;MultipleActiveResultSets=True;");
         SqlCommand cmd;
+        bool drag = false;
+        Point start_point = new Point(0, 0);
+        string proid = "Pro-";
         public ProductMaster()
         {
             InitializeComponent();
         }
 
+        public void procode()
+        {
 
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            SqlCommand cmd = new SqlCommand("select Count(Code) from tblItemMaster", ModCommonClasses.con);
+            int i = Convert.ToInt32(cmd.ExecuteScalar());
+            ModCommonClasses.con.Close();
+            i++;
+            txt_Productcode.Text = proid + i.ToString();
+
+        }
+
+
+        public void barcodenumber()
+        {
+
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            ModCommonClasses.cmd = new SqlCommand("select max (Barcode1)+1 from tblItemMaster", ModCommonClasses.con);
+            SqlDataReader dr = ModCommonClasses.cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    txt_Barcode1.Text = dr[0].ToString();
+                    if (txt_Barcode1.Text == "")
+                    {
+                        txt_Barcode1.Text = "10000001";
+
+                    }
+
+                }
+
+            }
+            else
+            {
+                txt_Barcode1.Text = "10000001";
+            }
+
+            ModCommonClasses.con.Close();
+        }
 
         public void ClearField()
         {
@@ -43,9 +87,9 @@ namespace Loop_Inventory
             txt_CompanyProduct.Text = "";
             txt_PreferredVender.Text = "";
             combo_DiscountType.SelectedIndex = 0;//= "";
+            txt_DiscountAmount.Text = "";
             txt_DirectDiscount.Text = "";
-            txt_NextShoppingDiscount.Text = "";
-            txt_TaxPercentage.Text = "";
+            combo_TaxType.Text = "";
             txt_ReorderLevel.Text = "";
             dateTimePicker2.Value = System.DateTime.Now;
             dateTimePicker1.Value = System.DateTime.Now;// "";
@@ -120,8 +164,12 @@ namespace Loop_Inventory
             this.tblItemMasterTableAdapter.Fill(this.inventory_DBDataSet.tblItemMaster);
 
             refreshGrid();
+            barcodenumber();
+            procode();
 
 
+            this.ActiveControl = txt_Barcode2;
+            txt_Barcode2.Focus();
 
 
 
@@ -319,7 +367,7 @@ namespace Loop_Inventory
 
 
 
-            combo_PurchaseCurency.Items.Clear();
+            combo_SellingCurrency.Items.Clear();
             ModCommonClasses.con = new SqlConnection(ModCS.cs);
             ModCommonClasses.con.Open();
             ModCommonClasses.cmd8 = ModCommonClasses.con.CreateCommand();
@@ -334,7 +382,7 @@ namespace Loop_Inventory
             {
 
 
-                combo_PurchaseCurency.Items.Add(dr8["Name"].ToString());
+                combo_SellingCurrency.Items.Add(dr8["Name"].ToString());
 
             }
 
@@ -475,25 +523,25 @@ namespace Loop_Inventory
             tb.Company = txt_CompanyProduct.Text;
             tb.Vender = txt_PreferredVender.Text;
             tb.DiscountType = combo_DiscountType.Text;
-            if (txt_DirectDiscount.Text != "")
+            if (txt_DiscountAmount.Text != "")
             {
-                decimal direct = decimal.Parse(txt_DirectDiscount.Text.ToString());
+                decimal direct = decimal.Parse(txt_DiscountAmount.Text.ToString());
 
                 tb.DirectDiscount = direct;
             }
-            if (txt_NextShoppingDiscount.Text != "")
+            if (txt_DirectDiscount.Text != "")
             {
-                decimal nextshopping = decimal.Parse(txt_NextShoppingDiscount.Text.ToString());
+                decimal nextshopping = decimal.Parse(txt_DirectDiscount.Text.ToString());
 
                 tb.NextShoppingDiscount = nextshopping;
             }
-            if (txt_NextShoppingDiscount.Text != "")
+            if (txt_DirectDiscount.Text != "")
             {
-                decimal taxpercentage = decimal.Parse(txt_TaxPercentage.Text.ToString());
+                decimal taxpercentage = decimal.Parse(combo_TaxType.Text.ToString());
 
                 tb.TaxPercent = taxpercentage;
             }
-            if (txt_NextShoppingDiscount.Text != "")
+            if (txt_DirectDiscount.Text != "")
             {
                 decimal redorder = decimal.Parse(txt_ReorderLevel.Text.ToString());
 
@@ -577,25 +625,25 @@ namespace Loop_Inventory
                 tb.Company = txt_CompanyProduct.Text;
                 tb.Vender = txt_PreferredVender.Text;
                 tb.DiscountType = combo_DiscountType.Text;
-                if (txt_DirectDiscount.Text != "")
+                if (txt_DiscountAmount.Text != "")
                 {
-                    decimal direct = decimal.Parse(txt_DirectDiscount.Text.ToString());
+                    decimal direct = decimal.Parse(txt_DiscountAmount.Text.ToString());
 
                     tb.DirectDiscount = direct;
                 }
-                if (txt_NextShoppingDiscount.Text != "")
+                if (txt_DirectDiscount.Text != "")
                 {
-                    decimal nextshopping = decimal.Parse(txt_NextShoppingDiscount.Text.ToString());
+                    decimal nextshopping = decimal.Parse(txt_DirectDiscount.Text.ToString());
 
                     tb.NextShoppingDiscount = nextshopping;
                 }
-                if (txt_NextShoppingDiscount.Text != "")
+                if (txt_DirectDiscount.Text != "")
                 {
-                    decimal taxpercentage = decimal.Parse(txt_TaxPercentage.Text.ToString());
+                    decimal taxpercentage = decimal.Parse(combo_TaxType.Text.ToString());
 
                     tb.TaxPercent = taxpercentage;
                 }
-                if (txt_NextShoppingDiscount.Text != "")
+                if (txt_DirectDiscount.Text != "")
                 {
                     decimal redorder = decimal.Parse(txt_ReorderLevel.Text.ToString());
 
@@ -742,9 +790,9 @@ namespace Loop_Inventory
                     txt_CompanyProduct.Text = dr.Cells[13].Value.ToString();
                     txt_PreferredVender.Text = dr.Cells[14].Value.ToString();
                     combo_DiscountType.Text = dr.Cells[15].Value.ToString();
-                    txt_DirectDiscount.Text = dr.Cells[16].Value.ToString();
-                    txt_NextShoppingDiscount.Text = dr.Cells[17].Value.ToString();
-                    txt_TaxPercentage.Text = dr.Cells[18].Value.ToString();
+                    txt_DiscountAmount.Text = dr.Cells[16].Value.ToString();
+                    txt_DirectDiscount.Text = dr.Cells[17].Value.ToString();
+                    combo_TaxType.Text = dr.Cells[18].Value.ToString();
                     txt_ReorderLevel.Text = dr.Cells[19].Value.ToString();
                     dateTimePicker2.Text = dr.Cells[20].Value.ToString();
                     dateTimePicker1.Text = dr.Cells[21].Value.ToString();
@@ -995,6 +1043,40 @@ namespace Loop_Inventory
             DiscountMaster ss = new DiscountMaster();
             ss.Show();
             ss.lblUser.Text = lblUser.Text;
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            drag = true;
+            start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (drag)
+            {
+
+
+                Point p = PointToScreen(e.Location);
+                this.Location = new Point(p.X - start_point.X, p.Y - start_point.Y);
+
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            drag = false;
+        }
+
+        private void ProductMaster_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+
+                SendKeys.Send("{TAB}");
+
+
+            }
         }
     }
 

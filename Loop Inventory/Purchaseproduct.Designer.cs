@@ -863,9 +863,9 @@
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(1, 1);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(77, 20);
+            this.label13.Size = new System.Drawing.Size(72, 20);
             this.label13.TabIndex = 318;
-            this.label13.Text = "Category:";
+            this.label13.Text = "Barcode:";
             // 
             // panel10
             // 

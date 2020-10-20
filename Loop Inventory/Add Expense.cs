@@ -64,5 +64,21 @@ namespace Loop_Inventory
         {
             drag = false;
         }
+
+        
+
+        private void add2_Click(object sender, EventArgs e)
+        {
+            Currency_Master ss = new Currency_Master();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+        }
+
+        private void add1_Click(object sender, EventArgs e)
+        {
+            Expense_Master ss = new Expense_Master();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+        }
     }
 }

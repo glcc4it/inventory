@@ -65,16 +65,17 @@ namespace Loop_Inventory
             drag = false;
         }
 
-       
+        private void AddRevenue_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = cmbCurrencyType;
+            cmbCurrencyType.Focus();
+        }
 
-        
-
-        
-
-       
-
-       
-
-      
+        private void add1_Click(object sender, EventArgs e)
+        {
+            Currency_Master ss = new Currency_Master();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+        }
     }
 }

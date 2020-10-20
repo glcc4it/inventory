@@ -48,5 +48,16 @@ namespace Loop_Inventory
         {
             drag = false;
         }
+
+        private void Money_Transfer_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+
+                SendKeys.Send("{TAB}");
+
+
+            }
+        }
     }
 }
