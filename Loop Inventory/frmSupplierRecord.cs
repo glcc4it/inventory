@@ -115,5 +115,60 @@ namespace Loop_Inventory
         {
             drag = false;
         }
+
+        private void dtpDateFrom_ValueChanged(object sender, EventArgs e)
+        {
+            dtpDateFrom.CustomFormat = "dd/MM/yyyy";
+
+        }
+
+        private void dtpDateTo_ValueChanged(object sender, EventArgs e)
+        {
+            dtpDateTo.CustomFormat = "dd/MM/yyyy";
+
+        }
+
+        private void btnGetData_Click(object sender, EventArgs e)
+        {
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            SqlDataAdapter sdf = new SqlDataAdapter("select * from ServicesLedgerBook where Date between '" + dtpDateFrom.Value.ToString("dd/MM/yyyy") + "' and '" + dtpDateTo.Value.ToString("dd/MM/yyyy") + "'", ModCommonClasses.con);
+            DataTable sd = new DataTable();
+            sdf.Fill(sd);
+            dgw.DataSource = sd;
+        }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (cmbUserID.Text == "SupplierName")
+                {
+                    ModCommonClasses.con = new SqlConnection(ModCS.cs);
+                    ModCommonClasses.con.Open();
+                    SqlDataAdapter sdf = new SqlDataAdapter("select * from CustomerLedgerBook where Name='" + txt_barcode.Text + "'", ModCommonClasses.con);
+                    DataTable sd = new DataTable();
+                    sdf.Fill(sd);
+                    dgw.DataSource = sd;
+                }
+                else if (cmbUserID.Text == "Phone")
+                {
+                    ModCommonClasses.con = new SqlConnection(ModCS.cs);
+                    ModCommonClasses.con.Open();
+                    SqlDataAdapter sdf = new SqlDataAdapter("select * from CustomerLedgerBook where MobileNo= '" + txt_barcode.Text + "'", ModCommonClasses.con);
+                    DataTable sd = new DataTable();
+                    sdf.Fill(sd);
+                    dgw.DataSource = sd;
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Some error Occured ! Pls try again");
+            }
+        }
     }
 }

@@ -219,6 +219,7 @@
             this.btnClear.Text = "&Format Dates";
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // GroupBox2
             // 
@@ -525,7 +526,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label11.Location = new System.Drawing.Point(317, 609);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(211, 24);
+            this.label11.Size = new System.Drawing.Size(214, 24);
             this.label11.TabIndex = 807;
             this.label11.Text = "Total Balance Amount:";
             // 

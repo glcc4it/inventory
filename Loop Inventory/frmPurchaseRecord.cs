@@ -182,8 +182,9 @@ namespace Loop_Inventory
             }
         }
 
-       
+        private void btnClear_Click(object sender, EventArgs e)
+        {
 
-       
+        }
     }
 }

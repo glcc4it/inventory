@@ -305,6 +305,7 @@
             this.btn_print.Text = "Print";
             this.btn_print.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_print.UseVisualStyleBackColor = true;
+            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
             // 
             // panel6
             // 
@@ -368,7 +369,7 @@
             this.Label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.Location = new System.Drawing.Point(141, -4);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(30, 18);
+            this.Label2.Size = new System.Drawing.Size(32, 18);
             this.Label2.TabIndex = 545;
             this.Label2.Text = "To :";
             // 
@@ -402,6 +403,7 @@
             this.dtpDateTo.Name = "dtpDateTo";
             this.dtpDateTo.Size = new System.Drawing.Size(125, 26);
             this.dtpDateTo.TabIndex = 313;
+            this.dtpDateTo.ValueChanged += new System.EventHandler(this.dtpDateTo_ValueChanged);
             // 
             // panel34
             // 
@@ -423,6 +425,7 @@
             this.dtpDateFrom.Name = "dtpDateFrom";
             this.dtpDateFrom.Size = new System.Drawing.Size(125, 26);
             this.dtpDateFrom.TabIndex = 313;
+            this.dtpDateFrom.ValueChanged += new System.EventHandler(this.dtpDateFrom_ValueChanged);
             // 
             // btnGetData
             // 
@@ -437,6 +440,7 @@
             this.btnGetData.Text = "Get Data";
             this.btnGetData.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGetData.UseVisualStyleBackColor = true;
+            this.btnGetData.Click += new System.EventHandler(this.btnGetData_Click);
             // 
             // dgw
             // 
@@ -589,7 +593,7 @@
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label6.Location = new System.Drawing.Point(274, 2);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(190, 23);
+            this.label6.Size = new System.Drawing.Size(191, 23);
             this.label6.TabIndex = 148;
             this.label6.Text = "Serach Suppliers Record";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;

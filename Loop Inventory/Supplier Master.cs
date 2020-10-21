@@ -81,7 +81,7 @@ namespace Loop_Inventory
                 {
                     decimal credit = decimal.Parse(txtCreditLimit.Text.ToString());
 
-                    tb.CreditLimit =credit;
+                    tb.CreditLimit = credit;
                 }
                 tb.AccountName = txtAccountName.Text;
                 tb.Branch = txtBranch.Text;
@@ -94,11 +94,11 @@ namespace Loop_Inventory
                 refreshGrid();
                 ClearField();
 
-                
-            }
-            
 
             }
+
+
+        }
 
         private void btn_update_Click(object sender, EventArgs e)
         {
@@ -139,7 +139,7 @@ namespace Loop_Inventory
                 ClearField();
             }
 
-            }
+        }
 
         private void Supplier_Master_Load(object sender, EventArgs e)
         {
@@ -205,15 +205,15 @@ namespace Loop_Inventory
                     comboCurrencyType.Text = dr.Cells[4].Value.ToString();
                     txtOpeningBalance.Text = dr.Cells[5].Value.ToString();
                     cmbOpeningBalanceType.Text = dr.Cells[6].Value.ToString();
-                    txtAddress.Text= dr.Cells[7].Value.ToString();
-                    txtEmailID.Text= dr.Cells[8].Value.ToString();
-                    txtContactNo.Text= dr.Cells[9].Value.ToString();
-                    txtCreditLimit.Text= dr.Cells[10].Value.ToString();
-                    txtAccountName.Text= dr.Cells[11].Value.ToString();
-                   txtBranch.Text= dr.Cells[12].Value.ToString();
-                    txtAccountNo.Text= dr.Cells[13].Value.ToString();
-                    cmbDefultTransaction.Text= dr.Cells[14].Value.ToString();
-                    cmbStatus.Text= dr.Cells[15].Value.ToString();
+                    txtAddress.Text = dr.Cells[7].Value.ToString();
+                    txtEmailID.Text = dr.Cells[8].Value.ToString();
+                    txtContactNo.Text = dr.Cells[9].Value.ToString();
+                    txtCreditLimit.Text = dr.Cells[10].Value.ToString();
+                    txtAccountName.Text = dr.Cells[11].Value.ToString();
+                    txtBranch.Text = dr.Cells[12].Value.ToString();
+                    txtAccountNo.Text = dr.Cells[13].Value.ToString();
+                    cmbDefultTransaction.Text = dr.Cells[14].Value.ToString();
+                    cmbStatus.Text = dr.Cells[15].Value.ToString();
 
                 }
             }
@@ -268,6 +268,34 @@ namespace Loop_Inventory
                 SendKeys.Send("{TAB}");
 
 
+            }
+        }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (combo_search_type.Text == "Name")
+                {
+                    Inventory_DBEntities db = new Inventory_DBEntities();
+                    var tb1 = db.Suppliers.Where(x => x.Name == txt_search.Text).ToList();
+                    dataGridView1.DataSource = tb1;
+                    dataGridView1.Columns[0].Width = 0;
+                }
+                else if (combo_search_type.Text == "Mobile")
+                {
+                    Inventory_DBEntities db = new Inventory_DBEntities();
+                    var tb1 = db.Suppliers.Where(x => x.Mobileno == txt_search.Text).ToList();
+                    dataGridView1.DataSource = tb1;
+                    dataGridView1.Columns[0].Width = 0;
+                }
+            }
+
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Some error Occured ! Pls try again");
             }
         }
     }
