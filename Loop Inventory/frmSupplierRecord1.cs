@@ -118,5 +118,10 @@ namespace Loop_Inventory
 
             }
         }
+
+        private void btnaddsupplier_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

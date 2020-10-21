@@ -12,26 +12,14 @@ using System.Windows.Forms;
 
 namespace Loop_Inventory
 {
-    public partial class frmSupplierRecord : Form
+    public partial class frmCustomerRecord : Form
     {
         bool drag = false;
         Point start_point = new Point(0, 0);
 
-        public frmSupplierRecord()
+        public frmCustomerRecord()
         {
             InitializeComponent();
-        }
-
-        private void frmSupplierRecord_Load(object sender, EventArgs e)
-        {
-            
-           
-            
-
-
-            
-           
-
         }
 
         private void bunifuImageButton6_Click(object sender, EventArgs e)
@@ -44,13 +32,14 @@ namespace Loop_Inventory
             WindowState = FormWindowState.Minimized;
         }
 
-       
+        private void frmCustomerRecord_Load(object sender, EventArgs e)
+        {
+            
+        }
 
         private void btnaddsupplier_Click(object sender, EventArgs e)
         {
 
-            Supplier_Master ss = new Supplier_Master();
-            ss.Show();
         }
 
         private void dgw_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -59,25 +48,26 @@ namespace Loop_Inventory
             {
                 DataGridViewRow dr = dgw.SelectedRows[0];
                 this.Hide();
-                Purchaseproduct frmPurchase = new Purchaseproduct();
+                Saleproduct frmsale = new Saleproduct();
+                // or simply use column name instead of index
+                // dr.Cells["id"].Value.ToString();
+                if (lblSet.Text == "Sale")
+                    frmsale.Show();
+                frmsale.txtCus_ID.Text = dr.Cells[0].Value.ToString();
+                frmsale.txtCustomerID.Text = dr.Cells[1].Value.ToString();
+                frmsale.txtCustomerName.Text = dr.Cells[3].Value.ToString();
+                frmsale.txt_cus_mob.Text = dr.Cells[9].Value.ToString();
+                frmsale.GetSupplierBalance();
 
-                if (lblSet.Text == "Purchase")
-                  
-                    frmPurchase.txt_ven_invoice.Text = ModCS.InvoiceNumber;
-                    frmPurchase.Show();
-                frmPurchase.txtSup_ID.Text = dr.Cells[0].Value.ToString();
-                frmPurchase.txtSupplierID.Text = dr.Cells[1].Value.ToString();
-                frmPurchase.txtSupplierName.Text = dr.Cells[3].Value.ToString();
-                frmPurchase.txtContactNo.Text = dr.Cells[9].Value.ToString();
-                frmPurchase.GetSupplierBalance();
 
 
-                
                
+
+
+
+
+
             }
-
-
-
 
             catch (Exception ex)
             {
@@ -85,11 +75,7 @@ namespace Loop_Inventory
             }
         }
 
-        private void txt_search_TextChanged(object sender, EventArgs e)
-        {
-
-            
-        }
+       
 
         private void panel32_MouseDown(object sender, MouseEventArgs e)
         {
