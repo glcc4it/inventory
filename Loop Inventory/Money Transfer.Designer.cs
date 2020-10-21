@@ -44,8 +44,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_des = new System.Windows.Forms.TextBox();
-            this.txt_cnic_no = new System.Windows.Forms.TextBox();
-            this.txt_mob = new System.Windows.Forms.TextBox();
             this.txt_city = new System.Windows.Forms.TextBox();
             this.txt_address = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -76,6 +74,8 @@
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.cmbUserType = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuImageButton38 = new Bunifu.Framework.UI.BunifuImageButton();
             this.label24 = new System.Windows.Forms.Label();
@@ -85,17 +85,17 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbUserType = new System.Windows.Forms.ComboBox();
-            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuImageButton32
@@ -183,7 +183,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(9, 276);
+            this.label11.Location = new System.Drawing.Point(9, 278);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 18);
             this.label11.TabIndex = 822;
@@ -217,28 +217,10 @@
             // 
             this.txt_des.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
             this.txt_des.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_des.Location = new System.Drawing.Point(191, 270);
+            this.txt_des.Location = new System.Drawing.Point(191, 272);
             this.txt_des.Name = "txt_des";
             this.txt_des.Size = new System.Drawing.Size(194, 25);
             this.txt_des.TabIndex = 819;
-            // 
-            // txt_cnic_no
-            // 
-            this.txt_cnic_no.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_cnic_no.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_cnic_no.Location = new System.Drawing.Point(191, 238);
-            this.txt_cnic_no.Name = "txt_cnic_no";
-            this.txt_cnic_no.Size = new System.Drawing.Size(194, 25);
-            this.txt_cnic_no.TabIndex = 818;
-            // 
-            // txt_mob
-            // 
-            this.txt_mob.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_mob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_mob.Location = new System.Drawing.Point(191, 206);
-            this.txt_mob.Name = "txt_mob";
-            this.txt_mob.Size = new System.Drawing.Size(194, 25);
-            this.txt_mob.TabIndex = 817;
             // 
             // txt_city
             // 
@@ -277,7 +259,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(19, 252);
+            this.label7.Location = new System.Drawing.Point(19, 253);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 18);
             this.label7.TabIndex = 842;
@@ -599,6 +581,8 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Transparent;
+            this.panel17.Controls.Add(this.comboBox2);
+            this.panel17.Controls.Add(this.comboBox1);
             this.panel17.Controls.Add(this.bunifuImageButton3);
             this.panel17.Controls.Add(this.cmbUserType);
             this.panel17.Controls.Add(this.label11);
@@ -606,8 +590,6 @@
             this.panel17.Controls.Add(this.dateTimePicker1);
             this.panel17.Controls.Add(this.label2);
             this.panel17.Controls.Add(this.txt_des);
-            this.panel17.Controls.Add(this.txt_cnic_no);
-            this.panel17.Controls.Add(this.txt_mob);
             this.panel17.Controls.Add(this.txt_city);
             this.panel17.Controls.Add(this.txt_address);
             this.panel17.Controls.Add(this.txt_salesman_name);
@@ -622,6 +604,37 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(399, 308);
             this.panel17.TabIndex = 845;
+            // 
+            // bunifuImageButton3
+            // 
+            this.bunifuImageButton3.BackColor = System.Drawing.Color.DimGray;
+            this.bunifuImageButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
+            this.bunifuImageButton3.ImageActive = null;
+            this.bunifuImageButton3.Location = new System.Drawing.Point(365, 176);
+            this.bunifuImageButton3.Name = "bunifuImageButton3";
+            this.bunifuImageButton3.Size = new System.Drawing.Size(20, 23);
+            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton3.TabIndex = 1059;
+            this.bunifuImageButton3.TabStop = false;
+            this.bunifuImageButton3.Zoom = 10;
+            // 
+            // cmbUserType
+            // 
+            this.cmbUserType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbUserType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbUserType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cmbUserType.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cmbUserType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmbUserType.FormattingEnabled = true;
+            this.cmbUserType.Items.AddRange(new object[] {
+            "Admin",
+            "Salesman"});
+            this.cmbUserType.Location = new System.Drawing.Point(191, 174);
+            this.cmbUserType.Name = "cmbUserType";
+            this.cmbUserType.Size = new System.Drawing.Size(170, 25);
+            this.cmbUserType.TabIndex = 854;
+            this.cmbUserType.Text = "--- Select Currency---";
             // 
             // panel2
             // 
@@ -745,36 +758,43 @@
             this.label1.TabIndex = 838;
             this.label1.Text = "Salesman Name:";
             // 
-            // cmbUserType
+            // comboBox1
             // 
-            this.cmbUserType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbUserType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbUserType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.cmbUserType.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cmbUserType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cmbUserType.FormattingEnabled = true;
-            this.cmbUserType.Items.AddRange(new object[] {
-            "Admin",
-            "Salesman"});
-            this.cmbUserType.Location = new System.Drawing.Point(191, 174);
-            this.cmbUserType.Name = "cmbUserType";
-            this.cmbUserType.Size = new System.Drawing.Size(170, 25);
-            this.cmbUserType.TabIndex = 854;
-            this.cmbUserType.Text = "--- Select Currency---";
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Treasury",
+            "Bank",
+            "Account",
+            "Wallet"});
+            this.comboBox1.Location = new System.Drawing.Point(191, 206);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(194, 25);
+            this.comboBox1.TabIndex = 1060;
+            this.comboBox1.Text = "--- Select Pay Type---";
             // 
-            // bunifuImageButton3
+            // comboBox2
             // 
-            this.bunifuImageButton3.BackColor = System.Drawing.Color.DimGray;
-            this.bunifuImageButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
-            this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(365, 176);
-            this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(20, 23);
-            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton3.TabIndex = 1059;
-            this.bunifuImageButton3.TabStop = false;
-            this.bunifuImageButton3.Zoom = 10;
+            this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Treasury",
+            "Bank",
+            "Account",
+            "Wallet"});
+            this.comboBox2.Location = new System.Drawing.Point(191, 239);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(194, 25);
+            this.comboBox2.TabIndex = 1061;
+            this.comboBox2.Text = "--- Select Pay Type---";
             // 
             // Money_Transfer
             // 
@@ -808,13 +828,13 @@
             this.panel4.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -833,8 +853,6 @@
         internal System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_des;
-        private System.Windows.Forms.TextBox txt_cnic_no;
-        private System.Windows.Forms.TextBox txt_mob;
         private System.Windows.Forms.TextBox txt_city;
         private System.Windows.Forms.TextBox txt_address;
         private System.Windows.Forms.Label label4;
@@ -876,5 +894,7 @@
         internal System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.ComboBox cmbUserType;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -13,6 +13,7 @@ namespace Loop_Inventory
 {
     public partial class DiscountMaster : Form
     {
+        private string st1;
         bool drag = false;
         Point start_point = new Point(0, 0);
         public DiscountMaster()
@@ -32,6 +33,11 @@ namespace Loop_Inventory
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (combo_status.SelectedIndex == 0)
+                st1 = "Yes";
+            else
+                st1 = "No";
+
             if (txt_DiscountName.Text == "")
             {
                 MessageBox.Show("Please Enter Discount Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -67,7 +73,7 @@ namespace Loop_Inventory
                 ModCommonClasses.con = new SqlConnection(ModCS.cs);
                 ModCommonClasses.con.Open();
 
-                string cb = "insert into tbl_discount(DiscountName,DiscountPercentage,Status) VALUES ('" + txt_DiscountName.Text + "' ,'" + txt_DiscountPercent.Text + "' , '" + combo_status.Text + "')";
+                string cb = "insert into tbl_discount(DiscountName,DiscountPercentage,Status) VALUES ('" + txt_DiscountName.Text + "' ,'" + txt_DiscountPercent.Text + "' , '" + st1 + "')";
 
                 ModCommonClasses.cmd = new SqlCommand(cb);
                 ModCommonClasses.cmd.Connection = ModCommonClasses.con;
@@ -136,7 +142,7 @@ namespace Loop_Inventory
                 ModCommonClasses.cmd.Parameters.AddWithValue("@id1", txtID.Text);
                 ModCommonClasses.cmd.Parameters.AddWithValue("@d1", txt_DiscountName.Text);
                 ModCommonClasses.cmd.Parameters.AddWithValue("@d2", txt_DiscountPercent.Text);
-                ModCommonClasses.cmd.Parameters.AddWithValue("@d3", combo_status.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d3", st1);
 
 
 

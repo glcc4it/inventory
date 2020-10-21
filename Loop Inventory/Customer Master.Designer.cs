@@ -57,7 +57,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_print = new System.Windows.Forms.Button();
@@ -77,7 +76,6 @@
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.add2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.add1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel25 = new System.Windows.Forms.Panel();
             this.comboDefultTranaction = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -127,8 +125,6 @@
             this.txtOpeningBalance = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.comboCurrencyType = new System.Windows.Forms.ComboBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.comboAccounttype = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.panel34 = new System.Windows.Forms.Panel();
@@ -146,7 +142,6 @@
             this.panel32.SuspendLayout();
             this.panel26.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.add2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.add1)).BeginInit();
             this.panel25.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -165,7 +160,6 @@
             this.panel23.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel34.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -374,7 +368,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(8, 191);
+            this.label5.Location = new System.Drawing.Point(8, 158);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 18);
             this.label5.TabIndex = 878;
@@ -385,7 +379,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(8, 227);
+            this.label7.Location = new System.Drawing.Point(8, 194);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(113, 18);
             this.label7.TabIndex = 881;
@@ -396,7 +390,7 @@
             this.label30.AutoSize = true;
             this.label30.BackColor = System.Drawing.Color.Transparent;
             this.label30.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label30.Location = new System.Drawing.Point(8, 279);
+            this.label30.Location = new System.Drawing.Point(8, 246);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(92, 18);
             this.label30.TabIndex = 883;
@@ -407,7 +401,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(8, 315);
+            this.label9.Location = new System.Drawing.Point(8, 282);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(106, 18);
             this.label9.TabIndex = 887;
@@ -418,7 +412,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(8, 353);
+            this.label16.Location = new System.Drawing.Point(8, 320);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(86, 18);
             this.label16.TabIndex = 889;
@@ -471,23 +465,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(650, 164);
             this.dataGridView1.TabIndex = 912;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(8, 119);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 18);
-            this.label8.TabIndex = 913;
-            this.label8.Text = "Account Nature:";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(8, 155);
+            this.label10.Location = new System.Drawing.Point(8, 122);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(103, 18);
             this.label10.TabIndex = 915;
@@ -511,7 +494,6 @@
             this.panel2.Controls.Add(this.panel26);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.add2);
-            this.panel2.Controls.Add(this.add1);
             this.panel2.Controls.Add(this.panel25);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.panel22);
@@ -534,12 +516,10 @@
             this.panel2.Controls.Add(this.panel23);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Controls.Add(this.panel12);
-            this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel34);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label9);
@@ -750,7 +730,7 @@
             this.add2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.add2.Image = ((System.Drawing.Image)(resources.GetObject("add2.Image")));
             this.add2.ImageActive = null;
-            this.add2.Location = new System.Drawing.Point(300, 156);
+            this.add2.Location = new System.Drawing.Point(300, 123);
             this.add2.Name = "add2";
             this.add2.Size = new System.Drawing.Size(18, 18);
             this.add2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -759,26 +739,11 @@
             this.add2.Zoom = 10;
             this.add2.Click += new System.EventHandler(this.add2_Click);
             // 
-            // add1
-            // 
-            this.add1.BackColor = System.Drawing.Color.DimGray;
-            this.add1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.add1.Image = ((System.Drawing.Image)(resources.GetObject("add1.Image")));
-            this.add1.ImageActive = null;
-            this.add1.Location = new System.Drawing.Point(300, 120);
-            this.add1.Name = "add1";
-            this.add1.Size = new System.Drawing.Size(18, 18);
-            this.add1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.add1.TabIndex = 1020;
-            this.add1.TabStop = false;
-            this.add1.Zoom = 10;
-            this.add1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
-            // 
             // panel25
             // 
             this.panel25.BackColor = System.Drawing.Color.Gainsboro;
             this.panel25.Controls.Add(this.comboDefultTranaction);
-            this.panel25.Location = new System.Drawing.Point(133, 389);
+            this.panel25.Location = new System.Drawing.Point(133, 356);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(186, 29);
             this.panel25.TabIndex = 942;
@@ -788,6 +753,9 @@
             this.comboDefultTranaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.comboDefultTranaction.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.comboDefultTranaction.FormattingEnabled = true;
+            this.comboDefultTranaction.Items.AddRange(new object[] {
+            "Cash",
+            "Credit"});
             this.comboDefultTranaction.Location = new System.Drawing.Point(2, 2);
             this.comboDefultTranaction.Name = "comboDefultTranaction";
             this.comboDefultTranaction.Size = new System.Drawing.Size(182, 25);
@@ -799,7 +767,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label17.Location = new System.Drawing.Point(8, 394);
+            this.label17.Location = new System.Drawing.Point(8, 361);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(126, 18);
             this.label17.TabIndex = 941;
@@ -1129,7 +1097,7 @@
             // 
             this.panel30.BackColor = System.Drawing.Color.Gainsboro;
             this.panel30.Controls.Add(this.txtCreditLimit);
-            this.panel30.Location = new System.Drawing.Point(133, 347);
+            this.panel30.Location = new System.Drawing.Point(133, 314);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(186, 29);
             this.panel30.TabIndex = 940;
@@ -1148,7 +1116,7 @@
             // 
             this.panel18.BackColor = System.Drawing.Color.Gainsboro;
             this.panel18.Controls.Add(this.txtContactNo);
-            this.panel18.Location = new System.Drawing.Point(133, 310);
+            this.panel18.Location = new System.Drawing.Point(133, 277);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(186, 29);
             this.panel18.TabIndex = 939;
@@ -1167,7 +1135,7 @@
             // 
             this.panel44.BackColor = System.Drawing.Color.Gainsboro;
             this.panel44.Controls.Add(this.txtEmailID);
-            this.panel44.Location = new System.Drawing.Point(133, 273);
+            this.panel44.Location = new System.Drawing.Point(133, 240);
             this.panel44.Name = "panel44";
             this.panel44.Size = new System.Drawing.Size(186, 29);
             this.panel44.TabIndex = 938;
@@ -1186,7 +1154,7 @@
             // 
             this.panel24.BackColor = System.Drawing.Color.Gainsboro;
             this.panel24.Controls.Add(this.txtAddress);
-            this.panel24.Location = new System.Drawing.Point(133, 223);
+            this.panel24.Location = new System.Drawing.Point(133, 190);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(186, 42);
             this.panel24.TabIndex = 937;
@@ -1207,7 +1175,7 @@
             this.panel23.BackColor = System.Drawing.Color.Gainsboro;
             this.panel23.Controls.Add(this.cmbOpeningBalanceType);
             this.panel23.Controls.Add(this.textBox1);
-            this.panel23.Location = new System.Drawing.Point(230, 186);
+            this.panel23.Location = new System.Drawing.Point(230, 153);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(89, 29);
             this.panel23.TabIndex = 936;
@@ -1243,7 +1211,7 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.Gainsboro;
             this.panel9.Controls.Add(this.txtOpeningBalance);
-            this.panel9.Location = new System.Drawing.Point(133, 186);
+            this.panel9.Location = new System.Drawing.Point(133, 153);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(92, 29);
             this.panel9.TabIndex = 935;
@@ -1264,7 +1232,7 @@
             // 
             this.panel12.BackColor = System.Drawing.Color.Gainsboro;
             this.panel12.Controls.Add(this.comboCurrencyType);
-            this.panel12.Location = new System.Drawing.Point(133, 150);
+            this.panel12.Location = new System.Drawing.Point(133, 117);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(164, 29);
             this.panel12.TabIndex = 934;
@@ -1279,26 +1247,6 @@
             this.comboCurrencyType.Size = new System.Drawing.Size(160, 25);
             this.comboCurrencyType.TabIndex = 2;
             this.comboCurrencyType.Text = "--- Select Currency---";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel6.Controls.Add(this.comboAccounttype);
-            this.panel6.Location = new System.Drawing.Point(133, 114);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(164, 29);
-            this.panel6.TabIndex = 933;
-            // 
-            // comboAccounttype
-            // 
-            this.comboAccounttype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.comboAccounttype.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.comboAccounttype.FormattingEnabled = true;
-            this.comboAccounttype.Location = new System.Drawing.Point(2, 2);
-            this.comboAccounttype.Name = "comboAccounttype";
-            this.comboAccounttype.Size = new System.Drawing.Size(160, 25);
-            this.comboAccounttype.TabIndex = 2;
-            this.comboAccounttype.Text = "-Select Account Type-";
             // 
             // panel3
             // 
@@ -1390,7 +1338,6 @@
             this.panel32.ResumeLayout(false);
             this.panel26.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.add2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.add1)).EndInit();
             this.panel25.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
@@ -1423,7 +1370,6 @@
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel12.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel34.ResumeLayout(false);
@@ -1458,7 +1404,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label16;
         internal System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
@@ -1467,8 +1412,6 @@
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.TextBox txtCustomerName;
-        private System.Windows.Forms.Panel panel6;
-        public System.Windows.Forms.ComboBox comboAccounttype;
         private System.Windows.Forms.Panel panel12;
         public System.Windows.Forms.ComboBox comboCurrencyType;
         private System.Windows.Forms.Panel panel23;
@@ -1519,7 +1462,6 @@
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Label label17;
         private Bunifu.Framework.UI.BunifuImageButton add2;
-        private Bunifu.Framework.UI.BunifuImageButton add1;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Label label18;
         public System.Windows.Forms.ComboBox cmbStatus;

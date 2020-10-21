@@ -44,7 +44,7 @@ namespace Loop_Inventory
             txtAccountName.Text = "";
             txtBranch.Text = "";
             txtAccountNo.Text = "";
-            txtDefulttransaction.Text = "";
+            cmbDefultTransaction.Text = "--- Set Transaction---";
             cmbStatus.SelectedIndex = 0; ;// = dr.Cells[15].Value.ToString();
             refreshGrid();
         }
@@ -86,7 +86,7 @@ namespace Loop_Inventory
                 tb.AccountName = txtAccountName.Text;
                 tb.Branch = txtBranch.Text;
                 tb.AccountNumber = txtAccountNo.Text;
-                tb.DefultTransaction = txtDefulttransaction.Text;
+                tb.DefultTransaction = cmbDefultTransaction.Text;
                 tb.Status = cmbStatus.Text;
                 db.Suppliers.Add(tb);
                 db.SaveChanges();
@@ -130,7 +130,7 @@ namespace Loop_Inventory
                 tb.AccountName = txtAccountName.Text;
                 tb.Branch = txtBranch.Text;
                 tb.AccountNumber = txtAccountNo.Text;
-                tb.DefultTransaction = txtDefulttransaction.Text;
+                tb.DefultTransaction = cmbDefultTransaction.Text;
                 tb.Status = cmbStatus.Text;
                 db.Suppliers.Add(tb);
                 db.SaveChanges();
@@ -212,7 +212,7 @@ namespace Loop_Inventory
                     txtAccountName.Text= dr.Cells[11].Value.ToString();
                    txtBranch.Text= dr.Cells[12].Value.ToString();
                     txtAccountNo.Text= dr.Cells[13].Value.ToString();
-                    txtDefulttransaction.Text= dr.Cells[14].Value.ToString();
+                    cmbDefultTransaction.Text= dr.Cells[14].Value.ToString();
                     cmbStatus.Text= dr.Cells[15].Value.ToString();
 
                 }

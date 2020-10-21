@@ -852,9 +852,9 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(106, 1);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(115, 20);
+            this.label11.Size = new System.Drawing.Size(92, 20);
             this.label11.TabIndex = 320;
-            this.label11.Text = "Product Name:";
+            this.label11.Text = "Item Name:";
             // 
             // label13
             // 

@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PayTaxes));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PayTaxes));
             this.label24 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.add1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.TxtNotes = new System.Windows.Forms.TextBox();
-            this.TxtPayFrom = new System.Windows.Forms.TextBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.txtAmount = new System.Windows.Forms.TextBox();
@@ -84,8 +84,9 @@
             this.bunifuImageButton38 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.add1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).BeginInit();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -93,7 +94,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton38)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.add1)).BeginInit();
             this.SuspendLayout();
             // 
             // label24
@@ -114,9 +114,9 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Transparent;
+            this.panel17.Controls.Add(this.comboBox1);
             this.panel17.Controls.Add(this.add1);
             this.panel17.Controls.Add(this.TxtNotes);
-            this.panel17.Controls.Add(this.TxtPayFrom);
             this.panel17.Controls.Add(this.dateTimePicker3);
             this.panel17.Controls.Add(this.dateTimePicker2);
             this.panel17.Controls.Add(this.txtAmount);
@@ -142,6 +142,20 @@
             this.panel17.Size = new System.Drawing.Size(399, 308);
             this.panel17.TabIndex = 846;
             // 
+            // add1
+            // 
+            this.add1.BackColor = System.Drawing.Color.DimGray;
+            this.add1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add1.Image = ((System.Drawing.Image)(resources.GetObject("add1.Image")));
+            this.add1.ImageActive = null;
+            this.add1.Location = new System.Drawing.Point(364, 113);
+            this.add1.Name = "add1";
+            this.add1.Size = new System.Drawing.Size(20, 25);
+            this.add1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add1.TabIndex = 1050;
+            this.add1.TabStop = false;
+            this.add1.Zoom = 10;
+            // 
             // TxtNotes
             // 
             this.TxtNotes.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
@@ -151,15 +165,6 @@
             this.TxtNotes.Name = "TxtNotes";
             this.TxtNotes.Size = new System.Drawing.Size(194, 50);
             this.TxtNotes.TabIndex = 1049;
-            // 
-            // TxtPayFrom
-            // 
-            this.TxtPayFrom.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.TxtPayFrom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TxtPayFrom.Location = new System.Drawing.Point(190, 214);
-            this.TxtPayFrom.Name = "TxtPayFrom";
-            this.TxtPayFrom.Size = new System.Drawing.Size(194, 25);
-            this.TxtPayFrom.TabIndex = 1048;
             // 
             // dateTimePicker3
             // 
@@ -743,19 +748,24 @@
             this.panel6.Size = new System.Drawing.Size(5, 396);
             this.panel6.TabIndex = 851;
             // 
-            // add1
+            // comboBox1
             // 
-            this.add1.BackColor = System.Drawing.Color.DimGray;
-            this.add1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.add1.Image = ((System.Drawing.Image)(resources.GetObject("add1.Image")));
-            this.add1.ImageActive = null;
-            this.add1.Location = new System.Drawing.Point(364, 113);
-            this.add1.Name = "add1";
-            this.add1.Size = new System.Drawing.Size(20, 25);
-            this.add1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.add1.TabIndex = 1050;
-            this.add1.TabStop = false;
-            this.add1.Zoom = 10;
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Treasury",
+            "Bank",
+            "Account",
+            "Wallet"});
+            this.comboBox1.Location = new System.Drawing.Point(190, 215);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(194, 25);
+            this.comboBox1.TabIndex = 1051;
+            this.comboBox1.Text = "--- Select Pay Type---";
             // 
             // PayTaxes
             // 
@@ -778,6 +788,7 @@
             this.Text = "PayTaxes";
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -787,7 +798,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton38)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.add1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -845,8 +855,8 @@
         private System.Windows.Forms.TextBox txtAmount;
         internal System.Windows.Forms.DateTimePicker dateTimePicker2;
         internal System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.TextBox TxtPayFrom;
         private System.Windows.Forms.TextBox TxtNotes;
         private Bunifu.Framework.UI.BunifuImageButton add1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

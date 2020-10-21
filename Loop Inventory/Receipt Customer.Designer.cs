@@ -43,6 +43,9 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.u = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.txtDiscountAmount = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.add2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.add1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -51,8 +54,6 @@
             this.combo_search_type = new System.Windows.Forms.ComboBox();
             this.panel31 = new System.Windows.Forms.Panel();
             this.txt_search = new System.Windows.Forms.TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.txtReciptIn = new System.Windows.Forms.TextBox();
             this.panel17 = new System.Windows.Forms.Panel();
             this.comboCurrencyType = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -78,7 +79,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -86,6 +86,9 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txtReciptIn = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSaveandPrint = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -106,18 +109,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.u.SuspendLayout();
+            this.panel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.add2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.add1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel32.SuspendLayout();
             this.panel31.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel15.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel41.SuspendLayout();
             this.panel39.SuspendLayout();
@@ -234,13 +238,14 @@
             // 
             this.u.BackColor = System.Drawing.Color.WhiteSmoke;
             this.u.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.u.Controls.Add(this.panel21);
+            this.u.Controls.Add(this.label10);
             this.u.Controls.Add(this.add2);
             this.u.Controls.Add(this.add1);
             this.u.Controls.Add(this.dataGridView1);
             this.u.Controls.Add(this.btn_print);
             this.u.Controls.Add(this.panel32);
             this.u.Controls.Add(this.panel31);
-            this.u.Controls.Add(this.panel8);
             this.u.Controls.Add(this.panel17);
             this.u.Controls.Add(this.panel6);
             this.u.Controls.Add(this.panel9);
@@ -261,7 +266,6 @@
             this.u.Controls.Add(this.label5);
             this.u.Controls.Add(this.label4);
             this.u.Controls.Add(this.label7);
-            this.u.Controls.Add(this.label2);
             this.u.Controls.Add(this.label6);
             this.u.Controls.Add(this.panel11);
             this.u.Controls.Add(this.panel14);
@@ -275,13 +279,43 @@
             this.u.Size = new System.Drawing.Size(689, 619);
             this.u.TabIndex = 918;
             // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel21.Controls.Add(this.txtDiscountAmount);
+            this.panel21.Location = new System.Drawing.Point(130, 245);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(191, 29);
+            this.panel21.TabIndex = 1052;
+            // 
+            // txtDiscountAmount
+            // 
+            this.txtDiscountAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtDiscountAmount.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtDiscountAmount.ForeColor = System.Drawing.Color.Black;
+            this.txtDiscountAmount.Location = new System.Drawing.Point(2, 2);
+            this.txtDiscountAmount.Name = "txtDiscountAmount";
+            this.txtDiscountAmount.Size = new System.Drawing.Size(187, 25);
+            this.txtDiscountAmount.TabIndex = 5;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(14, 250);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(116, 18);
+            this.label10.TabIndex = 1051;
+            this.label10.Text = "Discount Amount:";
+            // 
             // add2
             // 
             this.add2.BackColor = System.Drawing.Color.DimGray;
             this.add2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.add2.Image = ((System.Drawing.Image)(resources.GetObject("add2.Image")));
             this.add2.ImageActive = null;
-            this.add2.Location = new System.Drawing.Point(301, 251);
+            this.add2.Location = new System.Drawing.Point(301, 293);
             this.add2.Name = "add2";
             this.add2.Size = new System.Drawing.Size(20, 23);
             this.add2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -407,30 +441,11 @@
             this.txt_search.Size = new System.Drawing.Size(164, 25);
             this.txt_search.TabIndex = 1;
             // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel8.Controls.Add(this.txtReciptIn);
-            this.panel8.Location = new System.Drawing.Point(130, 292);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(191, 29);
-            this.panel8.TabIndex = 1052;
-            // 
-            // txtReciptIn
-            // 
-            this.txtReciptIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtReciptIn.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtReciptIn.ForeColor = System.Drawing.Color.Black;
-            this.txtReciptIn.Location = new System.Drawing.Point(2, 2);
-            this.txtReciptIn.Name = "txtReciptIn";
-            this.txtReciptIn.Size = new System.Drawing.Size(187, 25);
-            this.txtReciptIn.TabIndex = 5;
-            // 
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Gainsboro;
             this.panel17.Controls.Add(this.comboCurrencyType);
-            this.panel17.Location = new System.Drawing.Point(130, 246);
+            this.panel17.Location = new System.Drawing.Point(130, 288);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(169, 29);
             this.panel17.TabIndex = 1051;
@@ -645,7 +660,7 @@
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label24.Location = new System.Drawing.Point(347, 63);
+            this.label24.Location = new System.Drawing.Point(347, 98);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(101, 36);
             this.label24.TabIndex = 984;
@@ -656,11 +671,11 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(12, 251);
+            this.label9.Location = new System.Drawing.Point(12, 293);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 18);
+            this.label9.Size = new System.Drawing.Size(116, 18);
             this.label9.TabIndex = 968;
-            this.label9.Text = "Currency Type:";
+            this.label9.Text = "Discount Amount:";
             // 
             // label8
             // 
@@ -705,17 +720,6 @@
             this.label7.Size = new System.Drawing.Size(99, 18);
             this.label7.TabIndex = 966;
             this.label7.Text = "Discount Type:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(12, 298);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 18);
-            this.label2.TabIndex = 960;
-            this.label2.Text = "Receipt In:";
             // 
             // label6
             // 
@@ -777,6 +781,8 @@
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.Transparent;
+            this.panel15.Controls.Add(this.panel8);
+            this.panel15.Controls.Add(this.label2);
             this.panel15.Controls.Add(this.btnDelete);
             this.panel15.Controls.Add(this.btnSaveandPrint);
             this.panel15.Controls.Add(this.btnSave);
@@ -791,6 +797,36 @@
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(348, 280);
             this.panel15.TabIndex = 1003;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel8.Controls.Add(this.txtReciptIn);
+            this.panel8.Location = new System.Drawing.Point(133, 35);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(191, 29);
+            this.panel8.TabIndex = 1057;
+            // 
+            // txtReciptIn
+            // 
+            this.txtReciptIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtReciptIn.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtReciptIn.ForeColor = System.Drawing.Color.Black;
+            this.txtReciptIn.Location = new System.Drawing.Point(2, 2);
+            this.txtReciptIn.Name = "txtReciptIn";
+            this.txtReciptIn.Size = new System.Drawing.Size(187, 25);
+            this.txtReciptIn.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(15, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 18);
+            this.label2.TabIndex = 1056;
+            this.label2.Text = "Receipt In:";
             // 
             // btnDelete
             // 
@@ -887,9 +923,9 @@
             this.panel39.BackColor = System.Drawing.Color.Gainsboro;
             this.panel39.Controls.Add(this.txtTotalAmountafterdis);
             this.panel39.Controls.Add(this.txtID);
-            this.panel39.Location = new System.Drawing.Point(133, 40);
+            this.panel39.Location = new System.Drawing.Point(133, 81);
             this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(191, 80);
+            this.panel39.Size = new System.Drawing.Size(191, 29);
             this.panel39.TabIndex = 1050;
             // 
             // txtTotalAmountafterdis
@@ -900,7 +936,7 @@
             this.txtTotalAmountafterdis.Location = new System.Drawing.Point(2, 2);
             this.txtTotalAmountafterdis.Multiline = true;
             this.txtTotalAmountafterdis.Name = "txtTotalAmountafterdis";
-            this.txtTotalAmountafterdis.Size = new System.Drawing.Size(187, 76);
+            this.txtTotalAmountafterdis.Size = new System.Drawing.Size(187, 25);
             this.txtTotalAmountafterdis.TabIndex = 0;
             this.txtTotalAmountafterdis.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -975,14 +1011,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.u.ResumeLayout(false);
             this.u.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.add2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.add1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel32.ResumeLayout(false);
             this.panel31.ResumeLayout(false);
             this.panel31.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -992,6 +1028,9 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             this.panel41.ResumeLayout(false);
@@ -1018,7 +1057,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel14;
@@ -1046,8 +1084,6 @@
         public System.Windows.Forms.ComboBox comboDiscounttype;
         private System.Windows.Forms.Panel panel17;
         public System.Windows.Forms.ComboBox comboCurrencyType;
-        private System.Windows.Forms.Panel panel8;
-        public System.Windows.Forms.TextBox txtReciptIn;
         private System.Windows.Forms.Panel panel39;
         private System.Windows.Forms.TextBox txtTotalAmountafterdis;
         public System.Windows.Forms.TextBox txtID;
@@ -1071,5 +1107,11 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuImageButton add2;
         private Bunifu.Framework.UI.BunifuImageButton add1;
+        private System.Windows.Forms.Panel panel8;
+        public System.Windows.Forms.TextBox txtReciptIn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Label label10;
+        public System.Windows.Forms.TextBox txtDiscountAmount;
     }
 }

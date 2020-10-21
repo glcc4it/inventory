@@ -369,3 +369,4 @@ C:\Users\glcc4\Documents\Visual Studio 2015\Projects\Loop Inventory Github\Loop 
 C:\Users\glcc4\Documents\Visual Studio 2015\Projects\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.ProductMaster.resources
 C:\Users\glcc4\Documents\Visual Studio 2015\Projects\Loop Inventory Github\Loop Inventory\obj\Debug\Loop Inventory.csprojResolveAssemblyReference.cache
 C:\Users\glcc4\Documents\Visual Studio 2015\Projects\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.DiscountMaster.resources
+C:\Users\glcc4\Documents\Visual Studio 2015\Projects\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Item_Master.resources

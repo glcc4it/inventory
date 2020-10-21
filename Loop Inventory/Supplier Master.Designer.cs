@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Supplier_Master));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel45 = new System.Windows.Forms.Panel();
             this.txtAccountNo = new System.Windows.Forms.TextBox();
             this.btn_print = new System.Windows.Forms.Button();
@@ -44,7 +44,6 @@
             this.combo_search_type = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.panel33 = new System.Windows.Forms.Panel();
-            this.txtDefulttransaction = new System.Windows.Forms.TextBox();
             this.panel35 = new System.Windows.Forms.Panel();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
@@ -82,6 +81,7 @@
             this.txtBranch = new System.Windows.Forms.TextBox();
             this.panel41 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.cmbDefultTransaction = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -124,6 +124,9 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tbl_AccountMasterTableAdapter = new Loop_Inventory.DataSet1TableAdapters.tbl_AccountMasterTableAdapter();
@@ -159,6 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel45
@@ -266,17 +270,6 @@
             this.panel33.Size = new System.Drawing.Size(179, 2);
             this.panel33.TabIndex = 1032;
             // 
-            // txtDefulttransaction
-            // 
-            this.txtDefulttransaction.BackColor = System.Drawing.Color.White;
-            this.txtDefulttransaction.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtDefulttransaction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDefulttransaction.Location = new System.Drawing.Point(2, 2);
-            this.txtDefulttransaction.Multiline = true;
-            this.txtDefulttransaction.Name = "txtDefulttransaction";
-            this.txtDefulttransaction.Size = new System.Drawing.Size(182, 79);
-            this.txtDefulttransaction.TabIndex = 0;
-            // 
             // panel35
             // 
             this.panel35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -337,7 +330,7 @@
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel26.Location = new System.Drawing.Point(451, 315);
+            this.panel26.Location = new System.Drawing.Point(451, 304);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(186, 29);
             this.panel26.TabIndex = 1023;
@@ -350,7 +343,7 @@
             this.cmbStatus.Items.AddRange(new object[] {
             "Active",
             "Deactive"});
-            this.cmbStatus.Location = new System.Drawing.Point(453, 317);
+            this.cmbStatus.Location = new System.Drawing.Point(453, 306);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(182, 25);
             this.cmbStatus.TabIndex = 3;
@@ -372,7 +365,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label18.Location = new System.Drawing.Point(335, 320);
+            this.label18.Location = new System.Drawing.Point(327, 310);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(92, 18);
             this.label18.TabIndex = 1022;
@@ -451,7 +444,6 @@
             this.comboAccounttype.Name = "comboAccounttype";
             this.comboAccounttype.Size = new System.Drawing.Size(160, 25);
             this.comboAccounttype.TabIndex = 2;
-            this.comboAccounttype.Text = "--Select Account Type--";
             this.comboAccounttype.ValueMember = "AccountName";
             // 
             // tblAccountMasterBindingSource
@@ -475,7 +467,6 @@
             this.comboCurrencyType.Name = "comboCurrencyType";
             this.comboCurrencyType.Size = new System.Drawing.Size(160, 25);
             this.comboCurrencyType.TabIndex = 2;
-            this.comboCurrencyType.Text = "--Select Currency--";
             this.comboCurrencyType.ValueMember = "Name";
             // 
             // tblCurrencyBindingSource
@@ -673,22 +664,39 @@
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel16.Controls.Add(this.txtDefulttransaction);
-            this.panel16.Location = new System.Drawing.Point(451, 222);
+            this.panel16.Controls.Add(this.cmbDefultTransaction);
+            this.panel16.Location = new System.Drawing.Point(451, 225);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(186, 83);
+            this.panel16.Size = new System.Drawing.Size(186, 29);
             this.panel16.TabIndex = 1007;
+            // 
+            // cmbDefultTransaction
+            // 
+            this.cmbDefultTransaction.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbDefultTransaction.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbDefultTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cmbDefultTransaction.DropDownWidth = 50;
+            this.cmbDefultTransaction.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cmbDefultTransaction.FormattingEnabled = true;
+            this.cmbDefultTransaction.Items.AddRange(new object[] {
+            "Credit",
+            "Cash"});
+            this.cmbDefultTransaction.Location = new System.Drawing.Point(2, 2);
+            this.cmbDefultTransaction.Name = "cmbDefultTransaction";
+            this.cmbDefultTransaction.Size = new System.Drawing.Size(182, 25);
+            this.cmbDefultTransaction.TabIndex = 4;
+            this.cmbDefultTransaction.Text = "--- Set Transaction---";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(335, 227);
+            this.label11.Location = new System.Drawing.Point(327, 230);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 36);
+            this.label11.Size = new System.Drawing.Size(126, 18);
             this.label11.TabIndex = 1006;
-            this.label11.Text = "Defult \r\nTransaction:";
+            this.label11.Text = "Defult Transaction:";
             // 
             // label3
             // 
@@ -882,18 +890,18 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.OldLace;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.OldLace;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeight = 24;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView1.EnableHeadersVisualStyles = false;
@@ -903,21 +911,21 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidth = 25;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 18;
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
@@ -1018,7 +1026,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(8, 50);
+            this.label1.Location = new System.Drawing.Point(5, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 18);
             this.label1.TabIndex = 874;
@@ -1161,6 +1169,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.panel17);
+            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.cmbStatus);
             this.panel2.Controls.Add(this.btn_print);
             this.panel2.Controls.Add(this.panel31);
@@ -1212,6 +1222,43 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(663, 650);
             this.panel2.TabIndex = 459;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel17.Controls.Add(this.comboBox2);
+            this.panel17.Location = new System.Drawing.Point(451, 264);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(186, 29);
+            this.panel17.TabIndex = 1009;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.comboBox2.DropDownWidth = 50;
+            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Credit",
+            "Cash"});
+            this.comboBox2.Location = new System.Drawing.Point(2, 2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(182, 25);
+            this.comboBox2.TabIndex = 4;
+            this.comboBox2.Text = "--- Select Pricing Level---";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label12.Location = new System.Drawing.Point(327, 269);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(93, 18);
+            this.label12.TabIndex = 1008;
+            this.label12.Text = "Pricing Level:";
             // 
             // panel7
             // 
@@ -1271,7 +1318,6 @@
             this.panel41.ResumeLayout(false);
             this.panel41.PerformLayout();
             this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1303,6 +1349,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel17.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1319,7 +1366,6 @@
         private System.Windows.Forms.ComboBox combo_search_type;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel33;
-        public System.Windows.Forms.TextBox txtDefulttransaction;
         private System.Windows.Forms.Panel panel35;
         internal System.Windows.Forms.Button btn_delete;
         internal System.Windows.Forms.Button btn_update;
@@ -1403,5 +1449,9 @@
         private DataSet1TableAdapters.tbl_AccountMasterTableAdapter tbl_AccountMasterTableAdapter;
         private System.Windows.Forms.BindingSource tblCurrencyBindingSource;
         private DataSet1TableAdapters.tbl_CurrencyTableAdapter tbl_CurrencyTableAdapter;
+        public System.Windows.Forms.ComboBox cmbDefultTransaction;
+        private System.Windows.Forms.Panel panel17;
+        public System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label12;
     }
 }

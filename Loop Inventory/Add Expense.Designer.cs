@@ -414,8 +414,8 @@
             this.cmbTransactionType.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmbTransactionType.FormattingEnabled = true;
             this.cmbTransactionType.Items.AddRange(new object[] {
-            "Cr",
-            "Dr"});
+            "Cash ",
+            "Credit"});
             this.cmbTransactionType.Location = new System.Drawing.Point(2, 2);
             this.cmbTransactionType.Name = "cmbTransactionType";
             this.cmbTransactionType.Size = new System.Drawing.Size(160, 25);
