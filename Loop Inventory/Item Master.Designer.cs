@@ -44,11 +44,6 @@
             this.bunifuImageButton13 = new Bunifu.Framework.UI.BunifuImageButton();
             this.lnk_sale_rpt = new System.Windows.Forms.LinkLabel();
             this.bunifuImageButton14 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuImageButton9 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton10 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -156,17 +151,12 @@
             this.lblBrand = new System.Windows.Forms.Label();
             this.lblProductCode = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton14)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tcMain.SuspendLayout();
             this.Registration.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -208,23 +198,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.panel1.Controls.Add(this.bunifuImageButton7);
-            this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.btn_delete);
-            this.panel1.Controls.Add(this.bunifuImageButton8);
-            this.panel1.Controls.Add(this.lnk_exprt);
-            this.panel1.Controls.Add(this.bunifuImageButton11);
-            this.panel1.Controls.Add(this.lnk_stock_updte);
-            this.panel1.Controls.Add(this.lnk_sve);
-            this.panel1.Controls.Add(this.bunifuImageButton12);
-            this.panel1.Controls.Add(this.bunifuImageButton13);
-            this.panel1.Controls.Add(this.lnk_sale_rpt);
-            this.panel1.Controls.Add(this.bunifuImageButton14);
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1266, 95);
+            this.panel1.Size = new System.Drawing.Size(1029, 31);
             this.panel1.TabIndex = 292;
             // 
             // bunifuImageButton7
@@ -233,7 +210,7 @@
             this.bunifuImageButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuImageButton7.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton7.Image")));
             this.bunifuImageButton7.ImageActive = null;
-            this.bunifuImageButton7.Location = new System.Drawing.Point(667, 48);
+            this.bunifuImageButton7.Location = new System.Drawing.Point(676, 590);
             this.bunifuImageButton7.Name = "bunifuImageButton7";
             this.bunifuImageButton7.Size = new System.Drawing.Size(35, 35);
             this.bunifuImageButton7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -247,7 +224,7 @@
             this.linkLabel1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(707, 59);
+            this.linkLabel1.Location = new System.Drawing.Point(716, 601);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(34, 15);
             this.linkLabel1.TabIndex = 43;
@@ -260,7 +237,7 @@
             this.btn_delete.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.btn_delete.LinkColor = System.Drawing.Color.White;
-            this.btn_delete.Location = new System.Drawing.Point(316, 59);
+            this.btn_delete.Location = new System.Drawing.Point(325, 601);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(87, 15);
             this.btn_delete.TabIndex = 34;
@@ -274,7 +251,7 @@
             this.bunifuImageButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuImageButton8.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton8.Image")));
             this.bunifuImageButton8.ImageActive = null;
-            this.bunifuImageButton8.Location = new System.Drawing.Point(276, 48);
+            this.bunifuImageButton8.Location = new System.Drawing.Point(285, 590);
             this.bunifuImageButton8.Name = "bunifuImageButton8";
             this.bunifuImageButton8.Size = new System.Drawing.Size(35, 35);
             this.bunifuImageButton8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -288,7 +265,7 @@
             this.lnk_exprt.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnk_exprt.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnk_exprt.LinkColor = System.Drawing.Color.White;
-            this.lnk_exprt.Location = new System.Drawing.Point(181, 59);
+            this.lnk_exprt.Location = new System.Drawing.Point(190, 601);
             this.lnk_exprt.Name = "lnk_exprt";
             this.lnk_exprt.Size = new System.Drawing.Size(91, 15);
             this.lnk_exprt.TabIndex = 33;
@@ -302,7 +279,7 @@
             this.bunifuImageButton11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuImageButton11.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton11.Image")));
             this.bunifuImageButton11.ImageActive = null;
-            this.bunifuImageButton11.Location = new System.Drawing.Point(141, 48);
+            this.bunifuImageButton11.Location = new System.Drawing.Point(150, 590);
             this.bunifuImageButton11.Name = "bunifuImageButton11";
             this.bunifuImageButton11.Size = new System.Drawing.Size(35, 35);
             this.bunifuImageButton11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -316,7 +293,7 @@
             this.lnk_stock_updte.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnk_stock_updte.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnk_stock_updte.LinkColor = System.Drawing.Color.White;
-            this.lnk_stock_updte.Location = new System.Drawing.Point(571, 59);
+            this.lnk_stock_updte.Location = new System.Drawing.Point(580, 601);
             this.lnk_stock_updte.Name = "lnk_stock_updte";
             this.lnk_stock_updte.Size = new System.Drawing.Size(95, 15);
             this.lnk_stock_updte.TabIndex = 36;
@@ -330,7 +307,7 @@
             this.lnk_sve.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnk_sve.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnk_sve.LinkColor = System.Drawing.Color.White;
-            this.lnk_sve.Location = new System.Drawing.Point(56, 59);
+            this.lnk_sve.Location = new System.Drawing.Point(65, 601);
             this.lnk_sve.Name = "lnk_sve";
             this.lnk_sve.Size = new System.Drawing.Size(79, 15);
             this.lnk_sve.TabIndex = 32;
@@ -344,7 +321,7 @@
             this.bunifuImageButton12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuImageButton12.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton12.Image")));
             this.bunifuImageButton12.ImageActive = null;
-            this.bunifuImageButton12.Location = new System.Drawing.Point(17, 48);
+            this.bunifuImageButton12.Location = new System.Drawing.Point(26, 590);
             this.bunifuImageButton12.Name = "bunifuImageButton12";
             this.bunifuImageButton12.Size = new System.Drawing.Size(35, 35);
             this.bunifuImageButton12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -358,7 +335,7 @@
             this.bunifuImageButton13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuImageButton13.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton13.Image")));
             this.bunifuImageButton13.ImageActive = null;
-            this.bunifuImageButton13.Location = new System.Drawing.Point(532, 48);
+            this.bunifuImageButton13.Location = new System.Drawing.Point(541, 590);
             this.bunifuImageButton13.Name = "bunifuImageButton13";
             this.bunifuImageButton13.Size = new System.Drawing.Size(35, 35);
             this.bunifuImageButton13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -372,7 +349,7 @@
             this.lnk_sale_rpt.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnk_sale_rpt.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lnk_sale_rpt.LinkColor = System.Drawing.Color.White;
-            this.lnk_sale_rpt.Location = new System.Drawing.Point(446, 59);
+            this.lnk_sale_rpt.Location = new System.Drawing.Point(455, 601);
             this.lnk_sale_rpt.Name = "lnk_sale_rpt";
             this.lnk_sale_rpt.Size = new System.Drawing.Size(81, 15);
             this.lnk_sale_rpt.TabIndex = 35;
@@ -386,7 +363,7 @@
             this.bunifuImageButton14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuImageButton14.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton14.Image")));
             this.bunifuImageButton14.ImageActive = null;
-            this.bunifuImageButton14.Location = new System.Drawing.Point(407, 48);
+            this.bunifuImageButton14.Location = new System.Drawing.Point(416, 590);
             this.bunifuImageButton14.Name = "bunifuImageButton14";
             this.bunifuImageButton14.Size = new System.Drawing.Size(35, 35);
             this.bunifuImageButton14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -394,97 +371,31 @@
             this.bunifuImageButton14.TabStop = false;
             this.bunifuImageButton14.Zoom = 10;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Navy;
-            this.panel2.Controls.Add(this.bunifuImageButton9);
-            this.panel2.Controls.Add(this.bunifuImageButton10);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 13);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1263, 27);
-            this.panel2.TabIndex = 0;
-            // 
-            // bunifuImageButton9
-            // 
-            this.bunifuImageButton9.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton9.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton9.Image")));
-            this.bunifuImageButton9.ImageActive = null;
-            this.bunifuImageButton9.Location = new System.Drawing.Point(1213, 3);
-            this.bunifuImageButton9.Name = "bunifuImageButton9";
-            this.bunifuImageButton9.Size = new System.Drawing.Size(22, 22);
-            this.bunifuImageButton9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton9.TabIndex = 288;
-            this.bunifuImageButton9.TabStop = false;
-            this.bunifuImageButton9.Zoom = 10;
-            // 
-            // bunifuImageButton10
-            // 
-            this.bunifuImageButton10.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton10.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton10.Image")));
-            this.bunifuImageButton10.ImageActive = null;
-            this.bunifuImageButton10.Location = new System.Drawing.Point(1234, 3);
-            this.bunifuImageButton10.Name = "bunifuImageButton10";
-            this.bunifuImageButton10.Size = new System.Drawing.Size(22, 22);
-            this.bunifuImageButton10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton10.TabIndex = 287;
-            this.bunifuImageButton10.TabStop = false;
-            this.bunifuImageButton10.Zoom = 10;
-            this.bunifuImageButton10.Click += new System.EventHandler(this.bunifuImageButton10_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox1.TabIndex = 286;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(301, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 23);
-            this.label1.TabIndex = 146;
-            this.label1.Text = "Product Creation";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 95);
+            this.panel4.Location = new System.Drawing.Point(0, 31);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 668);
+            this.panel4.Size = new System.Drawing.Size(5, 680);
             this.panel4.TabIndex = 294;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(1256, 95);
+            this.panel5.Location = new System.Drawing.Point(1019, 31);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 668);
+            this.panel5.Size = new System.Drawing.Size(10, 680);
             this.panel5.TabIndex = 295;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(5, 758);
+            this.panel10.Location = new System.Drawing.Point(5, 706);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1251, 5);
+            this.panel10.Size = new System.Drawing.Size(1014, 5);
             this.panel10.TabIndex = 296;
             // 
             // tcMain
@@ -494,10 +405,10 @@
             this.tcMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcMain.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tcMain.HotTrack = true;
-            this.tcMain.Location = new System.Drawing.Point(5, 95);
+            this.tcMain.Location = new System.Drawing.Point(5, 31);
             this.tcMain.Name = "tcMain";
             this.tcMain.SelectedIndex = 0;
-            this.tcMain.Size = new System.Drawing.Size(1251, 663);
+            this.tcMain.Size = new System.Drawing.Size(1014, 675);
             this.tcMain.TabIndex = 297;
             this.tcMain.TabStop = false;
             // 
@@ -505,21 +416,33 @@
             // 
             this.Registration.BackColor = System.Drawing.Color.Lavender;
             this.Registration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Registration.Controls.Add(this.bunifuImageButton7);
             this.Registration.Controls.Add(this.txtID);
             this.Registration.Controls.Add(this.dataGridView1);
+            this.Registration.Controls.Add(this.linkLabel1);
             this.Registration.Controls.Add(this.btn_print);
             this.Registration.Controls.Add(this.combo_search_type);
+            this.Registration.Controls.Add(this.btn_delete);
             this.Registration.Controls.Add(this.txt_search);
             this.Registration.Controls.Add(this.panel37);
+            this.Registration.Controls.Add(this.bunifuImageButton8);
             this.Registration.Controls.Add(this.panel38);
             this.Registration.Controls.Add(this.panel35);
+            this.Registration.Controls.Add(this.lnk_exprt);
             this.Registration.Controls.Add(this.panel36);
+            this.Registration.Controls.Add(this.bunifuImageButton11);
             this.Registration.Controls.Add(this.panel33);
+            this.Registration.Controls.Add(this.bunifuImageButton14);
             this.Registration.Controls.Add(this.panel34);
+            this.Registration.Controls.Add(this.lnk_stock_updte);
             this.Registration.Controls.Add(this.panel31);
+            this.Registration.Controls.Add(this.lnk_sale_rpt);
             this.Registration.Controls.Add(this.panel32);
+            this.Registration.Controls.Add(this.lnk_sve);
             this.Registration.Controls.Add(this.panel3);
+            this.Registration.Controls.Add(this.bunifuImageButton13);
             this.Registration.Controls.Add(this.panel6);
+            this.Registration.Controls.Add(this.bunifuImageButton12);
             this.Registration.Controls.Add(this.panel7);
             this.Registration.Controls.Add(this.panel28);
             this.Registration.Controls.Add(this.panel9);
@@ -576,7 +499,7 @@
             this.Registration.Location = new System.Drawing.Point(4, 30);
             this.Registration.Name = "Registration";
             this.Registration.Padding = new System.Windows.Forms.Padding(3);
-            this.Registration.Size = new System.Drawing.Size(1243, 629);
+            this.Registration.Size = new System.Drawing.Size(1006, 641);
             this.Registration.TabIndex = 0;
             this.Registration.Text = "Main Details";
             // 
@@ -912,7 +835,7 @@
             this.label26.ForeColor = System.Drawing.Color.Black;
             this.label26.Location = new System.Drawing.Point(-58, 324);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(193, 18);
+            this.label26.Size = new System.Drawing.Size(192, 18);
             this.label26.TabIndex = 926;
             this.label26.Text = "Powered By Glcc Of IT Solutions";
             // 
@@ -934,7 +857,7 @@
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label27.Location = new System.Drawing.Point(-74, 299);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(233, 24);
+            this.label27.Size = new System.Drawing.Size(230, 24);
             this.label27.TabIndex = 925;
             this.label27.Text = "LOOP STOCK INVENTORY";
             // 
@@ -1488,7 +1411,7 @@
             this.label8.Location = new System.Drawing.Point(15, 409);
             this.label8.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 15);
+            this.label8.Size = new System.Drawing.Size(69, 15);
             this.label8.TabIndex = 977;
             this.label8.Text = "Expire Date:";
             // 
@@ -1524,7 +1447,7 @@
             this.label28.Location = new System.Drawing.Point(374, 335);
             this.label28.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(84, 15);
+            this.label28.Size = new System.Drawing.Size(83, 15);
             this.label28.TabIndex = 974;
             this.label28.Text = "Tax Percent %:";
             // 
@@ -1536,7 +1459,7 @@
             this.label31.Location = new System.Drawing.Point(15, 334);
             this.label31.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(107, 15);
+            this.label31.Size = new System.Drawing.Size(108, 15);
             this.label31.TabIndex = 973;
             this.label31.Text = "Next Shopping Dis:";
             // 
@@ -1560,7 +1483,7 @@
             this.label33.Location = new System.Drawing.Point(15, 297);
             this.label33.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(86, 15);
+            this.label33.Size = new System.Drawing.Size(84, 15);
             this.label33.TabIndex = 971;
             this.label33.Text = "Discount Type:";
             // 
@@ -1572,7 +1495,7 @@
             this.label34.Location = new System.Drawing.Point(374, 261);
             this.label34.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(98, 15);
+            this.label34.Size = new System.Drawing.Size(97, 15);
             this.label34.TabIndex = 970;
             this.label34.Text = "Preferred Vender:";
             // 
@@ -1596,7 +1519,7 @@
             this.label37.Location = new System.Drawing.Point(373, 189);
             this.label37.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(99, 15);
+            this.label37.Size = new System.Drawing.Size(97, 15);
             this.label37.TabIndex = 968;
             this.label37.Text = "Type Description:";
             // 
@@ -1658,7 +1581,7 @@
             this.label41.Location = new System.Drawing.Point(374, 152);
             this.label41.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(75, 15);
+            this.label41.Size = new System.Drawing.Size(73, 15);
             this.label41.TabIndex = 965;
             this.label41.Text = "Type of Unit:";
             // 
@@ -1708,7 +1631,7 @@
             this.lblUnit.Location = new System.Drawing.Point(374, 82);
             this.lblUnit.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(100, 15);
+            this.lblUnit.Size = new System.Drawing.Size(98, 15);
             this.lblUnit.TabIndex = 959;
             this.lblUnit.Text = "Select Store Type:";
             // 
@@ -1764,7 +1687,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1266, 763);
+            this.ClientSize = new System.Drawing.Size(1029, 711);
             this.Controls.Add(this.tcMain);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel5);
@@ -1775,19 +1698,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Item_Master";
             this.Load += new System.EventHandler(this.Item_Master_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton14)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tcMain.ResumeLayout(false);
             this.Registration.ResumeLayout(false);
             this.Registration.PerformLayout();
@@ -1864,11 +1780,6 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton13;
         private System.Windows.Forms.LinkLabel lnk_sale_rpt;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton14;
-        private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton9;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton10;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel10;

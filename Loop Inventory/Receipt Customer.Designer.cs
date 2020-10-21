@@ -28,24 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Receipt_Customer));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.minimize = new Bunifu.Framework.UI.BunifuImageButton();
+            this.close = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.u = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.txtDiscountAmount = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.add2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.add1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_print = new System.Windows.Forms.Button();
             this.panel32 = new System.Windows.Forms.Panel();
             this.combo_search_type = new System.Windows.Forms.ComboBox();
             this.panel31 = new System.Windows.Forms.Panel();
             this.txt_search = new System.Windows.Forms.TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.txtReciptIn = new System.Windows.Forms.TextBox();
             this.panel17 = new System.Windows.Forms.Panel();
             this.comboCurrencyType = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -71,7 +79,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -79,6 +86,9 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txtReciptIn = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSaveandPrint = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -93,30 +103,28 @@
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.close = new Bunifu.Framework.UI.BunifuImageButton();
-            this.minimize = new Bunifu.Framework.UI.BunifuImageButton();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.u.SuspendLayout();
+            this.panel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.add2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel32.SuspendLayout();
             this.panel31.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel15.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel41.SuspendLayout();
             this.panel39.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -128,6 +136,76 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(695, 52);
             this.panel1.TabIndex = 293;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.Controls.Add(this.minimize);
+            this.panel2.Controls.Add(this.close);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(2, 13);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(700, 27);
+            this.panel2.TabIndex = 0;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // minimize
+            // 
+            this.minimize.BackColor = System.Drawing.Color.Transparent;
+            this.minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.minimize.Image = ((System.Drawing.Image)(resources.GetObject("minimize.Image")));
+            this.minimize.ImageActive = null;
+            this.minimize.Location = new System.Drawing.Point(651, 3);
+            this.minimize.Name = "minimize";
+            this.minimize.Size = new System.Drawing.Size(22, 22);
+            this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.minimize.TabIndex = 226;
+            this.minimize.TabStop = false;
+            this.minimize.Zoom = 10;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
+            // 
+            // close
+            // 
+            this.close.BackColor = System.Drawing.Color.Transparent;
+            this.close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
+            this.close.ImageActive = null;
+            this.close.Location = new System.Drawing.Point(670, 3);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(22, 22);
+            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.close.TabIndex = 225;
+            this.close.TabStop = false;
+            this.close.Zoom = 10;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox1.TabIndex = 286;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(275, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 23);
+            this.label1.TabIndex = 146;
+            this.label1.Text = "Receipt Customer";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel4
             // 
@@ -160,11 +238,14 @@
             // 
             this.u.BackColor = System.Drawing.Color.WhiteSmoke;
             this.u.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.u.Controls.Add(this.panel21);
+            this.u.Controls.Add(this.label10);
+            this.u.Controls.Add(this.add2);
+            this.u.Controls.Add(this.add1);
             this.u.Controls.Add(this.dataGridView1);
             this.u.Controls.Add(this.btn_print);
             this.u.Controls.Add(this.panel32);
             this.u.Controls.Add(this.panel31);
-            this.u.Controls.Add(this.panel8);
             this.u.Controls.Add(this.panel17);
             this.u.Controls.Add(this.panel6);
             this.u.Controls.Add(this.panel9);
@@ -185,7 +266,6 @@
             this.u.Controls.Add(this.label5);
             this.u.Controls.Add(this.label4);
             this.u.Controls.Add(this.label7);
-            this.u.Controls.Add(this.label2);
             this.u.Controls.Add(this.label6);
             this.u.Controls.Add(this.panel11);
             this.u.Controls.Add(this.panel14);
@@ -199,22 +279,82 @@
             this.u.Size = new System.Drawing.Size(689, 619);
             this.u.TabIndex = 918;
             // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel21.Controls.Add(this.txtDiscountAmount);
+            this.panel21.Location = new System.Drawing.Point(130, 245);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(191, 29);
+            this.panel21.TabIndex = 1052;
+            // 
+            // txtDiscountAmount
+            // 
+            this.txtDiscountAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtDiscountAmount.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtDiscountAmount.ForeColor = System.Drawing.Color.Black;
+            this.txtDiscountAmount.Location = new System.Drawing.Point(2, 2);
+            this.txtDiscountAmount.Name = "txtDiscountAmount";
+            this.txtDiscountAmount.Size = new System.Drawing.Size(187, 25);
+            this.txtDiscountAmount.TabIndex = 5;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(14, 250);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(116, 18);
+            this.label10.TabIndex = 1051;
+            this.label10.Text = "Discount Amount:";
+            // 
+            // add2
+            // 
+            this.add2.BackColor = System.Drawing.Color.DimGray;
+            this.add2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add2.Image = ((System.Drawing.Image)(resources.GetObject("add2.Image")));
+            this.add2.ImageActive = null;
+            this.add2.Location = new System.Drawing.Point(301, 293);
+            this.add2.Name = "add2";
+            this.add2.Size = new System.Drawing.Size(20, 23);
+            this.add2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add2.TabIndex = 1059;
+            this.add2.TabStop = false;
+            this.add2.Zoom = 10;
+            this.add2.Click += new System.EventHandler(this.add2_Click);
+            // 
+            // add1
+            // 
+            this.add1.BackColor = System.Drawing.Color.DimGray;
+            this.add1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add1.Image = ((System.Drawing.Image)(resources.GetObject("add1.Image")));
+            this.add1.ImageActive = null;
+            this.add1.Location = new System.Drawing.Point(301, 204);
+            this.add1.Name = "add1";
+            this.add1.Size = new System.Drawing.Size(20, 23);
+            this.add1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add1.TabIndex = 1058;
+            this.add1.TabStop = false;
+            this.add1.Zoom = 10;
+            this.add1.Click += new System.EventHandler(this.add1_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.OldLace;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.OldLace;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeight = 24;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView1.EnableHeadersVisualStyles = false;
@@ -224,21 +364,21 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidth = 25;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 18;
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
@@ -301,32 +441,13 @@
             this.txt_search.Size = new System.Drawing.Size(164, 25);
             this.txt_search.TabIndex = 1;
             // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel8.Controls.Add(this.txtReciptIn);
-            this.panel8.Location = new System.Drawing.Point(130, 292);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(191, 29);
-            this.panel8.TabIndex = 1052;
-            // 
-            // txtReciptIn
-            // 
-            this.txtReciptIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtReciptIn.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtReciptIn.ForeColor = System.Drawing.Color.Black;
-            this.txtReciptIn.Location = new System.Drawing.Point(2, 2);
-            this.txtReciptIn.Name = "txtReciptIn";
-            this.txtReciptIn.Size = new System.Drawing.Size(187, 25);
-            this.txtReciptIn.TabIndex = 5;
-            // 
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Gainsboro;
             this.panel17.Controls.Add(this.comboCurrencyType);
-            this.panel17.Location = new System.Drawing.Point(130, 246);
+            this.panel17.Location = new System.Drawing.Point(130, 288);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(191, 29);
+            this.panel17.Size = new System.Drawing.Size(169, 29);
             this.panel17.TabIndex = 1051;
             // 
             // comboCurrencyType
@@ -347,7 +468,7 @@
             this.comboCurrencyType.Location = new System.Drawing.Point(2, 2);
             this.comboCurrencyType.MaxDropDownItems = 50;
             this.comboCurrencyType.Name = "comboCurrencyType";
-            this.comboCurrencyType.Size = new System.Drawing.Size(187, 25);
+            this.comboCurrencyType.Size = new System.Drawing.Size(165, 25);
             this.comboCurrencyType.TabIndex = 572;
             this.comboCurrencyType.Text = "--- Currency Type---";
             // 
@@ -357,7 +478,7 @@
             this.panel6.Controls.Add(this.comboDiscounttype);
             this.panel6.Location = new System.Drawing.Point(130, 200);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(191, 29);
+            this.panel6.Size = new System.Drawing.Size(169, 29);
             this.panel6.TabIndex = 1050;
             // 
             // comboDiscounttype
@@ -378,7 +499,7 @@
             this.comboDiscounttype.Location = new System.Drawing.Point(2, 2);
             this.comboDiscounttype.MaxDropDownItems = 50;
             this.comboDiscounttype.Name = "comboDiscounttype";
-            this.comboDiscounttype.Size = new System.Drawing.Size(187, 25);
+            this.comboDiscounttype.Size = new System.Drawing.Size(165, 25);
             this.comboDiscounttype.TabIndex = 572;
             this.comboDiscounttype.Text = "--- Discount Type---";
             // 
@@ -539,7 +660,7 @@
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label24.Location = new System.Drawing.Point(347, 63);
+            this.label24.Location = new System.Drawing.Point(347, 98);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(101, 36);
             this.label24.TabIndex = 984;
@@ -550,11 +671,11 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(12, 251);
+            this.label9.Location = new System.Drawing.Point(12, 293);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 18);
+            this.label9.Size = new System.Drawing.Size(116, 18);
             this.label9.TabIndex = 968;
-            this.label9.Text = "Currency Type:";
+            this.label9.Text = "Discount Amount:";
             // 
             // label8
             // 
@@ -599,17 +720,6 @@
             this.label7.Size = new System.Drawing.Size(99, 18);
             this.label7.TabIndex = 966;
             this.label7.Text = "Discount Type:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(12, 298);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 18);
-            this.label2.TabIndex = 960;
-            this.label2.Text = "Receipt In:";
             // 
             // label6
             // 
@@ -671,6 +781,8 @@
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.Transparent;
+            this.panel15.Controls.Add(this.panel8);
+            this.panel15.Controls.Add(this.label2);
             this.panel15.Controls.Add(this.btnDelete);
             this.panel15.Controls.Add(this.btnSaveandPrint);
             this.panel15.Controls.Add(this.btnSave);
@@ -685,6 +797,36 @@
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(348, 280);
             this.panel15.TabIndex = 1003;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel8.Controls.Add(this.txtReciptIn);
+            this.panel8.Location = new System.Drawing.Point(133, 35);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(191, 29);
+            this.panel8.TabIndex = 1057;
+            // 
+            // txtReciptIn
+            // 
+            this.txtReciptIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtReciptIn.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtReciptIn.ForeColor = System.Drawing.Color.Black;
+            this.txtReciptIn.Location = new System.Drawing.Point(2, 2);
+            this.txtReciptIn.Name = "txtReciptIn";
+            this.txtReciptIn.Size = new System.Drawing.Size(187, 25);
+            this.txtReciptIn.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(15, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 18);
+            this.label2.TabIndex = 1056;
+            this.label2.Text = "Receipt In:";
             // 
             // btnDelete
             // 
@@ -781,9 +923,9 @@
             this.panel39.BackColor = System.Drawing.Color.Gainsboro;
             this.panel39.Controls.Add(this.txtTotalAmountafterdis);
             this.panel39.Controls.Add(this.txtID);
-            this.panel39.Location = new System.Drawing.Point(133, 40);
+            this.panel39.Location = new System.Drawing.Point(133, 81);
             this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(191, 80);
+            this.panel39.Size = new System.Drawing.Size(191, 29);
             this.panel39.TabIndex = 1050;
             // 
             // txtTotalAmountafterdis
@@ -794,7 +936,7 @@
             this.txtTotalAmountafterdis.Location = new System.Drawing.Point(2, 2);
             this.txtTotalAmountafterdis.Multiline = true;
             this.txtTotalAmountafterdis.Name = "txtTotalAmountafterdis";
-            this.txtTotalAmountafterdis.Size = new System.Drawing.Size(187, 76);
+            this.txtTotalAmountafterdis.Size = new System.Drawing.Size(187, 25);
             this.txtTotalAmountafterdis.TabIndex = 0;
             this.txtTotalAmountafterdis.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -845,76 +987,6 @@
             this.panel18.Size = new System.Drawing.Size(2, 280);
             this.panel18.TabIndex = 422;
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(275, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 23);
-            this.label1.TabIndex = 146;
-            this.label1.Text = "Receipt Customer";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox1.TabIndex = 286;
-            this.pictureBox1.TabStop = false;
-            // 
-            // close
-            // 
-            this.close.BackColor = System.Drawing.Color.Transparent;
-            this.close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
-            this.close.ImageActive = null;
-            this.close.Location = new System.Drawing.Point(670, 3);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(22, 22);
-            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.close.TabIndex = 225;
-            this.close.TabStop = false;
-            this.close.Zoom = 10;
-            this.close.Click += new System.EventHandler(this.close_Click);
-            // 
-            // minimize
-            // 
-            this.minimize.BackColor = System.Drawing.Color.Transparent;
-            this.minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.minimize.Image = ((System.Drawing.Image)(resources.GetObject("minimize.Image")));
-            this.minimize.ImageActive = null;
-            this.minimize.Location = new System.Drawing.Point(651, 3);
-            this.minimize.Name = "minimize";
-            this.minimize.Size = new System.Drawing.Size(22, 22);
-            this.minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.minimize.TabIndex = 226;
-            this.minimize.TabStop = false;
-            this.minimize.Zoom = 10;
-            this.minimize.Click += new System.EventHandler(this.minimize_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Navy;
-            this.panel2.Controls.Add(this.minimize);
-            this.panel2.Controls.Add(this.close);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(2, 13);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(700, 27);
-            this.panel2.TabIndex = 0;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
-            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
-            // 
             // Receipt_Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -926,18 +998,27 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Receipt_Customer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Receipt_Customer";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Receipt_Customer_KeyDown);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.minimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.u.ResumeLayout(false);
             this.u.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.add2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel32.ResumeLayout(false);
             this.panel31.ResumeLayout(false);
             this.panel31.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -947,17 +1028,15 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             this.panel41.ResumeLayout(false);
             this.panel41.PerformLayout();
             this.panel39.ResumeLayout(false);
             this.panel39.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.minimize)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -978,7 +1057,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel14;
@@ -1006,8 +1084,6 @@
         public System.Windows.Forms.ComboBox comboDiscounttype;
         private System.Windows.Forms.Panel panel17;
         public System.Windows.Forms.ComboBox comboCurrencyType;
-        private System.Windows.Forms.Panel panel8;
-        public System.Windows.Forms.TextBox txtReciptIn;
         private System.Windows.Forms.Panel panel39;
         private System.Windows.Forms.TextBox txtTotalAmountafterdis;
         public System.Windows.Forms.TextBox txtID;
@@ -1029,5 +1105,13 @@
         private Bunifu.Framework.UI.BunifuImageButton close;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuImageButton add2;
+        private Bunifu.Framework.UI.BunifuImageButton add1;
+        private System.Windows.Forms.Panel panel8;
+        public System.Windows.Forms.TextBox txtReciptIn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Label label10;
+        public System.Windows.Forms.TextBox txtDiscountAmount;
     }
 }

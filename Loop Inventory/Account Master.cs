@@ -12,6 +12,8 @@ namespace Loop_Inventory
 {
     public partial class Account_Master : Form
     {
+        bool drag = false;
+        Point start_point = new Point(0, 0);
         public Account_Master()
         {
             InitializeComponent();
@@ -71,6 +73,9 @@ namespace Loop_Inventory
         private void Account_Master_Load(object sender, EventArgs e)
         {
             refreshGrid();
+
+            this.ActiveControl = cmbAccounttype;
+            cmbAccounttype.Focus();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -78,7 +83,8 @@ namespace Loop_Inventory
             Inventory_DBEntities db = new Inventory_DBEntities();
             tbl_AccountMaster tb = new tbl_AccountMaster();
             tb.AccountNumber = txtAccountNo.Text;
-            tb.Date = dtpTranactionDate.Value;
+            DateTime dttransactiondate = DateTime.Parse(dtpTranactionDate.Value.ToString());
+            tb.Date = dttransactiondate;
             tb.Accounttype = cmbAccounttype.Text;
             tb.AccountName = txtAccountName.Text;
             tb.SubAccountof = txtSubAccount.Text;
@@ -101,7 +107,8 @@ namespace Loop_Inventory
             decimal idd = decimal.Parse(txtID.Text.ToString());
             var tb = db.tbl_AccountMaster.Where(x => x.Id == idd).FirstOrDefault();
             tb.AccountNumber = txtAccountNo.Text;
-            tb.Date = dtpTranactionDate.Value;
+            DateTime dttransactiondate = DateTime.Parse(dtpTranactionDate.Value.ToString());
+            tb.Date = dttransactiondate;
             tb.Accounttype = cmbAccounttype.Text;
             tb.AccountName = txtAccountName.Text;
             tb.SubAccountof = txtSubAccount.Text;
@@ -206,6 +213,29 @@ namespace Loop_Inventory
             {
 
             }
+        }
+
+        private void panel46_MouseDown(object sender, MouseEventArgs e)
+        {
+            drag = true;
+            start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel46_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (drag)
+            {
+
+
+                Point p = PointToScreen(e.Location);
+                this.Location = new Point(p.X - start_point.X, p.Y - start_point.Y);
+
+            }
+        }
+
+        private void panel46_MouseUp(object sender, MouseEventArgs e)
+        {
+            drag = false;
         }
     }
 }

@@ -1,7 +1,9 @@
-﻿namespace Loop_Inventory {
-    
-    
-    public partial class Inventory_DBDataSet {
+﻿namespace Loop_Inventory
+{
+
+
+    public partial class Inventory_DBDataSet
+    {
     }
 }
 

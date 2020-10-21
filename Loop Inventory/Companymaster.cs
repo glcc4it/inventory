@@ -15,6 +15,7 @@ namespace Loop_Inventory
 {
     public partial class Companymaster : Form
     {
+        private string st1;
         bool drag = false;
         Point start_point = new Point(0, 0);
 
@@ -41,10 +42,10 @@ namespace Loop_Inventory
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_bus_name.Text))
+            if (string.IsNullOrEmpty(txt_Company_name.Text))
             {
                 MessageBox.Show("Please Enter Company Name", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_bus_name.Focus();
+                txt_Company_name.Focus();
                 return;
             }
            
@@ -65,37 +66,47 @@ namespace Loop_Inventory
                     }
                     return;
                 }
+
+
+                if (chkActive.Checked == true)
+                    st1 = "Yes";
+                else
+                    st1 = "No";
                 ModCommonClasses.con = new SqlConnection(ModCS.cs);
                 ModCommonClasses.con.Open();
 
-                string cb = "insert into tbl_company(Businessname, Ntnno, Bustype, Addres, City,  Email, Phone, Mobile, Website, Accountname, Branchname, Accountno, Image) VALUES (@d1,@d2,@d3,@d4,@d5,@d6,@d7,@d8,@d9,@d10,@d11,@d12,@d13)";
+                string cb = "insert into tbl_company(CompanyName, Mailingname, Startwork, Accountyear, Addressline1,  Addressline2, Addressline3, Contact, Email, Website, Vatno, Capitalaccount, Basecurrencey, Currencycode, Footernotes, Image) VALUES (@d1,@d2,@d3,@d4,@d5,@d6,@d7,@d8,@d9,@d10,@d11,@d12,@d13,@d14,@d15,@d16)";
                 ModCommonClasses.cmd = new SqlCommand(cb);
                 ModCommonClasses.cmd.Connection = ModCommonClasses.con;
-                ModCommonClasses.cmd.Parameters.AddWithValue("@d1", txt_bus_name.Text);
-                ModCommonClasses.cmd.Parameters.AddWithValue("@d2", txt_ntn.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d1", txt_Company_name.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d2", txt_MailingName.Text);
                 ModCommonClasses.cmd.Parameters.AddWithValue("@d3", dateTimePicker1.Text);
                 ModCommonClasses.cmd.Parameters.AddWithValue("@d4", dateTimePicker2.Text);
-                ModCommonClasses.cmd.Parameters.AddWithValue("@d5", txt_city.Text);
-                ModCommonClasses.cmd.Parameters.AddWithValue("@d6", txt_email.Text);
-                ModCommonClasses.cmd.Parameters.AddWithValue("@d7", txt_phone.Text);
-                ModCommonClasses.cmd.Parameters.AddWithValue("@d8", txt_mob.Text);
-                ModCommonClasses.cmd.Parameters.AddWithValue("@d9", txt_website.Text);
-                ModCommonClasses.cmd.Parameters.AddWithValue("@d10", txt_accountname.Text);
-                ModCommonClasses.cmd.Parameters.AddWithValue("@d11", txt_branchname.Text);
-               
-                
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d5", txt_Address.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d6", txt_Address2.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d7", txt_Address3.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d8", txt_Contactno.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d9", txt_Email.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d10", txt_Website.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d11", txt_VatNumber.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d12", st1);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d13", Combo_Currency.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d14", Txt_CurrencyCode.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d15", Txt_notes.Text);
+
+
                 MemoryStream ms = new MemoryStream();
                 Bitmap bmpImage = new Bitmap(pictureBox3.Image);
                 bmpImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                 byte[] data = ms.GetBuffer();
-                SqlParameter p = new SqlParameter("@d13", SqlDbType.Image);
+                SqlParameter p = new SqlParameter("@d16", SqlDbType.Image);
                 p.Value = data;
                 ModCommonClasses.cmd.Parameters.Add(p);
                 ModCommonClasses.cmd.ExecuteNonQuery();
                 ModCommonClasses.con.Close();
-                string st = "added the company '" + txt_bus_name.Text + "' info";
+                string st = "Added the Company '" + txt_Company_name.Text + "' info";
               
-                MessageBox.Show("Successfully saved", "Company Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Successfully Saved", "Company Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnSave.Enabled = false;
                 btnUpdate.Enabled = true;
                 btnDelete.Enabled = true;
@@ -131,26 +142,35 @@ namespace Loop_Inventory
         //Clear Data 
         private void ClearData()
         {
-            txt_bus_name.Text = "";
-            txt_ntn.Text = "";
+            txt_Company_name.Text = "";
+            txt_MailingName.Text = "";
             dateTimePicker1.Text = "";
             dateTimePicker2.Text = "";
-            txt_city.Text = "";
-            txt_email.Text = "";
+            txt_Address.Text = "";
+            txt_Address2.Text = "";
 
-            txt_phone.Text = "";
-            txt_mob.Text = "";
-            txt_website.Text = "";
+            txt_Address3.Text = "";
+            txt_Contactno.Text = "";
+            txt_Email.Text = "";
 
 
-            txt_accountname.Text = "";
-            txt_branchname.Text = "";
-            
+            txt_Website.Text = "";
+            txt_VatNumber.Text = "";
+
+            Combo_Currency.Text = "--- Select Currency---";
+
+            Txt_CurrencyCode.Text = "";
+
+            Txt_notes.Text = "";
+
+            txt_VatNumber.Text = "";
+            chkActive.Checked = false;
+
             pictureBox3.Image = null;
 
 
 
-            txt_bus_name.Focus();
+            txt_Company_name.Focus();
            
            
         }
@@ -178,7 +198,9 @@ namespace Loop_Inventory
 
         private void Companymaster_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'inventory_DBDataSet.tbl_company' table. You can move, or remove it, as needed.
+            this.tbl_companyTableAdapter.Fill(this.inventory_DBDataSet.tbl_company);
+
 
             DisplayData();
             btnUpdate.Enabled = false;
@@ -186,8 +208,8 @@ namespace Loop_Inventory
 
 
 
-            this.ActiveControl = txt_bus_name;
-            txt_bus_name.Focus();
+            this.ActiveControl = txt_Company_name;
+            txt_Company_name.Focus();
 
 
 
@@ -195,10 +217,7 @@ namespace Loop_Inventory
 
         }
 
-        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            
-        }
+       
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -253,21 +272,26 @@ namespace Loop_Inventory
                     DataGridViewRow dr = dataGridView1.SelectedRows[0];
 
                     
-                    txt_bus_name.Text = dr.Cells[1].Value.ToString();
-                    txt_ntn.Text = dr.Cells[2].Value.ToString();
+                    txt_Company_name.Text = dr.Cells[1].Value.ToString();
+                    txt_MailingName.Text = dr.Cells[2].Value.ToString();
                     dateTimePicker1.Text = dr.Cells[3].Value.ToString();
                     dateTimePicker1.Text = dr.Cells[4].Value.ToString();
-                    txt_city.Text = dr.Cells[5].Value.ToString();
-                    txt_email.Text = dr.Cells[6].Value.ToString();
-                    txt_phone.Text = dr.Cells[7].Value.ToString();
-                    txt_mob.Text = dr.Cells[8].Value.ToString();
-                    txt_website.Text = dr.Cells[9].Value.ToString();
-                    txt_accountname.Text = dr.Cells[10].Value.ToString();
-                    txt_branchname.Text = dr.Cells[11].Value.ToString();
+                    txt_Address.Text = dr.Cells[5].Value.ToString();
+                    txt_Address2.Text = dr.Cells[6].Value.ToString();
+                    txt_Address3.Text = dr.Cells[7].Value.ToString();
+                    txt_Contactno.Text = dr.Cells[8].Value.ToString();
+                    txt_Email.Text = dr.Cells[9].Value.ToString();
+                    txt_Website.Text = dr.Cells[10].Value.ToString();
+                    txt_VatNumber.Text = dr.Cells[11].Value.ToString();
                     
+                    Combo_Currency.Text = dr.Cells[13].Value.ToString();
+                    Txt_CurrencyCode.Text = dr.Cells[14].Value.ToString();
+                    Txt_notes.Text = dr.Cells[15].Value.ToString();
 
 
-                    byte[] data = (byte[])dr.Cells[13].Value;
+
+
+                    byte[] data = (byte[])dr.Cells[16].Value;
                     MemoryStream ms = new MemoryStream(data);
                     this.pictureBox3.Image = Image.FromStream(ms);
                     btnUpdate.Enabled = true;

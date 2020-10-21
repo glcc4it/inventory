@@ -262,5 +262,16 @@ namespace Loop_Inventory
         {
             drag = false;
         }
-}
+
+        private void Godownmaster_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+
+                SendKeys.Send("{TAB}");
+
+
+            }
+        }
+    }
 }

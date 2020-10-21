@@ -46,6 +46,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.u = new System.Windows.Forms.Panel();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.btn_print = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -96,7 +97,6 @@
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel46.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton7)).BeginInit();
@@ -142,6 +142,9 @@
             this.panel46.Name = "panel46";
             this.panel46.Size = new System.Drawing.Size(668, 27);
             this.panel46.TabIndex = 0;
+            this.panel46.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel46_MouseDown);
+            this.panel46.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel46_MouseMove);
+            this.panel46.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel46_MouseUp);
             // 
             // bunifuImageButton7
             // 
@@ -261,7 +264,6 @@
             // 
             this.u.BackColor = System.Drawing.Color.WhiteSmoke;
             this.u.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.u.Controls.Add(this.txtID);
             this.u.Controls.Add(this.btn_print);
             this.u.Controls.Add(this.dataGridView1);
             this.u.Controls.Add(this.panel5);
@@ -296,6 +298,17 @@
             this.u.Name = "u";
             this.u.Size = new System.Drawing.Size(662, 614);
             this.u.TabIndex = 921;
+            // 
+            // txtID
+            // 
+            this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtID.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtID.ForeColor = System.Drawing.Color.Black;
+            this.txtID.Location = new System.Drawing.Point(75, 27);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(10, 25);
+            this.txtID.TabIndex = 1034;
             // 
             // btn_print
             // 
@@ -629,7 +642,7 @@
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(11, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 18);
+            this.label3.Size = new System.Drawing.Size(96, 18);
             this.label3.TabIndex = 998;
             this.label3.Text = "Account Type:";
             // 
@@ -689,7 +702,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(11, 152);
+            this.label5.Location = new System.Drawing.Point(11, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 18);
             this.label5.TabIndex = 964;
@@ -713,7 +726,7 @@
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(11, 198);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 18);
+            this.label7.Size = new System.Drawing.Size(107, 18);
             this.label7.TabIndex = 966;
             this.label7.Text = "Sub Account Of:";
             // 
@@ -849,6 +862,7 @@
             // 
             this.panel41.BackColor = System.Drawing.Color.Gainsboro;
             this.panel41.Controls.Add(this.txtRemarks);
+            this.panel41.Controls.Add(this.txtID);
             this.panel41.Location = new System.Drawing.Point(123, 76);
             this.panel41.Name = "panel41";
             this.panel41.Size = new System.Drawing.Size(191, 74);
@@ -931,17 +945,6 @@
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(2, 216);
             this.panel18.TabIndex = 422;
-            // 
-            // txtID
-            // 
-            this.txtID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txtID.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtID.ForeColor = System.Drawing.Color.Black;
-            this.txtID.Location = new System.Drawing.Point(449, 1);
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(10, 25);
-            this.txtID.TabIndex = 1034;
             // 
             // Account_Master
             // 

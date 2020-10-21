@@ -16,7 +16,7 @@ namespace Loop_Inventory
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Supplier_Master());
+            Application.Run(new Dashboard());
         }
     }
 }

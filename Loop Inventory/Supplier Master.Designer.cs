@@ -44,7 +44,6 @@
             this.combo_search_type = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.panel33 = new System.Windows.Forms.Panel();
-            this.txtDefulttransaction = new System.Windows.Forms.TextBox();
             this.panel35 = new System.Windows.Forms.Panel();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
@@ -53,8 +52,8 @@
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.add2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.add1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtSupplierName = new System.Windows.Forms.TextBox();
@@ -82,6 +81,7 @@
             this.txtBranch = new System.Windows.Forms.TextBox();
             this.panel41 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.cmbDefultTransaction = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -124,6 +124,9 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tbl_AccountMasterTableAdapter = new Loop_Inventory.DataSet1TableAdapters.tbl_AccountMasterTableAdapter();
@@ -131,8 +134,8 @@
             this.panel45.SuspendLayout();
             this.panel31.SuspendLayout();
             this.panel32.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblAccountMasterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCurrencyBindingSource)).BeginInit();
@@ -159,6 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel45
@@ -266,17 +270,6 @@
             this.panel33.Size = new System.Drawing.Size(179, 2);
             this.panel33.TabIndex = 1032;
             // 
-            // txtDefulttransaction
-            // 
-            this.txtDefulttransaction.BackColor = System.Drawing.Color.White;
-            this.txtDefulttransaction.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtDefulttransaction.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDefulttransaction.Location = new System.Drawing.Point(2, 2);
-            this.txtDefulttransaction.Multiline = true;
-            this.txtDefulttransaction.Name = "txtDefulttransaction";
-            this.txtDefulttransaction.Size = new System.Drawing.Size(182, 41);
-            this.txtDefulttransaction.TabIndex = 0;
-            // 
             // panel35
             // 
             this.panel35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -337,7 +330,7 @@
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel26.Location = new System.Drawing.Point(453, 280);
+            this.panel26.Location = new System.Drawing.Point(451, 304);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(186, 29);
             this.panel26.TabIndex = 1023;
@@ -350,7 +343,7 @@
             this.cmbStatus.Items.AddRange(new object[] {
             "Active",
             "Deactive"});
-            this.cmbStatus.Location = new System.Drawing.Point(453, 280);
+            this.cmbStatus.Location = new System.Drawing.Point(453, 306);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(182, 25);
             this.cmbStatus.TabIndex = 3;
@@ -372,39 +365,41 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label18.Location = new System.Drawing.Point(335, 287);
+            this.label18.Location = new System.Drawing.Point(327, 310);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(92, 18);
             this.label18.TabIndex = 1022;
             this.label18.Text = "Select Status:";
             // 
-            // bunifuImageButton3
+            // add2
             // 
-            this.bunifuImageButton3.BackColor = System.Drawing.Color.DimGray;
-            this.bunifuImageButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
-            this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(300, 157);
-            this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(18, 18);
-            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton3.TabIndex = 1021;
-            this.bunifuImageButton3.TabStop = false;
-            this.bunifuImageButton3.Zoom = 10;
+            this.add2.BackColor = System.Drawing.Color.DimGray;
+            this.add2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add2.Image = ((System.Drawing.Image)(resources.GetObject("add2.Image")));
+            this.add2.ImageActive = null;
+            this.add2.Location = new System.Drawing.Point(300, 157);
+            this.add2.Name = "add2";
+            this.add2.Size = new System.Drawing.Size(18, 18);
+            this.add2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.add2.TabIndex = 1021;
+            this.add2.TabStop = false;
+            this.add2.Zoom = 10;
+            this.add2.Click += new System.EventHandler(this.add2_Click);
             // 
-            // bunifuImageButton1
+            // add1
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.DimGray;
-            this.bunifuImageButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(300, 120);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(18, 18);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton1.TabIndex = 1020;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
+            this.add1.BackColor = System.Drawing.Color.DimGray;
+            this.add1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add1.Image = ((System.Drawing.Image)(resources.GetObject("add1.Image")));
+            this.add1.ImageActive = null;
+            this.add1.Location = new System.Drawing.Point(300, 120);
+            this.add1.Name = "add1";
+            this.add1.Size = new System.Drawing.Size(18, 18);
+            this.add1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.add1.TabIndex = 1020;
+            this.add1.TabStop = false;
+            this.add1.Zoom = 10;
+            this.add1.Click += new System.EventHandler(this.add1_Click);
             // 
             // txtCustomerID
             // 
@@ -669,22 +664,39 @@
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel16.Controls.Add(this.txtDefulttransaction);
-            this.panel16.Location = new System.Drawing.Point(451, 222);
+            this.panel16.Controls.Add(this.cmbDefultTransaction);
+            this.panel16.Location = new System.Drawing.Point(451, 225);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(186, 45);
+            this.panel16.Size = new System.Drawing.Size(186, 29);
             this.panel16.TabIndex = 1007;
+            // 
+            // cmbDefultTransaction
+            // 
+            this.cmbDefultTransaction.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbDefultTransaction.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbDefultTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cmbDefultTransaction.DropDownWidth = 50;
+            this.cmbDefultTransaction.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cmbDefultTransaction.FormattingEnabled = true;
+            this.cmbDefultTransaction.Items.AddRange(new object[] {
+            "Credit",
+            "Cash"});
+            this.cmbDefultTransaction.Location = new System.Drawing.Point(2, 2);
+            this.cmbDefultTransaction.Name = "cmbDefultTransaction";
+            this.cmbDefultTransaction.Size = new System.Drawing.Size(182, 25);
+            this.cmbDefultTransaction.TabIndex = 4;
+            this.cmbDefultTransaction.Text = "--- Set Transaction---";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(335, 227);
+            this.label11.Location = new System.Drawing.Point(327, 230);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 36);
+            this.label11.Size = new System.Drawing.Size(126, 18);
             this.label11.TabIndex = 1006;
-            this.label11.Text = "Defult \r\nTransaction:";
+            this.label11.Text = "Defult Transaction:";
             // 
             // label3
             // 
@@ -972,7 +984,7 @@
             this.label30.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label30.Location = new System.Drawing.Point(8, 282);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(93, 18);
+            this.label30.Size = new System.Drawing.Size(92, 18);
             this.label30.TabIndex = 883;
             this.label30.Text = "Email Addres:";
             // 
@@ -983,7 +995,7 @@
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(8, 229);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 18);
+            this.label7.Size = new System.Drawing.Size(113, 18);
             this.label7.TabIndex = 881;
             this.label7.Text = "Current Address:";
             // 
@@ -1014,7 +1026,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(8, 50);
+            this.label1.Location = new System.Drawing.Point(5, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 18);
             this.label1.TabIndex = 874;
@@ -1058,6 +1070,9 @@
             this.panel46.Name = "panel46";
             this.panel46.Size = new System.Drawing.Size(676, 27);
             this.panel46.TabIndex = 0;
+            this.panel46.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel46_MouseDown);
+            this.panel46.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel46_MouseMove);
+            this.panel46.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel46_MouseUp);
             // 
             // minimize
             // 
@@ -1154,6 +1169,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.panel17);
+            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.cmbStatus);
             this.panel2.Controls.Add(this.btn_print);
             this.panel2.Controls.Add(this.panel31);
@@ -1168,8 +1185,8 @@
             this.panel2.Controls.Add(this.btn_save);
             this.panel2.Controls.Add(this.panel26);
             this.panel2.Controls.Add(this.label18);
-            this.panel2.Controls.Add(this.bunifuImageButton3);
-            this.panel2.Controls.Add(this.bunifuImageButton1);
+            this.panel2.Controls.Add(this.add2);
+            this.panel2.Controls.Add(this.add1);
             this.panel2.Controls.Add(this.panel16);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label3);
@@ -1205,6 +1222,43 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(663, 650);
             this.panel2.TabIndex = 459;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel17.Controls.Add(this.comboBox2);
+            this.panel17.Location = new System.Drawing.Point(451, 264);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(186, 29);
+            this.panel17.TabIndex = 1009;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.comboBox2.DropDownWidth = 50;
+            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Credit",
+            "Cash"});
+            this.comboBox2.Location = new System.Drawing.Point(2, 2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(182, 25);
+            this.comboBox2.TabIndex = 4;
+            this.comboBox2.Text = "--- Select Pricing Level---";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label12.Location = new System.Drawing.Point(327, 269);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(93, 18);
+            this.label12.TabIndex = 1008;
+            this.label12.Text = "Pricing Level:";
             // 
             // panel7
             // 
@@ -1243,17 +1297,19 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel13);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Supplier_Master";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Supplier_Master";
             this.Load += new System.EventHandler(this.Supplier_Master_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Supplier_Master_KeyDown);
             this.panel45.ResumeLayout(false);
             this.panel45.PerformLayout();
             this.panel31.ResumeLayout(false);
             this.panel31.PerformLayout();
             this.panel32.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblAccountMasterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCurrencyBindingSource)).EndInit();
@@ -1262,7 +1318,6 @@
             this.panel41.ResumeLayout(false);
             this.panel41.PerformLayout();
             this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1294,6 +1349,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel17.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1310,7 +1366,6 @@
         private System.Windows.Forms.ComboBox combo_search_type;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel33;
-        public System.Windows.Forms.TextBox txtDefulttransaction;
         private System.Windows.Forms.Panel panel35;
         internal System.Windows.Forms.Button btn_delete;
         internal System.Windows.Forms.Button btn_update;
@@ -1319,8 +1374,8 @@
         public System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label18;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuImageButton add2;
+        private Bunifu.Framework.UI.BunifuImageButton add1;
         public System.Windows.Forms.TextBox txtCustomerID;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
         public System.Windows.Forms.TextBox txtSupplierName;
@@ -1394,5 +1449,9 @@
         private DataSet1TableAdapters.tbl_AccountMasterTableAdapter tbl_AccountMasterTableAdapter;
         private System.Windows.Forms.BindingSource tblCurrencyBindingSource;
         private DataSet1TableAdapters.tbl_CurrencyTableAdapter tbl_CurrencyTableAdapter;
+        public System.Windows.Forms.ComboBox cmbDefultTransaction;
+        private System.Windows.Forms.Panel panel17;
+        public System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label12;
     }
 }

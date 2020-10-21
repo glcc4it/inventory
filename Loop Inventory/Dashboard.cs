@@ -25,31 +25,31 @@ namespace Loop_Inventory
 
 
         public void Backup()
-        {
-            try
-            {
-                DateTime dt = DateTime.Today;
-                string destdir = "Inventory_DB " + DateTime.Now.ToString("dd-MM-yyyy_h-mm-ss") + ".bak";
-                SaveFileDialog objdlg = new SaveFileDialog();
-                objdlg.FileName = destdir;
-                objdlg.ShowDialog();
-                Filename = objdlg.FileName;
-                Cursor = Cursors.WaitCursor;
-                timer2.Enabled = true;
-                ModCommonClasses.con = new SqlConnection(ModCS.cs);
-                ModCommonClasses.con.Open();
-                string cb = "backup database Inventory_DB to disk='" + Filename + "'with init,stats=10";
-                ModCommonClasses.cmd = new SqlCommand(cb);
-                ModCommonClasses.cmd.Connection = ModCommonClasses.con;
-                ModCommonClasses.cmd.ExecuteReader();
-                ModCommonClasses.con.Close();
+		{
+			try
+			{
+				DateTime dt = DateTime.Today;
+				string destdir = "Inventory_DB " + DateTime.Now.ToString("dd-MM-yyyy_h-mm-ss") + ".bak";
+				SaveFileDialog objdlg = new SaveFileDialog();
+				objdlg.FileName = destdir;
+				objdlg.ShowDialog();
+				Filename = objdlg.FileName;
+				Cursor = Cursors.WaitCursor;
+				timer2.Enabled = true;
+				ModCommonClasses.con = new SqlConnection(ModCS.cs);
+				ModCommonClasses.con.Open();
+				string cb = "backup database Inventory_DB to disk='" + Filename + "'with init,stats=10";
+				ModCommonClasses.cmd = new SqlCommand(cb);
+				ModCommonClasses.cmd.Connection = ModCommonClasses.con;
+				ModCommonClasses.cmd.ExecuteReader();
+				ModCommonClasses.con.Close();
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
 
 
         public void LogOut()
@@ -262,15 +262,16 @@ namespace Loop_Inventory
 
         private void LinkAddproduct_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Item_Master ss = new Item_Master();
+            ProductMaster ss = new ProductMaster();
             ss.Show();
-            
+            ss.lblUser.Text = lblUser.Text;
+
 
         }
 
         private void ProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Product_Creation ss = new Product_Creation();
+            ProductMaster ss = new ProductMaster();
             ss.Show();
             ss.lblUser.Text = lblUser.Text;
 
@@ -335,12 +336,7 @@ namespace Loop_Inventory
             ss.lblUser.Text = lblUser.Text;
         }
 
-        private void PurchaseReturnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Purchase_Return ss = new Purchase_Return();
-            ss.Show();
-            ss.lblUser.Text = lblUser.Text;
-        }
+       
 
         private void purchaseViewToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -356,12 +352,7 @@ namespace Loop_Inventory
             ss.lblUser.Text = lblUser.Text;
         }
 
-        private void SaleReturnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Sale_Return ss = new Sale_Return();
-            ss.Show();
-            ss.lblUser.Text = lblUser.Text;
-        }
+        
 
         private void salesViewToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -370,12 +361,7 @@ namespace Loop_Inventory
             
         }
 
-        private void ImportProductToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Import_Product ss = new Import_Product();
-            ss.Show();
-            ss.lblUser.Text = lblUser.Text;
-        }
+        
 
         private void stockProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -384,14 +370,7 @@ namespace Loop_Inventory
             ss.lblUser.Text = lblUser.Text;
         }
 
-        private void CashPaymentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            Cash_Transaction ss = new Cash_Transaction();
-            ss.Show();
-            ss.lblUser.Text = lblUser.Text;
-            
-        }
+        
 
         
 
@@ -591,6 +570,41 @@ namespace Loop_Inventory
         private void quantityMasterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Quantity_Bonus ss = new Quantity_Bonus();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+        }
+
+        private void venderPaymentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Vender_Payment ss = new Vender_Payment();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+        }
+
+        private void customerReceiptToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Receipt_Customer ss = new Receipt_Customer();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+        }
+
+        private void brandMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Brand_Master ss = new Brand_Master();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+        }
+
+        private void discountMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DiscountMaster ss = new DiscountMaster();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+        }
+
+        private void LinkCustomer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Customer_Master ss = new Customer_Master();
             ss.Show();
             ss.lblUser.Text = lblUser.Text;
         }

@@ -56,6 +56,7 @@
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.add1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtBonus = new System.Windows.Forms.TextBox();
             this.txtOfferQty = new System.Windows.Forms.TextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -88,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -270,7 +272,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(11, 127);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 18);
+            this.label5.Size = new System.Drawing.Size(88, 18);
             this.label5.TabIndex = 832;
             this.label5.Text = "Type of Unit:";
             // 
@@ -342,7 +344,7 @@
             this.label24.ForeColor = System.Drawing.Color.Transparent;
             this.label24.Location = new System.Drawing.Point(26, 5);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(157, 20);
+            this.label24.Size = new System.Drawing.Size(156, 20);
             this.label24.TabIndex = 290;
             this.label24.Text = "Quantity Bonus Form";
             this.label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -378,6 +380,7 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Transparent;
+            this.panel17.Controls.Add(this.add1);
             this.panel17.Controls.Add(this.txtBonus);
             this.panel17.Controls.Add(this.txtOfferQty);
             this.panel17.Controls.Add(this.dateTimePicker2);
@@ -403,6 +406,21 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(399, 308);
             this.panel17.TabIndex = 836;
+            // 
+            // add1
+            // 
+            this.add1.BackColor = System.Drawing.Color.DimGray;
+            this.add1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add1.Image = ((System.Drawing.Image)(resources.GetObject("add1.Image")));
+            this.add1.ImageActive = null;
+            this.add1.Location = new System.Drawing.Point(366, 126);
+            this.add1.Name = "add1";
+            this.add1.Size = new System.Drawing.Size(20, 23);
+            this.add1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add1.TabIndex = 1058;
+            this.add1.TabStop = false;
+            this.add1.Zoom = 10;
+            this.add1.Click += new System.EventHandler(this.add1_Click);
             // 
             // txtBonus
             // 
@@ -455,7 +473,7 @@
             "Salesman"});
             this.cmbUserType.Location = new System.Drawing.Point(192, 124);
             this.cmbUserType.Name = "cmbUserType";
-            this.cmbUserType.Size = new System.Drawing.Size(194, 25);
+            this.cmbUserType.Size = new System.Drawing.Size(170, 25);
             this.cmbUserType.TabIndex = 853;
             this.cmbUserType.Text = "--- Select Unit---";
             // 
@@ -496,7 +514,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(11, 198);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 18);
+            this.label10.Size = new System.Drawing.Size(57, 18);
             this.label10.TabIndex = 840;
             this.label10.Text = "To Date:";
             // 
@@ -716,7 +734,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(18, 263);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 18);
+            this.label7.Size = new System.Drawing.Size(92, 18);
             this.label7.TabIndex = 833;
             this.label7.Text = "Email Addres:";
             // 
@@ -736,10 +754,12 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Quantity_Bonus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quantity_Bonus";
             this.Load += new System.EventHandler(this.Quantity_Bonus_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Quantity_Bonus_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
@@ -747,6 +767,7 @@
             this.panel1.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
@@ -809,5 +830,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.TextBox txtOfferQty;
         private System.Windows.Forms.TextBox txtBonus;
+        private Bunifu.Framework.UI.BunifuImageButton add1;
     }
 }

@@ -72,6 +72,8 @@
             this.panel18 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.u = new System.Windows.Forms.Panel();
+            this.add2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.add1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.label12 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -111,6 +113,8 @@
             this.panel39.SuspendLayout();
             this.panel31.SuspendLayout();
             this.u.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.add2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).BeginInit();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).BeginInit();
@@ -172,7 +176,7 @@
             this.panel17.Controls.Add(this.comboCurrencyType);
             this.panel17.Location = new System.Drawing.Point(130, 246);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(191, 29);
+            this.panel17.Size = new System.Drawing.Size(167, 29);
             this.panel17.TabIndex = 1051;
             // 
             // comboCurrencyType
@@ -193,7 +197,7 @@
             this.comboCurrencyType.Location = new System.Drawing.Point(2, 2);
             this.comboCurrencyType.MaxDropDownItems = 50;
             this.comboCurrencyType.Name = "comboCurrencyType";
-            this.comboCurrencyType.Size = new System.Drawing.Size(187, 25);
+            this.comboCurrencyType.Size = new System.Drawing.Size(163, 25);
             this.comboCurrencyType.TabIndex = 572;
             this.comboCurrencyType.Text = "--- Currency Type---";
             // 
@@ -203,7 +207,7 @@
             this.panel6.Controls.Add(this.comboDiscounttype);
             this.panel6.Location = new System.Drawing.Point(130, 200);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(191, 29);
+            this.panel6.Size = new System.Drawing.Size(167, 29);
             this.panel6.TabIndex = 1050;
             // 
             // comboDiscounttype
@@ -224,7 +228,7 @@
             this.comboDiscounttype.Location = new System.Drawing.Point(2, 2);
             this.comboDiscounttype.MaxDropDownItems = 50;
             this.comboDiscounttype.Name = "comboDiscounttype";
-            this.comboDiscounttype.Size = new System.Drawing.Size(187, 25);
+            this.comboDiscounttype.Size = new System.Drawing.Size(163, 25);
             this.comboDiscounttype.TabIndex = 572;
             this.comboDiscounttype.Text = "--- Discount Type---";
             // 
@@ -583,6 +587,8 @@
             // 
             this.u.BackColor = System.Drawing.Color.WhiteSmoke;
             this.u.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.u.Controls.Add(this.add2);
+            this.u.Controls.Add(this.add1);
             this.u.Controls.Add(this.dataGridView1);
             this.u.Controls.Add(this.btn_print);
             this.u.Controls.Add(this.panel32);
@@ -621,6 +627,36 @@
             this.u.Name = "u";
             this.u.Size = new System.Drawing.Size(689, 619);
             this.u.TabIndex = 923;
+            // 
+            // add2
+            // 
+            this.add2.BackColor = System.Drawing.Color.DimGray;
+            this.add2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add2.Image = ((System.Drawing.Image)(resources.GetObject("add2.Image")));
+            this.add2.ImageActive = null;
+            this.add2.Location = new System.Drawing.Point(301, 250);
+            this.add2.Name = "add2";
+            this.add2.Size = new System.Drawing.Size(20, 23);
+            this.add2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add2.TabIndex = 1059;
+            this.add2.TabStop = false;
+            this.add2.Zoom = 10;
+            this.add2.Click += new System.EventHandler(this.add2_Click);
+            // 
+            // add1
+            // 
+            this.add1.BackColor = System.Drawing.Color.DimGray;
+            this.add1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add1.Image = ((System.Drawing.Image)(resources.GetObject("add1.Image")));
+            this.add1.ImageActive = null;
+            this.add1.Location = new System.Drawing.Point(301, 205);
+            this.add1.Name = "add1";
+            this.add1.Size = new System.Drawing.Size(20, 23);
+            this.add1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add1.TabIndex = 1058;
+            this.add1.TabStop = false;
+            this.add1.Zoom = 10;
+            this.add1.Click += new System.EventHandler(this.add1_Click);
             // 
             // label12
             // 
@@ -929,6 +965,7 @@
             this.Name = "Vender_Payment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vender_Payment";
+            this.Load += new System.EventHandler(this.Vender_Payment_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Vender_Payment_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel17.ResumeLayout(false);
@@ -952,6 +989,8 @@
             this.panel31.PerformLayout();
             this.u.ResumeLayout(false);
             this.u.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.add2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).EndInit();
             this.panel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimize)).EndInit();
@@ -1030,5 +1069,7 @@
         private Bunifu.Framework.UI.BunifuImageButton close;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private Bunifu.Framework.UI.BunifuImageButton add2;
+        private Bunifu.Framework.UI.BunifuImageButton add1;
     }
 }

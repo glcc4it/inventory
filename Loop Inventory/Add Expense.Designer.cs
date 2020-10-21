@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Expense));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel30 = new System.Windows.Forms.Panel();
             this.txtAmount = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -57,6 +57,9 @@
             this.panel18 = new System.Windows.Forms.Panel();
             this.cmbTransactionType = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.add3 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.add2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.add1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_print = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -113,6 +116,9 @@
             this.panel44.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.add3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel19.SuspendLayout();
             this.panel20.SuspendLayout();
@@ -275,9 +281,9 @@
             "Dr"});
             this.cmbExpenseType.Location = new System.Drawing.Point(2, 2);
             this.cmbExpenseType.Name = "cmbExpenseType";
-            this.cmbExpenseType.Size = new System.Drawing.Size(182, 25);
+            this.cmbExpenseType.Size = new System.Drawing.Size(160, 25);
             this.cmbExpenseType.TabIndex = 3;
-            this.cmbExpenseType.Text = "--- Select Expense Type---";
+            this.cmbExpenseType.Text = "- Select Expense Type-";
             // 
             // textBox1
             // 
@@ -308,7 +314,7 @@
             this.panel23.Controls.Add(this.textBox1);
             this.panel23.Location = new System.Drawing.Point(130, 132);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(186, 29);
+            this.panel23.Size = new System.Drawing.Size(164, 29);
             this.panel23.TabIndex = 880;
             // 
             // txtExpenseName
@@ -359,7 +365,7 @@
             this.panel44.Controls.Add(this.cmbCurrencyType);
             this.panel44.Location = new System.Drawing.Point(130, 211);
             this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(186, 29);
+            this.panel44.Size = new System.Drawing.Size(164, 29);
             this.panel44.TabIndex = 884;
             // 
             // cmbCurrencyType
@@ -375,7 +381,7 @@
             "Dr"});
             this.cmbCurrencyType.Location = new System.Drawing.Point(2, 2);
             this.cmbCurrencyType.Name = "cmbCurrencyType";
-            this.cmbCurrencyType.Size = new System.Drawing.Size(182, 25);
+            this.cmbCurrencyType.Size = new System.Drawing.Size(160, 25);
             this.cmbCurrencyType.TabIndex = 4;
             this.cmbCurrencyType.Text = "--- Select Currency---";
             // 
@@ -396,7 +402,7 @@
             this.panel18.Controls.Add(this.cmbTransactionType);
             this.panel18.Location = new System.Drawing.Point(130, 250);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(186, 29);
+            this.panel18.Size = new System.Drawing.Size(164, 29);
             this.panel18.TabIndex = 886;
             // 
             // cmbTransactionType
@@ -408,11 +414,11 @@
             this.cmbTransactionType.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmbTransactionType.FormattingEnabled = true;
             this.cmbTransactionType.Items.AddRange(new object[] {
-            "Cr",
-            "Dr"});
+            "Cash ",
+            "Credit"});
             this.cmbTransactionType.Location = new System.Drawing.Point(2, 2);
             this.cmbTransactionType.Name = "cmbTransactionType";
-            this.cmbTransactionType.Size = new System.Drawing.Size(182, 25);
+            this.cmbTransactionType.Size = new System.Drawing.Size(160, 25);
             this.cmbTransactionType.TabIndex = 4;
             this.cmbTransactionType.Text = "-Select Transaction Type-";
             // 
@@ -420,6 +426,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.add3);
+            this.panel2.Controls.Add(this.add2);
+            this.panel2.Controls.Add(this.add1);
             this.panel2.Controls.Add(this.btn_print);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.panel6);
@@ -461,6 +470,50 @@
             this.panel2.Size = new System.Drawing.Size(662, 650);
             this.panel2.TabIndex = 458;
             // 
+            // add3
+            // 
+            this.add3.BackColor = System.Drawing.Color.DimGray;
+            this.add3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add3.Image = ((System.Drawing.Image)(resources.GetObject("add3.Image")));
+            this.add3.ImageActive = null;
+            this.add3.Location = new System.Drawing.Point(298, 254);
+            this.add3.Name = "add3";
+            this.add3.Size = new System.Drawing.Size(20, 23);
+            this.add3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add3.TabIndex = 1055;
+            this.add3.TabStop = false;
+            this.add3.Zoom = 10;
+            // 
+            // add2
+            // 
+            this.add2.BackColor = System.Drawing.Color.DimGray;
+            this.add2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add2.Image = ((System.Drawing.Image)(resources.GetObject("add2.Image")));
+            this.add2.ImageActive = null;
+            this.add2.Location = new System.Drawing.Point(298, 216);
+            this.add2.Name = "add2";
+            this.add2.Size = new System.Drawing.Size(20, 23);
+            this.add2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add2.TabIndex = 1054;
+            this.add2.TabStop = false;
+            this.add2.Zoom = 10;
+            this.add2.Click += new System.EventHandler(this.add2_Click);
+            // 
+            // add1
+            // 
+            this.add1.BackColor = System.Drawing.Color.DimGray;
+            this.add1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add1.Image = ((System.Drawing.Image)(resources.GetObject("add1.Image")));
+            this.add1.ImageActive = null;
+            this.add1.Location = new System.Drawing.Point(298, 136);
+            this.add1.Name = "add1";
+            this.add1.Size = new System.Drawing.Size(20, 23);
+            this.add1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.add1.TabIndex = 1053;
+            this.add1.TabStop = false;
+            this.add1.Zoom = 10;
+            this.add1.Click += new System.EventHandler(this.add1_Click);
+            // 
             // btn_print
             // 
             this.btn_print.BackColor = System.Drawing.Color.Blue;
@@ -481,8 +534,8 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(8, 401);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Size = new System.Drawing.Size(647, 240);
             this.dataGridView1.TabIndex = 1035;
             // 
@@ -946,7 +999,7 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(2, 1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(26, 24);
             this.pictureBox2.TabIndex = 286;
@@ -1016,6 +1069,9 @@
             this.panel18.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.add3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.add1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
@@ -1115,5 +1171,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox combo_search_type;
         private System.Windows.Forms.Button btn_print;
+        private Bunifu.Framework.UI.BunifuImageButton add3;
+        private Bunifu.Framework.UI.BunifuImageButton add2;
+        private Bunifu.Framework.UI.BunifuImageButton add1;
     }
 }

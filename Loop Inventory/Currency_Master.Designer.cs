@@ -36,11 +36,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txt_cur_rate = new System.Windows.Forms.TextBox();
-            this.txt_cur_name = new System.Windows.Forms.TextBox();
+            this.combo_Currency = new System.Windows.Forms.ComboBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -65,9 +63,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.combo_status = new System.Windows.Forms.ComboBox();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.GroupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -78,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // label12
@@ -96,12 +96,12 @@
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.Control;
             this.panel6.Controls.Add(this.txt_cur_rate);
-            this.panel6.Controls.Add(this.txt_cur_name);
+            this.panel6.Controls.Add(this.combo_Currency);
             this.panel6.Controls.Add(this.lblUser);
             this.panel6.Controls.Add(this.txtID);
             this.panel6.Location = new System.Drawing.Point(6, 29);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(313, 31);
+            this.panel6.Size = new System.Drawing.Size(315, 31);
             this.panel6.TabIndex = 346;
             // 
             // txt_cur_rate
@@ -109,21 +109,283 @@
             this.txt_cur_rate.BackColor = System.Drawing.Color.White;
             this.txt_cur_rate.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
             this.txt_cur_rate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_cur_rate.Location = new System.Drawing.Point(157, 3);
+            this.txt_cur_rate.Location = new System.Drawing.Point(159, 3);
             this.txt_cur_rate.Multiline = true;
             this.txt_cur_rate.Name = "txt_cur_rate";
             this.txt_cur_rate.Size = new System.Drawing.Size(153, 25);
-            this.txt_cur_rate.TabIndex = 326;
+            this.txt_cur_rate.TabIndex = 1004;
             // 
-            // txt_cur_name
+            // combo_Currency
             // 
-            this.txt_cur_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txt_cur_name.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_cur_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_cur_name.Location = new System.Drawing.Point(3, 3);
-            this.txt_cur_name.Name = "txt_cur_name";
-            this.txt_cur_name.Size = new System.Drawing.Size(152, 25);
-            this.txt_cur_name.TabIndex = 325;
+            this.combo_Currency.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.combo_Currency.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.combo_Currency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.combo_Currency.DropDownHeight = 200;
+            this.combo_Currency.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.combo_Currency.ForeColor = System.Drawing.Color.Black;
+            this.combo_Currency.FormattingEnabled = true;
+            this.combo_Currency.IntegralHeight = false;
+            this.combo_Currency.ItemHeight = 17;
+            this.combo_Currency.Items.AddRange(new object[] {
+            "European euro",
+            "European euro",
+            "Albanian lek",
+            "Algerian dinar",
+            "United States dollar",
+            "European euro",
+            "Angolan kwanza",
+            "Afghan afghani",
+            "East Caribbean dollar",
+            "East Caribbean dollar",
+            "Argentine peso",
+            "Armenian dram",
+            "Aruban florin",
+            "Saint Helena pound",
+            "Australian dollar",
+            "European euro",
+            "Azerbaijan manat",
+            "Bahamian dollar",
+            "Bahraini dinar",
+            "Bangladeshi taka",
+            "Barbadian dollar",
+            "Belarusian ruble",
+            "European euro",
+            "Belize dollar",
+            "West African CFA franc",
+            "Bermudian dollar",
+            "Bhutanese ngultrum",
+            "Bolivian boliviano",
+            "United States dollar",
+            "Bosnia and Herzegovina convertible mark",
+            "Botswana pula",
+            "Brazilian real",
+            "United States dollar",
+            "United States dollar",
+            "Brunei dollar",
+            "Bulgarian lev",
+            "West African CFA franc",
+            "Burundi franc",
+            "Cabo Verdean escudo",
+            "Cambodian riel",
+            "Central African CFA franc",
+            "Canadian dollar",
+            "United States dollar",
+            "Cayman Islands dollar",
+            "Central African CFA franc",
+            "Central African CFA franc",
+            "New Zealand dollar",
+            "Chilean peso",
+            "Chinese Yuan Renminbi",
+            "Australian dollar",
+            "Australian dollar",
+            "Colombian peso",
+            "Comorian franc",
+            "Congolese franc",
+            "Central African CFA franc",
+            "Cook Islands dollar",
+            "Costa Rican colon",
+            "West African CFA franc",
+            "Croatian kuna",
+            "Cuban peso",
+            "Netherlands Antillean guilder",
+            "European euro",
+            "Czech koruna",
+            "Danish krone",
+            "Djiboutian franc",
+            "East Caribbean dollar",
+            "Dominican peso",
+            "United States dollar",
+            "Egyptian pound",
+            "United States dollar",
+            "Central African CFA franc",
+            "Eritrean nakfa",
+            "European euro",
+            "Swazi lilangeni",
+            "Ethiopian birr",
+            "Falkland Islands pound",
+            "Faroese krona",
+            "Fijian dollar",
+            "European euro",
+            "European euro",
+            "European euro",
+            "CFP franc",
+            "Central African CFA franc",
+            "Gambian dalasi",
+            "Georgian lari",
+            "European euro",
+            "Ghanaian cedi",
+            "Gibraltar pound",
+            "European euro",
+            "Danish krone",
+            "East Caribbean dollar",
+            "European euro",
+            "United States dollar",
+            "Guatemalan quetzal",
+            "Guernsey Pound",
+            "Guinean franc",
+            "West African CFA franc",
+            "Guyanese dollar",
+            "Haitian gourde",
+            "Honduran lempira",
+            "Hong Kong dollar",
+            "Hungarian forint",
+            "Icelandic krona",
+            "Indian rupee",
+            "Indonesian rupiah",
+            "SDR (Special Drawing Right)",
+            "Iranian rial",
+            "Iraqi dinar",
+            "European euro",
+            "Manx pound",
+            "Israeli new shekel",
+            "European euro",
+            "Jamaican dollar",
+            "Japanese yen",
+            "Jersey pound",
+            "Jordanian dinar",
+            "Kazakhstani tenge",
+            "Kenyan shilling",
+            "Australian dollar",
+            "European euro",
+            "Kuwaiti dinar",
+            "Kyrgyzstani som",
+            "Lao kip",
+            "European euro",
+            "Lebanese pound",
+            "Lesotho loti",
+            "Liberian dollar",
+            "Libyan dinar",
+            "Swiss franc",
+            "European euro",
+            "European euro",
+            "Macanese pataca",
+            "Malagasy ariary",
+            "Malawian kwacha",
+            "Malaysian ringgit",
+            "Maldivian rufiyaa",
+            "West African CFA franc",
+            "European euro",
+            "United States dollar",
+            "European euro",
+            "Mauritanian ouguiya",
+            "Mauritian rupee",
+            "European euro",
+            "Mexican peso",
+            "United States dollar",
+            "Moldovan leu",
+            "European euro",
+            "Mongolian tugrik",
+            "European euro",
+            "East Caribbean dollar",
+            "Moroccan dirham",
+            "Mozambican metical",
+            "Myanmar kyat",
+            "Namibian dollar",
+            "Australian dollar",
+            "Nepalese rupee",
+            "European euro",
+            "CFP franc",
+            "New Zealand dollar",
+            "Nicaraguan cordoba",
+            "West African CFA franc",
+            "Nigerian naira",
+            "New Zealand dollar",
+            "Australian dollar",
+            "United States dollar",
+            "North Korean won",
+            "Macedonian denar",
+            "Norwegian krone",
+            "Omani rial",
+            "Pakistani rupee",
+            "United States dollar",
+            "Israeli new shekel",
+            "United States dollar",
+            "Papua New Guinean kina",
+            "Paraguayan guarani",
+            "Peruvian sol",
+            "Philippine peso",
+            "New Zealand dollar",
+            "Polish zloty",
+            "European euro",
+            "United States dollar",
+            "Qatari riyal",
+            "European euro",
+            "Romanian leu",
+            "Russian ruble",
+            "Rwandan franc",
+            "United States dollar",
+            "European euro",
+            "Saint Helena pound",
+            "East Caribbean dollar",
+            "East Caribbean dollar",
+            "European euro",
+            "European euro",
+            "East Caribbean dollar",
+            "Samoan tala",
+            "European euro",
+            "Sao Tome and Principe dobra",
+            "Saudi Arabian riyal",
+            "West African CFA franc",
+            "Serbian dinar",
+            "Seychellois rupee",
+            "Sierra Leonean leone",
+            "Singapore dollar",
+            "United States dollar",
+            "Netherlands Antillean guilder",
+            "European euro",
+            "European euro",
+            "Solomon Islands dollar",
+            "Somali shilling",
+            "South African rand",
+            "Pound sterling",
+            "South Korean won",
+            "South Sudanese pound",
+            "European euro",
+            "Sri Lankan rupee",
+            "Sudanese pound",
+            "Surinamese dollar",
+            "Norwegian krone",
+            "Swedish krona",
+            "Swiss franc",
+            "Syrian pound",
+            "New Taiwan dollar",
+            "Tajikistani somoni",
+            "Tanzanian shilling",
+            "Thai baht",
+            "United States dollar",
+            "West African CFA franc",
+            "New Zealand dollar",
+            "Tongan pa’anga",
+            "Trinidad and Tobago dollar",
+            "Pound sterling",
+            "Tunisian dinar",
+            "Turkish lira",
+            "Turkmen manat",
+            "United States dollar",
+            "Australian dollar",
+            "Ugandan shilling",
+            "Ukrainian hryvnia",
+            "UAE dirham",
+            "Pound sterling",
+            "United States dollar",
+            "Uruguayan peso",
+            "United States dollar",
+            "Uzbekistani som",
+            "Vanuatu vatu",
+            "European euro",
+            "Venezuelan bolivar",
+            "Vietnamese dong",
+            "United States dollar",
+            "CFP franc",
+            "Yemeni rial",
+            "Zambian kwacha",
+            "United States dollar"});
+            this.combo_Currency.Location = new System.Drawing.Point(3, 3);
+            this.combo_Currency.MaxDropDownItems = 50;
+            this.combo_Currency.Name = "combo_Currency";
+            this.combo_Currency.Size = new System.Drawing.Size(154, 25);
+            this.combo_Currency.TabIndex = 1003;
+            this.combo_Currency.Text = "--- Select Currency---";
             // 
             // lblUser
             // 
@@ -142,28 +404,6 @@
             this.txtID.Size = new System.Drawing.Size(68, 20);
             this.txtID.TabIndex = 470;
             this.txtID.Visible = false;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.Navy;
-            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.label5);
-            this.panel15.Location = new System.Drawing.Point(3, 3);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(53, 25);
-            this.panel15.TabIndex = 311;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(2, 4);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 15);
-            this.label5.TabIndex = 250;
-            this.label5.Text = "Status:";
             // 
             // label4
             // 
@@ -276,6 +516,9 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(333, 27);
             this.panel12.TabIndex = 0;
+            this.panel12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel12_MouseDown);
+            this.panel12.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel12_MouseMove);
+            this.panel12.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel12_MouseUp);
             // 
             // bunifuImageButton1
             // 
@@ -364,6 +607,7 @@
             this.dgw.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.OldLace;
             this.dgw.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgw.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgw.BackgroundColor = System.Drawing.Color.White;
             this.dgw.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -493,12 +737,37 @@
             this.combo_status.FormattingEnabled = true;
             this.combo_status.IntegralHeight = false;
             this.combo_status.ItemHeight = 17;
-            this.combo_status.Location = new System.Drawing.Point(58, 3);
+            this.combo_status.Items.AddRange(new object[] {
+            "Active",
+            "Unactive"});
+            this.combo_status.Location = new System.Drawing.Point(97, 3);
             this.combo_status.MaxDropDownItems = 50;
             this.combo_status.Name = "combo_status";
-            this.combo_status.Size = new System.Drawing.Size(249, 25);
-            this.combo_status.TabIndex = 574;
+            this.combo_status.Size = new System.Drawing.Size(210, 25);
+            this.combo_status.TabIndex = 1002;
             this.combo_status.Text = "--- Select Status---";
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Navy;
+            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel15.Controls.Add(this.label5);
+            this.panel15.Location = new System.Drawing.Point(3, 3);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(92, 25);
+            this.panel15.TabIndex = 311;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(2, 4);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 15);
+            this.label5.TabIndex = 250;
+            this.label5.Text = "Select Status:";
             // 
             // label11
             // 
@@ -523,14 +792,14 @@
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Currency_Master";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Currency_Master";
             this.Load += new System.EventHandler(this.Currency_Master_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Currency_Master_KeyDown);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
             this.GroupBox2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
@@ -544,6 +813,8 @@
             this.groupBox1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -552,12 +823,8 @@
 
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox txt_cur_rate;
-        private System.Windows.Forms.TextBox txt_cur_name;
         internal System.Windows.Forms.Label lblUser;
         internal System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         internal System.Windows.Forms.GroupBox GroupBox2;
         internal System.Windows.Forms.Button btnUpdate;
@@ -582,6 +849,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox combo_Currency;
+        private System.Windows.Forms.TextBox txt_cur_rate;
         private System.Windows.Forms.ComboBox combo_status;
     }
 }

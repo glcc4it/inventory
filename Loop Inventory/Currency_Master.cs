@@ -12,6 +12,8 @@ namespace Loop_Inventory
 {
     public partial class Currency_Master : Form
     {
+        bool drag = false;
+        Point start_point = new Point(0, 0);
         public Currency_Master()
         {
             InitializeComponent();
@@ -28,6 +30,17 @@ namespace Loop_Inventory
         {
             this.Close();
         }
+
+
+        public void ClearField()
+        {
+            combo_Currency.Text = "--- Select Currency---";
+            txt_cur_rate.Text = "";
+            combo_status.Text = "--- Select Status---";
+            
+            refreshGrid();
+        }
+
         public void refreshGrid()
         {
             Inventory_DBEntities db = new Inventory_DBEntities();
@@ -42,7 +55,7 @@ namespace Loop_Inventory
         {
             Inventory_DBEntities db = new Inventory_DBEntities();
             tbl_Currency tb = new tbl_Currency();
-            tb.Name = txt_cur_name.Text;
+            tb.Name = combo_Currency.Text;
             decimal valuee = decimal.Parse(txt_cur_rate.Text.ToString());
             tb.value = valuee;
             tb.Status = combo_status.Text;
@@ -51,6 +64,9 @@ namespace Loop_Inventory
             MessageBox.Show("Successfully Added", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             refreshGrid();
+            ClearField();
+            this.ActiveControl = combo_Currency;
+            combo_Currency.Focus();
         }
 
         private void dgw_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -61,7 +77,7 @@ namespace Loop_Inventory
                 {
                     DataGridViewRow dr = dgw.SelectedRows[0];
                     txtID.Text = dr.Cells[0].Value.ToString();
-                    txt_cur_name.Text = dr.Cells[1].Value.ToString();
+                    combo_Currency.Text = dr.Cells[1].Value.ToString();
                     txt_cur_rate.Text = dr.Cells[2].Value.ToString();
                     combo_status.Text = dr.Cells[3].Value.ToString();
 
@@ -102,6 +118,9 @@ namespace Loop_Inventory
 
                 MessageBox.Show("Successfully Deleted", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refreshGrid();
+                ClearField();
+                this.ActiveControl = combo_Currency;
+                combo_Currency.Focus();
             }
             catch (Exception ex)
             {
@@ -116,7 +135,7 @@ namespace Loop_Inventory
 
             var tb = db.tbl_Currency.Where(x => x.ID == idd).FirstOrDefault();
 
-            tb.Name = txt_cur_name.Text;
+            tb.Name = combo_Currency.Text;
             decimal valuee = decimal.Parse(txt_cur_rate.Text.ToString());
             tb.value = valuee;
             tb.Status = combo_status.Text;
@@ -125,6 +144,9 @@ namespace Loop_Inventory
             MessageBox.Show("Successfully Updated", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             refreshGrid();
+            ClearField();
+            this.ActiveControl = combo_Currency;
+            combo_Currency.Focus();
         }
 
         private void Tax_Master_Load(object sender, EventArgs e)
@@ -136,6 +158,43 @@ namespace Loop_Inventory
         {
             refreshGrid();
 
+            this.ActiveControl = combo_Currency;
+            combo_Currency.Focus();
+
+        }
+
+        private void Currency_Master_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+
+                SendKeys.Send("{TAB}");
+
+
+            }
+        }
+
+        private void panel12_MouseDown(object sender, MouseEventArgs e)
+        {
+            drag = true;
+            start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel12_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (drag)
+            {
+
+
+                Point p = PointToScreen(e.Location);
+                this.Location = new Point(p.X - start_point.X, p.Y - start_point.Y);
+
+            }
+        }
+
+        private void panel12_MouseUp(object sender, MouseEventArgs e)
+        {
+            drag = false;
         }
     }
 }

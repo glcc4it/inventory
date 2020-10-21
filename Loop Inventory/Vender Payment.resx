@@ -241,6 +241,36 @@
         +i+2LXxPOtPdLgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="add2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIUAAAB3CAYAAAAtgIMuAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6
+        JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAAsQAAALEAGtI711AAAB40lE
+        QVR4Xu3SQWrkQAAEQf//N/vCWXRciIO8eORmKhviktAHqevr9Xol/2DMNsZsY8w2xmxjzDbGbGPMNsZs
+        Y8w2xmxjzDbGbGPMNsZsY8w2xmxjzDbGbGPMNsZsY8w2xmxjzDbGbGPMNsZsY8w2xmxjzDbGbGMc8ucb
+        dP8jMQ65HvvOaRRDGgUwDmkUwDikUQDjkEYBjEMaBTAOaRTAOKRRAOOQRgGMQxoFMA5pFMA4pFEA45BG
+        AYxDGgUwDmkUwDikUQDjkEYBjEMaBTAOaRTAeKDrUd7lztG9n6bv/hWMB7p+2iefRvEfGsWDGA/UKB7E
+        eKBG8SDGAzWKBzEeqFE8iPFAjeJBjAdqFA9iPFCjeBDjga6f9i53ju79NH33r2Accj3GnXPUo70b45BG
+        AYxDGgUwDmkUwDikUQDjkEYBjEMaBTAOaRTAOKRRAOOQRgGMQxoFMA5pFMA4pFEA45BGAYxDGgUwDmkU
+        wDikUQDjkEYBjEMaBTAOaRTAOKRRAOOQ67Hv0v2PxJhtjNnGmG2M2caYbYzZxphtjNnGmG2M2caYbYzZ
+        xphtjNnGmG2M2caYbYzZxphtjNnGmG2M2caYbYzZxphtjNnGmG2M2caYbYzZxphtjNnGmG2M2caYZa+v
+        v7WBxXvUK3W1AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="add1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIUAAAB3CAYAAAAtgIMuAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6
+        JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAAsQAAALEAGtI711AAAB40lE
+        QVR4Xu3SQWrkQAAEQf//N/vCWXRciIO8eORmKhviktAHqevr9Xol/2DMNsZsY8w2xmxjzDbGbGPMNsZs
+        Y8w2xmxjzDbGbGPMNsZsY8w2xmxjzDbGbGPMNsZsY8w2xmxjzDbGbGPMNsZsY8w2xmxjzDbGbGMc8ucb
+        dP8jMQ65HvvOaRRDGgUwDmkUwDikUQDjkEYBjEMaBTAOaRTAOKRRAOOQRgGMQxoFMA5pFMA4pFEA45BG
+        AYxDGgUwDmkUwDikUQDjkEYBjEMaBTAOaRTAeKDrUd7lztG9n6bv/hWMB7p+2iefRvEfGsWDGA/UKB7E
+        eKBG8SDGAzWKBzEeqFE8iPFAjeJBjAdqFA9iPFCjeBDjga6f9i53ju79NH33r2Accj3GnXPUo70b45BG
+        AYxDGgUwDmkUwDikUQDjkEYBjEMaBTAOaRTAOKRRAOOQRgGMQxoFMA5pFMA4pFEA45BGAYxDGgUwDmkU
+        wDikUQDjkEYBjEMaBTAOaRTAOKRRAOOQ67Hv0v2PxJhtjNnGmG2M2caYbYzZxphtjNnGmG2M2caYbYzZ
+        xphtjNnGmG2M2caYbYzZxphtjNnGmG2M2caYbYzZxphtjNnGmG2M2caYbYzZxphtjNnGmG2M2caYZa+v
+        v7WBxXvUK3W1AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAABGdBTUEAALGPC/xhBQAALYlJREFUeF7t

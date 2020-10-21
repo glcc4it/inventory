@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -26,6 +27,8 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -64,11 +67,11 @@
       <HintPath>..\packages\DGV Printer.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
@@ -104,6 +107,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -155,17 +159,17 @@
     <Compile Include="Add Wallets.Designer.cs">
       <DependentUpon>Add Wallets.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddRevenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRevenue.Designer.cs">
+      <DependentUpon>AddRevenue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Brand Master.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Brand Master.Designer.cs">
       <DependentUpon>Brand Master.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cash Transaction.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cash Transaction.Designer.cs">
-      <DependentUpon>Cash Transaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Cashbook.cs">
       <SubType>Form</SubType>
@@ -214,6 +218,18 @@
     <Compile Include="Daybook.Designer.cs">
       <DependentUpon>Daybook.cs</DependentUpon>
     </Compile>
+    <Compile Include="DiscountMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiscountMaster.Designer.cs">
+      <DependentUpon>DiscountMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailSetting.Designer.cs">
+      <DependentUpon>EmailSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Encryption.cs" />
     <Compile Include="Expense Master.cs">
       <SubType>Form</SubType>
@@ -226,18 +242,6 @@
     </Compile>
     <Compile Include="frmCustomerRecord.Designer.cs">
       <DependentUpon>frmCustomerRecord.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCustomerRecord1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCustomerRecord1.Designer.cs">
-      <DependentUpon>frmCustomerRecord1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCustomerRecord2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCustomerRecord2.Designer.cs">
-      <DependentUpon>frmCustomerRecord2.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -263,23 +267,23 @@
     <Compile Include="frmSupplierRecord.Designer.cs">
       <DependentUpon>frmSupplierRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSupplierRecord1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSupplierRecord1.Designer.cs">
-      <DependentUpon>frmSupplierRecord1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmSupplierRecord2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSupplierRecord2.Designer.cs">
-      <DependentUpon>frmSupplierRecord2.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmTrialBalance.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTrialBalance.Designer.cs">
       <DependentUpon>frmTrialBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralPayment.Designer.cs">
+      <DependentUpon>GeneralPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralReceipt .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralReceipt .Designer.cs">
+      <DependentUpon>GeneralReceipt .cs</DependentUpon>
     </Compile>
     <Compile Include="Godownmaster.cs">
       <SubType>Form</SubType>
@@ -287,11 +291,17 @@
     <Compile Include="Godownmaster.Designer.cs">
       <DependentUpon>Godownmaster.cs</DependentUpon>
     </Compile>
-    <Compile Include="Import Product.cs">
+    <Compile Include="ImportCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Import Product.Designer.cs">
-      <DependentUpon>Import Product.cs</DependentUpon>
+    <Compile Include="ImportCustomer.Designer.cs">
+      <DependentUpon>ImportCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportVender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportVender.Designer.cs">
+      <DependentUpon>ImportVender.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory_DBDataSet.cs">
       <DependentUpon>Inventory_DBDataSet.xsd</DependentUpon>
@@ -337,17 +347,23 @@
     <Compile Include="Money Transfer.Designer.cs">
       <DependentUpon>Money Transfer.cs</DependentUpon>
     </Compile>
+    <Compile Include="PayTaxes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayTaxes.Designer.cs">
+      <DependentUpon>PayTaxes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pricing level.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pricing level.Designer.cs">
       <DependentUpon>Pricing level.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product Creation.cs">
+    <Compile Include="ProductMaster.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Product Creation.Designer.cs">
-      <DependentUpon>Product Creation.cs</DependentUpon>
+    <Compile Include="ProductMaster.Designer.cs">
+      <DependentUpon>ProductMaster.cs</DependentUpon>
     </Compile>
     <Compile Include="Profit and Loss.cs">
       <SubType>Form</SubType>
@@ -362,12 +378,6 @@
     </Compile>
     <Compile Include="Purchase Report.Designer.cs">
       <DependentUpon>Purchase Report.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Purchase Return.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Purchase Return.Designer.cs">
-      <DependentUpon>Purchase Return.cs</DependentUpon>
     </Compile>
     <Compile Include="Purchaseproduct.cs">
       <SubType>Form</SubType>
@@ -393,17 +403,23 @@
     <Compile Include="Receipt Customer.Designer.cs">
       <DependentUpon>Receipt Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sale Return.cs">
+    <Compile Include="Reminder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sale Return.Designer.cs">
-      <DependentUpon>Sale Return.cs</DependentUpon>
+    <Compile Include="Reminder.Designer.cs">
+      <DependentUpon>Reminder.cs</DependentUpon>
     </Compile>
     <Compile Include="Sale view.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sale view.Designer.cs">
       <DependentUpon>Sale view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleForm.Designer.cs">
+      <DependentUpon>SaleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Saleproduct.cs">
       <SubType>Form</SubType>
@@ -507,6 +523,12 @@
     <Compile Include="tbl_Tax.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="TerminalSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TerminalSetting.Designer.cs">
+      <DependentUpon>TerminalSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction Record.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -567,11 +589,11 @@
     <EmbeddedResource Include="Add Wallets.resx">
       <DependentUpon>Add Wallets.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddRevenue.resx">
+      <DependentUpon>AddRevenue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Brand Master.resx">
       <DependentUpon>Brand Master.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cash Transaction.resx">
-      <DependentUpon>Cash Transaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cashbook.resx">
       <DependentUpon>Cashbook.cs</DependentUpon>
@@ -594,17 +616,17 @@
     <EmbeddedResource Include="Daybook.resx">
       <DependentUpon>Daybook.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DiscountMaster.resx">
+      <DependentUpon>DiscountMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailSetting.resx">
+      <DependentUpon>EmailSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Expense Master.resx">
       <DependentUpon>Expense Master.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCustomerRecord.resx">
       <DependentUpon>frmCustomerRecord.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomerRecord1.resx">
-      <DependentUpon>frmCustomerRecord1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCustomerRecord2.resx">
-      <DependentUpon>frmCustomerRecord2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -618,20 +640,23 @@
     <EmbeddedResource Include="frmSupplierRecord.resx">
       <DependentUpon>frmSupplierRecord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSupplierRecord1.resx">
-      <DependentUpon>frmSupplierRecord1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSupplierRecord2.resx">
-      <DependentUpon>frmSupplierRecord2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmTrialBalance.resx">
       <DependentUpon>frmTrialBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralPayment.resx">
+      <DependentUpon>GeneralPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralReceipt .resx">
+      <DependentUpon>GeneralReceipt .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Godownmaster.resx">
       <DependentUpon>Godownmaster.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Import Product.resx">
-      <DependentUpon>Import Product.cs</DependentUpon>
+    <EmbeddedResource Include="ImportCustomer.resx">
+      <DependentUpon>ImportCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportVender.resx">
+      <DependentUpon>ImportVender.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Item Master.resx">
       <DependentUpon>Item Master.cs</DependentUpon>
@@ -642,11 +667,14 @@
     <EmbeddedResource Include="Money Transfer.resx">
       <DependentUpon>Money Transfer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PayTaxes.resx">
+      <DependentUpon>PayTaxes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pricing level.resx">
       <DependentUpon>Pricing level.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Product Creation.resx">
-      <DependentUpon>Product Creation.cs</DependentUpon>
+    <EmbeddedResource Include="ProductMaster.resx">
+      <DependentUpon>ProductMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profit and Loss.resx">
       <DependentUpon>Profit and Loss.cs</DependentUpon>
@@ -664,9 +692,6 @@
     <EmbeddedResource Include="Purchase Report.resx">
       <DependentUpon>Purchase Report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Purchase Return.resx">
-      <DependentUpon>Purchase Return.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Purchaseproduct.resx">
       <DependentUpon>Purchaseproduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -679,17 +704,20 @@
     <EmbeddedResource Include="Receipt Customer.resx">
       <DependentUpon>Receipt Customer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reminder.resx">
+      <DependentUpon>Reminder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Report4.rdlc" />
     <EmbeddedResource Include="Report5.rdlc" />
     <EmbeddedResource Include="Report6.rdlc" />
-    <EmbeddedResource Include="Sale Return.resx">
-      <DependentUpon>Sale Return.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Sale view.resx">
       <DependentUpon>Sale view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleForm.resx">
+      <DependentUpon>SaleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Saleproduct.resx">
       <DependentUpon>Saleproduct.cs</DependentUpon>
@@ -729,6 +757,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tax Master.resx">
       <DependentUpon>Tax Master.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TerminalSetting.resx">
+      <DependentUpon>TerminalSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction Record.resx">
       <DependentUpon>Transaction Record.cs</DependentUpon>
@@ -829,6 +860,14 @@
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

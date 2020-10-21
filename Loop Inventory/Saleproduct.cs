@@ -149,7 +149,7 @@ namespace Loop_Inventory
 
             combo_bil_type.SelectedIndex = 0;
 
-            combo_salesman.SelectedIndex = 0;
+            
 
             autonumber();
 

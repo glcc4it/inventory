@@ -164,5 +164,23 @@ namespace Loop_Inventory
             }
 
         }
+
+        private void Quantity_Bonus_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+
+                SendKeys.Send("{TAB}");
+
+
+            }
+        }
+
+        private void add1_Click(object sender, EventArgs e)
+        {
+            Unitmaster ss = new Unitmaster();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+        }
     }
 }
