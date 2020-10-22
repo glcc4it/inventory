@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer_Master));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel46 = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
@@ -85,10 +85,6 @@
             this.panel21 = new System.Windows.Forms.Panel();
             this.txtcNextShopping = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.cmbPricinglevel = new System.Windows.Forms.ComboBox();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.txtcDirectDiscount = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -145,8 +141,6 @@
             this.panel25.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel21.SuspendLayout();
-            this.panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.panel17.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -381,7 +375,7 @@
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(8, 194);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 18);
+            this.label7.Size = new System.Drawing.Size(114, 18);
             this.label7.TabIndex = 881;
             this.label7.Text = "Current Address:";
             // 
@@ -392,7 +386,7 @@
             this.label30.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label30.Location = new System.Drawing.Point(8, 246);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(92, 18);
+            this.label30.Size = new System.Drawing.Size(93, 18);
             this.label30.TabIndex = 883;
             this.label30.Text = "Email Addres:";
             // 
@@ -422,18 +416,18 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.OldLace;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.OldLace;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeight = 24;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView1.EnableHeadersVisualStyles = false;
@@ -443,27 +437,28 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Orange;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidth = 25;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 18;
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(650, 164);
             this.dataGridView1.TabIndex = 912;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // label10
             // 
@@ -472,7 +467,7 @@
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label10.Location = new System.Drawing.Point(8, 122);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 18);
+            this.label10.Size = new System.Drawing.Size(104, 18);
             this.label10.TabIndex = 915;
             this.label10.Text = "Currency Type:";
             // 
@@ -500,9 +495,6 @@
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.panel21);
             this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.panel20);
-            this.panel2.Controls.Add(this.bunifuImageButton2);
-            this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.panel17);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.panel16);
@@ -659,6 +651,7 @@
             this.btn_delete.Text = "&Delete";
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_update
             // 
@@ -674,6 +667,7 @@
             this.btn_update.Text = "&Update";
             this.btn_update.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_save
             // 
@@ -689,12 +683,13 @@
             this.btn_save.Text = "&Save";
             this.btn_save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.Color.Gainsboro;
             this.panel26.Controls.Add(this.cmbStatus);
-            this.panel26.Location = new System.Drawing.Point(451, 347);
+            this.panel26.Location = new System.Drawing.Point(453, 315);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(186, 29);
             this.panel26.TabIndex = 1023;
@@ -718,7 +713,7 @@
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label18.Location = new System.Drawing.Point(336, 352);
+            this.label18.Location = new System.Drawing.Point(338, 320);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(92, 18);
             this.label18.TabIndex = 1022;
@@ -769,7 +764,7 @@
             this.label17.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label17.Location = new System.Drawing.Point(8, 361);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(126, 18);
+            this.label17.Size = new System.Drawing.Size(127, 18);
             this.label17.TabIndex = 941;
             this.label17.Text = "Defult Transaction:";
             // 
@@ -777,7 +772,7 @@
             // 
             this.panel22.BackColor = System.Drawing.Color.Gainsboro;
             this.panel22.Controls.Add(this.txtcPaymentTermsdays);
-            this.panel22.Location = new System.Drawing.Point(451, 310);
+            this.panel22.Location = new System.Drawing.Point(453, 278);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(186, 29);
             this.panel22.TabIndex = 1016;
@@ -797,9 +792,9 @@
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(336, 315);
+            this.label15.Location = new System.Drawing.Point(338, 283);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(107, 18);
+            this.label15.Size = new System.Drawing.Size(109, 18);
             this.label15.TabIndex = 1015;
             this.label15.Text = "Pay Terms Days:";
             // 
@@ -807,7 +802,7 @@
             // 
             this.panel21.BackColor = System.Drawing.Color.Gainsboro;
             this.panel21.Controls.Add(this.txtcNextShopping);
-            this.panel21.Location = new System.Drawing.Point(451, 273);
+            this.panel21.Location = new System.Drawing.Point(453, 241);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(186, 29);
             this.panel21.TabIndex = 1014;
@@ -817,7 +812,7 @@
             this.txtcNextShopping.BackColor = System.Drawing.Color.White;
             this.txtcNextShopping.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
             this.txtcNextShopping.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtcNextShopping.Location = new System.Drawing.Point(2, 2);
+            this.txtcNextShopping.Location = new System.Drawing.Point(0, 1);
             this.txtcNextShopping.Name = "txtcNextShopping";
             this.txtcNextShopping.Size = new System.Drawing.Size(182, 25);
             this.txtcNextShopping.TabIndex = 0;
@@ -827,56 +822,11 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label14.Location = new System.Drawing.Point(336, 278);
+            this.label14.Location = new System.Drawing.Point(338, 246);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(102, 18);
             this.label14.TabIndex = 1013;
             this.label14.Text = "Next Shopping:";
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel20.Controls.Add(this.cmbPricinglevel);
-            this.panel20.Location = new System.Drawing.Point(451, 236);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(186, 29);
-            this.panel20.TabIndex = 1012;
-            // 
-            // cmbPricinglevel
-            // 
-            this.cmbPricinglevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.cmbPricinglevel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.cmbPricinglevel.FormattingEnabled = true;
-            this.cmbPricinglevel.Location = new System.Drawing.Point(2, 2);
-            this.cmbPricinglevel.Name = "cmbPricinglevel";
-            this.cmbPricinglevel.Size = new System.Drawing.Size(182, 25);
-            this.cmbPricinglevel.TabIndex = 3;
-            this.cmbPricinglevel.Text = "--- Select Pricing Level---";
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.DimGray;
-            this.bunifuImageButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(639, 242);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(18, 18);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton2.TabIndex = 1011;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(336, 241);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 18);
-            this.label13.TabIndex = 1010;
-            this.label13.Text = "Pricing Level:";
             // 
             // panel17
             // 
@@ -1343,8 +1293,6 @@
             this.panel22.PerformLayout();
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
-            this.panel20.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.panel16.ResumeLayout(false);
@@ -1449,10 +1397,6 @@
         private System.Windows.Forms.Panel panel17;
         public System.Windows.Forms.TextBox txtcDirectDiscount;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel20;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private System.Windows.Forms.Label label13;
-        public System.Windows.Forms.ComboBox cmbPricinglevel;
         private System.Windows.Forms.Panel panel21;
         public System.Windows.Forms.TextBox txtcNextShopping;
         private System.Windows.Forms.Label label14;

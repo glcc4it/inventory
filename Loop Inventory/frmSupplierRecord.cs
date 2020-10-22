@@ -147,7 +147,7 @@ namespace Loop_Inventory
                 {
                     ModCommonClasses.con = new SqlConnection(ModCS.cs);
                     ModCommonClasses.con.Open();
-                    SqlDataAdapter sdf = new SqlDataAdapter("select * from CustomerLedgerBook where Name='" + txt_barcode.Text + "'", ModCommonClasses.con);
+                    SqlDataAdapter sdf = new SqlDataAdapter("select * from SupplierLedgerBook where Name='" + txt_barcode.Text + "'", ModCommonClasses.con);
                     DataTable sd = new DataTable();
                     sdf.Fill(sd);
                     dgw.DataSource = sd;

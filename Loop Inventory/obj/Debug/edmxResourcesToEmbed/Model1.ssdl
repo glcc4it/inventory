@@ -1,5 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Inventory_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerID" Type="nchar" MaxLength="10" />
+    <Property Name="Date" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="varchar" MaxLength="500" />
+    <Property Name="OpeningBalance" Type="int" />
+    <Property Name="OpeningBalanceType" Type="varchar" MaxLength="200" />
+    <Property Name="Address" Type="varchar(max)" />
+    <Property Name="EmailID" Type="varchar" MaxLength="200" />
+    <Property Name="Phoneno" Type="varchar" MaxLength="100" />
+    <Property Name="Mobileno" Type="varchar" MaxLength="50" />
+    <Property Name="CreditLimit" Type="numeric" Precision="18" Scale="3" />
+    <Property Name="AccountName" Type="varchar" MaxLength="500" />
+    <Property Name="Branch" Type="varchar" MaxLength="500" />
+    <Property Name="AccountNumber" Type="nchar" MaxLength="150" />
+    <Property Name="Remarks" Type="varchar(max)" />
+    <Property Name="defaultTransaction" Type="varchar" MaxLength="50" />
+    <Property Name="DefDiscountPercentage" Type="nvarchar" MaxLength="50" />
+    <Property Name="DirectDiscount" Type="decimal" Precision="18" Scale="3" />
+    <Property Name="NextShopping" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayTerms" Type="nvarchar" MaxLength="50" />
+    <Property Name="CurrencyType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="Supplier">
     <Key>
       <PropertyRef Name="id" />
@@ -126,6 +153,7 @@
     <Property Name="Status" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityContainer Name="Inventory_DBModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbl_AccountMaster" EntityType="Self.tbl_AccountMaster" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbl_Currency" EntityType="Self.tbl_Currency" Schema="dbo" store:Type="Tables" />

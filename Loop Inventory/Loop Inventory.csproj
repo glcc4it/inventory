@@ -201,6 +201,9 @@
     <Compile Include="Customer Master.Designer.cs">
       <DependentUpon>Customer Master.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>

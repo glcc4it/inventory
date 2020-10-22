@@ -192,7 +192,6 @@ D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\bin\Debug\ru\
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Aboutus.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Account_Master.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Brand_Master.resources
-D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Cash_Transaction.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Cashbook.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Categorymaster.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Companymaster.resources
@@ -202,31 +201,23 @@ D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loo
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Daybook.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Expense_Master.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmCustomerRecord.resources
-D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmCustomerRecord1.resources
-D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmCustomerRecord2.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmLogin.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmPurchaseRecord.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmSqlServerSetting.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmSupplierRecord.resources
-D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmSupplierRecord1.resources
-D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmSupplierRecord2.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmTrialBalance.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Godownmaster.resources
-D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Import_Product.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Item_Master.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Logs.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Money_Transfer.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Pricing_level.resources
-D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Product_Creation.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Profit_and_Loss.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Properties.Resources.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Purchase_Report.resources
-D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Purchase_Return.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Purchaseproduct.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Quantity_Bonus.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Rackmaster.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Receipt_Customer.resources
-D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Sale_Return.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Sale_view.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Saleproduct.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Salesmanmaster.resources
@@ -370,3 +361,16 @@ C:\Users\glcc4\Documents\Visual Studio 2015\Projects\Loop Inventory Github\Loop 
 C:\Users\glcc4\Documents\Visual Studio 2015\Projects\Loop Inventory Github\Loop Inventory\obj\Debug\Loop Inventory.csprojResolveAssemblyReference.cache
 C:\Users\glcc4\Documents\Visual Studio 2015\Projects\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.DiscountMaster.resources
 C:\Users\glcc4\Documents\Visual Studio 2015\Projects\Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Item_Master.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop Inventory.csprojResolveAssemblyReference.cache
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.AddRevenue.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.DiscountMaster.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.EmailSetting.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.GeneralPayment.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.GeneralReceipt.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.ImportCustomer.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.ImportVender.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.PayTaxes.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.ProductMaster.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Reminder.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.SaleForm.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.TerminalSetting.resources

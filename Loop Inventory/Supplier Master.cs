@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+ 
+using System.Data.SqlClient;
 
 namespace Loop_Inventory
 {
@@ -57,6 +59,33 @@ namespace Loop_Inventory
 
 
         }
+        public void FillOpeningBalance()
+        {
+            decimal debit = 0;
+            decimal credit = 0;
+            if(cmbOpeningBalanceType.Text=="Cr")
+            {
+                debit = 0;
+                credit = decimal.Parse(txtOpeningBalance.Text);
+            }
+            if (cmbOpeningBalanceType.Text == "Dr")
+            {
+                credit = 0;
+                debit = decimal.Parse(txtOpeningBalance.Text);
+            }
+
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+
+            string cb = "insert into SupplierLedgerBook(Date,Name,Label,Debit,Credit,Mobileno) VALUES ('" + dateTimePicker1.Text + "' ,'" + txtSupplierName.Text + "' , 'Opening Balance','"+ debit +"','"+ credit+"','"+ txtContactNo.Text+"')";
+
+            ModCommonClasses.cmd = new SqlCommand(cb);
+            ModCommonClasses.cmd.Connection = ModCommonClasses.con;
+            ModCommonClasses.cmd.ExecuteReader();
+            ModCommonClasses.con.Close();
+
+
+        }
         private void btn_save_Click(object sender, EventArgs e)
         {
             if (txtSupplierName.Text != "")
@@ -90,7 +119,11 @@ namespace Loop_Inventory
                 tb.Status = cmbStatus.Text;
                 db.Suppliers.Add(tb);
                 db.SaveChanges();
+
+                FillOpeningBalance();
+
                 MessageBox.Show("Successfully Added", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 refreshGrid();
                 ClearField();
 
@@ -134,10 +167,38 @@ namespace Loop_Inventory
                 tb.Status = cmbStatus.Text;
                 db.Suppliers.Add(tb);
                 db.SaveChanges();
+                UpdateOpeningBalance();
                 MessageBox.Show("Successfully Updated", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 refreshGrid();
                 ClearField();
             }
+
+        }
+        public void UpdateOpeningBalance()
+        {
+            decimal debit = 0;
+            decimal credit = 0;
+            if (cmbOpeningBalanceType.Text == "Cr")
+            {
+                debit = 0;
+                credit = decimal.Parse(txtOpeningBalance.Text);
+            }
+            if (cmbOpeningBalanceType.Text == "Dr")
+            {
+                credit = 0;
+                debit = decimal.Parse(txtOpeningBalance.Text);
+            }
+
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+
+            string cb = "update  CustomerLedgerBook set Date='" + dateTimePicker1.Text + "',Name='" + txtSupplierName.Text + "',Label='Opening Balance',Debit='" + debit + "',Credit='" + credit + "',Mobileno='" + txtContactNo.Text + "' where ID='" + txtCustomerID.Text + "'";
+
+            ModCommonClasses.cmd = new SqlCommand(cb);
+            ModCommonClasses.cmd.Connection = ModCommonClasses.con;
+            ModCommonClasses.cmd.ExecuteReader();
+            ModCommonClasses.con.Close();
+
 
         }
 
