@@ -374,3 +374,6 @@ D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loo
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Reminder.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.SaleForm.resources
 D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.TerminalSetting.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.Cash_Transaction.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmCustomerRecord1.resources
+D:\Work Accomplished\Designer Loop Inventory Github\Loop Inventory\obj\Debug\Loop_Inventory.frmSupplierRecord1.resources

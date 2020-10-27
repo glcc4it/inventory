@@ -69,6 +69,23 @@
           <Property Name="Notes" Type="nvarchar" MaxLength="300" />
           <Property Name="Status" Type="nvarchar" MaxLength="300" />
         </EntityType>
+        <EntityType Name="tbl_AddExpenses">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="varchar" MaxLength="50" />
+          <Property Name="InvoiceNumber" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="ExpenseType" Type="nvarchar" MaxLength="200" />
+          <Property Name="ExpensesName" Type="nvarchar" MaxLength="200" />
+          <Property Name="CurrencyType" Type="nvarchar" MaxLength="200" />
+          <Property Name="TransactionType" Type="nvarchar" MaxLength="200" />
+          <Property Name="Amount" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="200" />
+          <Property Name="PaymentMethods" Type="nvarchar" MaxLength="200" />
+          <Property Name="TaxAmount" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="TotalAmount" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
         <EntityType Name="tbl_Currency">
           <Key>
             <PropertyRef Name="ID" />
@@ -161,6 +178,7 @@
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_AccountMaster" EntityType="Self.tbl_AccountMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_AddExpenses" EntityType="Self.tbl_AddExpenses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Currency" EntityType="Self.tbl_Currency" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_godown" EntityType="Self.tbl_godown" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Tax" EntityType="Self.tbl_Tax" Schema="dbo" store:Type="Tables" />
@@ -191,6 +209,7 @@
           <EntitySet Name="Suppliers" EntityType="Inventory_DBModel.Supplier" />
           <EntitySet Name="tbl_AccountMaster" EntityType="Inventory_DBModel.tbl_AccountMaster" />
           <EntitySet Name="Customers" EntityType="Inventory_DBModel.Customer" />
+          <EntitySet Name="tbl_AddExpenses" EntityType="Inventory_DBModel.tbl_AddExpenses" />
         </EntityContainer>
         <EntityType Name="tbl_Currency">
           <Key>
@@ -334,6 +353,23 @@
           <Property Name="PayTerms" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CurrencyType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_AddExpenses">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="InvoiceNumber" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ExpenseType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ExpensesName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencyType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TransactionType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Notes" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PaymentMethods" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TaxAmount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -499,6 +535,24 @@
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_AddExpenses">
+            <EntityTypeMapping TypeName="Inventory_DBModel.tbl_AddExpenses">
+              <MappingFragment StoreEntitySet="tbl_AddExpenses">
+                <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+                <ScalarProperty Name="TaxAmount" ColumnName="TaxAmount" />
+                <ScalarProperty Name="PaymentMethods" ColumnName="PaymentMethods" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+                <ScalarProperty Name="CurrencyType" ColumnName="CurrencyType" />
+                <ScalarProperty Name="ExpensesName" ColumnName="ExpensesName" />
+                <ScalarProperty Name="ExpenseType" ColumnName="ExpenseType" />
+                <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

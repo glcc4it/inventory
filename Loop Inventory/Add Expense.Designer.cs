@@ -255,7 +255,7 @@
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(10, 137);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 18);
+            this.label5.Size = new System.Drawing.Size(97, 18);
             this.label5.TabIndex = 878;
             this.label5.Text = "Expense Type:";
             // 
@@ -335,7 +335,7 @@
             this.label30.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label30.Location = new System.Drawing.Point(10, 216);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(103, 18);
+            this.label30.Size = new System.Drawing.Size(104, 18);
             this.label30.TabIndex = 883;
             this.label30.Text = "Currency Type:";
             // 
@@ -355,7 +355,7 @@
             this.label13.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label13.Location = new System.Drawing.Point(10, 255);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(118, 18);
+            this.label13.Size = new System.Drawing.Size(120, 18);
             this.label13.TabIndex = 885;
             this.label13.Text = "Transaction Type:";
             // 
@@ -524,8 +524,9 @@
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(63, 29);
             this.btn_print.TabIndex = 1036;
-            this.btn_print.Text = "Print";
+            this.btn_print.Text = "Search";
             this.btn_print.UseVisualStyleBackColor = false;
+            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
             // 
             // dataGridView1
             // 
@@ -538,6 +539,7 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Size = new System.Drawing.Size(647, 240);
             this.dataGridView1.TabIndex = 1035;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // panel6
             // 
@@ -613,7 +615,7 @@
             this.combo_search_type.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.combo_search_type.FormattingEnabled = true;
             this.combo_search_type.Items.AddRange(new object[] {
-            "Customer",
+            "Name",
             "Mobile"});
             this.combo_search_type.Location = new System.Drawing.Point(2, 2);
             this.combo_search_type.Name = "combo_search_type";
@@ -656,6 +658,7 @@
             this.btnDelete.Text = "&Delete";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -670,6 +673,7 @@
             this.btnUpdate.Text = " &Update";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnSave
             // 
@@ -684,6 +688,7 @@
             this.btnSave.Text = "&Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // panel15
             // 
@@ -733,7 +738,7 @@
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label8.Location = new System.Drawing.Point(10, 197);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 18);
+            this.label8.Size = new System.Drawing.Size(95, 18);
             this.label8.TabIndex = 1014;
             this.label8.Text = "Total Amount:";
             // 
@@ -764,7 +769,7 @@
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(10, 157);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 18);
+            this.label3.Size = new System.Drawing.Size(86, 18);
             this.label3.TabIndex = 1012;
             this.label3.Text = "Tax Amount:";
             // 
@@ -813,7 +818,7 @@
             this.label25.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold);
             this.label25.Location = new System.Drawing.Point(10, 117);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(120, 18);
+            this.label25.Size = new System.Drawing.Size(121, 18);
             this.label25.TabIndex = 1010;
             this.label25.Text = "Payment Methods:";
             // 
@@ -1053,6 +1058,7 @@
             this.Name = "Add_Expense";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Expense";
+            this.Load += new System.EventHandler(this.Add_Expense_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Add_Expense_KeyDown);
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();

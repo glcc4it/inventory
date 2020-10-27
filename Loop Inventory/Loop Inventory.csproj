@@ -171,6 +171,12 @@
     <Compile Include="Brand Master.Designer.cs">
       <DependentUpon>Brand Master.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cash Transaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cash Transaction.Designer.cs">
+      <DependentUpon>Cash Transaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cashbook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +252,12 @@
     <Compile Include="frmCustomerRecord.Designer.cs">
       <DependentUpon>frmCustomerRecord.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCustomerRecord1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerRecord1.designer.cs">
+      <DependentUpon>frmCustomerRecord1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +281,12 @@
     </Compile>
     <Compile Include="frmSupplierRecord.Designer.cs">
       <DependentUpon>frmSupplierRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplierRecord1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupplierRecord1.Designer.cs">
+      <DependentUpon>frmSupplierRecord1.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTrialBalance.cs">
       <SubType>Form</SubType>
@@ -517,6 +535,9 @@
     <Compile Include="tbl_AccountMaster.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="tbl_AddExpenses.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_Currency.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -598,6 +619,9 @@
     <EmbeddedResource Include="Brand Master.resx">
       <DependentUpon>Brand Master.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cash Transaction.resx">
+      <DependentUpon>Cash Transaction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cashbook.resx">
       <DependentUpon>Cashbook.cs</DependentUpon>
     </EmbeddedResource>
@@ -631,6 +655,9 @@
     <EmbeddedResource Include="frmCustomerRecord.resx">
       <DependentUpon>frmCustomerRecord.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerRecord1.resx">
+      <DependentUpon>frmCustomerRecord1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -642,6 +669,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSupplierRecord.resx">
       <DependentUpon>frmSupplierRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplierRecord1.resx">
+      <DependentUpon>frmSupplierRecord1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrialBalance.resx">
       <DependentUpon>frmTrialBalance.cs</DependentUpon>

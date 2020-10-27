@@ -34,5 +34,6 @@ namespace Loop_Inventory
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<tbl_AccountMaster> tbl_AccountMaster { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<tbl_AddExpenses> tbl_AddExpenses { get; set; }
     }
 }

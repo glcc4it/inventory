@@ -19,6 +19,7 @@
     <EntitySet Name="Suppliers" EntityType="Inventory_DBModel.Supplier" />
     <EntitySet Name="tbl_AccountMaster" EntityType="Inventory_DBModel.tbl_AccountMaster" />
     <EntitySet Name="Customers" EntityType="Inventory_DBModel.Customer" />
+    <EntitySet Name="tbl_AddExpenses" EntityType="Inventory_DBModel.tbl_AddExpenses" />
   </EntityContainer>
   <EntityType Name="tbl_Currency">
     <Key>
@@ -162,5 +163,22 @@
     <Property Name="PayTerms" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="CurrencyType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_AddExpenses">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InvoiceNumber" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ExpenseType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ExpensesName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CurrencyType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TransactionType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Notes" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentMethods" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TaxAmount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
   </EntityType>
 </Schema>
