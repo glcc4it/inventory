@@ -18,32 +18,35 @@ namespace Loop_Inventory
         public string Barcode1 { get; set; }
         public string Barcode2 { get; set; }
         public string Code { get; set; }
+        public string StoreType { get; set; }
+        public string Category { get; set; }
+        public string BrandName { get; set; }
+        public string Color { get; set; }
+        public string Unit { get; set; }
         public string NameArabic { get; set; }
         public string NameEng { get; set; }
-        public string StoreType { get; set; }
-        public string BrandName { get; set; }
-        public string Category { get; set; }
-        public string Unit { get; set; }
-        public string Color { get; set; }
         public string Description { get; set; }
         public Nullable<decimal> QtyPerUnit { get; set; }
-        public string Company { get; set; }
-        public string Vender { get; set; }
+        public string CompanyProduct { get; set; }
+        public Nullable<decimal> TaxPercentage { get; set; }
+        public string TaxAmount { get; set; }
         public string DiscountType { get; set; }
+        public string DiscountAmount { get; set; }
         public Nullable<decimal> DirectDiscount { get; set; }
         public Nullable<decimal> NextShoppingDiscount { get; set; }
-        public Nullable<decimal> TaxPercent { get; set; }
+        public string VenderPreferred { get; set; }
         public Nullable<decimal> ReorderLevel { get; set; }
         public Nullable<System.DateTime> ManufacturingDate { get; set; }
         public Nullable<System.DateTime> ExpireDate { get; set; }
         public string PurchaseCurrency { get; set; }
         public string SellingCurrency { get; set; }
-        public Nullable<decimal> WholeSalePrice { get; set; }
         public Nullable<decimal> PurchasePrice { get; set; }
-        public Nullable<decimal> CustomPrice { get; set; }
+        public Nullable<decimal> WholeSalePrice { get; set; }
         public Nullable<decimal> RetailPrice { get; set; }
         public Nullable<decimal> CustomerPrice { get; set; }
+        public string Location { get; set; }
         public Nullable<decimal> AddProfit { get; set; }
+        public Nullable<decimal> OpeningStock { get; set; }
         public string Status { get; set; }
     }
 }

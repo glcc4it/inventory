@@ -138,7 +138,164 @@ namespace Loop_Inventory
 
 
 
-            
+            combo_Store.Items.Clear();
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            ModCommonClasses.cmd2 = ModCommonClasses.con.CreateCommand();
+            ModCommonClasses.cmd2.CommandType = CommandType.Text;
+
+            ModCommonClasses.cmd2.CommandText = "SELECT *FROM tbl_StoreMaster";
+            ModCommonClasses.cmd2.ExecuteNonQuery();
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter da2 = new SqlDataAdapter(ModCommonClasses.cmd2);
+            da2.Fill(dt2);
+            foreach (DataRow dr2 in dt2.Rows)
+            {
+
+
+                combo_Store.Items.Add(dr2["StoreNumber"].ToString());
+
+            }
+
+
+            ModCommonClasses.con.Close();
+
+
+
+
+
+
+            combo_Currency.Items.Clear();
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            ModCommonClasses.cmd3 = ModCommonClasses.con.CreateCommand();
+            ModCommonClasses.cmd3.CommandType = CommandType.Text;
+
+            ModCommonClasses.cmd3.CommandText = "SELECT *FROM tbl_Currency";
+            ModCommonClasses.cmd3.ExecuteNonQuery();
+            DataTable dt3 = new DataTable();
+            SqlDataAdapter da3 = new SqlDataAdapter(ModCommonClasses.cmd3);
+            da3.Fill(dt3);
+            foreach (DataRow dr3 in dt3.Rows)
+            {
+
+
+                combo_Currency.Items.Add(dr3["Name"].ToString());
+
+            }
+
+
+            ModCommonClasses.con.Close();
+
+
+
+
+
+
+
+            combo_Pricinglevel.Items.Clear();
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            ModCommonClasses.cmd4 = ModCommonClasses.con.CreateCommand();
+            ModCommonClasses.cmd4.CommandType = CommandType.Text;
+
+            ModCommonClasses.cmd4.CommandText = "SELECT *FROM tbl_pricinglevel";
+            ModCommonClasses.cmd4.ExecuteNonQuery();
+            DataTable dt4 = new DataTable();
+            SqlDataAdapter da4 = new SqlDataAdapter(ModCommonClasses.cmd4);
+            da4.Fill(dt4);
+            foreach (DataRow dr4 in dt4.Rows)
+            {
+
+
+                combo_Pricinglevel.Items.Add(dr4["Pricingname"].ToString());
+
+            }
+
+
+            ModCommonClasses.con.Close();
+
+
+
+
+
+
+            combo_Unit.Items.Clear();
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            ModCommonClasses.cmd5 = ModCommonClasses.con.CreateCommand();
+            ModCommonClasses.cmd5.CommandType = CommandType.Text;
+
+            ModCommonClasses.cmd5.CommandText = "SELECT *FROM tbl_unitmaster";
+            ModCommonClasses.cmd5.ExecuteNonQuery();
+            DataTable dt5 = new DataTable();
+            SqlDataAdapter da5 = new SqlDataAdapter(ModCommonClasses.cmd5);
+            da5.Fill(dt5);
+            foreach (DataRow dr5 in dt5.Rows)
+            {
+
+
+                combo_Unit.Items.Add(dr5["Unit_type"].ToString());
+
+            }
+
+
+            ModCommonClasses.con.Close();
+
+
+
+
+
+            combo_DiscountType.Items.Clear();
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            ModCommonClasses.cmd6 = ModCommonClasses.con.CreateCommand();
+            ModCommonClasses.cmd6.CommandType = CommandType.Text;
+
+            ModCommonClasses.cmd6.CommandText = "SELECT *FROM tbl_discount";
+            ModCommonClasses.cmd6.ExecuteNonQuery();
+            DataTable dt6= new DataTable();
+            SqlDataAdapter da6 = new SqlDataAdapter(ModCommonClasses.cmd6);
+            da6.Fill(dt6);
+            foreach (DataRow dr6 in dt6.Rows)
+            {
+
+
+                combo_DiscountType.Items.Add(dr6["DiscountName"].ToString());
+
+            }
+
+
+            ModCommonClasses.con.Close();
+
+
+
+
+
+            combo_TaxType.Items.Clear();
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            ModCommonClasses.cmd7 = ModCommonClasses.con.CreateCommand();
+            ModCommonClasses.cmd7.CommandType = CommandType.Text;
+
+            ModCommonClasses.cmd7.CommandText = "SELECT *FROM tbl_Tax";
+            ModCommonClasses.cmd7.ExecuteNonQuery();
+            DataTable dt7 = new DataTable();
+            SqlDataAdapter da7 = new SqlDataAdapter(ModCommonClasses.cmd7);
+            da7.Fill(dt7);
+            foreach (DataRow dr7 in dt7.Rows)
+            {
+
+
+                combo_TaxType.Items.Add(dr7["Name"].ToString());
+
+            }
+
+
+            ModCommonClasses.con.Close();
+
+
+
 
 
             Search();
@@ -149,7 +306,7 @@ namespace Loop_Inventory
 
             combo_bil_type.SelectedIndex = 0;
 
-            
+            combo_salesman.SelectedIndex = 0;
 
             autonumber();
 
@@ -189,8 +346,8 @@ namespace Loop_Inventory
                 txt_barcode.Text = dgview.SelectedRows[0].Cells[0].Value.ToString();
                 txt_pro_code.Text = dgview.SelectedRows[0].Cells[1].Value.ToString();
                 txt_pro_name.Text = dgview.SelectedRows[0].Cells[2].Value.ToString();
-                txt_current_stock.Text = dgview.SelectedRows[0].Cells[3].Value.ToString();
-                txt_unit.Text = dgview.SelectedRows[0].Cells[5].Value.ToString();
+                txt_Barcode2.Text = dgview.SelectedRows[0].Cells[3].Value.ToString();
+                combo_Unit.Text = dgview.SelectedRows[0].Cells[5].Value.ToString();
 
 
                 this.dgview.Visible = false;
@@ -323,8 +480,8 @@ namespace Loop_Inventory
 
                     txt_barcode.Text = dgview.SelectedRows[0].Cells[0].Value.ToString();
                     txt_pro_name.Text = dgview.SelectedRows[0].Cells[1].Value.ToString();
-                    txt_current_stock.Text = dgview.SelectedRows[0].Cells[2].Value.ToString();
-                    txt_unit.Text = dgview.SelectedRows[0].Cells[4].Value.ToString();
+                    txt_Barcode2.Text = dgview.SelectedRows[0].Cells[2].Value.ToString();
+                    combo_Unit.Text = dgview.SelectedRows[0].Cells[4].Value.ToString();
                     this.dgview.Visible = false;
                     txt_price.Focus();
                 }
@@ -404,7 +561,7 @@ namespace Loop_Inventory
                 dr["Product"] = txt_pro_name.Text;
                 dr["Saleprice"] = txt_price.Text;
                 dr["Quantity"] = txt_qty.Text;
-                dr["Unit"] = txt_unit.Text;
+                dr["Unit"] = combo_Unit.Text;
                 dr["Total"] = txt_amount.Text;
 
                 dt.Rows.Add(dr);
@@ -423,7 +580,7 @@ namespace Loop_Inventory
                     sum += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
 
                     txt_total_amount.Text = sum.ToString();
-                    txt_net_amount.Text = sum.ToString();
+                    txt_Total.Text = sum.ToString();
                   
                 }
 
@@ -450,10 +607,10 @@ namespace Loop_Inventory
 
             txt_pro_name.Text = "";
             txt_barcode.Text = "";
-            txt_current_stock.Text = "";
+            txt_Barcode2.Text = "";
             txt_price.Text = "";
             txt_qty.Text = "";
-            txt_unit.Text = "";
+            combo_Unit.Text = "";
             txt_amount.Text = "";
         }
 
@@ -499,115 +656,174 @@ namespace Loop_Inventory
 
 
 
-           
-        }
+            combo_Store.Items.Clear();
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            ModCommonClasses.cmd2 = ModCommonClasses.con.CreateCommand();
+            ModCommonClasses.cmd2.CommandType = CommandType.Text;
 
-
-        public void Calculate()
-        {
-            try
+            ModCommonClasses.cmd2.CommandText = "SELECT *FROM tbl_StoreMaster";
+            ModCommonClasses.cmd2.ExecuteNonQuery();
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter da2 = new SqlDataAdapter(ModCommonClasses.cmd2);
+            da2.Fill(dt2);
+            foreach (DataRow dr2 in dt2.Rows)
             {
-                double val1 = 0;
-                double val2 = 0;
-                double val3 = 0;
-                double val4 = 0;
-                double val5 = 0;
-                if (txt_discount.Text != "")
-                {
-                    val1 = Convert.ToInt32((Convert.ToInt32(txt_total_amount.Text) * Convert.ToInt32(txt_discount.Text) / 100));
-                    val1 = Math.Round(val1, 2);
-                    txt_dis_amount.Text = val1.ToString();
 
-                }
-                if (txt_tax.Text != "")
-                {
-                    val3 = Convert.ToInt32(((Convert.ToInt32(txt_total_amount.Text) + Convert.ToInt32(txt_dis_amount.Text)) * Convert.ToInt32(txt_tax.Text) / 100));
-                    val3 = Math.Round(val3, 2);
-                    txt_tax_amount.Text = val3.ToString();
-                }
 
-                double.TryParse(txt_tax_amount.Text, out val1);
-                double.TryParse(txt_total_amount.Text, out val2);
-                double.TryParse(txt_dis_amount.Text, out val3);
-                double.TryParse(txt_net_amount.Text, out val4);
-                double.TryParse(txt_total_items.Text, out val5);
-                val1 = Math.Round(val1, 2);
-                val2 = Math.Round(val2, 2);
-                val3 = Math.Round(val3, 2);
-                val4 = val1 + val2 - val3;
-                val4 = Math.Round(val4, 2);
-                txt_net_amount.Text = val4.ToString();
-                double I = (val5 - val4);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                combo_Store.Items.Add(dr2["StoreNumber"].ToString());
 
             }
 
-        }
 
-        private void txt_discount_TextChanged(object sender, EventArgs e)
-        {
-            Calculate();
+            ModCommonClasses.con.Close();
 
-            string value = txt_discount.Text;
 
-            if (value == "")
+
+
+
+
+            combo_Currency.Items.Clear();
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            ModCommonClasses.cmd3 = ModCommonClasses.con.CreateCommand();
+            ModCommonClasses.cmd3.CommandType = CommandType.Text;
+
+            ModCommonClasses.cmd3.CommandText = "SELECT *FROM tbl_Currency";
+            ModCommonClasses.cmd3.ExecuteNonQuery();
+            DataTable dt3 = new DataTable();
+            SqlDataAdapter da3 = new SqlDataAdapter(ModCommonClasses.cmd3);
+            da3.Fill(dt3);
+            foreach (DataRow dr3 in dt3.Rows)
             {
 
-                int sum = 0;
-                for (int i = 0; i < dataGridView1.Rows.Count; ++i)
-                {
 
-
-                    sum += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
-
-                    txt_total_amount.Text = sum.ToString();
-                    txt_net_amount.Text = sum.ToString();
-
-
-                    txt_dis_amount.Text = "";
-
-
-                }
-
-
-
-            }
-        }
-
-        private void txt_tax_TextChanged(object sender, EventArgs e)
-        {
-            Calculate();
-
-            string value = txt_tax.Text;
-
-            if (value == "")
-            {
-
-                int sum = 0;
-                for (int i = 0; i < dataGridView1.Rows.Count; ++i)
-                {
-
-
-                    sum += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
-
-                    txt_total_amount.Text = sum.ToString();
-                    txt_net_amount.Text = sum.ToString();
-
-
-                    txt_tax_amount.Text = "";
-
-
-                }
-
-
+                combo_Currency.Items.Add(dr3["Name"].ToString());
 
             }
 
+
+            ModCommonClasses.con.Close();
+
+
+
+
+
+
+
+            combo_Pricinglevel.Items.Clear();
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            ModCommonClasses.cmd4 = ModCommonClasses.con.CreateCommand();
+            ModCommonClasses.cmd4.CommandType = CommandType.Text;
+
+            ModCommonClasses.cmd4.CommandText = "SELECT *FROM tbl_pricinglevel";
+            ModCommonClasses.cmd4.ExecuteNonQuery();
+            DataTable dt4 = new DataTable();
+            SqlDataAdapter da4 = new SqlDataAdapter(ModCommonClasses.cmd4);
+            da4.Fill(dt4);
+            foreach (DataRow dr4 in dt4.Rows)
+            {
+
+
+                combo_Pricinglevel.Items.Add(dr4["Pricingname"].ToString());
+
+            }
+
+
+            ModCommonClasses.con.Close();
+
+
+
+
+
+
+            combo_Unit.Items.Clear();
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            ModCommonClasses.cmd5 = ModCommonClasses.con.CreateCommand();
+            ModCommonClasses.cmd5.CommandType = CommandType.Text;
+
+            ModCommonClasses.cmd5.CommandText = "SELECT *FROM tbl_unitmaster";
+            ModCommonClasses.cmd5.ExecuteNonQuery();
+            DataTable dt5 = new DataTable();
+            SqlDataAdapter da5 = new SqlDataAdapter(ModCommonClasses.cmd5);
+            da5.Fill(dt5);
+            foreach (DataRow dr5 in dt5.Rows)
+            {
+
+
+                combo_Unit.Items.Add(dr5["Unit_type"].ToString());
+
+            }
+
+
+            ModCommonClasses.con.Close();
+
+
+
+
+
+            combo_DiscountType.Items.Clear();
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            ModCommonClasses.cmd6 = ModCommonClasses.con.CreateCommand();
+            ModCommonClasses.cmd6.CommandType = CommandType.Text;
+
+            ModCommonClasses.cmd6.CommandText = "SELECT *FROM tbl_discount";
+            ModCommonClasses.cmd6.ExecuteNonQuery();
+            DataTable dt6 = new DataTable();
+            SqlDataAdapter da6 = new SqlDataAdapter(ModCommonClasses.cmd6);
+            da6.Fill(dt6);
+            foreach (DataRow dr6 in dt6.Rows)
+            {
+
+
+                combo_DiscountType.Items.Add(dr6["DiscountName"].ToString());
+
+            }
+
+
+            ModCommonClasses.con.Close();
+
+
+
+
+
+            combo_TaxType.Items.Clear();
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            ModCommonClasses.cmd7 = ModCommonClasses.con.CreateCommand();
+            ModCommonClasses.cmd7.CommandType = CommandType.Text;
+
+            ModCommonClasses.cmd7.CommandText = "SELECT *FROM tbl_Tax";
+            ModCommonClasses.cmd7.ExecuteNonQuery();
+            DataTable dt7 = new DataTable();
+            SqlDataAdapter da7 = new SqlDataAdapter(ModCommonClasses.cmd7);
+            da7.Fill(dt7);
+            foreach (DataRow dr7 in dt7.Rows)
+            {
+
+
+                combo_TaxType.Items.Add(dr7["Name"].ToString());
+
+            }
+
+
+            ModCommonClasses.con.Close();
+
+
+
+
+
+
         }
+
+
+
+       
+
+        
 
         private void Reset()
         {
@@ -619,18 +835,18 @@ namespace Loop_Inventory
             txt_qty.Text = "";
             txtCustomerName.Text = "";
             txt_cus_mob.Text = "";
-            txt_unit.Text = "";
+            combo_Unit.Text = "";
             txt_amount.Text = "";
             txt_total_items.Text = "";
             txt_total_amount.Text = "0";
-            
-            txt_discount.Text = "0";
-            txt_tax.Text = "0";
+
+            combo_DiscountType.Text = "-Select Dis-";
+            combo_TaxType.Text = "-Select Tax-";
             lblBalance.Text = "00";
             
 
             txt_tax_amount.Text = "0";
-            txt_net_amount.Text = "";
+            txt_Total.Text = "";
             txt_old_bal.Text = "";
             txt_new_bal.Text = "";
 
@@ -660,18 +876,18 @@ namespace Loop_Inventory
             txt_qty.Text = "";
             txtCustomerName.Text = "";
             txt_cus_mob.Text = "";
-            txt_unit.Text = "";
+            combo_Unit.Text = "";
             txt_amount.Text = "";
             txt_total_items.Text = "";
             txt_total_amount.Text = "0";
 
-            txt_discount.Text = "0";
-            txt_tax.Text = "0";
+            combo_DiscountType.Text = "-Select Dis-";
+            combo_TaxType.Text = "-Select Tax-";
             lblBalance.Text = "00";
 
 
             txt_tax_amount.Text = "0";
-            txt_net_amount.Text = "";
+            txt_Total.Text = "";
             txt_old_bal.Text = "";
             txt_new_bal.Text = "";
 
@@ -693,7 +909,7 @@ namespace Loop_Inventory
             int value2 = 0;
             int result = 0;
 
-            if (int.TryParse(txt_net_amount.Text, out value1) & int.TryParse(txt_old_bal.Text, out value2))
+            if (int.TryParse(txt_Total.Text, out value1) & int.TryParse(txt_old_bal.Text, out value2))
             {
                 result = value1 + value2;
                 txt_new_bal.Text = result.ToString();
@@ -752,11 +968,11 @@ namespace Loop_Inventory
                 ModCommonClasses.cmd.Parameters.AddWithValue("@d6", txtCus_ID.Text);
                 ModCommonClasses.cmd.Parameters.AddWithValue("@d7", txtCustomerName.Text);
                 ModCommonClasses.cmd.Parameters.AddWithValue("@d8", txt_total_amount.Text);
-                ModCommonClasses.cmd.Parameters.AddWithValue("@d9", txt_discount.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d9", combo_DiscountType.Text);
                 ModCommonClasses.cmd.Parameters.AddWithValue("@d10", txt_dis_amount.Text);
-                ModCommonClasses.cmd.Parameters.AddWithValue("@d11", txt_tax.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d11", combo_TaxType.Text);
                 ModCommonClasses.cmd.Parameters.AddWithValue("@d12", txt_tax_amount.Text);
-                ModCommonClasses.cmd.Parameters.AddWithValue("@d13", txt_net_amount.Text);
+                ModCommonClasses.cmd.Parameters.AddWithValue("@d13", txt_Total.Text);
                 ModCommonClasses.cmd.Parameters.AddWithValue("@d14", txt_old_bal.Text);
                 ModCommonClasses.cmd.Parameters.AddWithValue("@d15", txt_new_bal.Text);
                 ModCommonClasses.cmd.Parameters.AddWithValue("@d16", txt_rec_amount.Text);
@@ -1045,7 +1261,7 @@ namespace Loop_Inventory
 
             e.Graphics.DrawString("Taxamount:  " + txt_tax_amount.Text.Trim(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(175, yPos + 48));
 
-            e.Graphics.DrawString("Net total:      " + txt_net_amount.Text.Trim(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(175, yPos + 63));
+            e.Graphics.DrawString("Net total:      " + txt_Total.Text.Trim(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(175, yPos + 63));
 
             e.Graphics.DrawString("Oldbalnce:    " + txt_old_bal.Text.Trim(), new Font("Arial", 6, FontStyle.Regular), Brushes.Black, new Point(175, yPos + 78));
 
@@ -1155,16 +1371,7 @@ namespace Loop_Inventory
             }
         }
 
-        private void btnget_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-
-            Sale_view frmsaleview = new Sale_view();
-            // or simply use column name instead of index
-            // dr.Cells["id"].Value.ToString();
-            frmsaleview.Show();
-            frmsaleview.lblSet.Text = "Saleview";
-        }
+        
 
 
         
@@ -1230,5 +1437,7 @@ namespace Loop_Inventory
         {
             drag = false;
         }
+
+        
     }
 }

@@ -79,8 +79,8 @@ namespace Loop_Inventory
                 decimal qtyperunit = decimal.Parse(txt_QtyPerUnit.Text.ToString());
                 tb.QtyPerUnit = qtyperunit;
             }
-            tb.Company = txt_CompanyProduct.Text;
-            tb.Vender = txt_PreferredVender.Text;
+            tb.CompanyProduct = txt_CompanyProduct.Text;
+            tb.VenderPreferred = txt_PreferredVender.Text;
             tb.DiscountType = combo_DiscountType.Text;
             if (txt_DirectDiscount.Text != "")
             {
@@ -98,7 +98,7 @@ namespace Loop_Inventory
             {
                 decimal taxpercentage = decimal.Parse(txt_TaxPercentage.Text.ToString());
 
-                tb.TaxPercent = taxpercentage;
+                tb.TaxPercentage = taxpercentage;
             }
             if (txt_NextShoppingDiscount.Text != "")
             {
@@ -181,8 +181,8 @@ namespace Loop_Inventory
                     decimal qtyperunit = decimal.Parse(txt_QtyPerUnit.Text.ToString());
                     tb.QtyPerUnit = qtyperunit;
                 }
-                tb.Company = txt_CompanyProduct.Text;
-                tb.Vender = txt_PreferredVender.Text;
+                tb.CompanyProduct = txt_CompanyProduct.Text;
+                tb.VenderPreferred = txt_PreferredVender.Text;
                 tb.DiscountType = combo_DiscountType.Text;
                 if (txt_DirectDiscount.Text != "")
                 {
@@ -200,7 +200,7 @@ namespace Loop_Inventory
                 {
                     decimal taxpercentage = decimal.Parse(txt_TaxPercentage.Text.ToString());
 
-                    tb.TaxPercent = taxpercentage;
+                    tb.TaxPercentage = taxpercentage;
                 }
                 if (txt_NextShoppingDiscount.Text != "")
                 {

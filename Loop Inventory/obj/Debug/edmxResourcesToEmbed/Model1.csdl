@@ -15,11 +15,15 @@
     <EntitySet Name="tblBonusQuantities" EntityType="Inventory_DBModel.tblBonusQuantity" />
     <EntitySet Name="tbl_godown" EntityType="Inventory_DBModel.tbl_godown" />
     <EntitySet Name="tblStores" EntityType="Inventory_DBModel.tblStore" />
-    <EntitySet Name="tblItemMasters" EntityType="Inventory_DBModel.tblItemMaster" />
     <EntitySet Name="Suppliers" EntityType="Inventory_DBModel.Supplier" />
     <EntitySet Name="tbl_AccountMaster" EntityType="Inventory_DBModel.tbl_AccountMaster" />
     <EntitySet Name="Customers" EntityType="Inventory_DBModel.Customer" />
     <EntitySet Name="tbl_AddExpenses" EntityType="Inventory_DBModel.tbl_AddExpenses" />
+    <EntitySet Name="tbl_AddBank" EntityType="Inventory_DBModel.tbl_AddBank" />
+    <EntitySet Name="tbl_AddRevenue" EntityType="Inventory_DBModel.tbl_AddRevenue" />
+    <EntitySet Name="tbl_AddWallet" EntityType="Inventory_DBModel.tbl_AddWallet" />
+    <EntitySet Name="tblItemMasters" EntityType="Inventory_DBModel.tblItemMaster" />
+    <EntitySet Name="tbl_AddTreasury" EntityType="Inventory_DBModel.tbl_AddTreasury" />
   </EntityContainer>
   <EntityType Name="tbl_Currency">
     <Key>
@@ -62,42 +66,6 @@
     <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="EmailAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="tblItemMaster">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Barcode1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Barcode2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="NameArabic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="NameEng" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="StoreType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="BrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="QtyPerUnit" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="Company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Vender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="DiscountType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="DirectDiscount" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="NextShoppingDiscount" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="TaxPercent" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="ReorderLevel" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="ManufacturingDate" Type="DateTime" Precision="0" />
-    <Property Name="ExpireDate" Type="DateTime" Precision="0" />
-    <Property Name="PurchaseCurrency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="SellingCurrency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="WholeSalePrice" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="PurchasePrice" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="CustomPrice" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="RetailPrice" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="CustomerPrice" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="AddProfit" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Supplier">
@@ -180,5 +148,105 @@
     <Property Name="PaymentMethods" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="TaxAmount" Type="Decimal" Precision="18" Scale="0" />
     <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="tbl_AddBank">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BankNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AccountType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CurrencyType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="BankName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="BranchName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Balance" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="tbl_AddRevenue">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RevenueNumber" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="RevenueNumber2" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CurrencyType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="RevenueName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TotalBeforeTax" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PaymentMethods" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Taxes" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Total" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Notes" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_AddWallet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WelletNumber" Type="Int32" />
+    <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AccountType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CurrencyType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="WalletName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="OpeningBalance" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblItemMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Barcode1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Barcode2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StoreType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NameArabic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NameEng" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="QtyPerUnit" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CompanyProduct" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TaxPercentage" Type="Decimal" Precision="18" Scale="3" />
+    <Property Name="TaxAmount" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="DiscountType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiscountAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DirectDiscount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NextShoppingDiscount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="VenderPreferred" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReorderLevel" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ManufacturingDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpireDate" Type="DateTime" Precision="0" />
+    <Property Name="PurchaseCurrency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SellingCurrency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PurchasePrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WholeSalePrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RetailPrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CustomerPrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddProfit" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OpeningStock" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_AddTreasury">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TreasuryNumber" Type="Int32" />
+    <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TreasuryName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="AccountType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CurrencyType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Balance" Type="Decimal" Precision="18" Scale="0" />
   </EntityType>
 </Schema>

@@ -22,10 +22,13 @@ namespace Loop_Inventory
         bool drag = false;
         Point start_point = new Point(0, 0);
         string proid = "Pro-";
+
+
         public ProductMaster()
         {
             InitializeComponent();
         }
+
 
         public void procode()
         {
@@ -70,6 +73,12 @@ namespace Loop_Inventory
             ModCommonClasses.con.Close();
         }
 
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         public void ClearField()
         {
             txt_Barcode1.Text = "";
@@ -87,8 +96,8 @@ namespace Loop_Inventory
             txt_CompanyProduct.Text = "";
             txt_PreferredVender.Text = "";
             combo_DiscountType.SelectedIndex = 0;//= "";
-            txt_DiscountAmount.Text = "";
             txt_DirectDiscount.Text = "";
+            txt_NextShoppingDiscount.Text = "";
             combo_TaxType.Text = "";
             txt_ReorderLevel.Text = "";
             dateTimePicker2.Value = System.DateTime.Now;
@@ -104,66 +113,261 @@ namespace Loop_Inventory
             refreshGrid();
         }
 
-        private void close_Click(object sender, EventArgs e)
+        public void refreshGrid()
         {
-            this.Close();
+            Inventory_DBEntities db = new Inventory_DBEntities();
+            var tb = db.tblItemMasters.ToList();
+            dataGridView1.DataSource = tb;
+            dataGridView1.Columns[0].Width = 0;
+
+
         }
 
-        private void add1_Click(object sender, EventArgs e)
+        private void btn_save_Click(object sender, EventArgs e)
         {
-            Store_Master ss = new Store_Master();
-            ss.Show();
-            ss.lblUser.Text = lblUser.Text;
+            Inventory_DBEntities db = new Inventory_DBEntities();
+            tblItemMaster tb = new tblItemMaster();
+            tb.Barcode1 = txt_Barcode1.Text;
+            tb.Barcode2 = txt_Barcode2.Text;
+            tb.Code = txt_Productcode.Text;
+            tb.NameArabic = txt_ProductnameArabic.Text;
+            tb.NameEng = txt_ProductnameEng.Text;
+            tb.StoreType = combo_Store.Text;
+            tb.BrandName = combo_Brand.Text;
+            tb.Category = combo_Category.Text;
+            tb.Unit = combo_Unit.Text;
+            tb.Color = combo_Color.Text;
+            tb.Description = txt_Description.Text;
+            if (txt_QtyPerUnit.Text != "")
+            {
+                decimal qtyperunit = decimal.Parse(txt_QtyPerUnit.Text.ToString());
+                tb.QtyPerUnit = qtyperunit;
+            }
+            tb.CompanyProduct = txt_CompanyProduct.Text;
+            tb.VenderPreferred = txt_PreferredVender.Text;
+            tb.DiscountType = combo_DiscountType.Text;
+            if (txt_DirectDiscount.Text != "")
+            {
+                decimal direct = decimal.Parse(txt_DirectDiscount.Text.ToString());
+
+                tb.DirectDiscount = direct;
+            }
+            if (txt_NextShoppingDiscount.Text != "")
+            {
+                decimal nextshopping = decimal.Parse(txt_NextShoppingDiscount.Text.ToString());
+
+                tb.NextShoppingDiscount = nextshopping;
+            }
+            if (txt_NextShoppingDiscount.Text != "")
+            {
+                decimal taxpercentage = decimal.Parse(combo_TaxType.Text.ToString());
+
+                tb.TaxPercentage = taxpercentage;
+            }
+            if (txt_NextShoppingDiscount.Text != "")
+            {
+                decimal redorder = decimal.Parse(txt_ReorderLevel.Text.ToString());
+
+                tb.ReorderLevel = redorder;
+            }
+            DateTime manu = DateTime.Parse(dateTimePicker2.Text);
+            tb.ManufacturingDate = manu;
+            DateTime expire = DateTime.Parse(dateTimePicker1.Text);
+
+            tb.ExpireDate = expire;
+            tb.PurchaseCurrency = combo_PurchaseCurency.Text;
+            tb.SellingCurrency = combo_SellingCurrency.Text;
+            if (txt_WholeSalePrice.Text != "")
+            {
+                decimal wholesale = decimal.Parse(txt_WholeSalePrice.Text.ToString());
+
+                tb.WholeSalePrice = wholesale;
+            }
+            if (txt_PurchasePrice.Text != "")
+            {
+                decimal purchaseprice = decimal.Parse(txt_PurchasePrice.Text.ToString());
+
+                tb.PurchasePrice = purchaseprice;
+            }
+            if (txt_PurchasePrice.Text != "")
+            {
+                decimal customerprice = decimal.Parse(txt_CustomerPrice.Text.ToString());
+
+                tb.CustomerPrice = customerprice;
+            }
+            if (txt_RetailPrice.Text != "")
+            {
+                decimal retialprice = decimal.Parse(txt_RetailPrice.Text.ToString());
+
+                tb.RetailPrice = retialprice;
+            }
+            if (txt_AddProfit.Text != "")
+            {
+                decimal addprofit = decimal.Parse(txt_AddProfit.Text.ToString());
+
+                tb.AddProfit = addprofit;
+            }
+            tb.Status = combo_Status.Text;
+            db.tblItemMasters.Add(tb);
+            db.SaveChanges();
+            MessageBox.Show("Successfully Added", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            refreshGrid();
+            ClearField();
+            barcodenumber();
+            procode();
         }
 
-        private void add2_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Categorymaster ss = new Categorymaster();
-            ss.Show();
-            ss.lblUser.Text = lblUser.Text;
+            if (txt_ProductnameEng.Text != "")
+            {
+
+
+                Inventory_DBEntities db = new Inventory_DBEntities();
+                decimal idd = decimal.Parse(txtID.Text.ToString());
+                var tb = db.tblItemMasters.Where(x => x.ID == idd).FirstOrDefault();
+                tb.Barcode1 = txt_Barcode1.Text;
+                tb.Barcode2 = txt_Barcode2.Text;
+                tb.Code = txt_Productcode.Text;
+                tb.NameArabic = txt_ProductnameArabic.Text;
+                tb.NameEng = txt_ProductnameEng.Text;
+                tb.StoreType = combo_Store.Text;
+                tb.BrandName = combo_Brand.Text;
+                tb.Category = combo_Category.Text;
+                tb.Unit = combo_Unit.Text;
+                tb.Color = combo_Color.Text;
+                tb.Description = txt_Description.Text;
+                if (txt_QtyPerUnit.Text != "")
+                {
+                    decimal qtyperunit = decimal.Parse(txt_QtyPerUnit.Text.ToString());
+                    tb.QtyPerUnit = qtyperunit;
+                }
+               // tb.Company = txt_CompanyProduct.Text;
+               // tb.Vender = txt_PreferredVender.Text;
+                tb.DiscountType = combo_DiscountType.Text;
+                if (txt_DirectDiscount.Text != "")
+                {
+                    decimal direct = decimal.Parse(txt_DirectDiscount.Text.ToString());
+
+                    tb.DirectDiscount = direct;
+                }
+                if (txt_NextShoppingDiscount.Text != "")
+                {
+                    decimal nextshopping = decimal.Parse(txt_NextShoppingDiscount.Text.ToString());
+
+                    tb.NextShoppingDiscount = nextshopping;
+                }
+                if (txt_NextShoppingDiscount.Text != "")
+                {
+                    decimal taxpercentage = decimal.Parse(combo_TaxType.Text.ToString());
+
+                    tb.TaxPercentage = taxpercentage;
+                }
+                if (txt_NextShoppingDiscount.Text != "")
+                {
+                    decimal redorder = decimal.Parse(txt_ReorderLevel.Text.ToString());
+
+                    tb.ReorderLevel = redorder;
+                }
+                DateTime manu = DateTime.Parse(dateTimePicker2.Text);
+                tb.ManufacturingDate = manu;
+                DateTime expire = DateTime.Parse(dateTimePicker1.Text);
+
+                tb.ExpireDate = expire;
+                tb.PurchaseCurrency = combo_PurchaseCurency.Text;
+                tb.SellingCurrency = combo_SellingCurrency.Text;
+                if (txt_WholeSalePrice.Text != "")
+                {
+                    decimal wholesale = decimal.Parse(txt_WholeSalePrice.Text.ToString());
+
+                    tb.WholeSalePrice = wholesale;
+                }
+                if (txt_PurchasePrice.Text != "")
+                {
+                    decimal purchaseprice = decimal.Parse(txt_PurchasePrice.Text.ToString());
+
+                    tb.PurchasePrice = purchaseprice;
+                }
+                if (txt_PurchasePrice.Text != "")
+                {
+                    decimal customerprice = decimal.Parse(txt_CustomerPrice.Text.ToString());
+
+                    tb.CustomerPrice = customerprice;
+                }
+                if (txt_RetailPrice.Text != "")
+                {
+                    decimal retialprice = decimal.Parse(txt_RetailPrice.Text.ToString());
+
+                    tb.RetailPrice = retialprice;
+                }
+                if (txt_AddProfit.Text != "")
+                {
+                    decimal addprofit = decimal.Parse(txt_AddProfit.Text.ToString());
+
+                    tb.AddProfit = addprofit;
+                }
+                tb.Status = combo_Status.Text;
+                db.SaveChanges();
+
+                MessageBox.Show("Successfully Updated", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                refreshGrid();
+                ClearField();
+                barcodenumber();
+                procode();
+
+
+
+
+            }
         }
 
-        private void add3_Click(object sender, EventArgs e)
+
+        private void DeleteRecord()
         {
-            Brand_Master ss = new Brand_Master();
-            ss.Show();
-            ss.lblUser.Text = lblUser.Text;
+            try
+            {
+                Inventory_DBEntities db = new Inventory_DBEntities();
+                decimal idd = decimal.Parse(txtID.Text.ToString());
+                var tb = db.tblItemMasters.Where(x => x.ID == idd).FirstOrDefault();
+                db.tblItemMasters.Remove(tb);
+                db.SaveChanges();
+
+
+                MessageBox.Show("Successfully Deleted", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                refreshGrid();
+                ClearField();
+                barcodenumber();
+                procode();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void add5_Click(object sender, EventArgs e)
+        private void btndel_Click(object sender, EventArgs e)
         {
-            Unitmaster ss = new Unitmaster();
-            ss.Show();
-            ss.lblUser.Text = lblUser.Text;
-        }
-
-        private void add7_Click(object sender, EventArgs e)
-        {
-            Currency_Master ss = new Currency_Master();
-            ss.Show();
-            ss.lblUser.Text = lblUser.Text;
-        }
-
-        private void add8_Click(object sender, EventArgs e)
-        {
-            Currency_Master ss = new Currency_Master();
-            ss.Show();
-            ss.lblUser.Text = lblUser.Text;
-        }
-
-        private void add4_Click(object sender, EventArgs e)
-        {
-            Categorymaster ss = new Categorymaster();
-            ss.Show();
-            ss.lblUser.Text = lblUser.Text;
+            try
+            {
+                if (MessageBox.Show("Do you Really Want to Delete this Record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    DeleteRecord();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void ProductMaster_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'inventory_DBDataSet.tblItemMaster' table. You can move, or remove it, as needed.
-            this.tblItemMasterTableAdapter.Fill(this.inventory_DBDataSet.tblItemMaster);
-
+            // TODO: This line of code loads data into the 'dataSet1.tbl_unitmaster' table. You can move, or remove it, as needed.
+            this.tbl_unitmasterTableAdapter.Fill(this.dataSet1.tbl_unitmaster);
+            // TODO: This line of code loads data into the 'dataSet1.tblStore' table. You can move, or remove it, as needed.
+            this.tblStoreTableAdapter.Fill(this.dataSet1.tblStore);
+            // TODO: This line of code loads data into the 'dataSet1.tbl_category' table. You can move, or remove it, as needed.
+            this.tbl_categoryTableAdapter.Fill(this.dataSet1.tbl_category);
             refreshGrid();
+
             barcodenumber();
             procode();
 
@@ -172,15 +376,13 @@ namespace Loop_Inventory
             txt_Barcode2.Focus();
 
 
-
-
             combo_Store.Items.Clear();
             ModCommonClasses.con = new SqlConnection(ModCS.cs);
             ModCommonClasses.con.Open();
             ModCommonClasses.cmd = ModCommonClasses.con.CreateCommand();
             ModCommonClasses.cmd.CommandType = CommandType.Text;
 
-            ModCommonClasses.cmd.CommandText = "SELECT *FROM tblStore";
+            ModCommonClasses.cmd.CommandText = "SELECT *FROM tbl_StoreMaster";
             ModCommonClasses.cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(ModCommonClasses.cmd);
@@ -336,7 +538,7 @@ namespace Loop_Inventory
 
 
 
-            
+
 
 
 
@@ -394,350 +596,33 @@ namespace Loop_Inventory
 
 
 
+            combo_TaxType.Items.Clear();
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            ModCommonClasses.cmd8 = ModCommonClasses.con.CreateCommand();
+            ModCommonClasses.cmd8.CommandType = CommandType.Text;
 
+            ModCommonClasses.cmd8.CommandText = "SELECT *FROM tbl_Tax";
+            ModCommonClasses.cmd8.ExecuteNonQuery();
+            DataTable dt9 = new DataTable();
+            SqlDataAdapter da9 = new SqlDataAdapter(ModCommonClasses.cmd8);
+            da9.Fill(dt9);
+            foreach (DataRow dr9 in dt9.Rows)
+            {
+
+
+                combo_TaxType.Items.Add(dr9["Name"].ToString());
+
+            }
+
+
+            ModCommonClasses.con.Close();
 
 
 
         }
 
-        private void btnfetch_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btn_export_Click(object sender, EventArgs e)
-        {
-            int rowsTotal = 0;
-            int colsTotal = 0;
-            int I = 0;
-            int j = 0;
-            int iC = 0;
-            System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.WaitCursor;
-            Excel.Application xlApp = new Excel.Application();
-
-
-
-
-            try
-            {
-                Excel.Workbook excelBook = xlApp.Workbooks.Add();
-                Excel.Worksheet excelWorksheet = (Excel.Worksheet)excelBook.Worksheets[1];
-                xlApp.Visible = true;
-
-                rowsTotal = dgw.RowCount - 1;
-                colsTotal = dgw.Columns.Count - 1;
-                var _with1 = excelWorksheet;
-                _with1.Cells.Select();
-                _with1.Cells.Delete();
-                for (iC = 0; iC <= colsTotal; iC++)
-                {
-                    _with1.Cells[1, iC + 1].Value = dgw.Columns[iC].HeaderText;
-                }
-                for (I = 0; I <= rowsTotal - 1; I++)
-                {
-                    for (j = 0; j <= colsTotal; j++)
-                    {
-                        _with1.Cells[I + 2, j + 1].value = dgw.Rows[I].Cells[j].Value;
-                    }
-                }
-                _with1.Rows["1:1"].Font.FontStyle = "Bold";
-                _with1.Rows["1:1"].Font.Size = 12;
-
-                _with1.Cells.Columns.AutoFit();
-                _with1.Cells.Select();
-                _with1.Cells.EntireColumn.AutoFit();
-                _with1.Cells[1, 1].Select();
-            }
-
-
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                //RELEASE ALLOACTED RESOURCES
-                System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.Default;
-                xlApp = null;
-            }
-        }
-
-
-        private void loadExcelToDataGrid(string strFilePath)
-        {
-            string sheet = "Sheet1";
-            String strConnectionString = @"Data Source=" + strFilePath + "; Provider=Microsoft.ACE.OLEDB.12.0;Extended Properties=Excel 12.0;";
-            OleDbConnection con = new OleDbConnection(strConnectionString);
-            con.Open();
-            OleDbCommand cmdSelect = new OleDbCommand(@"SELECT * FROM [" + sheet + "$]", con);
-            OleDbDataAdapter daCSV = new OleDbDataAdapter();
-            daCSV.SelectCommand = cmdSelect;
-            DataSet ds = new DataSet();
-            daCSV.Fill(ds);
-            dgvExcelData.DataSource = ds.Tables[0];
-            con.Close();
-        }
-
-        private void btnGetData_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            System.Windows.Forms.DialogResult dr = ofd.ShowDialog();
-            if (dr == DialogResult.OK)
-            {
-                txtFilePath.Text = ofd.FileName;
-                loadExcelToDataGrid(ofd.FileName);
-            }
-        }
-
-
-        public void refreshGrid()
-        {
-            Inventory_DBEntities db = new Inventory_DBEntities();
-            var tb = db.tblItemMasters.ToList();
-            dataGridView1.DataSource = tb;
-            dataGridView1.Columns[0].Width = 0;
-
-
-        }
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            Inventory_DBEntities db = new Inventory_DBEntities();
-            tblItemMaster tb = new tblItemMaster();
-            tb.Barcode1 = txt_Barcode1.Text;
-            tb.Barcode2 = txt_Barcode2.Text;
-            tb.Code = txt_Productcode.Text;
-            tb.NameArabic = txt_ProductnameArabic.Text;
-            tb.NameEng = txt_ProductnameEng.Text;
-            tb.StoreType = combo_Store.Text;
-            tb.BrandName = combo_Brand.Text;
-            tb.Category = combo_Category.Text;
-            tb.Unit = combo_Unit.Text;
-            tb.Color = combo_Color.Text;
-            tb.Description = txt_Description.Text;
-            if (txt_QtyPerUnit.Text != "")
-            {
-                decimal qtyperunit = decimal.Parse(txt_QtyPerUnit.Text.ToString());
-                tb.QtyPerUnit = qtyperunit;
-            }
-            tb.Company = txt_CompanyProduct.Text;
-            tb.Vender = txt_PreferredVender.Text;
-            tb.DiscountType = combo_DiscountType.Text;
-            if (txt_DiscountAmount.Text != "")
-            {
-                decimal direct = decimal.Parse(txt_DiscountAmount.Text.ToString());
-
-                tb.DirectDiscount = direct;
-            }
-            if (txt_DirectDiscount.Text != "")
-            {
-                decimal nextshopping = decimal.Parse(txt_DirectDiscount.Text.ToString());
-
-                tb.NextShoppingDiscount = nextshopping;
-            }
-            if (txt_DirectDiscount.Text != "")
-            {
-                decimal taxpercentage = decimal.Parse(combo_TaxType.Text.ToString());
-
-                tb.TaxPercent = taxpercentage;
-            }
-            if (txt_DirectDiscount.Text != "")
-            {
-                decimal redorder = decimal.Parse(txt_ReorderLevel.Text.ToString());
-
-                tb.ReorderLevel = redorder;
-            }
-            DateTime manu = DateTime.Parse(dateTimePicker2.Text);
-            tb.ManufacturingDate = manu;
-            DateTime expire = DateTime.Parse(dateTimePicker1.Text);
-
-            tb.ExpireDate = expire;
-            tb.PurchaseCurrency = combo_PurchaseCurency.Text;
-            tb.SellingCurrency = combo_SellingCurrency.Text;
-            if (txt_WholeSalePrice.Text != "")
-            {
-                decimal wholesale = decimal.Parse(txt_WholeSalePrice.Text.ToString());
-
-                tb.WholeSalePrice = wholesale;
-            }
-            if (txt_PurchasePrice.Text != "")
-            {
-                decimal purchaseprice = decimal.Parse(txt_PurchasePrice.Text.ToString());
-
-                tb.PurchasePrice = purchaseprice;
-            }
-            if (txt_PurchasePrice.Text != "")
-            {
-                decimal customerprice = decimal.Parse(txt_CustomerPrice.Text.ToString());
-
-                tb.CustomerPrice = customerprice;
-            }
-            if (txt_RetailPrice.Text != "")
-            {
-                decimal retialprice = decimal.Parse(txt_RetailPrice.Text.ToString());
-
-                tb.RetailPrice = retialprice;
-            }
-            if (txt_AddProfit.Text != "")
-            {
-                decimal addprofit = decimal.Parse(txt_AddProfit.Text.ToString());
-
-                tb.AddProfit = addprofit;
-            }
-            tb.Status = combo_Status.Text;
-            db.tblItemMasters.Add(tb);
-            db.SaveChanges();
-            MessageBox.Show("Successfully Added", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            refreshGrid();
-            ClearField();
-        }
-
-        private void btnNew_Click(object sender, EventArgs e)
-        {
-            ClearField();
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            if (txt_ProductnameEng.Text != "")
-            {
-
-
-                Inventory_DBEntities db = new Inventory_DBEntities();
-                decimal idd = decimal.Parse(txtID.Text.ToString());
-                var tb = db.tblItemMasters.Where(x => x.ID == idd).FirstOrDefault();
-                tb.Barcode1 = txt_Barcode1.Text;
-                tb.Barcode2 = txt_Barcode2.Text;
-                tb.Code = txt_Productcode.Text;
-                tb.NameArabic = txt_ProductnameArabic.Text;
-                tb.NameEng = txt_ProductnameEng.Text;
-                tb.StoreType = combo_Store.Text;
-                tb.BrandName = combo_Brand.Text;
-                tb.Category = combo_Category.Text;
-                tb.Unit = combo_Unit.Text;
-                tb.Color = combo_Color.Text;
-                tb.Description = txt_Description.Text;
-                if (txt_QtyPerUnit.Text != "")
-                {
-                    decimal qtyperunit = decimal.Parse(txt_QtyPerUnit.Text.ToString());
-                    tb.QtyPerUnit = qtyperunit;
-                }
-                tb.Company = txt_CompanyProduct.Text;
-                tb.Vender = txt_PreferredVender.Text;
-                tb.DiscountType = combo_DiscountType.Text;
-                if (txt_DiscountAmount.Text != "")
-                {
-                    decimal direct = decimal.Parse(txt_DiscountAmount.Text.ToString());
-
-                    tb.DirectDiscount = direct;
-                }
-                if (txt_DirectDiscount.Text != "")
-                {
-                    decimal nextshopping = decimal.Parse(txt_DirectDiscount.Text.ToString());
-
-                    tb.NextShoppingDiscount = nextshopping;
-                }
-                if (txt_DirectDiscount.Text != "")
-                {
-                    decimal taxpercentage = decimal.Parse(combo_TaxType.Text.ToString());
-
-                    tb.TaxPercent = taxpercentage;
-                }
-                if (txt_DirectDiscount.Text != "")
-                {
-                    decimal redorder = decimal.Parse(txt_ReorderLevel.Text.ToString());
-
-                    tb.ReorderLevel = redorder;
-                }
-                DateTime manu = DateTime.Parse(dateTimePicker2.Text);
-                tb.ManufacturingDate = manu;
-                DateTime expire = DateTime.Parse(dateTimePicker1.Text);
-
-                tb.ExpireDate = expire;
-                tb.PurchaseCurrency = combo_PurchaseCurency.Text;
-                tb.SellingCurrency = combo_SellingCurrency.Text;
-                if (txt_WholeSalePrice.Text != "")
-                {
-                    decimal wholesale = decimal.Parse(txt_WholeSalePrice.Text.ToString());
-
-                    tb.WholeSalePrice = wholesale;
-                }
-                if (txt_PurchasePrice.Text != "")
-                {
-                    decimal purchaseprice = decimal.Parse(txt_PurchasePrice.Text.ToString());
-
-                    tb.PurchasePrice = purchaseprice;
-                }
-                if (txt_PurchasePrice.Text != "")
-                {
-                    decimal customerprice = decimal.Parse(txt_CustomerPrice.Text.ToString());
-
-                    tb.CustomerPrice = customerprice;
-                }
-                if (txt_RetailPrice.Text != "")
-                {
-                    decimal retialprice = decimal.Parse(txt_RetailPrice.Text.ToString());
-
-                    tb.RetailPrice = retialprice;
-                }
-                if (txt_AddProfit.Text != "")
-                {
-                    decimal addprofit = decimal.Parse(txt_AddProfit.Text.ToString());
-
-                    tb.AddProfit = addprofit;
-                }
-                tb.Status = combo_Status.Text;
-                db.SaveChanges();
-
-                MessageBox.Show("Successfully Updated", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                refreshGrid();
-                ClearField();
-
-
-
-
-            }
-        }
-
-
-
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (MessageBox.Show("Do you Really Want to Delete this Record?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    DeleteRecord();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
-        private void DeleteRecord()
-        {
-            try
-            {
-                Inventory_DBEntities db = new Inventory_DBEntities();
-                decimal idd = decimal.Parse(txtID.Text.ToString());
-                var tb = db.tblItemMasters.Where(x => x.ID == idd).FirstOrDefault();
-                db.tblItemMasters.Remove(tb);
-                db.SaveChanges();
-
-
-                MessageBox.Show("Successfully Deleted", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                refreshGrid();
-                ClearField();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btn_search_Click(object sender, EventArgs e)
+    private void txt_search_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -790,8 +675,8 @@ namespace Loop_Inventory
                     txt_CompanyProduct.Text = dr.Cells[13].Value.ToString();
                     txt_PreferredVender.Text = dr.Cells[14].Value.ToString();
                     combo_DiscountType.Text = dr.Cells[15].Value.ToString();
-                    txt_DiscountAmount.Text = dr.Cells[16].Value.ToString();
-                    txt_DirectDiscount.Text = dr.Cells[17].Value.ToString();
+                    txt_DirectDiscount.Text = dr.Cells[16].Value.ToString();
+                    txt_NextShoppingDiscount.Text = dr.Cells[17].Value.ToString();
                     combo_TaxType.Text = dr.Cells[18].Value.ToString();
                     txt_ReorderLevel.Text = dr.Cells[19].Value.ToString();
                     dateTimePicker2.Text = dr.Cells[20].Value.ToString();
@@ -814,17 +699,174 @@ namespace Loop_Inventory
             }
         }
 
+        private void btn_export_Click(object sender, EventArgs e)
+        {
+            int rowsTotal = 0;
+            int colsTotal = 0;
+            int I = 0;
+            int j = 0;
+            int iC = 0;
+            System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.WaitCursor;
+            Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+
+
+
+
+            try
+            {
+                Microsoft.Office.Interop.Excel.Workbook excelBook = xlApp.Workbooks.Add();
+                Microsoft.Office.Interop.Excel.Worksheet excelWorksheet = (Microsoft.Office.Interop.Excel.Worksheet)excelBook.Worksheets[1];
+                xlApp.Visible = true;
+
+                rowsTotal = dgw.RowCount - 1;
+                colsTotal = dgw.Columns.Count - 1;
+                var _with1 = excelWorksheet;
+                _with1.Cells.Select();
+                _with1.Cells.Delete();
+                for (iC = 0; iC <= colsTotal; iC++)
+                {
+                    _with1.Cells[1, iC + 1].Value = dgw.Columns[iC].HeaderText;
+                }
+                for (I = 0; I <= rowsTotal - 1; I++)
+                {
+                    for (j = 0; j <= colsTotal; j++)
+                    {
+                        _with1.Cells[I + 2, j + 1].value = dgw.Rows[I].Cells[j].Value;
+                    }
+                }
+                _with1.Rows["1:1"].Font.FontStyle = "Bold";
+                _with1.Rows["1:1"].Font.Size = 12;
+
+                _with1.Cells.Columns.AutoFit();
+                _with1.Cells.Select();
+                _with1.Cells.EntireColumn.AutoFit();
+                _with1.Cells[1, 1].Select();
+            }
+
+
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                //RELEASE ALLOACTED RESOURCES
+                System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.Default;
+                xlApp = null;
+            }
+        }
+
+        private void add1_Click(object sender, EventArgs e)
+        {
+            Store_Master ss = new Store_Master();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+
+        }
+
+        private void add2_Click(object sender, EventArgs e)
+        {
+            Categorymaster ss = new Categorymaster();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+
+        }
+
+        private void add3_Click(object sender, EventArgs e)
+        {
+            Brand_Master ss = new Brand_Master();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+
+        }
+
+        private void add4_Click(object sender, EventArgs e)
+        {
+            Categorymaster ss = new Categorymaster();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+
+        }
+
+        private void add5_Click(object sender, EventArgs e)
+        {
+            Unitmaster ss = new Unitmaster();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+
+        }
+
+        private void add6_Click(object sender, EventArgs e)
+        {
+            Tax_Master ss = new Tax_Master();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+
+        }
+
+        private void add7_Click(object sender, EventArgs e)
+        {
+            DiscountMaster ss = new DiscountMaster();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+
+        }
+
+        private void add8_Click(object sender, EventArgs e)
+        {
+            Currency_Master ss = new Currency_Master();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+
+        }
+
+        private void add9_Click(object sender, EventArgs e)
+        {
+            Currency_Master ss = new Currency_Master();
+            ss.Show();
+            ss.lblUser.Text = lblUser.Text;
+
+        }
+
+
+        private void loadExcelToDataGrid(string strFilePath)
+        {
+            string sheet = "Sheet1";
+            String strConnectionString = @"Data Source=" + strFilePath + "; Provider=Microsoft.ACE.OLEDB.12.0;Extended Properties=Excel 12.0;";
+            OleDbConnection con = new OleDbConnection(strConnectionString);
+            con.Open();
+            OleDbCommand cmdSelect = new OleDbCommand(@"SELECT * FROM [" + sheet + "$]", con);
+            OleDbDataAdapter daCSV = new OleDbDataAdapter();
+            daCSV.SelectCommand = cmdSelect;
+            DataSet ds = new DataSet();
+            daCSV.Fill(ds);
+            dgvExcelData.DataSource = ds.Tables[0];
+            con.Close();
+        }
+
+
+        private void btnGetData_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            System.Windows.Forms.DialogResult dr = ofd.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                txtFilePath.Text = ofd.FileName;
+                loadExcelToDataGrid(ofd.FileName);
+            }
+
+        }
+
         private void ProductMaster_Activated(object sender, EventArgs e)
         {
-
-
             combo_Store.Items.Clear();
             ModCommonClasses.con = new SqlConnection(ModCS.cs);
             ModCommonClasses.con.Open();
             ModCommonClasses.cmd = ModCommonClasses.con.CreateCommand();
             ModCommonClasses.cmd.CommandType = CommandType.Text;
 
-            ModCommonClasses.cmd.CommandText = "SELECT *FROM tblStore";
+            ModCommonClasses.cmd.CommandText = "SELECT *FROM tbl_StoreMaster";
             ModCommonClasses.cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(ModCommonClasses.cmd);
@@ -1036,19 +1078,39 @@ namespace Loop_Inventory
 
 
 
-        }
 
-        private void add6_Click(object sender, EventArgs e)
-        {
-            DiscountMaster ss = new DiscountMaster();
-            ss.Show();
-            ss.lblUser.Text = lblUser.Text;
+            combo_TaxType.Items.Clear();
+            ModCommonClasses.con = new SqlConnection(ModCS.cs);
+            ModCommonClasses.con.Open();
+            ModCommonClasses.cmd8 = ModCommonClasses.con.CreateCommand();
+            ModCommonClasses.cmd8.CommandType = CommandType.Text;
+
+            ModCommonClasses.cmd8.CommandText = "SELECT *FROM tbl_Tax";
+            ModCommonClasses.cmd8.ExecuteNonQuery();
+            DataTable dt9 = new DataTable();
+            SqlDataAdapter da9 = new SqlDataAdapter(ModCommonClasses.cmd8);
+            da9.Fill(dt9);
+            foreach (DataRow dr9 in dt9.Rows)
+            {
+
+
+                combo_TaxType.Items.Add(dr9["Name"].ToString());
+
+            }
+
+
+            ModCommonClasses.con.Close();
+
+
+
+
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             drag = true;
             start_point = new Point(e.X, e.Y);
+
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
@@ -1061,6 +1123,7 @@ namespace Loop_Inventory
                 this.Location = new Point(p.X - start_point.X, p.Y - start_point.Y);
 
             }
+
         }
 
         private void panel1_MouseUp(object sender, MouseEventArgs e)
@@ -1077,7 +1140,10 @@ namespace Loop_Inventory
 
 
             }
+
         }
     }
-
 }
+
+    
+

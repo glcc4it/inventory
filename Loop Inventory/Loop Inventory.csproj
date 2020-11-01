@@ -430,12 +430,6 @@
     <Compile Include="Reminder.Designer.cs">
       <DependentUpon>Reminder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sale view.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sale view.Designer.cs">
-      <DependentUpon>Sale view.cs</DependentUpon>
-    </Compile>
     <Compile Include="SaleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -535,7 +529,19 @@
     <Compile Include="tbl_AccountMaster.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="tbl_AddBank.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_AddExpenses.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_AddRevenue.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_AddTreasury.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_AddWallet.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_Currency.cs">
@@ -746,9 +752,6 @@
     <EmbeddedResource Include="Report4.rdlc" />
     <EmbeddedResource Include="Report5.rdlc" />
     <EmbeddedResource Include="Report6.rdlc" />
-    <EmbeddedResource Include="Sale view.resx">
-      <DependentUpon>Sale view.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SaleForm.resx">
       <DependentUpon>SaleForm.cs</DependentUpon>
     </EmbeddedResource>

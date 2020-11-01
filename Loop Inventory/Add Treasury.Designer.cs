@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Treasury));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -61,7 +62,10 @@
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.cmbCurrencyType = new System.Windows.Forms.ComboBox();
+            this.tblCurrencyBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new Loop_Inventory.DataSet1();
             this.cmbAccountType = new System.Windows.Forms.ComboBox();
+            this.tblAccountMasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtTresuryName = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtTresuryNumber = new System.Windows.Forms.TextBox();
@@ -88,6 +92,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.tbl_AccountMasterTableAdapter = new Loop_Inventory.DataSet1TableAdapters.tbl_AccountMasterTableAdapter();
+            this.tbl_CurrencyTableAdapter = new Loop_Inventory.DataSet1TableAdapters.tbl_CurrencyTableAdapter();
+            this.txtid = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
@@ -95,6 +102,9 @@
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.add2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.add1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCurrencyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAccountMasterBindingSource)).BeginInit();
             this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel10.SuspendLayout();
@@ -109,7 +119,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(11, 156);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 18);
+            this.label6.Size = new System.Drawing.Size(104, 18);
             this.label6.TabIndex = 802;
             this.label6.Text = "Currency Type:";
             // 
@@ -121,7 +131,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(11, 91);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 18);
+            this.label4.Size = new System.Drawing.Size(106, 18);
             this.label4.TabIndex = 831;
             this.label4.Text = "Treasury Name:";
             // 
@@ -139,6 +149,7 @@
             this.btnDelete.Text = "&Delete";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -154,6 +165,7 @@
             this.btnUpdate.Text = "&Update";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnNew
             // 
@@ -169,6 +181,7 @@
             this.btnNew.Text = "&New";
             this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // panel5
             // 
@@ -212,6 +225,7 @@
             this.btnSave.Text = "&Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // bunifuImageButton38
             // 
@@ -275,7 +289,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(11, 123);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 18);
+            this.label5.Size = new System.Drawing.Size(97, 18);
             this.label5.TabIndex = 832;
             this.label5.Text = "Account Type:";
             // 
@@ -311,7 +325,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(11, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 18);
+            this.label1.Size = new System.Drawing.Size(121, 18);
             this.label1.TabIndex = 829;
             this.label1.Text = "Treasury Number:";
             // 
@@ -350,7 +364,7 @@
             this.label24.ForeColor = System.Drawing.Color.Transparent;
             this.label24.Location = new System.Drawing.Point(26, 5);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(101, 20);
+            this.label24.Size = new System.Drawing.Size(103, 20);
             this.label24.TabIndex = 290;
             this.label24.Text = "Add Treasury";
             this.label24.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -479,34 +493,47 @@
             this.cmbCurrencyType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbCurrencyType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbCurrencyType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cmbCurrencyType.DataSource = this.tblCurrencyBindingSource;
+            this.cmbCurrencyType.DisplayMember = "Name";
             this.cmbCurrencyType.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmbCurrencyType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cmbCurrencyType.FormattingEnabled = true;
-            this.cmbCurrencyType.Items.AddRange(new object[] {
-            "Admin",
-            "Salesman"});
             this.cmbCurrencyType.Location = new System.Drawing.Point(184, 152);
             this.cmbCurrencyType.Name = "cmbCurrencyType";
             this.cmbCurrencyType.Size = new System.Drawing.Size(170, 25);
             this.cmbCurrencyType.TabIndex = 1016;
-            this.cmbCurrencyType.Text = "--- Select Currency Type---";
+            this.cmbCurrencyType.ValueMember = "Name";
+            // 
+            // tblCurrencyBindingSource
+            // 
+            this.tblCurrencyBindingSource.DataMember = "tbl_Currency";
+            this.tblCurrencyBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cmbAccountType
             // 
             this.cmbAccountType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbAccountType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbAccountType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cmbAccountType.DataSource = this.tblAccountMasterBindingSource;
+            this.cmbAccountType.DisplayMember = "AccountName";
             this.cmbAccountType.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.cmbAccountType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cmbAccountType.FormattingEnabled = true;
-            this.cmbAccountType.Items.AddRange(new object[] {
-            "Admin",
-            "Salesman"});
             this.cmbAccountType.Location = new System.Drawing.Point(184, 120);
             this.cmbAccountType.Name = "cmbAccountType";
             this.cmbAccountType.Size = new System.Drawing.Size(170, 25);
             this.cmbAccountType.TabIndex = 1015;
-            this.cmbAccountType.Text = "--- Select Account Type---";
+            this.cmbAccountType.ValueMember = "AccountName";
+            // 
+            // tblAccountMasterBindingSource
+            // 
+            this.tblAccountMasterBindingSource.DataMember = "tbl_AccountMaster";
+            this.tblAccountMasterBindingSource.DataSource = this.dataSet1;
             // 
             // txtTresuryName
             // 
@@ -629,27 +656,28 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.OldLace;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.OldLace;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(8, 46);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(349, 321);
             this.dataGridView1.TabIndex = 805;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // label9
             // 
@@ -658,7 +686,7 @@
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(436, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 20);
+            this.label9.Size = new System.Drawing.Size(110, 20);
             this.label9.TabIndex = 839;
             this.label9.Text = "Search Record:";
             // 
@@ -669,13 +697,14 @@
             this.label13.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(26, 33);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(120, 20);
+            this.label13.Size = new System.Drawing.Size(122, 20);
             this.label13.TabIndex = 835;
             this.label13.Text = "Treasury Details:";
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.Transparent;
+            this.panel10.Controls.Add(this.txtid);
             this.panel10.Controls.Add(this.dataGridView1);
             this.panel10.Controls.Add(this.btn_print);
             this.panel10.Controls.Add(this.combo_search_type);
@@ -701,8 +730,9 @@
             this.btn_print.Name = "btn_print";
             this.btn_print.Size = new System.Drawing.Size(63, 25);
             this.btn_print.TabIndex = 804;
-            this.btn_print.Text = "Print";
+            this.btn_print.Text = "Search";
             this.btn_print.UseVisualStyleBackColor = false;
+            this.btn_print.Click += new System.EventHandler(this.btn_print_Click);
             // 
             // combo_search_type
             // 
@@ -713,8 +743,8 @@
             this.combo_search_type.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.combo_search_type.FormattingEnabled = true;
             this.combo_search_type.Items.AddRange(new object[] {
-            "Username",
-            "Mobile"});
+            "Number",
+            "Name"});
             this.combo_search_type.Location = new System.Drawing.Point(8, 15);
             this.combo_search_type.Name = "combo_search_type";
             this.combo_search_type.Size = new System.Drawing.Size(142, 25);
@@ -811,9 +841,29 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(18, 263);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 18);
+            this.label7.Size = new System.Drawing.Size(93, 18);
             this.label7.TabIndex = 833;
             this.label7.Text = "Email Addres:";
+            // 
+            // tbl_AccountMasterTableAdapter
+            // 
+            this.tbl_AccountMasterTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbl_CurrencyTableAdapter
+            // 
+            this.tbl_CurrencyTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtid
+            // 
+            this.txtid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtid.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtid.Location = new System.Drawing.Point(85, 176);
+            this.txtid.Name = "txtid";
+            this.txtid.ReadOnly = true;
+            this.txtid.Size = new System.Drawing.Size(194, 25);
+            this.txtid.TabIndex = 1013;
+            this.txtid.Visible = false;
             // 
             // Add_Treasury
             // 
@@ -846,6 +896,9 @@
             this.panel17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.add2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.add1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCurrencyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblAccountMasterBindingSource)).EndInit();
             this.panel15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel10.ResumeLayout(false);
@@ -914,5 +967,11 @@
         private System.Windows.Forms.ComboBox cmbStatus;
         private Bunifu.Framework.UI.BunifuImageButton add2;
         private Bunifu.Framework.UI.BunifuImageButton add1;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource tblAccountMasterBindingSource;
+        private DataSet1TableAdapters.tbl_AccountMasterTableAdapter tbl_AccountMasterTableAdapter;
+        private System.Windows.Forms.BindingSource tblCurrencyBindingSource;
+        private DataSet1TableAdapters.tbl_CurrencyTableAdapter tbl_CurrencyTableAdapter;
+        private System.Windows.Forms.TextBox txtid;
     }
 }

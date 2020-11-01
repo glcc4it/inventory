@@ -69,6 +69,23 @@
           <Property Name="Notes" Type="nvarchar" MaxLength="300" />
           <Property Name="Status" Type="nvarchar" MaxLength="300" />
         </EntityType>
+        <EntityType Name="tbl_AddBank">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BankNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="varchar" MaxLength="50" />
+          <Property Name="AccountType" Type="nvarchar" MaxLength="200" />
+          <Property Name="CurrencyType" Type="nvarchar" MaxLength="200" />
+          <Property Name="BankName" Type="nvarchar" MaxLength="200" />
+          <Property Name="BranchName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="200" />
+          <Property Name="Email" Type="nvarchar" MaxLength="200" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Balance" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
         <EntityType Name="tbl_AddExpenses">
           <Key>
             <PropertyRef Name="id" />
@@ -85,6 +102,50 @@
           <Property Name="PaymentMethods" Type="nvarchar" MaxLength="200" />
           <Property Name="TaxAmount" Type="numeric" Precision="18" Scale="0" />
           <Property Name="TotalAmount" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="tbl_AddRevenue">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RevenueNumber" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="RevenueNumber2" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Date" Type="nvarchar" MaxLength="50" />
+          <Property Name="CurrencyType" Type="nvarchar" MaxLength="200" />
+          <Property Name="RevenueName" Type="nvarchar" MaxLength="200" />
+          <Property Name="TotalBeforeTax" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Amount" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="PaymentMethods" Type="nvarchar" MaxLength="200" />
+          <Property Name="Taxes" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Total" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="tbl_AddTreasury">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TreasuryNumber" Type="int" />
+          <Property Name="Date" Type="varchar" MaxLength="50" />
+          <Property Name="TreasuryName" Type="nvarchar" MaxLength="200" />
+          <Property Name="AccountType" Type="nvarchar" MaxLength="200" />
+          <Property Name="CurrencyType" Type="nvarchar" MaxLength="200" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Balance" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="tbl_AddWallet">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WelletNumber" Type="int" />
+          <Property Name="Date" Type="varchar" MaxLength="50" />
+          <Property Name="AccountType" Type="nvarchar" MaxLength="200" />
+          <Property Name="CurrencyType" Type="nvarchar" MaxLength="200" />
+          <Property Name="WalletName" Type="nvarchar" MaxLength="200" />
+          <Property Name="OpeningBalance" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tbl_Currency">
           <Key>
@@ -130,36 +191,39 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
           <Property Name="Barcode1" Type="nvarchar" MaxLength="50" />
           <Property Name="Barcode2" Type="nvarchar" MaxLength="50" />
           <Property Name="Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="StoreType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" />
+          <Property Name="BrandName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Color" Type="nvarchar" MaxLength="50" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" />
           <Property Name="NameArabic" Type="nvarchar" MaxLength="50" />
           <Property Name="NameEng" Type="nvarchar" MaxLength="50" />
-          <Property Name="StoreType" Type="nvarchar" MaxLength="50" />
-          <Property Name="BrandName" Type="nvarchar" MaxLength="50" />
-          <Property Name="Category" Type="nvarchar" MaxLength="50" />
-          <Property Name="Unit" Type="nvarchar" MaxLength="50" />
-          <Property Name="Color" Type="nvarchar" MaxLength="50" />
           <Property Name="Description" Type="nvarchar" MaxLength="500" />
           <Property Name="QtyPerUnit" Type="numeric" Precision="18" Scale="0" />
-          <Property Name="Company" Type="nvarchar" MaxLength="50" />
-          <Property Name="Vender" Type="nvarchar" MaxLength="50" />
+          <Property Name="CompanyProduct" Type="nvarchar" MaxLength="50" />
+          <Property Name="TaxPercentage" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="TaxAmount" Type="nchar" MaxLength="10" />
           <Property Name="DiscountType" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiscountAmount" Type="nvarchar" MaxLength="50" />
           <Property Name="DirectDiscount" Type="decimal" Precision="18" Scale="2" />
           <Property Name="NextShoppingDiscount" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="TaxPercent" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="VenderPreferred" Type="nvarchar" MaxLength="50" />
           <Property Name="ReorderLevel" Type="numeric" Precision="18" Scale="0" />
           <Property Name="ManufacturingDate" Type="date" />
           <Property Name="ExpireDate" Type="date" />
           <Property Name="PurchaseCurrency" Type="nvarchar" MaxLength="50" />
           <Property Name="SellingCurrency" Type="nvarchar" MaxLength="50" />
-          <Property Name="WholeSalePrice" Type="decimal" Precision="18" Scale="2" />
           <Property Name="PurchasePrice" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="CustomPrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="WholeSalePrice" Type="decimal" Precision="18" Scale="2" />
           <Property Name="RetailPrice" Type="decimal" Precision="18" Scale="2" />
           <Property Name="CustomerPrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Location" Type="nvarchar" MaxLength="50" />
           <Property Name="AddProfit" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="OpeningStock" Type="numeric" Precision="18" Scale="0" />
           <Property Name="Status" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tblStore">
@@ -178,7 +242,11 @@
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_AccountMaster" EntityType="Self.tbl_AccountMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_AddBank" EntityType="Self.tbl_AddBank" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_AddExpenses" EntityType="Self.tbl_AddExpenses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_AddRevenue" EntityType="Self.tbl_AddRevenue" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_AddTreasury" EntityType="Self.tbl_AddTreasury" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_AddWallet" EntityType="Self.tbl_AddWallet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Currency" EntityType="Self.tbl_Currency" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_godown" EntityType="Self.tbl_godown" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Tax" EntityType="Self.tbl_Tax" Schema="dbo" store:Type="Tables" />
@@ -205,11 +273,15 @@
           <EntitySet Name="tblBonusQuantities" EntityType="Inventory_DBModel.tblBonusQuantity" />
           <EntitySet Name="tbl_godown" EntityType="Inventory_DBModel.tbl_godown" />
           <EntitySet Name="tblStores" EntityType="Inventory_DBModel.tblStore" />
-          <EntitySet Name="tblItemMasters" EntityType="Inventory_DBModel.tblItemMaster" />
           <EntitySet Name="Suppliers" EntityType="Inventory_DBModel.Supplier" />
           <EntitySet Name="tbl_AccountMaster" EntityType="Inventory_DBModel.tbl_AccountMaster" />
           <EntitySet Name="Customers" EntityType="Inventory_DBModel.Customer" />
           <EntitySet Name="tbl_AddExpenses" EntityType="Inventory_DBModel.tbl_AddExpenses" />
+          <EntitySet Name="tbl_AddBank" EntityType="Inventory_DBModel.tbl_AddBank" />
+          <EntitySet Name="tbl_AddRevenue" EntityType="Inventory_DBModel.tbl_AddRevenue" />
+          <EntitySet Name="tbl_AddWallet" EntityType="Inventory_DBModel.tbl_AddWallet" />
+          <EntitySet Name="tblItemMasters" EntityType="Inventory_DBModel.tblItemMaster" />
+          <EntitySet Name="tbl_AddTreasury" EntityType="Inventory_DBModel.tbl_AddTreasury" />
         </EntityContainer>
         <EntityType Name="tbl_Currency">
           <Key>
@@ -252,42 +324,6 @@
           <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="EmailAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="MobileNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="tblItemMaster">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Barcode1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Barcode2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NameArabic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NameEng" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="StoreType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="BrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="QtyPerUnit" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="Company" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Vender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DiscountType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DirectDiscount" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="NextShoppingDiscount" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="TaxPercent" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="ReorderLevel" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="ManufacturingDate" Type="DateTime" Precision="0" />
-          <Property Name="ExpireDate" Type="DateTime" Precision="0" />
-          <Property Name="PurchaseCurrency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="SellingCurrency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="WholeSalePrice" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="PurchasePrice" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="CustomPrice" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="RetailPrice" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="CustomerPrice" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="AddProfit" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Supplier">
@@ -371,6 +407,106 @@
           <Property Name="TaxAmount" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="0" />
         </EntityType>
+        <EntityType Name="tbl_AddBank">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BankNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AccountType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencyType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BankName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="BranchName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Balance" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="tbl_AddRevenue">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RevenueNumber" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="RevenueNumber2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencyType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RevenueName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TotalBeforeTax" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PaymentMethods" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Taxes" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Total" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Notes" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_AddWallet">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WelletNumber" Type="Int32" />
+          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AccountType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencyType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="WalletName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="OpeningBalance" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblItemMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Barcode1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Barcode2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StoreType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameArabic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NameEng" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="QtyPerUnit" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="CompanyProduct" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TaxPercentage" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="TaxAmount" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="DiscountType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DiscountAmount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DirectDiscount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="NextShoppingDiscount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="VenderPreferred" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReorderLevel" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ManufacturingDate" Type="DateTime" Precision="0" />
+          <Property Name="ExpireDate" Type="DateTime" Precision="0" />
+          <Property Name="PurchaseCurrency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SellingCurrency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PurchasePrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="WholeSalePrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="RetailPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="CustomerPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AddProfit" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="OpeningStock" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbl_AddTreasury">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TreasuryNumber" Type="Int32" />
+          <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TreasuryName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="AccountType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CurrencyType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Balance" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -430,43 +566,6 @@
                 <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tblItemMasters">
-            <EntityTypeMapping TypeName="Inventory_DBModel.tblItemMaster">
-              <MappingFragment StoreEntitySet="tblItemMaster">
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="AddProfit" ColumnName="AddProfit" />
-                <ScalarProperty Name="CustomerPrice" ColumnName="CustomerPrice" />
-                <ScalarProperty Name="RetailPrice" ColumnName="RetailPrice" />
-                <ScalarProperty Name="CustomPrice" ColumnName="CustomPrice" />
-                <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
-                <ScalarProperty Name="WholeSalePrice" ColumnName="WholeSalePrice" />
-                <ScalarProperty Name="SellingCurrency" ColumnName="SellingCurrency" />
-                <ScalarProperty Name="PurchaseCurrency" ColumnName="PurchaseCurrency" />
-                <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
-                <ScalarProperty Name="ManufacturingDate" ColumnName="ManufacturingDate" />
-                <ScalarProperty Name="ReorderLevel" ColumnName="ReorderLevel" />
-                <ScalarProperty Name="TaxPercent" ColumnName="TaxPercent" />
-                <ScalarProperty Name="NextShoppingDiscount" ColumnName="NextShoppingDiscount" />
-                <ScalarProperty Name="DirectDiscount" ColumnName="DirectDiscount" />
-                <ScalarProperty Name="DiscountType" ColumnName="DiscountType" />
-                <ScalarProperty Name="Vender" ColumnName="Vender" />
-                <ScalarProperty Name="Company" ColumnName="Company" />
-                <ScalarProperty Name="QtyPerUnit" ColumnName="QtyPerUnit" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Color" ColumnName="Color" />
-                <ScalarProperty Name="Unit" ColumnName="Unit" />
-                <ScalarProperty Name="Category" ColumnName="Category" />
-                <ScalarProperty Name="BrandName" ColumnName="BrandName" />
-                <ScalarProperty Name="StoreType" ColumnName="StoreType" />
-                <ScalarProperty Name="NameEng" ColumnName="NameEng" />
-                <ScalarProperty Name="NameArabic" ColumnName="NameArabic" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-                <ScalarProperty Name="Barcode2" ColumnName="Barcode2" />
-                <ScalarProperty Name="Barcode1" ColumnName="Barcode1" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -552,6 +651,111 @@
                 <ScalarProperty Name="ExpenseType" ColumnName="ExpenseType" />
                 <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_AddBank">
+            <EntityTypeMapping TypeName="Inventory_DBModel.tbl_AddBank">
+              <MappingFragment StoreEntitySet="tbl_AddBank">
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+                <ScalarProperty Name="BankName" ColumnName="BankName" />
+                <ScalarProperty Name="CurrencyType" ColumnName="CurrencyType" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="BankNo" ColumnName="BankNo" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_AddRevenue">
+            <EntityTypeMapping TypeName="Inventory_DBModel.tbl_AddRevenue">
+              <MappingFragment StoreEntitySet="tbl_AddRevenue">
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+                <ScalarProperty Name="PaymentMethods" ColumnName="PaymentMethods" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TotalBeforeTax" ColumnName="TotalBeforeTax" />
+                <ScalarProperty Name="RevenueName" ColumnName="RevenueName" />
+                <ScalarProperty Name="CurrencyType" ColumnName="CurrencyType" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="RevenueNumber2" ColumnName="RevenueNumber2" />
+                <ScalarProperty Name="RevenueNumber" ColumnName="RevenueNumber" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_AddWallet">
+            <EntityTypeMapping TypeName="Inventory_DBModel.tbl_AddWallet">
+              <MappingFragment StoreEntitySet="tbl_AddWallet">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="OpeningBalance" ColumnName="OpeningBalance" />
+                <ScalarProperty Name="WalletName" ColumnName="WalletName" />
+                <ScalarProperty Name="CurrencyType" ColumnName="CurrencyType" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="WelletNumber" ColumnName="WelletNumber" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblItemMasters">
+            <EntityTypeMapping TypeName="Inventory_DBModel.tblItemMaster">
+              <MappingFragment StoreEntitySet="tblItemMaster">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="OpeningStock" ColumnName="OpeningStock" />
+                <ScalarProperty Name="AddProfit" ColumnName="AddProfit" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="CustomerPrice" ColumnName="CustomerPrice" />
+                <ScalarProperty Name="RetailPrice" ColumnName="RetailPrice" />
+                <ScalarProperty Name="WholeSalePrice" ColumnName="WholeSalePrice" />
+                <ScalarProperty Name="PurchasePrice" ColumnName="PurchasePrice" />
+                <ScalarProperty Name="SellingCurrency" ColumnName="SellingCurrency" />
+                <ScalarProperty Name="PurchaseCurrency" ColumnName="PurchaseCurrency" />
+                <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+                <ScalarProperty Name="ManufacturingDate" ColumnName="ManufacturingDate" />
+                <ScalarProperty Name="ReorderLevel" ColumnName="ReorderLevel" />
+                <ScalarProperty Name="VenderPreferred" ColumnName="VenderPreferred" />
+                <ScalarProperty Name="NextShoppingDiscount" ColumnName="NextShoppingDiscount" />
+                <ScalarProperty Name="DirectDiscount" ColumnName="DirectDiscount" />
+                <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+                <ScalarProperty Name="DiscountType" ColumnName="DiscountType" />
+                <ScalarProperty Name="TaxAmount" ColumnName="TaxAmount" />
+                <ScalarProperty Name="TaxPercentage" ColumnName="TaxPercentage" />
+                <ScalarProperty Name="CompanyProduct" ColumnName="CompanyProduct" />
+                <ScalarProperty Name="QtyPerUnit" ColumnName="QtyPerUnit" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="NameEng" ColumnName="NameEng" />
+                <ScalarProperty Name="NameArabic" ColumnName="NameArabic" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="StoreType" ColumnName="StoreType" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Barcode2" ColumnName="Barcode2" />
+                <ScalarProperty Name="Barcode1" ColumnName="Barcode1" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_AddTreasury">
+            <EntityTypeMapping TypeName="Inventory_DBModel.tbl_AddTreasury">
+              <MappingFragment StoreEntitySet="tbl_AddTreasury">
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="CurrencyType" ColumnName="CurrencyType" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="TreasuryName" ColumnName="TreasuryName" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="TreasuryNumber" ColumnName="TreasuryNumber" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -356,8 +356,8 @@ namespace Loop_Inventory
 
         private void salesViewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Sale_view ss = new Sale_view();
-            ss.Show();
+            //Sale_view ss = new Sale_view();
+            //ss.Show();
             
         }
 
